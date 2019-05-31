@@ -230,7 +230,8 @@ namespace QuanLyKhoHang
             cbNCCCT.ValueMember = "MANCC";
             cbNLKCT.DisplayMember = "MASP";
             cbNLKCT.ValueMember = "MASP";
-
+            txtTimPN.Text = "Hãy nhập từ khóa tìm kiếm..";
+            txtTimCT.Text = "Hãy nhập từ khóa tìm kiếm..";
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -461,6 +462,38 @@ namespace QuanLyKhoHang
             {
                 e.Handled = true;
                 MessageBox.Show("Bạn cần phải nhập đơn giá là kí tự số ", "Thông Báo ");
+            }
+        }
+
+        private void txt_tk_enter(object sender, EventArgs e)
+        {
+            if (txtTimPN.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                txtTimPN.Text = "";
+            }
+        }
+
+        private void txt_tk_leave(object sender, EventArgs e)
+        {
+            if (txtTimPN.Text == "")
+            {
+                txtTimPN.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
+
+        private void txt_timkiem_enter(object sender, EventArgs e)
+        {
+            if (txtTimCT.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                txtTimCT.Text = "";
+            }
+        }
+
+        private void txt_timkiem_leave(object sender, EventArgs e)
+        {
+            if (txtTimCT.Text == "")
+            {
+                txtTimCT.Text = "Hãy nhập từ khóa tìm kiếm..";
             }
         }
     }
