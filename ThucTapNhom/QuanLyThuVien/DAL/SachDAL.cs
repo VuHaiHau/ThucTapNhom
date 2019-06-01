@@ -4,28 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 using DTO;
 
 namespace DAL
 {
-    public class SachDAL : DataConnection
+    public class SachDAL : KetNoi
     {
         public DataTable GetData()
         {
-            return (DataTable)ShowDataInGridView("select * FROM dbo.SACH");
-        }
-        KetNoi conn = new KetNoi();
-
-        public DataTable GetDataProc(string maphieu)
-        {
-            return conn.GetDataStr("SELECT * FROM Sach WHERE TENSACH NOT IN (SELECT CHITIETPHIEUMUON.MASACH FROM dbo.chitietphieumuon INNER JOIN dbo.Sach ON  sach.masach = chitietphieumuon.masach WHERE MaPM='" + maphieu + "')");
+            return (DataTable)ShowDataInGridView("SELECT dbo.SACH.MASACH, dbo.SACH.TENSACH, dbo.SACH.TENTG, dbo.SACH.NAMXUATBAN, dbo.SACH.SOLUONG, dbo.THELOAI.TENTHELOAI FROM dbo.SACH INNER JOIN dbo.THELOAI ON dbo.SACH.MATHELOAI = dbo.THELOAI.MATHELOAI order by MaSach");
         }
         public bool Them(Sach entity)
         {
             try
             {
-                string query = @"INSERT INTO dbo.sach(  masach ,Tensach ,tentg ,soluong ,namxuatban)
-                                VALUES  ( '" + entity.MaSach + "',N'" + entity.Tensach + "','" + entity.TenTG + "', N'" + entity.Soluong + "','" + entity.Namxuatban + "')";
+                string query = @"INSERT INTO dbo.sach(  masach ,Tensach ,tentg ,namxuatban,soluong ,matheloai)
+                                VALUES  ( '" + entity.MaSach + "',N'" + entity.Tensach + "',N'" + entity.TenTG + "', N'" + entity.Namxuatban + "','" + entity.Soluong + "','" + entity.MaTheLoai + "')";
                 OpenConection();
                 ExecuteQueries(query);
                 CloseConnection();
@@ -41,7 +36,7 @@ namespace DAL
         {
             try
             {
-                string query = @"UPDATE dbo.Sach set Tensach=N'" + entity.Tensach + "', tentg=N'" + entity.TenTG + "', soluong=" + entity.Soluong + ",Namxuatban='" + entity.Namxuatban + "' WHERE Masach='" + entity.MaSach + "'";
+                string query = @"UPDATE dbo.Sach SET TENSACH=N'" + entity.Tensach + "', TENTG=N'" + entity.TenTG + "', NamXuatBan=" + entity.Namxuatban + ",SoLuong='" + entity.Soluong + "',MaTheloai='" + entity.MaTheLoai + "' WHERE Masach='" + entity.MaSach + "'";
                 OpenConection();
                 ExecuteQueries(query);
                 CloseConnection();
@@ -53,13 +48,14 @@ namespace DAL
                 return false;
             }
         }
+        
         public bool Xoa(String ma)
         {
             try
             {
-                string query = @"DELETE dbo.CHITIETPHIEUMUON WHERE MASACH='" + ma + "'";
+                string query = @"DELETE dbo.SACH WHERE MASACH='" + ma + "'";
                 OpenConection();
-                ExecuteQueries(@"DELETE dbo.SACH WHERE MASACH ='" + ma + "'");
+                ExecuteQueries(@"DELETE dbo.CTPHIEUMUONTRA WHERE MASACH ='" + ma + "'");
                 ExecuteQueries(query);
                 CloseConnection();
                 return true;
@@ -75,8 +71,7 @@ namespace DAL
            
             try
             {
-                //string query = @"select * from NhanVien where (manv like '%" + chuoi + "%' or ten like N'%" + chuoi + "%' or maphong like '%" + chuoi + "%' or gioitinh like N'%" + chuoi + "%' or luong like '%" + chuoi + "%'or diachi like N'%" + chuoi+ "% or ngaysinh like '%" + DateTime.Parse(chuoi) +"')";
-                string query = @"select * from sach where (masach like '%" + chuoi + "%') or (tensach like N'%" + chuoi + "%') or (namxuatban like '%" + chuoi + "%') or (tentg like N'%" + chuoi + "%')";
+                string query = "select MASACH,TENSACH,TENTG,NAMXUATBAN,SOLUONG,TENTHELOAI FROM THELOAI,SACH WHERE THELOAI.MATHELOAI=SACH.MATHELOAI AND (TENSACH like N'%" + chuoi + "%' or MASACH like N'%" + chuoi + "%' or TENTG like N'%" + chuoi + "%' or NAMXUATBAN like N'%" + chuoi + "%' or TENTHELOAI like N'%" + chuoi + "%')";
                 return (DataTable)ShowDataInGridView(query);
             }
             catch (Exception ex)

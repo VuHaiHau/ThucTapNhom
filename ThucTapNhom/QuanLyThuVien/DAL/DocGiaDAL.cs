@@ -9,7 +9,7 @@ using DTO;
 
 namespace DAL
 {
-    public class DocGiaDAL : DataConnection
+    public class DocGiaDAL : KetNoi
     {
         public DataTable GetData()
         {
@@ -36,7 +36,7 @@ namespace DAL
         {
             try
             {
-                string query = @"UPDATE SINHVIEN SET TENSV=N'" + entity.Hoten + "', NGAYSINH=N'" + entity.Ngaysinh + "', GIOITINH=N'" + entity.Gioitinh + "',DIACHI=N'" + entity.Diachi + "',LOP=N'" + entity.Gioitinh + "' WHERE MASV='" + entity.Masv + "'";
+                string query = @"UPDATE SINHVIEN SET TENSV=N'" + entity.Hoten + "', NGAYSINH=N'" + entity.Ngaysinh + "', GIOITINH=N'" + entity.Gioitinh + "',DIACHI=N'" + entity.Diachi + "',LOP=N'" + entity.Lop + "' WHERE MASV='" + entity.Masv + "'";
                 OpenConection();
                 ExecuteQueries(query);
                 CloseConnection();
@@ -52,10 +52,9 @@ namespace DAL
         {
             try
             {
-                string query = @"Delete from SINHVIEN where masv='" + ma + "'";
+                string query = @"Delete from SINHVIEN where MASV='" + ma + "'";
                 OpenConection();
-                ExecuteQueries(@"DELETE FROM PhieuMuon WHERE masv = '" + ma + "'");
-                ExecuteQueries(@"DELETE FROM PhieuTra WHERE masv = '" + ma + "'");
+                ExecuteQueries(@"DELETE FROM PhieuMuonTra WHERE MASV = '" + ma + "'");
                 ExecuteQueries(query);
                 CloseConnection();
                 return true;

@@ -45,7 +45,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 69);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(171, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,6 +67,7 @@
             this.groupBox1.Size = new System.Drawing.Size(357, 187);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.checkMK_CheckedChanged_1);
             // 
             // btThoat
             // 
@@ -77,6 +78,7 @@
             this.btThoat.TabIndex = 4;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btDangNhap
             // 
@@ -132,24 +134,27 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 29);
+            this.label2.Location = new System.Drawing.Point(18, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tài khoản :";
+            this.label2.Text = "Tài Khoản :";
             // 
             // frmDangNhap
             // 
+            this.AcceptButton = this.btDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(609, 317);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MaximizeBox = false;
             this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập Hệ Thống";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangNhap_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDangNhap_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

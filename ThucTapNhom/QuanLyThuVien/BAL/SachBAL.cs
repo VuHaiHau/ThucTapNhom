@@ -16,10 +16,7 @@ namespace BAL
         {
             return dal_sach.GetData();
         }
-        public DataTable GetDataProc(string maphieu)
-        {
-            return dal_sach.GetDataProc(maphieu);
-        }
+      
         public bool Them(Sach nv)
         {
             return dal_sach.Them(nv);
@@ -28,6 +25,7 @@ namespace BAL
         {
             return dal_sach.Sua(nv);
         }
+        
         public Exception GetEx()
         {
             return dal_sach.GetEx();

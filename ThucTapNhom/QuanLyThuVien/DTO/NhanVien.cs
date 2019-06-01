@@ -21,8 +21,12 @@ namespace DTO
 
         public int Luong { set; get; }
 
+        public string SDT { set; get; }
+
+        public string HinhAnh { set; get; }
+
         
-        public NhanVien(string ma, string ten, DateTime ngaysinh, string gioitinh, int luong, string diadiem)
+        public NhanVien(string ma, string ten, DateTime ngaysinh, string gioitinh, int luong, string diadiem,string sdt,string hinhanh)
         {
             this.MaNV = ma;
             this.Ten = ten;
@@ -30,6 +34,8 @@ namespace DTO
             this.GioiTinh = gioitinh;
             this.Luong = luong;
             this.DiaChi = diadiem;
+            this.SDT = sdt;
+            this.HinhAnh = hinhanh;
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BAL;
+using System.IO;
 
 
 namespace TTN_QLTV
@@ -20,6 +21,9 @@ namespace TTN_QLTV
             InitializeComponent();
         }
         private int key = 0;
+        private string filename;
+        public static string filepath = "";
+        private string filepaths;
         NhanVienBAL bal_nhanvien = new NhanVienBAL();
         private void ClearText()
         {
@@ -27,6 +31,7 @@ namespace TTN_QLTV
             txtTen.Clear();
             txtDiachi.Clear();
             txtLuong.Clear();
+            txtsdt.Clear();
             dtNgaySinh.Text = DateTime.Now.ToShortDateString();
             rbNam.Checked = false;
             rbNu.Checked = false;
@@ -38,6 +43,7 @@ namespace TTN_QLTV
             txtMaNV.Enabled = true;
             txtDiachi.Enabled = true;
             txtLuong.Enabled = true;
+            txtsdt.Enabled = true;
             dtNgaySinh.Enabled = true;
             gbGT.Enabled = true;
         }
@@ -48,6 +54,7 @@ namespace TTN_QLTV
             txtMaNV.Enabled = false;
             txtDiachi.Enabled = false;
             txtLuong.Enabled = false;
+            txtsdt.Enabled = false;
             dtNgaySinh.Enabled = false;
             gbGT.Enabled = false;
         }
@@ -57,6 +64,7 @@ namespace TTN_QLTV
             btSua.Enabled = true;
             btXoa.Enabled = true;
             btnLuu.Enabled = false;
+            btn_file.Enabled = false;
         }
 
         private void Disablebtn()
@@ -65,6 +73,7 @@ namespace TTN_QLTV
             btSua.Enabled = false;
             btXoa.Enabled = false;
             btnLuu.Enabled = true;
+            btn_file.Enabled = true;
 
         }
         void ShowData()
@@ -84,6 +93,8 @@ namespace TTN_QLTV
             dgvNhanVien.Columns["GIOITINH"].HeaderText = "Giới Tính";
             dgvNhanVien.Columns["DIACHI"].HeaderText = "Địa Chỉ";
             dgvNhanVien.Columns["LUONG"].HeaderText = "Lương";
+            dgvNhanVien.Columns["SDT"].HeaderText = "Số Điện Thoại";
+            dgvNhanVien.Columns["HINHANH"].HeaderText = "Hình Ảnh";
 
 
             dgvNhanVien.Columns["MANV"].Width = 100;
@@ -92,13 +103,13 @@ namespace TTN_QLTV
             dgvNhanVien.Columns["GIOITINH"].Width = 50;
             dgvNhanVien.Columns["DIACHI"].Width = 200;
             dgvNhanVien.Columns["LUONG"].Width = 120;
+            dgvNhanVien.Columns["SDT"].Width = 120;
+            dgvNhanVien.Columns["HINHANH"].Width = 120;
         }
 
         private void bt_quaylai_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmMain fmain = new frmMain();
-            fmain.Show();
+            
         }
 
         private void dgvNhanVien_KeyDown(object sender, KeyEventArgs e)
@@ -158,7 +169,7 @@ namespace TTN_QLTV
                         gioitinh = "Nữ";
                     }
 
-                    NhanVien nv = new NhanVien(txtMaNV.Text.ToString().Trim(), txtTen.Text.ToString().Trim(), DateTime.Parse(dtNgaySinh.Text.ToString()), gioitinh, int.Parse(txtLuong.Text.ToString()), txtDiachi.Text.ToString().Trim());
+                    NhanVien nv = new NhanVien(txtMaNV.Text.ToString().Trim(), txtTen.Text.ToString().Trim(), DateTime.Parse(dtNgaySinh.Text.ToString()), gioitinh, int.Parse(txtLuong.Text.ToString()), txtDiachi.Text.ToString().Trim(), txtsdt.Text.ToString().Trim(), filename);
                     if (bal_nhanvien.Them(nv) == true)
                     {
                         ClearText();
@@ -171,7 +182,7 @@ namespace TTN_QLTV
                     {
                         Exception ex = bal_nhanvien.GetEx();
                         MessageBox.Show(ex.Message);
-                        MessageBox.Show("Có lỗi xảy ra");
+                        MessageBox.Show("Mã nhân viên đã tồn tại");
                     }
 
                 }
@@ -183,7 +194,7 @@ namespace TTN_QLTV
             {
 
 
-                if (txtMaNV.Text != "" && txtTen.Text != "" && txtDiachi.Text != "" && txtLuong.Text != "")
+                if (txtMaNV.Text != "" && txtTen.Text != "" && txtDiachi.Text != "" && txtLuong.Text != ""&&txtsdt.Text!="")
                 {
 
                     string gioitinh = "";
@@ -196,7 +207,7 @@ namespace TTN_QLTV
                         gioitinh = "Nữ";
                     }
 
-                    NhanVien nv = new NhanVien(txtMaNV.Text.ToString().Trim(), txtTen.Text.ToString().Trim(), DateTime.Parse(dtNgaySinh.Text.ToString()), gioitinh, int.Parse(txtLuong.Text.ToString()), txtDiachi.Text.ToString().Trim());
+                    NhanVien nv = new NhanVien(txtMaNV.Text.ToString().Trim(), txtTen.Text.ToString().Trim(), DateTime.Parse(dtNgaySinh.Text.ToString()), gioitinh, int.Parse(txtLuong.Text.ToString()), txtDiachi.Text.ToString().Trim(), txtsdt.Text.ToString().Trim(),filename);
                     if (bal_nhanvien.Sua(nv) == true)
                     {
                         ClearText();
@@ -234,7 +245,7 @@ namespace TTN_QLTV
                     {
                         Exception ex = bal_nhanvien.GetEx();
                         MessageBox.Show(ex.Message);
-                        MessageBox.Show("Lỗi");
+                        MessageBox.Show("Không Thể Xóa Nhân Viên Này");
                     }
                 }
                 else
@@ -251,6 +262,25 @@ namespace TTN_QLTV
             txtDiachi.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["DIACHI"].Value);
             txtLuong.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["LUONG"].Value);
             dtNgaySinh.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["NGAYSINH"].Value);
+            txtsdt.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["SDT"].Value);
+            filename = dgvNhanVien.CurrentRow.Cells["HINHANH"].Value.ToString().Trim();
+            if (filename == "")
+            {
+                pc_nhanvien.Image = null;
+            }
+            else
+            {
+                filepath = Application.StartupPath + "\\Images\\" + filename;
+                if (!File.Exists(filepath))
+                {
+                    pc_nhanvien.Image = null;
+                }
+                else
+                {
+                    pc_nhanvien.Image = Image.FromFile(filepath.ToString());
+                    pc_nhanvien.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
             if (dgvNhanVien.CurrentRow.Cells["GIOITINH"].Value.ToString() == "Nam")
             {
                 rbNam.Checked = true;
@@ -281,5 +311,68 @@ namespace TTN_QLTV
             else
                 MessageBox.Show("Bạn cần nhập thông tin để tìm kiếm !");
         }
+
+        private void frmnhanvien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+            frmMain fmain = new frmMain();
+            fmain.Show();
+        }
+
+        private void btn_file_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdImages = new OpenFileDialog();
+            PictureBox objpt = new PictureBox();
+            ofdImages.Title = "Chọn File Ảnh!";
+            ofdImages.InitialDirectory = @"Documents";//Thư mục mặc định khi mở
+            ofdImages.Filter = "All files (*.*)|*.*";// Lọc ra những file cần hiển thị
+            ofdImages.FilterIndex = 1;//chúng ta có All files là 1,jpg là 2
+            ofdImages.RestoreDirectory = true;
+            if (ofdImages.ShowDialog() == DialogResult.OK)
+            {
+                string filenameX = ofdImages.FileName;
+                pc_nhanvien.Image = Image.FromFile(ofdImages.FileName);
+                filename = Path.GetFileName(ofdImages.FileName);
+                pc_nhanvien.SizeMode = PictureBoxSizeMode.StretchImage;
+                filepath = Application.StartupPath + "\\Images\\" + filename;
+                if (!File.Exists(filenameX)) return;
+
+                if (File.Exists(filepath))
+                {
+
+                }
+                else
+                    try
+                    {
+                        File.Copy(filenameX, filepath);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Đã phát sinh lỗi trong việc chọn ảnh upload, vui lòng kiểm tra lại!!!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+            }
+            else
+            {
+                filename = "";
+                pc_nhanvien.Image = null;
+            }
+            //    OpenFileDialog ofdImages = new OpenFileDialog();
+            //    PictureBox objpt = new PictureBox();
+            //    ofdImages.Title = "Chọn File Ảnh!";
+            //    ofdImages.InitialDirectory = @"Documents";//Thư mục mặc định khi mở
+            //    ofdImages.Filter = "All files (*.*)|*.*";// Lọc ra những file cần hiển thị
+            //    ofdImages.FilterIndex = 1;//chúng ta có All files là 1,jpg là 2
+
+            //    if(ofdImages.ShowDialog()==DialogResult.OK)
+            //    {
+            //        string filenameX = ofdImages.FileName;
+            //        pc_nhanvien.Image = new Bitmap(ofdImages.FileName);
+            //        filename = Path.GetFileName(ofdImages.FileName);
+            //        pc_nhanvien.SizeMode = PictureBoxSizeMode.StretchImage;
+            //        filepath = Path.Combine(@"C:\Users\Duong\Downloads\TTN_QLTV\TTN_QLTV\Images\");
+            //File.Copy(filenameX,filepath);
+            //}
+        }
+        
     }
 }

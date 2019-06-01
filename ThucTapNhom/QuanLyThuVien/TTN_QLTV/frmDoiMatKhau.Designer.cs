@@ -35,21 +35,22 @@
             this.btn_dmk = new System.Windows.Forms.Button();
             this.tbx_nlmatkhaumoi = new System.Windows.Forms.TextBox();
             this.tbx_matkhaumoi = new System.Windows.Forms.TextBox();
-            this.tbx_matkhaucu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tbx_matkhaucu = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(170, 9);
+            this.label3.Location = new System.Drawing.Point(131, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 31);
+            this.label3.Size = new System.Drawing.Size(183, 31);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Đổi mật khẩu";
+            this.label3.Text = "Đổi Mật Khẩu";
             // 
             // tbx_tdn
             // 
@@ -72,22 +73,24 @@
             // btn_huy
             // 
             this.btn_huy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_huy.Location = new System.Drawing.Point(305, 232);
+            this.btn_huy.Location = new System.Drawing.Point(256, 232);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(93, 30);
+            this.btn_huy.Size = new System.Drawing.Size(142, 30);
             this.btn_huy.TabIndex = 19;
             this.btn_huy.Text = "Hủy";
             this.btn_huy.UseVisualStyleBackColor = true;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_dmk
             // 
             this.btn_dmk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dmk.Location = new System.Drawing.Point(202, 232);
+            this.btn_dmk.Location = new System.Drawing.Point(113, 232);
             this.btn_dmk.Name = "btn_dmk";
             this.btn_dmk.Size = new System.Drawing.Size(93, 30);
             this.btn_dmk.TabIndex = 18;
             this.btn_dmk.Text = "Đổi";
             this.btn_dmk.UseVisualStyleBackColor = true;
+            this.btn_dmk.Click += new System.EventHandler(this.btn_dmk_Click);
             // 
             // tbx_nlmatkhaumoi
             // 
@@ -106,14 +109,6 @@
             this.tbx_matkhaumoi.Size = new System.Drawing.Size(196, 26);
             this.tbx_matkhaumoi.TabIndex = 15;
             this.tbx_matkhaumoi.UseSystemPasswordChar = true;
-            // 
-            // tbx_matkhaucu
-            // 
-            this.tbx_matkhaucu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_matkhaucu.Location = new System.Drawing.Point(202, 106);
-            this.tbx_matkhaucu.Name = "tbx_matkhaucu";
-            this.tbx_matkhaucu.Size = new System.Drawing.Size(197, 26);
-            this.tbx_matkhaucu.TabIndex = 13;
             // 
             // label4
             // 
@@ -145,24 +140,37 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Mật Khẩu Hiện Tại :";
             // 
+            // tbx_matkhaucu
+            // 
+            this.tbx_matkhaucu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_matkhaucu.Location = new System.Drawing.Point(202, 106);
+            this.tbx_matkhaucu.Name = "tbx_matkhaucu";
+            this.tbx_matkhaucu.Size = new System.Drawing.Size(196, 26);
+            this.tbx_matkhaucu.TabIndex = 21;
+            this.tbx_matkhaucu.UseSystemPasswordChar = true;
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(431, 281);
+            this.Controls.Add(this.tbx_matkhaucu);
             this.Controls.Add(this.tbx_tdn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_dmk);
             this.Controls.Add(this.tbx_nlmatkhaumoi);
             this.Controls.Add(this.tbx_matkhaumoi);
-            this.Controls.Add(this.tbx_matkhaucu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
+            this.MaximizeBox = false;
             this.Name = "frmDoiMatKhau";
             this.Text = "frmDoiMatKhau";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDoiMatKhau_FormClosed);
+            this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,9 +185,9 @@
         private System.Windows.Forms.Button btn_dmk;
         private System.Windows.Forms.TextBox tbx_nlmatkhaumoi;
         private System.Windows.Forms.TextBox tbx_matkhaumoi;
-        private System.Windows.Forms.TextBox tbx_matkhaucu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbx_matkhaucu;
     }
 }

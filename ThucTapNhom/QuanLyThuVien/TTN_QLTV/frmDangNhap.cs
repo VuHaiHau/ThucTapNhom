@@ -19,71 +19,55 @@ namespace TTN_QLTV
         {
             InitializeComponent();
         }
-        public static int quyen;
-        DataConnection cq = new DataConnection();
+        public static string QuyenHan = "";
+        public static string USERNAME = "";
+        public static string MaNV = "";
+        
+        
+        public DataTable QH(string UN)
+        {
+            accessdata acc = new accessdata();
+            SqlDataReader a = acc.ExecuteReader("SELECT phanquyen FROM Login WHERE taikhoan='" + UN + "'");
+            while (a.Read())
+            {
+                QuyenHan = a["phanquyen"].ToString();
+
+            }
+            return null;
+        }
 
         private void btDangNhap_Click_1(object sender, EventArgs e)
         {
-            if (txtTaiKhoan.Text == "" || txtMatKhau.Text == "")
+            accessdata acc = new accessdata();
+            string user = txtTaiKhoan.Text.Trim();
+            string pass = txtMatKhau.Text.Trim();
+            SqlDataReader reader = acc.ExecuteReader("select taikhoan,matkhau,phanquyen from login where taikhoan='" + user + "' and matkhau='" + pass + "'");
+            if (reader.Read() == true)
             {
-                MessageBox.Show("Bạn cần nhập đủ tên tài khoản và mật khẩu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                QH(txtTaiKhoan.Text);
+                frmMain.Quyenhan = QuyenHan;
+                frmnguoidung.QuyenHan = QuyenHan;
+                frmnguoidung.taikhoan = txtTaiKhoan.Text;
+                frmThemTaiKhoan.Username = txtTaiKhoan.Text;
+
+                MessageBox.Show("Bạn Đã Đăng Nhập Thành Công ");
+                this.Hide();
+                frmMain menu = new frmMain();
+                menu.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Tài Khoản Hoặc Mật Khẩu Không Chính Xác");
+                txtTaiKhoan.Clear();
+                txtMatKhau.Clear();
                 txtTaiKhoan.Focus();
-                return;
-            }
-            cq.OpenConection();
-            try
-            {
-                SqlCommand cm = new SqlCommand("Select * from Login where taikhoan = @id and matkhau =@password ", cq.GetCon());
-                cm.Parameters.AddWithValue("@id", txtTaiKhoan.Text);
-                cm.Parameters.AddWithValue("@password", txtMatKhau.Text);
-                SqlDataAdapter adt = new SqlDataAdapter(cm);
-                DataSet ds = new DataSet();
-                adt.Fill(ds);
-                cq.CloseConnection();
-                string us = txtTaiKhoan.Text;
-                string pss = txtMatKhau.Text;
-                string taikhoan = "";
-                string matkhau = "";
-                foreach (DataRow row in ds.Tables[0].Rows)
-                {
-                    taikhoan = row["taikhoan"].ToString().Trim();
-                    matkhau = row["matkhau"].ToString().Trim();
-                    quyen = int.Parse(row["phanquyen"].ToString());
-                }
-                int ok = string.Compare(us, taikhoan);
-                int ok1 = string.Compare(pss, matkhau);
-                //int ok = us.CompareTo(ds.Tables[0].Rows[0].ItemArray[0].ToString());
-                //int ok1 = pss.CompareTo(ds.Tables[0].Rows[0].ItemArray[1].ToString());
-                if (ds.Tables[0].Rows.Count == 1 && ok == 0 && ok1 == 0)
-                {
-                    this.Hide();
-                    frmMain fm = new frmMain();
-                    fm.Show();
-                }
-                else
-                {
-                    txtTaiKhoan.Text = "";
-                    txtMatKhau.Text = "";
-                    txtTaiKhoan.Focus();
-                    MessageBox.Show("Bạn đã nhập sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
             }
         }
 
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                Application.Exit();
-            }
+            
         }
 
         private void checkMK_CheckedChanged_1(object sender, EventArgs e)
@@ -94,6 +78,16 @@ namespace TTN_QLTV
             }
             else
                 txtMatKhau.UseSystemPasswordChar = true;
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

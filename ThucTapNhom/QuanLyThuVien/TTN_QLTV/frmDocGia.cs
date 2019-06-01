@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BAL;
 using DTO;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace TTN_QLTV
 {
@@ -88,8 +89,8 @@ namespace TTN_QLTV
             dgvDocGia.Columns["MASV"].Width = 100;
             dgvDocGia.Columns["TENSV"].Width = 160;
             dgvDocGia.Columns["NGAYSINH"].Width = 100;
-            dgvDocGia.Columns["GIOITINH"].Width = 50;
-            dgvDocGia.Columns["DIACHI"].Width = 200;
+            dgvDocGia.Columns["GIOITINH"].Width = 100;
+            dgvDocGia.Columns["DIACHI"].Width = 180;
             dgvDocGia.Columns["LOP"].Width = 100;
         }
 
@@ -121,9 +122,7 @@ namespace TTN_QLTV
 
         private void bt_quaylai_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmMain fmain = new frmMain();
-            fmain.Show();
+            
         }
 
         private void cbTimKiem_SelectedIndexChanged(object sender, EventArgs e)
@@ -197,7 +196,7 @@ namespace TTN_QLTV
                     {
                         Exception ex = bal_docgia.GetEx();
                         MessageBox.Show(ex.Message);
-                        MessageBox.Show("Có lỗi xảy ra");
+                        MessageBox.Show("Mã độc giả đã tồn tại");
                     }
                 
                 }
@@ -260,7 +259,7 @@ namespace TTN_QLTV
                     {
                         Exception ex = bal_docgia.GetEx();
                         MessageBox.Show(ex.Message);
-                        MessageBox.Show("Lỗi");
+                        MessageBox.Show("Không Thể Xóa Độc Giả Này");
                     }
                 }
                 else
@@ -293,6 +292,69 @@ namespace TTN_QLTV
             {
                 rbNu.Checked = true;
             }
+        }
+
+        private void frmDocGia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+            frmMain fmain = new frmMain();
+            fmain.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Excel.Application exApp = new Excel.Application();
+            Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+            Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
+            Excel.Range exRang = (Excel.Range)exSheet.Cells[1, 1];
+
+            exRang.Range["A1:A2"].Font.Bold = true;
+            exRang.Range["A1:A2"].Font.Size = 14;
+            exRang.Range["A1"].Value = "Địa chỉ số 236 Hoàng Quốc Việt";
+            exRang.Range["A2"].Value = "Số điện thoại: 0123566789 ";
+
+
+            exRang.Range["C4"].Font.Bold = true;
+            exRang.Range["C4"].Font.Size = 22;
+            exRang.Range["C4"].Value = "DANH SÁCH ĐỘC GIẢ ";
+            exRang.Range["C4"].Font.Color = Color.Red;
+
+            exRang.Range["A6:F6"].Font.Bold = true;
+            exRang.Range["A6:F6"].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            exRang.Range["B6:C6"].ColumnWidth = 20;
+            exRang.Range["D6"].ColumnWidth = 30;
+            exRang.Range["E6:G6"].ColumnWidth = 20;
+            exRang.Range["A6"].Value = "STT";
+            exRang.Range["B6"].Value = "Mã Độc Giả";
+            exRang.Range["C6"].Value = "Tên Độc Giả";
+            exRang.Range["D6"].Value = "Ngày Sinh";
+            exRang.Range["E6"].Value = "Giới Tính";
+            exRang.Range["F6"].Value = "Địa Chỉ";
+            exRang.Range["G6"].Value = "Lớp";
+            
+
+            int row = 7;
+            for (int i = 0; i < dgvDocGia.Rows.Count - 1; i++)
+            {
+                row++;
+                exRang.Range["A" + row.ToString()].Value = (i + 1).ToString();
+                exRang.Range["B" + row.ToString()].Value = dgvDocGia.Rows[i].Cells[0].Value.ToString();
+                exRang.Range["C" + row.ToString()].Value = dgvDocGia.Rows[i].Cells[1].Value.ToString();
+                exRang.Range["D" + row.ToString()].Value = dgvDocGia.Rows[i].Cells[2].Value.ToString();
+                exRang.Range["E" + row.ToString()].Value = dgvDocGia.Rows[i].Cells[3].Value.ToString();
+                exRang.Range["F" + row.ToString()].Value = dgvDocGia.Rows[i].Cells[4].Value.ToString();
+                exRang.Range["G" + row.ToString()].Value = dgvDocGia.Rows[i].Cells[5].Value.ToString();
+                
+            }
+
+            exBook.Activate();
+            SaveFileDialog svFile = new SaveFileDialog();
+            if (svFile.ShowDialog() == DialogResult.OK)
+            {
+                exBook.SaveAs(svFile.FileName);
+                MessageBox.Show("Đã xuất file thành công");
+            }
+            exApp.Quit();
         }
     }
 }

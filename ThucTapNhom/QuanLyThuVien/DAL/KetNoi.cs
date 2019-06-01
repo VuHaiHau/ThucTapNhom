@@ -8,13 +8,22 @@ using System.Data;
 
 namespace DAL
 {
-    class KetNoi
+    public class KetNoi
     {
-
-        private SqlConnection conn;
+        public string strConnection = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLTV;Integrated Security=True";
+        public SqlConnection conn;
         public KetNoi()
         {
-            conn = new SqlConnection(@"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLTV;Integrated Security=True");
+            if (conn != null && conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            else if (conn == null)
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = strConnection;
+                conn.Open();
+            }
         }
         public DataTable GetDataStr(string strSql)
         {
@@ -25,34 +34,7 @@ namespace DAL
             conn.Close();
             return dt;
         }
-        public string TangMa(string sql, string Ma)
-        {
-            SqlCommand cm = new SqlCommand(sql, conn);      // bắt đầu truy vấn
-            cm.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cm);     //vận chuyển dữ liệu về
-            DataTable dt = new DataTable();                 //tạo 1 kho ảo để chứa dữ liệu
-            da.Fill(dt);
-            if (dt.Rows.Count <= 0)
-            {
-                Ma = Ma + "01";
-            }
-            else
-            {
-                int k;
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 2));
-                k = k + 1;
-                if (k < 10)
-                {
-                    Ma = Ma + "0";
-                }
-                else if (k < 100)
-                {
-                    Ma = Ma + "";
-                }
-                Ma = Ma + k.ToString();
-            }
-            return Ma;
-        }
+        
 
         public DataTable GetDataProc(string NameProc, SqlParameter[] para)
         {
@@ -117,6 +99,69 @@ namespace DAL
             DataSet ds = new DataSet();
             da.Fill(ds);
             return ds;
+        }
+        private Exception ex = new Exception();
+        
+        public void OpenConection()
+        {
+            conn = new SqlConnection(strConnection);
+            conn.Open();
+        }
+        public SqlConnection GetCon()
+        {
+            return this.conn;
+        }
+
+        public void CloseConnection()
+        {
+            conn.Close();
+        }
+
+
+        public void ExecuteQueries(string Query_)
+        {
+            SqlCommand cmd = new SqlCommand(Query_, conn);
+            cmd.ExecuteNonQuery();
+        }
+
+
+        public SqlDataReader DataReader(string Query_)
+        {
+            SqlCommand cmd = new SqlCommand(Query_, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+        }
+
+
+        public object ShowDataInGridView(string Query_)
+        {
+            SqlDataAdapter dr = new SqlDataAdapter(Query_, strConnection);
+            DataSet ds = new DataSet();
+            dr.Fill(ds);
+            object dataum = ds.Tables[0];
+            return dataum;
+        }
+        public Exception GetEx()
+        {
+            return ex;
+        }
+        public void SetEx(Exception ex)
+        {
+            this.ex = ex;
+        }
+        public SqlDataReader ExecuteReader(String sql)
+        {
+            OpenConection();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            return reader;
+        }
+        public bool executenonquery(String sql)
+        {
+            OpenConection();
+            SqlCommand command = new SqlCommand(sql, conn);
+            command.ExecuteNonQuery();
+            return true;
         }
     }
 }

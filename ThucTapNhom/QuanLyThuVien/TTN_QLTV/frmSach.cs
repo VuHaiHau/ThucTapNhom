@@ -21,6 +21,8 @@ namespace TTN_QLTV
         }
         private int key = 0;
         SachBAL bal_sach = new SachBAL();
+        TheLoaiBAL bus = new TheLoaiBAL();
+       
         private void ClearText()
         {
             txtMasach.Clear();
@@ -28,7 +30,6 @@ namespace TTN_QLTV
             txtsoluong.Clear();
             txttentacgia.Clear();
             txtnamxb.Clear();
-
         }
         private void Enabletbx()
         {
@@ -37,6 +38,7 @@ namespace TTN_QLTV
             txttentacgia.Enabled = true;
             txtsoluong.Enabled = true;
             txtnamxb.Enabled = true;
+            cbxtheloai.Enabled = true;
         }
         private void Disabletbx()
         {
@@ -45,6 +47,7 @@ namespace TTN_QLTV
             txttentacgia.Enabled = false;
             txtsoluong.Enabled = false;
             txtnamxb.Enabled = false;
+            cbxtheloai.Enabled = false;
         }
         private void Enablebtn()
         {
@@ -65,6 +68,10 @@ namespace TTN_QLTV
         void ShowData()
         {
             dgvSach.DataSource = bal_sach.GetData();
+            dgvSach.AutoResizeColumns();
+            cbxtheloai.DataSource = bus.GetData();
+            cbxtheloai.DisplayMember = "TENTHELOAI";
+            cbxtheloai.ValueMember = "MATHELOAI";
         }
 
 
@@ -100,9 +107,7 @@ namespace TTN_QLTV
 
         private void bt_quaylai_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmMain fmain = new frmMain();
-            fmain.Show();
+            
         }
 
         private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -114,9 +119,10 @@ namespace TTN_QLTV
                 row = dgvSach.Rows[e.RowIndex];
                 txtMasach.Text = row.Cells["MASACH"].Value.ToString().Trim();
                 txtTensach.Text = row.Cells["TENSACH"].Value.ToString().Trim();
-                txtsoluong.Text = row.Cells["SOLUONG"].Value.ToString().Trim();
                 txttentacgia.Text = row.Cells["TENTG"].Value.ToString().Trim();
                 txtnamxb.Text = row.Cells["NAMXUATBAN"].Value.ToString().Trim();
+                txtsoluong.Text = row.Cells["SOLUONG"].Value.ToString().Trim();
+                cbxtheloai.Text = row.Cells["TENTHELOAI"].Value.ToString().Trim();
             }
             catch (Exception ex)
             {
@@ -133,8 +139,10 @@ namespace TTN_QLTV
 
         private void frmSach_Load(object sender, EventArgs e)
         {
+
             Disabletbx();
             Enablebtn();
+            ShowData();
             dgvSach.DataSource = bal_sach.GetData();
             dgvSach.ClearSelection();
             dgvSach.Columns["MASACH"].HeaderText = "Mã Sách";
@@ -142,14 +150,15 @@ namespace TTN_QLTV
             dgvSach.Columns["TENTG"].HeaderText = "Tên Tác Giả";
             dgvSach.Columns["NAMXUATBAN"].HeaderText = "Năm Xuất Bản";
             dgvSach.Columns["SOLUONG"].HeaderText = "Số Lượng";
-            
+            dgvSach.Columns["TENTHELOAI"].HeaderText = "Tên Thể Loại";
+
 
             dgvSach.Columns["MASACH"].Width = 100;
-            dgvSach.Columns["TENSACH"].Width = 250;
-            dgvSach.Columns["TENTG"].Width = 160;
+            dgvSach.Columns["TENSACH"].Width = 200;
+            dgvSach.Columns["TENTG"].Width = 130;
             dgvSach.Columns["NAMXUATBAN"].Width = 100;
             dgvSach.Columns["SOLUONG"].Width = 100;
-            
+            dgvSach.Columns["TENTHELOAI"].Width = 100;
         }
 
         private void dgvSach_KeyDown(object sender, KeyEventArgs e)
@@ -164,6 +173,7 @@ namespace TTN_QLTV
         {
            
         }
+       
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -172,7 +182,7 @@ namespace TTN_QLTV
 
                 if (txtMasach.Text != "" && txtnamxb.Text != "" && txttentacgia.Text != "" && txtTensach.Text != "")
                 {
-                    Sach sach = new Sach(txtMasach.Text.ToString().Trim(), txtTensach.Text.ToString().Trim(), txttentacgia.Text.Trim(), int.Parse(txtsoluong.Text.Trim()), txtnamxb.Text.ToString().Trim());
+                    Sach sach = new Sach(txtMasach.Text.ToString().Trim(), txtTensach.Text.ToString().Trim(), txttentacgia.Text.Trim(), txtnamxb.Text.ToString().Trim(), int.Parse(txtsoluong.Text.Trim()), cbxtheloai.SelectedValue.ToString().Trim());
                     if (bal_sach.Them(sach) == true)
                     {
                         ClearText();
@@ -185,7 +195,7 @@ namespace TTN_QLTV
                     {
                         Exception ex = bal_sach.GetEx();
                         MessageBox.Show(ex.Message);
-                        MessageBox.Show("Có lỗi xảy ra");
+                        MessageBox.Show("Mã sách đã tồn tại");
                     }
                 }
                 else
@@ -196,21 +206,20 @@ namespace TTN_QLTV
             {
                 if (txtMasach.Text != "" && txtnamxb.Text != "" && txttentacgia.Text != "" && txtTensach.Text != "")
                 {
-
-                    Sach sach = new Sach(txtMasach.Text.ToString().Trim(), txtTensach.Text.ToString().Trim(), txttentacgia.Text.Trim(), int.Parse(txtsoluong.Text.Trim()), txtnamxb.Text.ToString().Trim());
-                    if (bal_sach.Sua(sach) == true)
+                    try
                     {
+                        Sach sach = new Sach(txtMasach.Text.ToString().Trim(), txtTensach.Text.ToString().Trim(), txttentacgia.Text.Trim(), txtnamxb.Text.ToString().Trim(), int.Parse(txtsoluong.Text.Trim()), cbxtheloai.SelectedValue.ToString().Trim());
+
+                        bal_sach.Sua(sach);
                         ClearText();
                         ShowData();
                         MessageBox.Show("Sửa thành công");
                         frmSach_Load(sender, e);
                         key = 0;
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        Exception ex = bal_sach.GetEx();
-                        MessageBox.Show(ex.Message);
-                        MessageBox.Show("Có lỗi xảy ra");
+                        MessageBox.Show("Lỗi" + ex.Message);
                     }
                 }
                 else
@@ -221,7 +230,7 @@ namespace TTN_QLTV
             {
                 if (txtMasach.Text.Length != 0)
                 {
-                    string query = @"DELETE FROM dbo.NhanVien Where manv='" + txtMasach.Text + "'";
+                    string query = @"DELETE FROM dbo.Sach Where manv='" + txtMasach.Text + "'";
                     
                     if (bal_sach.Xoa(txtMasach.Text.Trim()))
                     {
@@ -273,6 +282,13 @@ namespace TTN_QLTV
             }
             else
                 MessageBox.Show("Bạn cần nhập thông tin để tìm kiếm !");
+        }
+
+        private void frmSach_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+            frmMain fmain = new frmMain();
+            fmain.Show();
         }
     }
 }

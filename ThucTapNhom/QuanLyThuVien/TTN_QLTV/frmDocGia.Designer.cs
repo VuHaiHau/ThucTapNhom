@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDocGia));
-            this.bt_quaylai = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.grbNhanVien = new System.Windows.Forms.GroupBox();
@@ -55,22 +54,12 @@
             this.btSua = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.dgvDocGia = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.grbNhanVien.SuspendLayout();
             this.gbGT.SuspendLayout();
             this.grbChucNang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bt_quaylai
-            // 
-            this.bt_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_quaylai.Image = ((System.Drawing.Image)(resources.GetObject("bt_quaylai.Image")));
-            this.bt_quaylai.Location = new System.Drawing.Point(12, 12);
-            this.bt_quaylai.Name = "bt_quaylai";
-            this.bt_quaylai.Size = new System.Drawing.Size(56, 28);
-            this.bt_quaylai.TabIndex = 16;
-            this.bt_quaylai.UseVisualStyleBackColor = true;
-            this.bt_quaylai.Click += new System.EventHandler(this.bt_quaylai_Click);
             // 
             // txtTimKiem
             // 
@@ -83,7 +72,9 @@
             // 
             // btTimKiem
             // 
-            this.btTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btTimKiem.BackgroundImage")));
+            this.btTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimKiem.Location = new System.Drawing.Point(699, 6);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(89, 38);
@@ -168,7 +159,7 @@
             this.dtgNgaySinh.Name = "dtgNgaySinh";
             this.dtgNgaySinh.Size = new System.Drawing.Size(179, 26);
             this.dtgNgaySinh.TabIndex = 9;
-            this.dtgNgaySinh.Value = new System.DateTime(2018, 5, 23, 0, 0, 0, 0);
+            this.dtgNgaySinh.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // txtLop
             // 
@@ -263,6 +254,9 @@
             // 
             // btlammoi
             // 
+            this.btlammoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btlammoi.BackgroundImage")));
+            this.btlammoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btlammoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btlammoi.Location = new System.Drawing.Point(55, 191);
             this.btlammoi.Name = "btlammoi";
             this.btlammoi.Size = new System.Drawing.Size(85, 39);
@@ -273,6 +267,9 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.BackgroundImage")));
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(55, 149);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(85, 36);
@@ -283,6 +280,9 @@
             // 
             // btXoa
             // 
+            this.btXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXoa.BackgroundImage")));
+            this.btXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.Location = new System.Drawing.Point(55, 106);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(85, 37);
@@ -293,6 +293,9 @@
             // 
             // btSua
             // 
+            this.btSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSua.BackgroundImage")));
+            this.btSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua.Location = new System.Drawing.Point(55, 65);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(85, 38);
@@ -303,6 +306,9 @@
             // 
             // btThem
             // 
+            this.btThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btThem.BackgroundImage")));
+            this.btThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThem.Location = new System.Drawing.Point(55, 25);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(85, 34);
@@ -321,20 +327,36 @@
             this.dgvDocGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocGia_CellClick);
             this.dgvDocGia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvDocGia_KeyDown);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(7, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 38);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Xuất Báo Cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmDocGia
             // 
+            this.AcceptButton = this.btnLuu;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvDocGia);
             this.Controls.Add(this.grbChucNang);
             this.Controls.Add(this.grbNhanVien);
             this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.bt_quaylai);
+            this.MaximizeBox = false;
             this.Name = "frmDocGia";
             this.Text = "frmDocGia";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDocGia_FormClosed);
             this.Load += new System.EventHandler(this.frmDocGia_Load);
             this.grbNhanVien.ResumeLayout(false);
             this.grbNhanVien.PerformLayout();
@@ -348,8 +370,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button bt_quaylai;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.GroupBox grbNhanVien;
@@ -375,5 +395,6 @@
         private System.Windows.Forms.GroupBox gbGT;
         private System.Windows.Forms.RadioButton rbNu;
         private System.Windows.Forms.RadioButton rbNam;
+        private System.Windows.Forms.Button button1;
     }
 }

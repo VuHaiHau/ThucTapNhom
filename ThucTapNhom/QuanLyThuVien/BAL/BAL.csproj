@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="DocGiaBAL.cs" />
     <Compile Include="NhanVienBAL.cs" />
+    <Compile Include="PhieuMuonBAL.cs" />
     <Compile Include="SachBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheLoaiBAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
