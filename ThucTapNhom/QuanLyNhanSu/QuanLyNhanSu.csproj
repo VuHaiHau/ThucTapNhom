@@ -111,12 +111,6 @@
     <Compile Include="CT\ThuongPhat.Designer.cs">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\TimTrenWeb.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CT\TimTrenWeb.Designer.cs">
-      <DependentUpon>TimTrenWeb.cs</DependentUpon>
-    </Compile>
     <Compile Include="CT\TinhLuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,54 +155,6 @@
     <Compile Include="CT\tkChamCong.Designer.cs">
       <DependentUpon>tkChamCong.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongKe\abc.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\abc.Designer.cs">
-      <DependentUpon>abc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKe\tkNVNghiCoPhep.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\tkNVNghiCoPhep.Designer.cs">
-      <DependentUpon>tkNVNghiCoPhep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKe\tkNVNghiTrongNgay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\tkNVNghiTrongNgay.Designer.cs">
-      <DependentUpon>tkNVNghiTrongNgay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKe\tkSoNgayDiLam.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\tkSoNgayDiLam.Designer.cs">
-      <DependentUpon>tkSoNgayDiLam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKe\tkSoNgayNghiCoPhep.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\tkSoNgayNghiCoPhep.Designer.cs">
-      <DependentUpon>tkSoNgayNghiCoPhep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKe\tkSoNgayNghiKhongPhep.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\tkSoNgayNghiKhongPhep.Designer.cs">
-      <DependentUpon>tkSoNgayNghiKhongPhep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKe\tkXemccTheoPhong.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\tkXemccTheoPhong.Designer.cs">
-      <DependentUpon>tkXemccTheoPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKe\tkXemccTheoTen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ThongKe\tkXemccTheoTen.Designer.cs">
-      <DependentUpon>tkXemccTheoTen.cs</DependentUpon>
-    </Compile>
     <Compile Include="tkCauLenh.cs" />
     <EmbeddedResource Include="CT\BaoHiem.resx">
       <DependentUpon>BaoHiem.cs</DependentUpon>
@@ -243,9 +189,6 @@
     <EmbeddedResource Include="CT\ThuongPhat.resx">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\TimTrenWeb.resx">
-      <DependentUpon>TimTrenWeb.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CT\TinhLuong.resx">
       <DependentUpon>TinhLuong.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,30 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CT\tkChamCong.resx">
       <DependentUpon>tkChamCong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\abc.resx">
-      <DependentUpon>abc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\tkNVNghiCoPhep.resx">
-      <DependentUpon>tkNVNghiCoPhep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\tkNVNghiTrongNgay.resx">
-      <DependentUpon>tkNVNghiTrongNgay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\tkSoNgayDiLam.resx">
-      <DependentUpon>tkSoNgayDiLam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\tkSoNgayNghiCoPhep.resx">
-      <DependentUpon>tkSoNgayNghiCoPhep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\tkSoNgayNghiKhongPhep.resx">
-      <DependentUpon>tkSoNgayNghiKhongPhep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\tkXemccTheoPhong.resx">
-      <DependentUpon>tkXemccTheoPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKe\tkXemccTheoTen.resx">
-      <DependentUpon>tkXemccTheoTen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

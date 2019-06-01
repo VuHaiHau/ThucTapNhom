@@ -151,11 +151,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(160, 79);
+            this.label17.Location = new System.Drawing.Point(134, 79);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 15);
+            this.label17.Size = new System.Drawing.Size(138, 15);
             this.label17.TabIndex = 9;
-            this.label17.Text = "label16";
+            this.label17.Text = "Hướng Dẫn Sử Dụng";
             // 
             // label16
             // 
@@ -181,6 +181,7 @@
             this.button20.Size = new System.Drawing.Size(70, 70);
             this.button20.TabIndex = 7;
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -189,6 +190,7 @@
             this.button21.Size = new System.Drawing.Size(70, 70);
             this.button21.TabIndex = 8;
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // tpQuanLy
             // 
@@ -502,7 +504,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 662);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.pnLoad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

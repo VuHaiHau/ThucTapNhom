@@ -46,8 +46,8 @@ namespace QuanLyNhanSu.CT
             dt2.Clear();
             dt2 = cl.LayPhuCap("0");
             dataGridView1.DataSource = dt2;
-            ThongKe.abc abc = new ThongKe.abc();
-            panel1.Controls.Add(abc);
+            
+           
             btLuu.Enabled = false;
             btXoa.Enabled = false;
             btSua.Enabled = false;

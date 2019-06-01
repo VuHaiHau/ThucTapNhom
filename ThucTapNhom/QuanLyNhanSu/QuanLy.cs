@@ -200,6 +200,30 @@ namespace QuanLyNhanSu
             pnLoad.Controls.Add(pc);
         }
 
+        private void button21_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("                               Thông Tin Nhà Phát Hành\n"
 
+       + "   Phần Mềm Được Thực Hiện Bởi Các Thành Viên Trong Nhóm Gồm: \n\n"
+       + "                                        1. Vũ Hải Hậu\n "
+       + "                                       2. Trần Hồng Dương\n"
+       + "                                        3. Đỗ Đăng Khải \n"
+       + "                                        4. Triệu Văn Linh \n"
+       + "                                        5. Nguyễn Quang Huy\n\n"
+       + "Ngày Phát Hành Phần Mềm: 14/05/2019\n"
+       + "Phần Mềm Quản Lý Kho Hàng Được Thiết Kế Đơn Giản Với Nhiều Chức Năng Chính Cơ Bản Giúp Người Sử Dụng Một Cách Dễ Dàng.", "Thông Tin",
+       MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("                               Hướng Dẫn Sử Dụng\n\n"
+
+    + " Phần mềm được thiết kế với tất cả chức năng nằm ở thanh Menu bên trên cùng.\n"
+    + "Ở mỗi giao diện chính nếu muốn trở lại hãy nhấn nút x ở trên cùng bên phải để trở lại.\n"
+    + "Chúng tôi rất vui khi bạn đã sử dụng phần mềm của chúng tôi.\n"
+    + "Chúc Bạn Làm Việc Hiệu Quả", "Hướng Dẫn",
+    MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
