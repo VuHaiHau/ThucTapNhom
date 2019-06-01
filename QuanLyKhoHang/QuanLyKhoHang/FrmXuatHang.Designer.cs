@@ -453,6 +453,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(589, 239);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
+          //  this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox3
             // 
@@ -601,6 +602,7 @@
             this.btnTimCT.TabIndex = 13;
             this.btnTimCT.Text = "Tìm kiếm";
             this.btnTimCT.UseVisualStyleBackColor = false;
+            this.btnTimCT.Click += new System.EventHandler(this.btnTimCT_Click);
             // 
             // FrmXuatHang
             // 

@@ -483,5 +483,28 @@ namespace QuanLyKhoHang
                 txtTimCT.Text = "Hãy nhập từ khóa tìm kiếm..";
             }
         }
+
+        private void btnTimCT_Click(object sender, EventArgs e)
+        {
+            string timkiem = txtTimCT.Text;
+            if (timkiem == "")
+            {
+                MessageBox.Show("Bạn chưa nhập vào ô tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                string sql = "select MAPX as N'Mã phiếu xuất',  sp.MASP as N'Mã sản phẩm',TENSP as N'Tên sản phẩm', ctp.DONGIAX as N'Đơn giá', ctp.SOLUONG as N'Số lượng' from CHITIETPHIEUXUAT ctp Left Outer Join SANPHAM sp on sp.MASP=ctp.MASP where (ctp.MAPX like N'%" + timkiem + "%'  or sp.MASP like N'%" + timkiem + "%' or TENSP like N'%" + timkiem + "%') group by MAPX,sp.MASP,TENSP,ctp.DONGIAX,ctp.SOLUONG";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, con);
+                con.Open();
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                con.Close();
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
+      
     }
 }
