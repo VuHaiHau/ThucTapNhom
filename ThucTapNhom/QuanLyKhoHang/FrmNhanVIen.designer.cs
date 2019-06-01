@@ -139,7 +139,7 @@
             // 
             // btn_timkiem
             // 
-            this.btn_timkiem.BackColor = System.Drawing.Color.White;
+            this.btn_timkiem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timkiem.ForeColor = System.Drawing.Color.Black;
             this.btn_timkiem.Location = new System.Drawing.Point(762, 182);
@@ -180,7 +180,7 @@
             // 
             // btn_ghinhan
             // 
-            this.btn_ghinhan.BackColor = System.Drawing.Color.White;
+            this.btn_ghinhan.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_ghinhan.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ghinhan.ForeColor = System.Drawing.Color.Black;
             this.btn_ghinhan.Location = new System.Drawing.Point(482, 182);
@@ -231,7 +231,7 @@
             // 
             // btn_file
             // 
-            this.btn_file.BackColor = System.Drawing.Color.White;
+            this.btn_file.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_file.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_file.ForeColor = System.Drawing.Color.Black;
             this.btn_file.Location = new System.Drawing.Point(914, 181);
@@ -244,7 +244,7 @@
             // 
             // btn_lammoi
             // 
-            this.btn_lammoi.BackColor = System.Drawing.Color.White;
+            this.btn_lammoi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_lammoi.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lammoi.ForeColor = System.Drawing.Color.Black;
             this.btn_lammoi.Location = new System.Drawing.Point(622, 182);
@@ -257,7 +257,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.BackColor = System.Drawing.Color.White;
+            this.btn_xoa.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_xoa.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoa.ForeColor = System.Drawing.Color.Black;
             this.btn_xoa.Location = new System.Drawing.Point(342, 182);
@@ -270,7 +270,7 @@
             // 
             // btn_sua
             // 
-            this.btn_sua.BackColor = System.Drawing.Color.White;
+            this.btn_sua.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_sua.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.ForeColor = System.Drawing.Color.Black;
             this.btn_sua.Location = new System.Drawing.Point(202, 182);
@@ -283,7 +283,7 @@
             // 
             // btn_them
             // 
-            this.btn_them.BackColor = System.Drawing.Color.White;
+            this.btn_them.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_them.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them.ForeColor = System.Drawing.Color.Black;
             this.btn_them.Location = new System.Drawing.Point(62, 182);

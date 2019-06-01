@@ -350,10 +350,7 @@ namespace QuanLyKhoHang
 
         
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            lbx_ngaythanglap.Text = DateTime.Now.ToString("dd/MM/yyyy - hh:mm:ss");
-        }
+      
 
         private void mnts_bcnv_Click(object sender, EventArgs e)
         {
@@ -499,7 +496,7 @@ namespace QuanLyKhoHang
 
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            SelectQuery = "Select N.MAPN as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], NCC.TENNHACC as [Nhà Cung Cấp], SP.GIA as [Giá], CTN.TONGTIEN as [Tổng Tiền], NV.TENNV as [Nhân Viên], N.NGAYNHAP as [Ngày Nhập] from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO  ";
+            SelectQuery = "Select N.MAPN as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], NCC.TENNHACC as [Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TONGTIEN=CTN.SOLUONG*DONGIAN, NV.TENNV as [Nhân Viên], N.NGAYNHAP as [Ngày Nhập] from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO  ";
 
             if (cbx_kho.Text != "")
                 FromQuery = FromQuery + " And " + "KHO.TENKHO like N'%" + cbx_kho.Text + "%'";
@@ -548,7 +545,7 @@ namespace QuanLyKhoHang
 
         private void btn_timkiemx_Click(object sender, EventArgs e)
         {
-            SelectQueryX = "Select X.MAPX as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], KH.TENKH as [Khách Hàng], SP.GIA as [Giá], CTX.TONGTIEN as [Tổng Tiền], NV.TENNV as [Nhân Viên], X.NGAYXUAT as [Ngày Xuất]  ";
+            SelectQueryX = "Select X.MAPX as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], KH.TENKH as [Khách Hàng], CTX.DONGIAX as [Đơn Giá], TongTien=CTX.SOLUONG*DONGIAX , NV.TENNV as [Nhân Viên], X.NGAYXUAT as [Ngày Xuất]  ";
             FromQueryX = "from PHIEUXUAT X, CHITIETPHIEUXUAT CTX, SANPHAM SP, KHACHHANG KH, NHANVIEN NV, KHOHANG KHO where X.MAPX = CTX.MAPX and CTX.MASP = SP.MASP and X.MAKH = KH.MAKH and X.NVXUAT = NV.MANV and X.MAKHO = KHO.MAKHO ";
 
             if (cbx_khox.Text != "")
@@ -627,6 +624,11 @@ namespace QuanLyKhoHang
             {
                 tbx_denngayx.Text = dpc_denngayx.Value.ToShortDateString();
             }
+        }
+
+        private void timer_Tick_1(object sender, EventArgs e)
+        {
+            lbx_ngaythanglap.Text = DateTime.Now.ToString("dd/MM/yyyy - hh:mm:ss");
         }
     }
 }

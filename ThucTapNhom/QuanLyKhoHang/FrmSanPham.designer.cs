@@ -101,7 +101,7 @@
             // 
             // btn_huynhap
             // 
-            this.btn_huynhap.BackColor = System.Drawing.Color.White;
+            this.btn_huynhap.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_huynhap.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huynhap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_huynhap.Location = new System.Drawing.Point(140, 102);
@@ -114,7 +114,7 @@
             // 
             // btn_ghinhan
             // 
-            this.btn_ghinhan.BackColor = System.Drawing.Color.White;
+            this.btn_ghinhan.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_ghinhan.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ghinhan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_ghinhan.Location = new System.Drawing.Point(13, 102);
@@ -127,7 +127,7 @@
             // 
             // btn_lammoi
             // 
-            this.btn_lammoi.BackColor = System.Drawing.Color.White;
+            this.btn_lammoi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_lammoi.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lammoi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_lammoi.Location = new System.Drawing.Point(268, 102);
@@ -140,7 +140,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.BackColor = System.Drawing.Color.White;
+            this.btn_xoa.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_xoa.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_xoa.Location = new System.Drawing.Point(268, 23);
@@ -153,7 +153,7 @@
             // 
             // btn_chophepsua
             // 
-            this.btn_chophepsua.BackColor = System.Drawing.Color.White;
+            this.btn_chophepsua.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_chophepsua.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_chophepsua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_chophepsua.Location = new System.Drawing.Point(140, 23);
@@ -166,7 +166,7 @@
             // 
             // btn_themmoi
             // 
-            this.btn_themmoi.BackColor = System.Drawing.Color.White;
+            this.btn_themmoi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_themmoi.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_themmoi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_themmoi.Location = new System.Drawing.Point(13, 23);
@@ -280,7 +280,7 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(1128, 157);
             this.button8.Name = "button8";
@@ -393,7 +393,7 @@
             // 
             // btn_timkiem
             // 
-            this.btn_timkiem.BackColor = System.Drawing.Color.White;
+            this.btn_timkiem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_timkiem.Location = new System.Drawing.Point(1102, 19);

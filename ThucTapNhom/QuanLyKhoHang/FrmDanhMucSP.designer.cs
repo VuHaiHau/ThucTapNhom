@@ -66,7 +66,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.Location = new System.Drawing.Point(485, 127);
@@ -79,7 +79,7 @@
             // 
             // btn_ghinhan
             // 
-            this.btn_ghinhan.BackColor = System.Drawing.Color.White;
+            this.btn_ghinhan.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_ghinhan.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ghinhan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_ghinhan.Location = new System.Drawing.Point(367, 127);
@@ -92,7 +92,7 @@
             // 
             // bt_xoa
             // 
-            this.bt_xoa.BackColor = System.Drawing.Color.White;
+            this.bt_xoa.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_xoa.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_xoa.Location = new System.Drawing.Point(249, 127);
@@ -113,7 +113,7 @@
             // 
             // bt_chophepsua
             // 
-            this.bt_chophepsua.BackColor = System.Drawing.Color.White;
+            this.bt_chophepsua.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_chophepsua.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_chophepsua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_chophepsua.Location = new System.Drawing.Point(131, 127);
@@ -136,7 +136,7 @@
             // 
             // bt_them
             // 
-            this.bt_them.BackColor = System.Drawing.Color.White;
+            this.bt_them.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_them.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_them.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_them.Location = new System.Drawing.Point(13, 127);
@@ -231,7 +231,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(721, 127);
             this.button1.Name = "button1";
@@ -243,7 +243,7 @@
             // 
             // btn_Timkiem
             // 
-            this.btn_Timkiem.BackColor = System.Drawing.Color.White;
+            this.btn_Timkiem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_Timkiem.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Timkiem.Location = new System.Drawing.Point(603, 127);
             this.btn_Timkiem.Name = "btn_Timkiem";

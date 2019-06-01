@@ -117,7 +117,7 @@
             // 
             // btn_huyx
             // 
-            this.btn_huyx.BackColor = System.Drawing.Color.White;
+            this.btn_huyx.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_huyx.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huyx.Location = new System.Drawing.Point(737, 65);
             this.btn_huyx.Name = "btn_huyx";
@@ -136,7 +136,7 @@
             // 
             // btn_xemtatcax
             // 
-            this.btn_xemtatcax.BackColor = System.Drawing.Color.White;
+            this.btn_xemtatcax.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_xemtatcax.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xemtatcax.Location = new System.Drawing.Point(614, 65);
             this.btn_xemtatcax.Name = "btn_xemtatcax";
@@ -148,7 +148,7 @@
             // 
             // btn_timkiemx
             // 
-            this.btn_timkiemx.BackColor = System.Drawing.Color.White;
+            this.btn_timkiemx.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_timkiemx.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timkiemx.Location = new System.Drawing.Point(509, 65);
             this.btn_timkiemx.Name = "btn_timkiemx";
@@ -322,7 +322,7 @@
             // 
             // btn_huy
             // 
-            this.btn_huy.BackColor = System.Drawing.Color.White;
+            this.btn_huy.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_huy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.Location = new System.Drawing.Point(721, 65);
             this.btn_huy.Name = "btn_huy";
@@ -341,7 +341,7 @@
             // 
             // btn_xemtat
             // 
-            this.btn_xemtat.BackColor = System.Drawing.Color.White;
+            this.btn_xemtat.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_xemtat.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xemtat.Location = new System.Drawing.Point(599, 65);
             this.btn_xemtat.Name = "btn_xemtat";
@@ -353,7 +353,7 @@
             // 
             // btn_timkiem
             // 
-            this.btn_timkiem.BackColor = System.Drawing.Color.White;
+            this.btn_timkiem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timkiem.Location = new System.Drawing.Point(484, 65);
             this.btn_timkiem.Name = "btn_timkiem";
@@ -513,7 +513,7 @@
             // 
             // btn_xembc
             // 
-            this.btn_xembc.BackColor = System.Drawing.Color.White;
+            this.btn_xembc.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_xembc.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xembc.Location = new System.Drawing.Point(715, 228);
             this.btn_xembc.Name = "btn_xembc";
@@ -562,7 +562,7 @@
             // 
             // btn_xembaocaox
             // 
-            this.btn_xembaocaox.BackColor = System.Drawing.Color.White;
+            this.btn_xembaocaox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_xembaocaox.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xembaocaox.Location = new System.Drawing.Point(715, 235);
             this.btn_xembaocaox.Name = "btn_xembaocaox";
@@ -737,9 +737,13 @@
             this.lbx_tennv.Text = "Họ Tên";
             this.lbx_tennv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbx_tennv_LinkClicked_1);
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick_1);
+            // 
             // btn_huythaotac
             // 
-            this.btn_huythaotac.BackColor = System.Drawing.Color.White;
+            this.btn_huythaotac.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_huythaotac.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huythaotac.Location = new System.Drawing.Point(738, 468);
             this.btn_huythaotac.Name = "btn_huythaotac";

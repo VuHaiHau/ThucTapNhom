@@ -73,7 +73,7 @@
             // 
             // btn_huy
             // 
-            this.btn_huy.BackColor = System.Drawing.Color.White;
+            this.btn_huy.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_huy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.Location = new System.Drawing.Point(192, 235);
             this.btn_huy.Name = "btn_huy";
@@ -85,7 +85,7 @@
             // 
             // btn_dmk
             // 
-            this.btn_dmk.BackColor = System.Drawing.Color.White;
+            this.btn_dmk.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_dmk.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dmk.Location = new System.Drawing.Point(84, 235);
             this.btn_dmk.Name = "btn_dmk";

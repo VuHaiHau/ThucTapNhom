@@ -75,7 +75,7 @@
             // 
             // btn_ghinhan
             // 
-            this.btn_ghinhan.BackColor = System.Drawing.Color.White;
+            this.btn_ghinhan.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_ghinhan.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ghinhan.Location = new System.Drawing.Point(382, 132);
             this.btn_ghinhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -88,7 +88,7 @@
             // 
             // bt_lammoi
             // 
-            this.bt_lammoi.BackColor = System.Drawing.Color.White;
+            this.bt_lammoi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_lammoi.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_lammoi.Location = new System.Drawing.Point(500, 131);
             this.bt_lammoi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -101,7 +101,7 @@
             // 
             // bt_xoa
             // 
-            this.bt_xoa.BackColor = System.Drawing.Color.White;
+            this.bt_xoa.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_xoa.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_xoa.Location = new System.Drawing.Point(264, 132);
             this.bt_xoa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -114,7 +114,7 @@
             // 
             // bt_Sua
             // 
-            this.bt_Sua.BackColor = System.Drawing.Color.White;
+            this.bt_Sua.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_Sua.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Sua.Location = new System.Drawing.Point(146, 132);
             this.bt_Sua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -135,7 +135,7 @@
             // 
             // bt_them
             // 
-            this.bt_them.BackColor = System.Drawing.Color.White;
+            this.bt_them.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_them.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_them.Location = new System.Drawing.Point(28, 132);
             this.bt_them.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -156,7 +156,7 @@
             // 
             // bt_timkiem
             // 
-            this.bt_timkiem.BackColor = System.Drawing.Color.White;
+            this.bt_timkiem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bt_timkiem.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_timkiem.Location = new System.Drawing.Point(618, 131);
             this.bt_timkiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

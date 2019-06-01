@@ -230,7 +230,7 @@
             // 
             // inPhieu
             // 
-            this.inPhieu.BackColor = System.Drawing.Color.White;
+            this.inPhieu.BackColor = System.Drawing.SystemColors.ControlLight;
             this.inPhieu.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inPhieu.Location = new System.Drawing.Point(409, 204);
             this.inPhieu.Name = "inPhieu";
@@ -353,7 +353,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(409, 263);
             this.button4.Name = "button4";
@@ -372,7 +372,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(409, 142);
             this.button3.Name = "button3";
@@ -384,7 +384,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(409, 84);
             this.button2.Name = "button2";
@@ -396,7 +396,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(409, 26);
             this.button1.Name = "button1";
@@ -475,7 +475,7 @@
             // 
             // btnSuaCT
             // 
-            this.btnSuaCT.BackColor = System.Drawing.Color.White;
+            this.btnSuaCT.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnSuaCT.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaCT.Location = new System.Drawing.Point(436, 90);
             this.btnSuaCT.Name = "btnSuaCT";
@@ -520,7 +520,7 @@
             // 
             // btnTimCT
             // 
-            this.btnTimCT.BackColor = System.Drawing.Color.White;
+            this.btnTimCT.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnTimCT.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimCT.Location = new System.Drawing.Point(436, 263);
             this.btnTimCT.Name = "btnTimCT";
@@ -532,7 +532,7 @@
             // 
             // btnXoaCT
             // 
-            this.btnXoaCT.BackColor = System.Drawing.Color.White;
+            this.btnXoaCT.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnXoaCT.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaCT.Location = new System.Drawing.Point(436, 152);
             this.btnXoaCT.Name = "btnXoaCT";
@@ -544,7 +544,7 @@
             // 
             // btnThemCT
             // 
-            this.btnThemCT.BackColor = System.Drawing.Color.White;
+            this.btnThemCT.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnThemCT.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemCT.Location = new System.Drawing.Point(436, 26);
             this.btnThemCT.Name = "btnThemCT";

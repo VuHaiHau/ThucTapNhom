@@ -122,7 +122,7 @@
             // 
             // btn_huy
             // 
-            this.btn_huy.BackColor = System.Drawing.Color.White;
+            this.btn_huy.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_huy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.Location = new System.Drawing.Point(244, 192);
             this.btn_huy.Name = "btn_huy";
@@ -134,7 +134,7 @@
             // 
             // btn_dq
             // 
-            this.btn_dq.BackColor = System.Drawing.Color.White;
+            this.btn_dq.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_dq.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dq.Location = new System.Drawing.Point(130, 192);
             this.btn_dq.Name = "btn_dq";
