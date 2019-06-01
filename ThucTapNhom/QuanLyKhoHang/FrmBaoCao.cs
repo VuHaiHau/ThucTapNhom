@@ -52,15 +52,8 @@ namespace QuanLyKhoHang
             tbx_ngaynhap.Enabled = false;
             tbx_tungay.Enabled = false;
             tbx_denngay.Enabled = false;
-            btn_huythaotac.Enabled = true;
-            //dgv_thongkenhap.Columns["MAPN"].HeaderText = "Mã Phiếu Nhập";
-            //dgv_thongkenhap.Columns["TENKHO"].HeaderText = "Tên Kho";
-            //dgv_thongkenhap.Columns["TENSP"].HeaderText = "Tên Sản Phẩm";
-            //dgv_thongkenhap.Columns["TENNHACC"].HeaderText = "Tên Nhà Cung Cấp";
-            //dgv_thongkenhap.Columns["DONGIA"].HeaderText = "Đơn Giá";
-            //dgv_thongkenhap.Columns["TONGTIEN"].HeaderText = "Tổng Tiền";
-            //dgv_thongkenhap.Columns["TENNV"].HeaderText = "Tên Nhân Viên";
-            //dgv_thongkenhap.Columns["NGAYNHAP"].HeaderText = "Ngày Nhập";
+           btn_huythaotac.Enabled = true;
+            
             // Dành Cho Xuất
 
             AutoCompletecbx(cbx_khox, "Select TENKHO from KHOHANG", "TENKHO");
@@ -69,8 +62,8 @@ namespace QuanLyKhoHang
             AutoCompletecbx(cbx_nvx, "Select TENNV from NHANVIEN", "TENNV");
             AutoCompletecbx(cbx_giax, "Select GIA from SANPHAM", "GIA");
             tbx_denngayx.Enabled = false;
-            //dpc_denngay.Enabled = false;
-            //dpc_denngayx.Enabled = false;
+            dpc_denngay.Enabled = false;
+            dpc_denngayx.Enabled = false;
             tbx_tungayx.Enabled = false;
             tbx_ngayxuatx.Enabled = false;
             btn_huythaotac.Enabled = true;
@@ -408,7 +401,8 @@ namespace QuanLyKhoHang
 
         private void btn_xembaocaox_Click_1(object sender, EventArgs e)
         {
-            BaoCaoX_F m=new BaoCaoX_F();
+           
+           BaoCaoX_F m=new BaoCaoX_F();
             m.ShowDialog();
         }
 
@@ -508,7 +502,7 @@ namespace QuanLyKhoHang
                 FromQuery = FromQuery + "And " + "NCC.TENNHACC like N'%" + cbx_ncc.Text + "%'";
 
             if (cbx_giasp.Text != "")
-                FromQuery = FromQuery + "And " + "SP.GIA like N'%" + cbx_giasp.Text + "%'";
+                FromQuery = FromQuery + "And " + "DONGIAN like N'%" + cbx_giasp.Text + "%'";
 
             if (cbx_nv.Text != "")
                 FromQuery = FromQuery + "And " + "NV.TENNV like N'%" + cbx_nv.Text + "%'";
@@ -558,7 +552,7 @@ namespace QuanLyKhoHang
                 FromQueryX = FromQueryX + "And " + "KH.TENKH like N'%" + cbx_khachhangx.Text + "%' ";
 
             if (cbx_giax.Text != "")
-                FromQueryX = FromQueryX + "And " + "SP.GIA like N'%" + cbx_giax.Text + "%' ";
+                FromQueryX = FromQueryX + "And " + "DONGIAX like N'%" + cbx_giax.Text + "%' ";
 
             if (cbx_nvx.Text != "")
                 FromQueryX = FromQueryX + "And " + "NV.TENNV like N'%" + cbx_nvx.Text + "%' ";
@@ -596,34 +590,34 @@ namespace QuanLyKhoHang
 
         private void dpc_tungayx_ValueChanged_1(object sender, EventArgs e)
         {
-            dpc_ngayxuat.Enabled = false;
-            kiemtrangaythangnamx();
-            if (keyx == 1 || keyx == 2 || keyx == 3 || keyx == 4)
-            {
-                tbx_tungayx.Clear();
-                dpc_tungayx.Value = DateTime.Now;
-                keyx = 0;
-            }
-            else
-            {
-                tbx_tungayx.Text = dpc_tungayx.Value.ToShortDateString();
-            }
+            //dpc_ngayxuat.Enabled = false;
+            //kiemtrangaythangnamx();
+            //if (keyx == 1 || keyx == 2 || keyx == 3 || keyx == 4)
+            //{
+            //    tbx_tungayx.Clear();
+            //    dpc_tungayx.Value = DateTime.Now;
+            //    keyx = 0;
+            //}
+            //else
+            //{
+            //    tbx_tungayx.Text = dpc_tungayx.Value.ToShortDateString();
+            //}
         }
 
         private void dpc_denngayx_ValueChanged_1(object sender, EventArgs e)
         {
-            dpc_ngayxuat.Enabled = false;
-            kiemtrangaythangnamx();
-            if (keyx == 1 || keyx == 2 || keyx == 3 || keyx == 4)
-            {
-                tbx_denngayx.Clear();
-                dpc_denngayx.Value = DateTime.Now;
-                keyx = 0;
-            }
-            else
-            {
-                tbx_denngayx.Text = dpc_denngayx.Value.ToShortDateString();
-            }
+            //dpc_ngayxuat.Enabled = false;
+            //kiemtrangaythangnamx();
+            //if (keyx == 1 || keyx == 2 || keyx == 3 || keyx == 4)
+            //{
+            //    tbx_denngayx.Clear();
+            //    dpc_denngayx.Value = DateTime.Now;
+            //    keyx = 0;
+            //}
+            //else
+            //{
+            //    tbx_denngayx.Text = dpc_denngayx.Value.ToShortDateString();
+            //}
         }
 
         private void timer_Tick_1(object sender, EventArgs e)
