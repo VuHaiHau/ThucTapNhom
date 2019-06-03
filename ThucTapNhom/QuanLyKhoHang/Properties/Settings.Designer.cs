@@ -26,20 +26,20 @@ namespace QuanLyKhoHang.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3SFFPGN\\HAUMTA;Initial Catalog=QLKH;Integrated Security=True")]
-        public string QLKHConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3SFFPGN\\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True")]
+        public string QuanLyKhoHangConnectionString {
             get {
-                return ((string)(this["QLKHConnectionString"]));
+                return ((string)(this["QuanLyKhoHangConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3SFFPGN\\HAUMTA;Initial Catalog=QLKH;Integrated Security=True")]
-        public string QLKHConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3SFFPGN\\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True")]
+        public string QuanLyKhoHangConnectionString1 {
             get {
-                return ((string)(this["QLKHConnectionString1"]));
+                return ((string)(this["QuanLyKhoHangConnectionString1"]));
             }
         }
     }

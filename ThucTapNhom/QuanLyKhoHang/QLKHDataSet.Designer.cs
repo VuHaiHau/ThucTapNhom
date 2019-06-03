@@ -20,9 +20,9 @@ namespace QuanLyKhoHang {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("QLKHDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("QuanLyKhoHangDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class QLKHDataSet : global::System.Data.DataSet {
+    public partial class QuanLyKhoHangDataSet : global::System.Data.DataSet {
         
         private HOADONMUAHANGDataTable tableHOADONMUAHANG;
         
@@ -30,7 +30,7 @@ namespace QuanLyKhoHang {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public QLKHDataSet() {
+        public QuanLyKhoHangDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace QuanLyKhoHang {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected QLKHDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected QuanLyKhoHangDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace QuanLyKhoHang {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            QLKHDataSet cln = ((QLKHDataSet)(base.Clone()));
+            QuanLyKhoHangDataSet cln = ((QuanLyKhoHangDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace QuanLyKhoHang {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "QLKHDataSet";
+            this.DataSetName = "QuanLyKhoHangDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/QLKHDataSet.xsd";
+            this.Namespace = "http://tempuri.org/QuanLyKhoHangDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableHOADONMUAHANG = new HOADONMUAHANGDataTable();
@@ -225,7 +225,7 @@ namespace QuanLyKhoHang {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            QLKHDataSet ds = new QLKHDataSet();
+            QuanLyKhoHangDataSet ds = new QuanLyKhoHangDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -561,7 +561,7 @@ namespace QuanLyKhoHang {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QLKHDataSet ds = new QLKHDataSet();
+                QuanLyKhoHangDataSet ds = new QuanLyKhoHangDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -832,7 +832,7 @@ namespace QuanLyKhoHang {
         }
     }
 }
-namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
+namespace QuanLyKhoHang.QuanLyKhoHangDataSetTableAdapters {
     
     
     /// <summary>
@@ -970,7 +970,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyKhoHang.Properties.Settings.Default.QLKHConnectionString1;
+            this._connection.ConnectionString = global::QuanLyKhoHang.Properties.Settings.Default.QuanLyKhoHangConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -989,7 +989,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QLKHDataSet.HOADONMUAHANGDataTable dataTable, string MAPN) {
+        public virtual int Fill(QuanLyKhoHangDataSet.HOADONMUAHANGDataTable dataTable, string MAPN) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((MAPN == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1008,7 +1008,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QLKHDataSet.HOADONMUAHANGDataTable GetData(string MAPN) {
+        public virtual QuanLyKhoHangDataSet.HOADONMUAHANGDataTable GetData(string MAPN) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((MAPN == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1016,7 +1016,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MAPN));
             }
-            QLKHDataSet.HOADONMUAHANGDataTable dataTable = new QLKHDataSet.HOADONMUAHANGDataTable();
+            QuanLyKhoHangDataSet.HOADONMUAHANGDataTable dataTable = new QuanLyKhoHangDataSet.HOADONMUAHANGDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1090,7 +1090,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(QLKHDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(QuanLyKhoHangDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1100,7 +1100,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(QLKHDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(QuanLyKhoHangDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1110,7 +1110,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(QLKHDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(QuanLyKhoHangDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1144,7 +1144,7 @@ namespace QuanLyKhoHang.QLKHDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(QLKHDataSet dataSet) {
+        public virtual int UpdateAll(QuanLyKhoHangDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

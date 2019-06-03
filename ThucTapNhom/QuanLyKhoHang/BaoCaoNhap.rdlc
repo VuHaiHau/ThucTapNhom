@@ -1176,14 +1176,14 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="QLKH">
+    <DataSource Name="QuanLyKhoHang">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>8be93e58-2f64-4b96-9576-39e33ed03e3d</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="QLKHDataSet">
+    <DataSource Name="QuanLyKhoHangDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>

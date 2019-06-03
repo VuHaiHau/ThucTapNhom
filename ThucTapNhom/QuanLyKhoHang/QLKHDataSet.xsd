@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="QLKHDataSet" targetNamespace="http://tempuri.org/QLKHDataSet.xsd" xmlns:mstns="http://tempuri.org/QLKHDataSet.xsd" xmlns="http://tempuri.org/QLKHDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="QuanLyKhoHangDataSet" targetNamespace="http://tempuri.org/QuanLyKhoHangDataSet.xsd" xmlns:mstns="http://tempuri.org/QuanLyKhoHangDataSet.xsd" xmlns="http://tempuri.org/QuanLyKhoHangDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLKHConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLKHConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyKhoHang.Properties.Settings.GlobalReference.Default.QLKHConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyKhoHangConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyKhoHangConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyKhoHang.Properties.Settings.GlobalReference.Default.QuanLyKhoHangConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HOADONMUAHANGTableAdapter" GeneratorDataComponentClassName="HOADONMUAHANGTableAdapter" Name="HOADONMUAHANG" UserDataComponentName="HOADONMUAHANGTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QLKHConnectionString1 (Settings)" DbObjectName="QLKH.dbo.HOADONMUAHANG" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QuanLyKhoHangConnectionString1 (Settings)" DbObjectName="QuanLyKhoHang.dbo.HOADONMUAHANG" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.HOADONMUAHANG</CommandText>
@@ -37,7 +37,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="QLKHDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLKHDataSet" msprop:Generator_UserDSName="QLKHDataSet">
+  <xs:element name="QuanLyKhoHangDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QuanLyKhoHangDataSet" msprop:Generator_UserDSName="QuanLyKhoHangDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="HOADONMUAHANG" msprop:Generator_TableClassName="HOADONMUAHANGDataTable" msprop:Generator_TableVarName="tableHOADONMUAHANG" msprop:Generator_TablePropName="HOADONMUAHANG" msprop:Generator_RowDeletingName="HOADONMUAHANGRowDeleting" msprop:Generator_RowChangingName="HOADONMUAHANGRowChanging" msprop:Generator_RowEvHandlerName="HOADONMUAHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="HOADONMUAHANGRowDeleted" msprop:Generator_UserTableName="HOADONMUAHANG" msprop:Generator_RowChangedName="HOADONMUAHANGRowChanged" msprop:Generator_RowEvArgName="HOADONMUAHANGRowChangeEvent" msprop:Generator_RowClassName="HOADONMUAHANGRow">

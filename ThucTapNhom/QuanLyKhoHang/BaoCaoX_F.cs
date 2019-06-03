@@ -33,7 +33,7 @@ namespace QuanLyKhoHang
         {
 
             SqlConnection con = new SqlConnection();
-            string sql = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+            string sql = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             con.ConnectionString = sql;
             con.Open();
             SqlCommand cmd = new SqlCommand();

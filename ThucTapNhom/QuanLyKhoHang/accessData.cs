@@ -19,7 +19,7 @@ namespace QuanLyKhoHang
         // Chuỗi Kết Nối
         public void getconnection()
         {
-            string sql = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+            string sql = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             con = new SqlConnection(sql);
         }
 

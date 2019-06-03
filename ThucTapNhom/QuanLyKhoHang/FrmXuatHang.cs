@@ -43,7 +43,7 @@ namespace QuanLyKhoHang
 
 
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             string sql = "select MAPX as N'Mã phiếu xuất',  sp.MASP as N'Mã sản phẩm',TENSP as N'Tên sản phẩm', ctp.DONGIAX as N'Đơn giá', ctp.SOLUONG as N'Số lượng' from ChiTietPhieuXuat ctp, SanPham sp where  ctp.MASP=sp.MASP";
             SqlDataAdapter dt = new SqlDataAdapter(sql, con);
             con.Open();
@@ -80,7 +80,7 @@ namespace QuanLyKhoHang
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 string sql = "update PHIEUNHAPKHO set MAKHO = N'" + idLP + "', NVNHAP = N'" + idNV + "', NGAYNHAP = N'" + ngayN + "',MANCC = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPN = N'" + idPN + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
@@ -106,7 +106,7 @@ namespace QuanLyKhoHang
             textBox1.Text = "";
             cbNCCCT.Text = "";
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             string sql = "select pnx.MAPX as N'Mã phiếu xuất', MAKHO as N'Mã kho', NVXUAT as N'Mã nhân viên', NGAYXUAT as N'Ngày xuất', sum(DONGIAX*SOLUONG) as N'Tổng tiền',MAKH as [Khách Hàng], GHICHU as N'Ghi chú' from PHIEUXUAT pnx Left Outer Join CHITIETPHIEUXUAT ctp on pnx.MAPX=ctp.MAPX group by pnx.MAPX, MAKHO, NVXUAT, NGAYXUAT,MAKH, GHICHU";
             SqlDataAdapter dt = new SqlDataAdapter(sql, con);
             con.Open();
@@ -133,7 +133,7 @@ namespace QuanLyKhoHang
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 DataTable dt = new DataTable();
                 string sql = "select MAPX, MAKHO, NVXUAT, NGAYXUAT, GHICHU from PHIEUXUAT where MAPX = '" + idPN + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -173,7 +173,7 @@ namespace QuanLyKhoHang
         private void FrmXuatHang_Load(object sender, EventArgs e)
         {
             SqlConnection con1 = new SqlConnection();
-            con1.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+            con1.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             con1.Open();
             string sql1 = "select pnx.MAPX as N'Mã phiếu xuất', MAKHO as N'Mã kho', NVXUAT as N'Mã nhân viên', NGAYXUAT as N'Ngày xuất', sum(DONGIAX*SOLUONG) as N'Tổng tiền',MAKH as [Khách Hàng], GHICHU as N'Ghi chú' from PHIEUXUAT pnx Left Outer Join CHITIETPHIEUXUAT ctp on pnx.MAPX=ctp.MAPX group by pnx.MAPX, MAKHO, NVXUAT, NGAYXUAT,MAKH, GHICHU";
             DataSet ds1 = new DataSet();
@@ -184,7 +184,7 @@ namespace QuanLyKhoHang
             accessData acc = new accessData();
 
             SqlConnection con4 = new SqlConnection();
-            con4.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+            con4.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             con4.Open();
             string sql4 = "select MAPX as N'Mã phiếu xuất',  sp.MASP as N'Mã sản phẩm',TENSP as N'Tên sản phẩm', ctp.DONGIAX as N'Đơn giá', ctp.SOLUONG as N'Số lượng' from ChiTietPhieuXuat ctp, SanPham sp where  ctp.MASP=sp.MASP ";
             DataSet ds2 = new DataSet();
@@ -225,7 +225,7 @@ namespace QuanLyKhoHang
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 string sql = "update PHIEUXUAT set MAKHO = N'" + idLP + "', NVXUAT = N'" + idNV + "', NGAYXUAT = N'" + ngayN + "',MAKH = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPX = N'" + idPN + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
@@ -248,7 +248,7 @@ namespace QuanLyKhoHang
                 if (MessageBox.Show("Bạn chắc chắn muốn xóa phiếu nhập này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     SqlConnection con = new SqlConnection();
-                    con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                    con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                     string idPN = txtMaPN.Text;
                     string sql = "delete CHITIETPHIEUXUAT where MAPX = '" + idPN + "' DELETE PHIEUXUAT where MAPX = '" + idPN + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
@@ -272,7 +272,7 @@ namespace QuanLyKhoHang
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 string sql = "select pnx.MAPX as N'Mã phiếu xuất', MAKHO as N'Mã kho', NVXUAT as N'Mã nhân viên', NGAYXUAT as N'Ngày xuất', sum(DONGIAX*SOLUONG) as N'Tổng tiền',MAKH as N'Mã Khách Hàng', GHICHU as N'Ghi chú' from PHIEUXUAT pnx Left Outer Join CHITIETPHIEUXUAT ctp on pnx.MAPX=ctp.MAPX where (pnx.MAPX like N'%" + timkiem + "%' or NVXUAT like N'%" + timkiem + "%' or MAKHO like N'%" + timkiem + "%') group by pnx.MAPX, MAKHO, NVXUAT, NGAYXUAT,MAKH, GHICHU";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, con);
                 con.Open();
@@ -288,8 +288,8 @@ namespace QuanLyKhoHang
             txtMaPNCT.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             cbNLKCT.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
 
-            txtDGNCT.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtSLCT.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtDGNCT.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtSLCT.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void inPhieu_Click_1(object sender, EventArgs e)
@@ -336,7 +336,7 @@ namespace QuanLyKhoHang
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 DataTable dt = new DataTable();
                 string sql = "select * from ChiTietPhieuXuat where MAPX = '" + idPNCT + "' and MASP = '" + idNLKCT + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -376,7 +376,7 @@ namespace QuanLyKhoHang
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 DataTable dt = new DataTable();
                 string sql = "select * from ChiTietPhieuXuat where MAPX = '" + idPNCT + "' and MASP = '" + idNLKCT + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -391,7 +391,7 @@ namespace QuanLyKhoHang
                 else
                 {
                     SqlConnection con1 = new SqlConnection();
-                    con1.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                    con1.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                     string sql1 = "update ChiTietPhieuXuat set MASP = N'" + idNLKCT + "', DONGIAX = " + dg + ", SOLUONG = " + sl + " where MAPX = N'" + idPNCT + "' and MASP = N'" + idNLKCT + "'";
                     SqlCommand cmd1 = new SqlCommand(sql1, con1);
                     con1.Open();
@@ -417,7 +417,7 @@ namespace QuanLyKhoHang
                 if (MessageBox.Show("Bạn chắc chắn muốn xóa nguyên liệu này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     SqlConnection con = new SqlConnection();
-                    con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                    con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                     string idPNCT = txtMaPNCT.Text;
                     string sql = "delete ChiTietPhieuXuat where MAPX = '" + idPNCT + "' and MASP = '" + idNCC + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
@@ -494,7 +494,7 @@ namespace QuanLyKhoHang
             else
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QLKH;Integrated Security=True";
+                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 string sql = "select MAPX as N'Mã phiếu xuất',  sp.MASP as N'Mã sản phẩm',TENSP as N'Tên sản phẩm', ctp.DONGIAX as N'Đơn giá', ctp.SOLUONG as N'Số lượng' from CHITIETPHIEUXUAT ctp Left Outer Join SANPHAM sp on sp.MASP=ctp.MASP where (ctp.MAPX like N'%" + timkiem + "%'  or sp.MASP like N'%" + timkiem + "%' or TENSP like N'%" + timkiem + "%') group by MAPX,sp.MASP,TENSP,ctp.DONGIAX,ctp.SOLUONG";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, con);
                 con.Open();
