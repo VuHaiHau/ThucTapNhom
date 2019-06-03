@@ -184,6 +184,8 @@ namespace QuanLyKhoHang
             btn_chophepsua.Enabled = false;
             btn_ghinhan.Enabled = true;
             key = 2;
+            dtpicker_nsx.Text = DateTime.Now.ToShortDateString();
+            dtpicker_hsd.Text = DateTime.Now.ToShortDateString();
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)

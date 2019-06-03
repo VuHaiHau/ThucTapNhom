@@ -70,7 +70,7 @@ namespace QuanLyKhoHang
             string idLP = cbLP.Text.Trim();
             string idNV = cbNV.Text.Trim();
             string idNCC = cbNCCCT.Text.Trim();
-            DateTime ngayN = dtNgayN.Value;
+            //DateTime ngayN = dtNgayN.Value;
             string gc = textBox1.Text.Trim();
             if (idPN == "")
             {
@@ -81,7 +81,7 @@ namespace QuanLyKhoHang
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                string sql = "update PHIEUNHAPKHO set MAKHO = N'" + idLP + "', NVNHAP = N'" + idNV + "', NGAYNHAP = N'" + ngayN + "',MANCC = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPN = N'" + idPN + "'";
+                string sql = "update PHIEUNHAPKHO set MAKHO = N'" + idLP + "', NVNHAP = N'" + idNV + "', NGAYNHAP = N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',MANCC = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPN = N'" + idPN + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -104,7 +104,7 @@ namespace QuanLyKhoHang
             txtMaPN.Text = "";
             cbLP.Text = "";
             cbNV.Text = "";
-            dtNgayN.Value = DateTime.Now;
+            
             txtTongTien.Text = "";
             textBox1.Text = "";
             cbNCCCT.Text = "";
@@ -151,7 +151,7 @@ namespace QuanLyKhoHang
             string idLP = cbLP.Text.Trim();
             string idNV = cbNV.Text.Trim();
             string idNCC = cbNCCCT.Text.Trim();
-            DateTime ngayN = dtNgayN.Value;
+           // DateTime ngayN = dtNgayN.Value;
             string gc = textBox1.Text.Trim();
             if (idPN == "")
             {
@@ -174,7 +174,7 @@ namespace QuanLyKhoHang
                 }
                 else
                 {
-                    string sql2 = "INSERT into PHIEUNHAPKHO VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + ngayN + "',N'" + idNCC + "', N'" + gc + "')";
+                    string sql2 = "INSERT into PHIEUNHAPKHO VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',N'" + idNCC + "', N'" + gc + "')";
                     SqlCommand cmd2 = new SqlCommand(sql2, con);
                     con.Open();
                     cmd2.ExecuteNonQuery();
@@ -208,7 +208,7 @@ namespace QuanLyKhoHang
             dtgrPN.DataSource = ds1.Tables[0];
             dtgrPN.Refresh();
             accessData acc = new accessData();
-
+            DateTime.Parse(dtNgayN.Text.ToString());
             SqlConnection con4 = new SqlConnection();
             con4.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             con4.Open();
@@ -265,7 +265,7 @@ namespace QuanLyKhoHang
             string idLP = cbLP.Text.Trim();
             string idNV = cbNV.Text.Trim();
             string idNCC = cbNCCCT.Text.Trim();
-            DateTime ngayN = dtNgayN.Value;
+           // DateTime ngayN = dtNgayN.Value;
             string gc = textBox1.Text.Trim();
             if (idPN == "")
             {
@@ -276,7 +276,7 @@ namespace QuanLyKhoHang
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                string sql = "update PHIEUNHAPKHO set MAKHO = N'" + idLP + "', NVNHAP = N'" + idNV + "', NGAYNHAP = N'" + ngayN + "',MANCC = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPN = N'" + idPN + "'";
+                string sql = "update PHIEUNHAPKHO set MAKHO = N'" + idLP + "', NVNHAP = N'" + idNV + "', NGAYNHAP = N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',MANCC = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPN = N'" + idPN + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
