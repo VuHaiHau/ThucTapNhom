@@ -401,13 +401,29 @@ namespace QuanLyKhoHang
 
         private void btn_xembaocaox_Click_1(object sender, EventArgs e)
         {
-           
-           BaoCaoX_F m=new BaoCaoX_F();
+            BaoCaoX_F.TenKho = cbx_khox.Text;
+            BaoCaoX_F.TenNcc_Kh = cbx_khachhangx.Text;
+            BaoCaoX_F.TenNv = cbx_nvx.Text;
+            BaoCaoX_F.TenSp = cbx_spx.Text;
+            BaoCaoX_F.TuNgay = tbx_tungayx.Text;
+            BaoCaoX_F.NgayNh_Xu = tbx_ngayxuatx.Text;
+            BaoCaoX_F.DenNgay = tbx_denngayx.Text;
+            BaoCaoX_F.Gia = cbx_giax.Text;
+
+            BaoCaoX_F m=new BaoCaoX_F();
             m.ShowDialog();
         }
 
         private void btn_xembc_Click_1(object sender, EventArgs e)
         {
+            BaoCaoN_F.TenKho = cbx_kho.Text;
+            BaoCaoN_F.TenNcc_Kh = cbx_ncc.Text;
+            BaoCaoN_F.TenNv = cbx_nv.Text;
+            BaoCaoN_F.TenSp = cbx_tensp.Text;
+            BaoCaoN_F.TuNgay = tbx_tungay.Text;
+            BaoCaoN_F.NgayNh_Xu = tbx_ngaynhap.Text;
+            BaoCaoN_F.DenNgay = tbx_denngay.Text;
+            BaoCaoN_F.Gia = cbx_giasp.Text;
             BaoCaoN_F baocaof = new BaoCaoN_F();
             baocaof.ShowDialog();
         }
@@ -520,14 +536,7 @@ namespace QuanLyKhoHang
             {
                 dgv_thongkenhap.DataSource = acc.Select_Data(Query);
                 FromQuery = null;
-                BaoCaoN_F.TenKho = cbx_kho.Text;
-                BaoCaoN_F.TenNcc_Kh = cbx_ncc.Text;
-                BaoCaoN_F.TenNv = cbx_nv.Text;
-                BaoCaoN_F.TenSp = cbx_tensp.Text;
-                BaoCaoN_F.TuNgay = tbx_tungay.Text;
-                BaoCaoN_F.NgayNh_Xu = tbx_ngaynhap.Text;
-                BaoCaoN_F.DenNgay = tbx_denngay.Text;
-                BaoCaoN_F.Gia = cbx_giasp.Text;
+                
                 btn_xembc.Enabled = true;
                 ClearN();
             }

@@ -276,7 +276,7 @@ namespace QuanLyKhoHang
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                string sql = "update PHIEUNHAPKHO set MAKHO = N'" + idLP + "', NVNHAP = N'" + idNV + "', NGAYNHAP = N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',MANCC = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPN = N'" + idPN + "'";
+                string sql = "update PHIEUNHAPKHO set MAKHO = N'" + idLP + "', NVNHAP = N'" + idNV + "', NGAYNHAP = N'" +  dtNgayN.Text+ "',MANCC = N'" + idNCC + "', GHICHU = N'" + gc + "' where MAPN = N'" + idPN + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -516,6 +516,20 @@ namespace QuanLyKhoHang
                 con.Close();
                 dataGridView1.DataSource = dataTable;
             }
+        }
+        public void ClearText()
+        {
+            txtMaPN.Clear();
+            txtDGNCT.Clear();
+            txtMaPNCT.Clear();
+            txtSLCT.Clear();
+            txtTongTien.Clear();
+            
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ClearText();
+            FrmNhapHang_Load_1(sender, e);
         }
     }
 }

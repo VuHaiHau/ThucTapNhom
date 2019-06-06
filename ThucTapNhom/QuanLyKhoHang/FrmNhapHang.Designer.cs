@@ -78,6 +78,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -309,6 +310,7 @@
             // 
             // dtNgayN
             // 
+            this.dtNgayN.CustomFormat = "";
             this.dtNgayN.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgayN.Location = new System.Drawing.Point(122, 123);
             this.dtNgayN.Name = "dtNgayN";
@@ -442,6 +444,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.btnSuaCT);
             this.groupBox3.Controls.Add(this.txtMaPNCT);
@@ -601,6 +604,18 @@
             this.tabControl1.Size = new System.Drawing.Size(1129, 661);
             this.tabControl1.TabIndex = 3;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(436, 205);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 40);
+            this.button5.TabIndex = 37;
+            this.button5.Text = "Làm Mới";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // FrmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,5 +689,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -52,10 +52,10 @@ namespace QuanLyKhoHang
             DataSet ds = new DataSet();
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             sda.Fill(ds);
-            ReportParameter tungay = new ReportParameter("Tungay", TuNgay);
-            ReportParameter denngay = new ReportParameter("Denngay", DenNgay);
-            ReportParameter tu = new ReportParameter("Tu", "Từ");
-            ReportParameter den = new ReportParameter("Den", "Đến");
+            //ReportParameter tungay = new ReportParameter("Tungay", TuNgay);
+            //ReportParameter denngay = new ReportParameter("Denngay", DenNgay);
+            //ReportParameter tu = new ReportParameter("Tu", "Từ");
+            //ReportParameter den = new ReportParameter("Den", "Đến");
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.ReportPath = "BaoCaoNhap.rdlc";
             if (ds.Tables[0].Rows.Count > 0)

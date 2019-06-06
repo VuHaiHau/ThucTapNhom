@@ -505,6 +505,19 @@ namespace QuanLyKhoHang
             }
         }
 
-      
+        public void ClearText()
+        {
+            txtMaPN.Clear();
+            txtDGNCT.Clear();
+            txtMaPNCT.Clear();
+            txtSLCT.Clear();
+            txtTongTien.Clear();
+
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ClearText();
+            FrmXuatHang_Load(sender, e);
+        }
     }
 }
