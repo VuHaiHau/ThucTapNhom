@@ -116,7 +116,7 @@ namespace QuanLyKhoHang
             btn_file.Enabled = false;
             btn_sua.Enabled = true;
             btn_them.Enabled = true;
-            btn_xoa.Enabled = true;
+            bt_xoa.Enabled = true;
         }
 
         private void Disablebtn()
@@ -124,7 +124,7 @@ namespace QuanLyKhoHang
             btn_ghinhan.Enabled = true;
             btn_sua.Enabled = false;
             btn_them.Enabled = false;
-            btn_xoa.Enabled = false;
+            bt_xoa.Enabled = false;
             btn_file.Enabled = true;
         }
         private void bt_quaylai_Click(object sender, EventArgs e)
@@ -176,13 +176,13 @@ namespace QuanLyKhoHang
 
             if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
             {
-                btn_xoa.Enabled = true;
+                bt_xoa.Enabled = true;
                 lbx_nv.Enabled = true;
                 cbx_nv.Enabled = true;
             }
             else
             {
-                btn_xoa.Enabled = false;
+                bt_xoa.Enabled = false;
                 lbx_nv.Enabled = false;
                 cbx_nv.Enabled = false;
             }
@@ -222,7 +222,7 @@ namespace QuanLyKhoHang
             cbx_trangthai.Checked = false;
             btn_them.Enabled = false;
             btn_sua.Enabled = false;
-            btn_xoa.Enabled = false;
+            bt_xoa.Enabled = false;
             lbx_trangthai.Visible = true;
             cbx_trangthai.Visible = true;
             cbx_trangthai.Enabled = false;
@@ -236,7 +236,6 @@ namespace QuanLyKhoHang
         {
             Disablebtn();
             Enabletbx();
-            
             tbx_MaNV.Enabled = true;
             key = 1;
         }
@@ -548,25 +547,25 @@ namespace QuanLyKhoHang
                     {
                         if (key == 1 || key == 2 || key == 3 || cbx_nv.SelectedIndex == 1)
                         {
-                            btn_xoa.Enabled = false;
+                            bt_xoa.Enabled = false;
                             cbx_trangthai.Checked = true;
                         }
                         else
                         {
-                            btn_xoa.Enabled = true;
+                            bt_xoa.Enabled = true;
                             cbx_trangthai.Checked = true;
                         }
 
                     }
                     else
                     {
-                        btn_xoa.Enabled = false;
+                        bt_xoa.Enabled = false;
                     }
                 }
                 else
                 {
                     cbx_trangthai.Checked = false;
-                    btn_xoa.Enabled = false;
+                    bt_xoa.Enabled = false;
                 }
                 tbx_chucvu.Text = dgvNhanVien.CurrentRow.Cells["CHUCVU"].Value.ToString().Trim();
                 dateTimePicker_NS.Text = dgvNhanVien.CurrentRow.Cells["NS"].Value.ToString().Trim();
@@ -605,8 +604,8 @@ namespace QuanLyKhoHang
                 cbx_trangthai.Enabled = true;
                 cbx_trangthai.Checked = true;
                 btn_them.Enabled = true;
-                btn_xoa.Enabled = true;
-                btn_xoa.Enabled = true;
+                bt_xoa.Enabled = true;
+                bt_xoa.Enabled = true;
                 ClearText();
                 dgvNhanVien.DataSource = acc.Select_Data("Select NHANVIEN.TRANGTHAI, MANV, TENNV, EMAIL, NS, GT, NHANVIEN.DIENTHOAI, CHUCVU, HINHANH, DIACHI, LUONG, TENBP from NHANVIEN left join BOPHAN on BOPHAN.MABP = NHANVIEN.MABP WHERE NHANVIEN.TRANGTHAI = '1' order by MANV asc");
                 dgvNhanVien.ClearSelection();
@@ -616,8 +615,8 @@ namespace QuanLyKhoHang
             {
                 cbx_trangthai.Checked = false;
                 btn_them.Enabled = false;
-                btn_xoa.Enabled = false;
-                btn_xoa.Enabled = false;
+                bt_xoa.Enabled = false;
+                bt_xoa.Enabled = false;
                 lbx_trangthai.Visible = true;
                 cbx_trangthai.Visible = true;
                 cbx_trangthai.Enabled = false;
@@ -634,8 +633,8 @@ namespace QuanLyKhoHang
                 cbx_trangthai.Enabled = false;
                 cbx_trangthai.Checked = false;
                 btn_them.Enabled = true;
-                btn_xoa.Enabled = true;
-                btn_xoa.Enabled = true;
+                bt_xoa.Enabled = true;
+                bt_xoa.Enabled = true;
                 ClearText();
                 dgvNhanVien.DataSource = acc.Select_Data("Select NHANVIEN.TRANGTHAI, MANV, TENNV, EMAIL, NS, GT, NHANVIEN.DIENTHOAI, CHUCVU, HINHANH, DIACHI, LUONG, TENBP from NHANVIEN left join BOPHAN on BOPHAN.MABP = NHANVIEN.MABP order by MANV asc");
                 dgvNhanVien.ClearSelection();
@@ -716,6 +715,264 @@ namespace QuanLyKhoHang
             {
                 tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             }
+        }
+
+        private void bt_them_Click(object sender, EventArgs e)
+        {
+            Disablebtn();
+            Enabletbx();
+            tbx_MaNV.Enabled = true;
+            key = 1;
+        }
+
+        private void bt_Sua_Click(object sender, EventArgs e)
+        {
+            Disablebtn();
+            Enabletbx();
+
+            tbx_MaNV.Enabled = true;
+            key = 2;
+            if (keyall == 4)
+            {
+                cbx_trangthai.Enabled = true;
+            }
+        }
+
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+            Disablebtn();
+            Disabletbx();
+            ClearText();
+            btn_file.Enabled = false;
+            tbx_MaNV.Enabled = true;
+            tbx_MaNV.Focus();
+            key = 3;
+               
+            }
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (key == 1)
+            {
+                lbx_trangthai.Visible = false;
+                cbx_trangthai.Visible = false;
+                if (tbx_TenNV.Text.Trim() == "" || tbx_Email.Text.Trim() == "" || tbx_DienThoai.Text.Trim() == "" || tbx_DiaChi.Text.Trim() == "" || tbx_luong.Text.Trim() == "" || tbx_MaBP.Text.Trim() == "")
+                {
+                    MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin!", "Thông Báo!");
+                    tbx_MaNV.Focus();
+                }
+                else
+                {
+                    var item = tbx_MaBP.GetItemText(tbx_MaBP.SelectedItem);
+                    ThongTinMABP(item);
+                    DataTable dtnv = new DataTable();
+                    DataTable dtbp = new DataTable();
+                    dtnv = acc.CheckSql("select * from NHANVIEN where MANV ='" + tbx_MaNV.Text + "'");
+                    dtbp = acc.CheckSql("select * from BOPHAN where MABP ='" + MaBP + "'");
+                    if (dtnv.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Mã nhân viên đã tồn tại!", "Lỗi");
+                        tbx_MaNV.Clear();
+                        tbx_MaNV.Focus();
+                    }
+                    else if (dtbp.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Bộ phận không tồn tại!", "Lỗi");
+                        tbx_MaBP.ResetText();
+                    }
+                    else
+                    {
+                        string gt = "NAM";
+                        if (rbtn_Nu.Checked == true)
+                        {
+                            gt = "NỮ";
+                        }
+                        if (tbx_TenNV.Text == dgvNhanVien.CurrentRow.Cells["TENNV"].Value.ToString().Trim())
+                        {
+                            MessageBox.Show("Nhân Viên Này Đã Tồn Tại. Vui Lòng Sửa Lại!", "Thông Báo!");
+                        }
+                        else
+                        {
+                            acc.Them_NhanVien(tbx_MaNV.Text, tbx_TenNV.Text, tbx_Email.Text, dateTimePicker_NS.Value, gt, tbx_DienThoai.Text, tbx_chucvu.Text, filename, tbx_DiaChi.Text, float.Parse(tbx_luong.Text), MaBP);
+                            MessageBox.Show("Thêm Thành Công", "Thông Báo!");
+                            NhanVIen_Load(sender, e);
+                            key = 0;
+                        }
+                    }
+                }
+            }
+            if (key == 2)
+            {
+                if (cbx_trangthai.Checked == true)
+                {
+                    TRANGTHAI = "1";
+                }
+                else
+                {
+                    TRANGTHAI = "0";
+                }
+                string abc = TRANGTHAI;
+                dgvNhanVien.BeginEdit(true);
+                if (tbx_MaNV.Text.Trim() == "" || tbx_luong.Text.Trim() == "" || tbx_MaBP.Text.Trim() == "" /* || tbx_TenNV.Text.Trim() == "" || tbx_Email.Text.Trim() == "" || tbx_DienThoai.Text.Trim() == "" || tbx_DiaChi.Text.Trim() == "" || tbx_luong.Text.Trim() == "" */)
+                {
+                    MessageBox.Show("Chọn Dòng Bạn Muốn Sửa và Hãy Nhập Đầy Đủ Thông Tin. Tối Thiểu Mã NV và Lương Và MaBP!", "Thông Báo!");
+                    tbx_MaNV.Focus();
+                }
+                else
+                {
+                    var item = tbx_MaBP.GetItemText(tbx_MaBP.SelectedItem);
+                    ThongTinMABP(item);
+                    DataTable dtbp = new DataTable();
+                    dtbp = acc.CheckSql("select * from BOPHAN where MABP ='" + MaBP + "'");
+                    if (dtbp.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Phòng Ban không tồn tại!", "Lỗi");
+                    }
+                    //else if (tbx_MaNV.Text != dgvNhanVien.CurrentRow.Cells["MANV"].Value.ToString().Trim())
+                    //{
+                    //    MessageBox.Show("Mã Nhân Viên không thể thay đổi!", "Lỗi");
+                    //}
+                    else
+                    {
+                        string gt = "Nam";
+                        if (rbtn_Nu.Checked == true)
+                        {
+                            gt = "Nữ";
+                        }
+                        if (filepath == Application.StartupPath + "\\Images\\" + dgvNhanVien.CurrentRow.Cells["HINHANH"].Value.ToString() &&
+                            gt == dgvNhanVien.CurrentRow.Cells["GT"].Value.ToString() &&
+                            tbx_TenNV.Text == dgvNhanVien.CurrentRow.Cells["TENNV"].Value.ToString().Trim() &&
+                            tbx_MaBP.Text == dgvNhanVien.CurrentRow.Cells["TENBP"].Value.ToString().Trim() &&
+                            tbx_luong.Text == dgvNhanVien.CurrentRow.Cells["LUONG"].Value.ToString().Trim() &&
+                            tbx_Email.Text == dgvNhanVien.CurrentRow.Cells["EMAIL"].Value.ToString().Trim() &&
+                            tbx_DienThoai.Text == dgvNhanVien.CurrentRow.Cells["DIENTHOAI"].Value.ToString().Trim() &&
+                            tbx_DiaChi.Text == dgvNhanVien.CurrentRow.Cells["DIACHI"].Value.ToString().Trim() &&
+                            tbx_chucvu.Text == dgvNhanVien.CurrentRow.Cells["CHUCVU"].Value.ToString().Trim() &&
+                            Convert.ToBoolean(dgvNhanVien.CurrentRow.Cells["TRANGTHAI"].Value) == cbx_trangthai.Checked)
+                        {
+                            MessageBox.Show("Toàn Bộ Thông Tin Nhân Viên Đã Tồn Tại. Vui Lòng Sủa Lại!", "Thông Báo!");
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Bạn Chắc Chắn Muốn Sửa Nhân Viên Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                acc.CapNhat_NhanVien(tbx_MaNV.Text, tbx_TenNV.Text, tbx_Email.Text, dateTimePicker_NS.Value, gt, tbx_DienThoai.Text, tbx_chucvu.Text, filename, tbx_DiaChi.Text, float.Parse(tbx_luong.Text), MaBP, TRANGTHAI);
+                                MessageBox.Show("Sửa Thành Công!", "Thông Báo!");
+                                NhanVIen_Load(sender, e);
+                                key = 0;
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                    }
+                }
+                dgvNhanVien.EndEdit();
+            }
+            if (key == 3)
+            {
+                if (cbx_trangthai.Checked == false)
+                {
+                    MessageBox.Show("Nhân Viên này Đã Nghỉ!");
+                }
+                else
+                {
+                    if (tbx_MaNV.Text.Trim() == "" || dgvNhanVien.SelectedRows == null)
+                    {
+                        MessageBox.Show("Hãy Nhập Mã Nhân Viên Muốn Xóa Hoặc Chọn Dòng Muốm Xóa!,", "Cảnh Báo!");
+                        tbx_MaNV.Focus();
+                    }
+                    else
+                    {
+                        ThongTinTDN(TDN);
+                        if (MANV != tbx_MaNV.Text)
+                        {
+                            DataTable dtbp = new DataTable();
+                            dtbp = acc.CheckSql("select * from BOPHAN where NQL ='" + tbx_MaNV.Text + "'");
+                            DataTable dtnv = new DataTable();
+                            dtnv = acc.CheckSql("select * from DANGNHAP where MANV ='" + tbx_MaNV.Text + "'");
+                            if (dtbp.Rows.Count > 0 || dtnv.Rows.Count > 0)
+                            {
+                                if (MessageBox.Show("Nhân Viên Đang Tốn Tại Ơ Bảng Bộ Phận, Đăng Nhập! Bạn Chắc Chắn Muốn Xóa! Toàn Bộ Thông Tin Liên Quan Đến Nhân Viên Sẽ Chuyển Về Default!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                {
+                                    acc.CheckSql("Update BOPHAN SET NQL = null WHERE NQL = '" + tbx_MaNV.Text + "'");
+                                    acc.CheckSql("DELETE DANGNHAP WHERE MANV = '" + tbx_MaNV.Text + "'");
+                                    acc.Xoa_NhanVien(tbx_MaNV.Text);
+                                    MessageBox.Show("Xóa Thành Công!", "Thông Báo!");
+
+                                    NhanVIen_Load(sender, e);
+                                    key = 0;
+                                }
+                            }
+                            else
+                            {
+
+                                if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Nhân Viên Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                {
+                                    acc.Xoa_NhanVien(tbx_MaNV.Text);
+                                    MessageBox.Show("Xóa Thành Công!", "Thông Báo!");
+                                    NhanVIen_Load(sender, e);
+                                    key = 0;
+                                }
+                                else
+                                {
+
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không Thể Xoá Nhân Viên Này!");
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void btlammoi_Click(object sender, EventArgs e)
+        {
+            NhanVIen_Load(sender, e);
+            ClearText();
+            key = 0;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Cần Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
+                {
+                    dgvNhanVien.DataSource = acc.Select_Data("Select NHANVIEN.TRANGTHAI, MANV, TENNV, EMAIL, NS, GT, NHANVIEN.DIENTHOAI, CHUCVU, HINHANH, DIACHI, LUONG, TENBP from NHANVIEN left join BOPHAN on BOPHAN.MABP = NHANVIEN.MABP WHERE NHANVIEN.MANV like N'%" + tbx_timkiem.Text + "%' OR TENNV like N'%" + tbx_timkiem.Text + "%' OR EMAIL like N'%" + tbx_timkiem.Text + "%' OR NS like N'%" + tbx_timkiem.Text + "%' OR GT like N'%" + tbx_timkiem.Text + "%' OR NHANVIEN.DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR CHUCVU like N'%" + tbx_timkiem.Text + "%' OR DIACHI like N'%" + tbx_timkiem.Text + "%' OR LUONG like N'%" + tbx_timkiem.Text + "%' OR TENBP like N'%" + tbx_timkiem.Text + "%' order by MANV asc");
+                    tbx_timkiem.Clear();
+                    dgvNhanVien.ClearSelection();
+                }
+                else
+                {
+                    dgvNhanVien.DataSource = acc.Select_Data("Select NHANVIEN.TRANGTHAI, MANV, TENNV, EMAIL, NS, GT, NHANVIEN.DIENTHOAI, CHUCVU, HINHANH, DIACHI, LUONG, TENBP from NHANVIEN left join BOPHAN on BOPHAN.MABP = NHANVIEN.MABP WHERE TRANGTHAI = '1' and (NHANVIEN.MANV like N'%" + tbx_timkiem.Text + "%' OR TENNV like N'%" + tbx_timkiem.Text + "%' OR EMAIL like N'%" + tbx_timkiem.Text + "%' OR NS like N'%" + tbx_timkiem.Text + "%' OR GT like N'%" + tbx_timkiem.Text + "%' OR NHANVIEN.DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR CHUCVU like N'%" + tbx_timkiem.Text + "%' OR DIACHI like N'%" + tbx_timkiem.Text + "%' OR LUONG like N'%" + tbx_timkiem.Text + "%' OR TENBP like N'%" + tbx_timkiem.Text + "%') order by MANV asc");
+                    tbx_timkiem.Clear();
+                    dgvNhanVien.ClearSelection();
+                }
+            }
+        }
+
+        private void bt_xoa_Click_1(object sender, EventArgs e)
+        {
+            Disablebtn();
+            Disabletbx();
+            //ClearText();
+            btn_file.Enabled = false;
+            tbx_MaNV.Enabled = true;
+            tbx_MaNV.Focus();
+            key = 3;
+
         }
     }
 }

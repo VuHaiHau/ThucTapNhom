@@ -122,13 +122,7 @@ namespace QuanLyKhoHang
             }
         }
 
-       
-        private void bt_them_Click_1(object sender, EventArgs e)
-        {
-            Enabletbx();
-            Disablebtn();
-            key = 1;
-        }
+      
 
         private void bt_Sua_Click_1(object sender, EventArgs e)
         {
@@ -141,15 +135,124 @@ namespace QuanLyKhoHang
 
         private void bt_xoa_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btn_ghinhan_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void bt_lammoi_Click_1(object sender, EventArgs e)
+        {
+            ThemTaiKhoan_Load(sender, e);
+        }
+
+        private void bt_timkiem_Click_1(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                dgvThemTK.DataSource = acc.Select_Data("Select USERNAME, PASSWORD, TENNV, QUYENHAN from DANGNHAP, NHANVIEN WHERE DANGNHAP.MANV = NHANVIEN.MANV and (USERNAME like '%" + tbx_timkiem.Text + "%' OR PASSWORD like '%" + tbx_timkiem.Text + "%' OR TENNV like N'%" + tbx_timkiem.Text + "%' OR QUYENHAN like '%" + tbx_timkiem.Text + "%')");
+                tbx_timkiem.Clear();
+                dgvThemTK.ClearSelection();
+            }
+        }
+
+        private void dgvThemTK_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                tbx_TDN.Text = dgvThemTK.CurrentRow.Cells["USERNAME"].Value.ToString().Trim();
+                tbx_MK.Text = dgvThemTK.CurrentRow.Cells["PASSWORD"].Value.ToString().Trim();
+                tbx_MaNV.Text = dgvThemTK.CurrentRow.Cells["TENNV"].Value.ToString().Trim();
+                tbx_QuyenHan.Text = dgvThemTK.CurrentRow.Cells["QUYENHAN"].Value.ToString().Trim();
+            }
+        }
+
+        private void bt_quaylai_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            MainMenu menu = new MainMenu();
+            menu.ShowDialog();
+        }
+
+        private void txb_Timkiem(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                tbx_timkiem.Text = "";
+            }
+        }
+
+        private void txb_timkiem(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "")
+            {
+                tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            Enabletbx();
+            Disablebtn();
+            key = 1;
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            Enabletbx();
+            Disablebtn();
+            tbx_MaNV.Enabled = false;
+            tbx_TDN.Enabled = false;
+            key = 2;
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
             Enabletbx();
             Disablebtn();
             tbx_MaNV.Enabled = false;
             tbx_QuyenHan.Enabled = false;
             tbx_MK.Enabled = false;
-            key = 3;
+           
+                if (Username != dgvThemTK.CurrentRow.Cells["USERNAME"].Value.ToString().Trim())
+                {
+                    if (tbx_TDN.Text.Trim() == "" || dgvThemTK.SelectedRows == null)
+                    {
+                        MessageBox.Show("Hãy Nhập Tên Đăng Nhập Muốn Xóa Hoặc Chọn Dòng Muốm Xóa!,", "Cảnh Báo!");
+                        tbx_TDN.Focus();
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa tài Khoản Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            acc.Xoa_TaiKhoan(tbx_TDN.Text);
+                            tbx_MaNV.ResetText();
+                            tbx_MK.Clear();
+                            tbx_TDN.Clear();
+                            tbx_QuyenHan.Clear();
+                            ThemTaiKhoan_Load(sender, e);
+                            MessageBox.Show("Xóa Thành Công!", "Thông Báo!");
+                            dgvThemTK.ClearSelection();
+                        }
+                       
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("Bạn Không Thể Xóa Tài Khoản Đang Đăng Nhập!");
+                }
+            
         }
 
-        private void btn_ghinhan_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
             if (key == 1)
             {
@@ -243,48 +346,16 @@ namespace QuanLyKhoHang
                 dgvThemTK.EndEdit();
             }
 
-            if (key == 3)
-            {
-                if (Username != dgvThemTK.CurrentRow.Cells["USERNAME"].Value.ToString().Trim())
-                {
-                    if (tbx_TDN.Text.Trim() == "" || dgvThemTK.SelectedRows == null)
-                    {
-                        MessageBox.Show("Hãy Nhập Tên Đăng Nhập Muốn Xóa Hoặc Chọn Dòng Muốm Xóa!,", "Cảnh Báo!");
-                        tbx_TDN.Focus();
-                    }
-                    else
-                    {
-                        if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa tài Khoản Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            acc.Xoa_TaiKhoan(tbx_TDN.Text);
-                            tbx_MaNV.ResetText();
-                            tbx_MK.Clear();
-                            tbx_TDN.Clear();
-                            tbx_QuyenHan.Clear();
-                            ThemTaiKhoan_Load(sender, e);
-                            MessageBox.Show("Xóa Thành Công!", "Thông Báo!");
-                            dgvThemTK.ClearSelection();
-                        }
-                        else
-                        {
+            
+        
+    }
 
-                        }
-                    }
-                }
-
-                else
-                {
-                    MessageBox.Show("Bạn Không Thể Xóa Tài Khoản Đang Đăng Nhập!");
-                }
-            }
-        }
-
-        private void bt_lammoi_Click_1(object sender, EventArgs e)
+        private void btlammoi_Click(object sender, EventArgs e)
         {
             ThemTaiKhoan_Load(sender, e);
         }
 
-        private void bt_timkiem_Click_1(object sender, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (tbx_timkiem.Text.Trim() == "")
             {
@@ -296,41 +367,6 @@ namespace QuanLyKhoHang
                 dgvThemTK.DataSource = acc.Select_Data("Select USERNAME, PASSWORD, TENNV, QUYENHAN from DANGNHAP, NHANVIEN WHERE DANGNHAP.MANV = NHANVIEN.MANV and (USERNAME like '%" + tbx_timkiem.Text + "%' OR PASSWORD like '%" + tbx_timkiem.Text + "%' OR TENNV like N'%" + tbx_timkiem.Text + "%' OR QUYENHAN like '%" + tbx_timkiem.Text + "%')");
                 tbx_timkiem.Clear();
                 dgvThemTK.ClearSelection();
-            }
-        }
-
-        private void dgvThemTK_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                tbx_TDN.Text = dgvThemTK.CurrentRow.Cells["USERNAME"].Value.ToString().Trim();
-                tbx_MK.Text = dgvThemTK.CurrentRow.Cells["PASSWORD"].Value.ToString().Trim();
-                tbx_MaNV.Text = dgvThemTK.CurrentRow.Cells["TENNV"].Value.ToString().Trim();
-                tbx_QuyenHan.Text = dgvThemTK.CurrentRow.Cells["QUYENHAN"].Value.ToString().Trim();
-            }
-        }
-
-        private void bt_quaylai_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            MainMenu menu = new MainMenu();
-            menu.ShowDialog();
-        }
-
-        private void txb_Timkiem(object sender, EventArgs e)
-        {
-            if (tbx_timkiem.Text == "Hãy nhập từ khóa tìm kiếm..")
-            {
-                tbx_timkiem.Text = "";
-            }
-        }
-
-        private void txb_timkiem(object sender, EventArgs e)
-        {
-            if (tbx_timkiem.Text == "")
-            {
-                tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             }
         }
     }

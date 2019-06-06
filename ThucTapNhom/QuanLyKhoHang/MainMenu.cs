@@ -193,9 +193,17 @@ namespace QuanLyKhoHang
 
         private void đổiMậtKhẩuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmThemTaiKhoan ttk = new FrmThemTaiKhoan();
-            ttk.ShowDialog();
+            if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
+            {
+                this.Hide();
+                FrmThemTaiKhoan ttk = new FrmThemTaiKhoan();
+                ttk.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn Phải là ADMIN thì mới có quyền thực hiện được thao tác này!");
+            }
+           
         }
 
         private void đổiQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
