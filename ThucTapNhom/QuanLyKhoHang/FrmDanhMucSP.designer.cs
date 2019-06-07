@@ -39,17 +39,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.group_qldmsp = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btlammoi = new System.Windows.Forms.Button();
+            this.bt_xoa = new System.Windows.Forms.Button();
+            this.btn_ghinhan = new System.Windows.Forms.Button();
+            this.bt_chophepsua = new System.Windows.Forms.Button();
+            this.bt_them = new System.Windows.Forms.Button();
             this.btn_quaylai = new System.Windows.Forms.Button();
             this.tbx_timkiem = new System.Windows.Forms.TextBox();
             this.lb_thongbao = new System.Windows.Forms.Label();
             this.dgvDANHMUC = new System.Windows.Forms.DataGridView();
             this.group_dmsp = new System.Windows.Forms.GroupBox();
-            this.bt_xoa = new System.Windows.Forms.Button();
-            this.btn_ghinhan = new System.Windows.Forms.Button();
-            this.bt_chophepsua = new System.Windows.Forms.Button();
-            this.bt_them = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btlammoi = new System.Windows.Forms.Button();
             this.group_qldmsp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDANHMUC)).BeginInit();
             this.group_dmsp.SuspendLayout();
@@ -74,10 +74,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(254, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 31);
+            this.label1.Size = new System.Drawing.Size(314, 32);
             this.label1.TabIndex = 38;
             this.label1.Text = "DANH MỤC SẢN PHẨM";
             // 
@@ -162,61 +162,37 @@
             this.group_qldmsp.TabStop = false;
             this.group_qldmsp.Text = "Quản Trị";
             // 
-            // btn_quaylai
+            // button2
             // 
-            this.btn_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quaylai.Image = ((System.Drawing.Image)(resources.GetObject("btn_quaylai.Image")));
-            this.btn_quaylai.Location = new System.Drawing.Point(18, 6);
-            this.btn_quaylai.Name = "btn_quaylai";
-            this.btn_quaylai.Size = new System.Drawing.Size(65, 40);
-            this.btn_quaylai.TabIndex = 39;
-            this.btn_quaylai.UseVisualStyleBackColor = true;
-            this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(540, 127);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 50);
+            this.button2.TabIndex = 153;
+            this.button2.Text = "Tìm Kiếm";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tbx_timkiem
+            // btlammoi
             // 
-            this.tbx_timkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tbx_timkiem.Location = new System.Drawing.Point(146, 22);
-            this.tbx_timkiem.Name = "tbx_timkiem";
-            this.tbx_timkiem.Size = new System.Drawing.Size(639, 26);
-            this.tbx_timkiem.TabIndex = 10;
-            this.tbx_timkiem.Enter += new System.EventHandler(this.txt_tk_Enter);
-            this.tbx_timkiem.Leave += new System.EventHandler(this.txt_tk_Leave);
-            // 
-            // lb_thongbao
-            // 
-            this.lb_thongbao.AutoSize = true;
-            this.lb_thongbao.Location = new System.Drawing.Point(559, 25);
-            this.lb_thongbao.Name = "lb_thongbao";
-            this.lb_thongbao.Size = new System.Drawing.Size(0, 19);
-            this.lb_thongbao.TabIndex = 13;
-            // 
-            // dgvDANHMUC
-            // 
-            this.dgvDANHMUC.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDANHMUC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDANHMUC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvDANHMUC.Location = new System.Drawing.Point(6, 69);
-            this.dgvDANHMUC.Name = "dgvDANHMUC";
-            this.dgvDANHMUC.ReadOnly = true;
-            this.dgvDANHMUC.RowHeadersVisible = false;
-            this.dgvDANHMUC.Size = new System.Drawing.Size(779, 255);
-            this.dgvDANHMUC.TabIndex = 0;
-            this.dgvDANHMUC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDANHMUC_CellContentClick);
-            // 
-            // group_dmsp
-            // 
-            this.group_dmsp.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.group_dmsp.Controls.Add(this.dgvDANHMUC);
-            this.group_dmsp.Controls.Add(this.lb_thongbao);
-            this.group_dmsp.Controls.Add(this.tbx_timkiem);
-            this.group_dmsp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.group_dmsp.Location = new System.Drawing.Point(12, 244);
-            this.group_dmsp.Name = "group_dmsp";
-            this.group_dmsp.Size = new System.Drawing.Size(805, 336);
-            this.group_dmsp.TabIndex = 37;
-            this.group_dmsp.TabStop = false;
-            this.group_dmsp.Text = "Danh Sách Danh Mục";
+            this.btlammoi.BackColor = System.Drawing.SystemColors.Control;
+            this.btlammoi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btlammoi.ForeColor = System.Drawing.Color.Black;
+            this.btlammoi.Image = ((System.Drawing.Image)(resources.GetObject("btlammoi.Image")));
+            this.btlammoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btlammoi.Location = new System.Drawing.Point(675, 127);
+            this.btlammoi.Name = "btlammoi";
+            this.btlammoi.Size = new System.Drawing.Size(110, 50);
+            this.btlammoi.TabIndex = 152;
+            this.btlammoi.Text = "Refresh";
+            this.btlammoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btlammoi.UseVisualStyleBackColor = false;
+            this.btlammoi.Click += new System.EventHandler(this.btlammoi_Click);
             // 
             // bt_xoa
             // 
@@ -284,37 +260,61 @@
             this.bt_them.UseVisualStyleBackColor = false;
             this.bt_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // button2
+            // btn_quaylai
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(540, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 50);
-            this.button2.TabIndex = 153;
-            this.button2.Text = "Tìm Kiếm";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_quaylai.Image = ((System.Drawing.Image)(resources.GetObject("btn_quaylai.Image")));
+            this.btn_quaylai.Location = new System.Drawing.Point(18, 6);
+            this.btn_quaylai.Name = "btn_quaylai";
+            this.btn_quaylai.Size = new System.Drawing.Size(65, 40);
+            this.btn_quaylai.TabIndex = 39;
+            this.btn_quaylai.UseVisualStyleBackColor = true;
+            this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
             // 
-            // btlammoi
+            // tbx_timkiem
             // 
-            this.btlammoi.BackColor = System.Drawing.SystemColors.Control;
-            this.btlammoi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btlammoi.ForeColor = System.Drawing.Color.Black;
-            this.btlammoi.Image = ((System.Drawing.Image)(resources.GetObject("btlammoi.Image")));
-            this.btlammoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btlammoi.Location = new System.Drawing.Point(675, 127);
-            this.btlammoi.Name = "btlammoi";
-            this.btlammoi.Size = new System.Drawing.Size(110, 50);
-            this.btlammoi.TabIndex = 152;
-            this.btlammoi.Text = "Refresh";
-            this.btlammoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btlammoi.UseVisualStyleBackColor = false;
-            this.btlammoi.Click += new System.EventHandler(this.btlammoi_Click);
+            this.tbx_timkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tbx_timkiem.Location = new System.Drawing.Point(146, 22);
+            this.tbx_timkiem.Name = "tbx_timkiem";
+            this.tbx_timkiem.Size = new System.Drawing.Size(639, 26);
+            this.tbx_timkiem.TabIndex = 10;
+            this.tbx_timkiem.Enter += new System.EventHandler(this.txt_tk_Enter);
+            this.tbx_timkiem.Leave += new System.EventHandler(this.txt_tk_Leave);
+            // 
+            // lb_thongbao
+            // 
+            this.lb_thongbao.AutoSize = true;
+            this.lb_thongbao.Location = new System.Drawing.Point(559, 25);
+            this.lb_thongbao.Name = "lb_thongbao";
+            this.lb_thongbao.Size = new System.Drawing.Size(0, 19);
+            this.lb_thongbao.TabIndex = 13;
+            // 
+            // dgvDANHMUC
+            // 
+            this.dgvDANHMUC.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDANHMUC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDANHMUC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvDANHMUC.Location = new System.Drawing.Point(6, 69);
+            this.dgvDANHMUC.Name = "dgvDANHMUC";
+            this.dgvDANHMUC.ReadOnly = true;
+            this.dgvDANHMUC.RowHeadersVisible = false;
+            this.dgvDANHMUC.Size = new System.Drawing.Size(779, 255);
+            this.dgvDANHMUC.TabIndex = 0;
+            this.dgvDANHMUC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDANHMUC_CellContentClick);
+            // 
+            // group_dmsp
+            // 
+            this.group_dmsp.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.group_dmsp.Controls.Add(this.dgvDANHMUC);
+            this.group_dmsp.Controls.Add(this.lb_thongbao);
+            this.group_dmsp.Controls.Add(this.tbx_timkiem);
+            this.group_dmsp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.group_dmsp.Location = new System.Drawing.Point(12, 244);
+            this.group_dmsp.Name = "group_dmsp";
+            this.group_dmsp.Size = new System.Drawing.Size(805, 336);
+            this.group_dmsp.TabIndex = 37;
+            this.group_dmsp.TabStop = false;
+            this.group_dmsp.Text = "Danh Sách Danh Mục";
             // 
             // FrmDanhMucSP
             // 
@@ -331,6 +331,7 @@
             this.Text = "PHẦN MỀM QUẢN LÝ KHO HÀNG";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DanhMucSP_FormClosed);
             this.Load += new System.EventHandler(this.DanhMucSP_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenDanhMuc);
             this.group_qldmsp.ResumeLayout(false);
             this.group_qldmsp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDANHMUC)).EndInit();

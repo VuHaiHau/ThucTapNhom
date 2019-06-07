@@ -115,10 +115,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(403, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 31);
+            this.label1.Size = new System.Drawing.Size(333, 32);
             this.label1.TabIndex = 17;
             this.label1.Text = "QUẢN LÝ KHÁCH HÀNG";
             // 

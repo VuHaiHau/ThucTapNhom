@@ -43,14 +43,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_them = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_ghinhan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btlammoi = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_ghinhan = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BoPhan)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -205,57 +205,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Trị";
             // 
-            // label6
+            // button1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(254, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 19);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "NQL";
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(586, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 50);
+            this.button1.TabIndex = 151;
+            this.button1.Text = "Tìm Kiếm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // label1
+            // btlammoi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(380, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 31);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "BỘ PHẬN";
-            // 
-            // btn_them
-            // 
-            this.btn_them.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_them.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.ForeColor = System.Drawing.Color.Black;
-            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.Location = new System.Drawing.Point(26, 124);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(100, 50);
-            this.btn_them.TabIndex = 143;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_them.UseVisualStyleBackColor = false;
-            this.btn_them.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_sua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.ForeColor = System.Drawing.Color.Black;
-            this.btn_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_sua.Image")));
-            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sua.Location = new System.Drawing.Point(166, 124);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(100, 50);
-            this.btn_sua.TabIndex = 144;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_sua.UseVisualStyleBackColor = false;
-            this.btn_sua.Click += new System.EventHandler(this.button3_Click);
+            this.btlammoi.BackColor = System.Drawing.SystemColors.Control;
+            this.btlammoi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btlammoi.ForeColor = System.Drawing.Color.Black;
+            this.btlammoi.Image = ((System.Drawing.Image)(resources.GetObject("btlammoi.Image")));
+            this.btlammoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btlammoi.Location = new System.Drawing.Point(720, 124);
+            this.btlammoi.Name = "btlammoi";
+            this.btlammoi.Size = new System.Drawing.Size(110, 50);
+            this.btlammoi.TabIndex = 150;
+            this.btlammoi.Text = "Refresh";
+            this.btlammoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btlammoi.UseVisualStyleBackColor = false;
+            this.btlammoi.Click += new System.EventHandler(this.btlammoi_Click);
             // 
             // btn_xoa
             // 
@@ -290,37 +270,57 @@
             this.btn_ghinhan.UseVisualStyleBackColor = false;
             this.btn_ghinhan.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button1
+            // btn_sua
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(586, 124);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 50);
-            this.button1.TabIndex = 151;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btn_sua.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_sua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.Black;
+            this.btn_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_sua.Image")));
+            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sua.Location = new System.Drawing.Point(166, 124);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(100, 50);
+            this.btn_sua.TabIndex = 144;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btlammoi
+            // btn_them
             // 
-            this.btlammoi.BackColor = System.Drawing.SystemColors.Control;
-            this.btlammoi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btlammoi.ForeColor = System.Drawing.Color.Black;
-            this.btlammoi.Image = ((System.Drawing.Image)(resources.GetObject("btlammoi.Image")));
-            this.btlammoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btlammoi.Location = new System.Drawing.Point(720, 124);
-            this.btlammoi.Name = "btlammoi";
-            this.btlammoi.Size = new System.Drawing.Size(110, 50);
-            this.btlammoi.TabIndex = 150;
-            this.btlammoi.Text = "Refresh";
-            this.btlammoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btlammoi.UseVisualStyleBackColor = false;
-            this.btlammoi.Click += new System.EventHandler(this.btlammoi_Click);
+            this.btn_them.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_them.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.ForeColor = System.Drawing.Color.Black;
+            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
+            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_them.Location = new System.Drawing.Point(26, 124);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(100, 50);
+            this.btn_them.TabIndex = 143;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(254, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 19);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "NQL";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(380, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 32);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "BỘ PHẬN";
             // 
             // FrmBoPhan
             // 

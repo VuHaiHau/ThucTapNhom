@@ -36,7 +36,7 @@ namespace QuanLyKhoHang
         }
         private void KhoHang_Load(object sender, EventArgs e)
         {        
-            dgvKHOHANG.DataSource = acc.Select_Data("SELECT * FROM KHOHANG");
+            dgvKHOHANG.DataSource = acc.Select_Data("Select Row_number() over(order by MAKHO) STT,* from KhoHang1");
             dgvKHOHANG.ClearSelection();
             groupBox_ketquatimkiem.Text = "";
             tbx_makho.Text = "";
@@ -45,20 +45,21 @@ namespace QuanLyKhoHang
             tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             //btn_chophepsua.Enabled = false; btn_ghinhan.Enabled = false; bt_xoa.Enabled = false;
             //hiển thị tiêu đề của cột:
-            dgvKHOHANG.Columns[0].HeaderText = "Mã Kho";
-            dgvKHOHANG.Columns[1].HeaderText = "Tên Kho";
-            dgvKHOHANG.Columns[2].HeaderText = "Tổng Số Danh Mục";
-            dgvKHOHANG.Columns[3].HeaderText = "Ghi Chú";
+            dgvKHOHANG.Columns[1].HeaderText = "Mã Kho";
+            dgvKHOHANG.Columns[2].HeaderText = "Tên Kho";
+            dgvKHOHANG.Columns[3].HeaderText = "Tổng Số Sản Phẩm";
+            dgvKHOHANG.Columns[4].HeaderText = "Ghi Chú";
 
             // can chinh do rong cot:
-            dgvKHOHANG.Columns[0].Width = 100;
-            dgvKHOHANG.Columns[1].Width = 250;
-            dgvKHOHANG.Columns[2].Width = 145;
-            dgvKHOHANG.Columns[3].Width = 180;
+            dgvKHOHANG.Columns[0].Width = 60;
+            dgvKHOHANG.Columns[1].Width = 100;
+            dgvKHOHANG.Columns[2].Width = 300;
+            dgvKHOHANG.Columns[3].Width = 155;
+            dgvKHOHANG.Columns[4].Width = 340;
 
             btn_ghinhan.Enabled = false;
             bt_them.Enabled = true;
-            bt_xoa.Enabled = true;
+            bt_them.Enabled = true;
             btn_chophepsua.Enabled = true;
         }
 
@@ -119,7 +120,7 @@ namespace QuanLyKhoHang
             tbx_makho.Enabled = false;
             btn_ghinhan.Enabled = true;
             bt_them.Enabled = false;
-            bt_xoa.Enabled = false;
+            bt_them.Enabled = false;
             btn_chophepsua.Enabled = false;
             key = 1;
         }
@@ -133,7 +134,7 @@ namespace QuanLyKhoHang
             tbx_makho.Enabled = false;
             btn_ghinhan.Enabled = true;
             bt_them.Enabled = false;
-            bt_xoa.Enabled = false;
+            bt_them.Enabled = false;
             btn_chophepsua.Enabled = false;
             key = 2;
         }
@@ -150,7 +151,7 @@ namespace QuanLyKhoHang
             tbx_makho.Enabled = true;
             btn_ghinhan.Enabled = true;
             bt_them.Enabled = false;
-            bt_xoa.Enabled = false;
+            bt_them.Enabled = false;
             btn_chophepsua.Enabled = false;
             key = 3;
         }
@@ -308,6 +309,129 @@ namespace QuanLyKhoHang
             {
                 tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             }
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            Enable();
+            tbx_tenkho.Focus();
+            tbx_makho.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            bt_them.Enabled = false;
+            bt_them.Enabled = false;
+            btn_chophepsua.Enabled = false;
+            key = 1;
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            Enable();
+            tbx_tenkho.Focus();
+            tbx_makho.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            bt_them.Enabled = false;
+            bt_them.Enabled = false;
+            btn_chophepsua.Enabled = false;
+            key = 2;
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            Disable();
+            tbx_makho.Enabled = true;
+            btn_ghinhan.Enabled = true;
+            bt_them.Enabled = false;
+            bt_them.Enabled = false;
+            btn_chophepsua.Enabled = false;
+            key = 3;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (key == 1)
+            {
+                if (tbx_tenkho.Text == "" || tbx_tongdmsp.Value == 0)
+                {
+                    MessageBox.Show("Hãy Nhập Đủ hết thông tin", "Lỗi Nhập!");
+                    tbx_makho.Focus();
+                }
+                else
+                {
+                    DataTable dtkh = acc.CheckSql("SELECT *FROM KHOHANG WHERE MAKHO='" + tbx_makho.Text + "'");
+                    if (dtkh.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Mã Kho đã tồn tại!!", "Cảnh Báo");
+                        tbx_makho.Clear();
+                        tbx_makho.Focus();
+                    }
+                    else
+                    {
+                        acc.THEM_KHOHANG(tbx_makho.Text, tbx_tenkho.Text, Convert.ToInt32(tbx_tongdmsp.Value), tbx_ghichu.Text);
+                        KhoHang_Load(sender, e);
+                        clearText();
+                    }
+                }
+            }
+            if (key == 2)
+            {
+                if (tbx_makho.Text.Trim() == "")
+                {
+                    MessageBox.Show("Hãy Nhập Đầy Đủ THông Tin Hoặc Chọn Dòng Bạn Muốn sửa!", "Thông Báo");
+                    tbx_makho.Focus();
+                }
+                else
+                {
+                    acc.SUA_KHOHANG(tbx_makho.Text, tbx_tenkho.Text, Convert.ToInt32(tbx_tongdmsp.Value), tbx_ghichu.Text);
+                    KhoHang_Load(sender, e);
+                    clearText();
+                    //bt_them.Enabled = true; bt_xoa.Enabled = false;
+                }
+            }
+
+            if (key == 3)
+            {
+                if (tbx_makho.Text == "" || dgvKHOHANG.SelectedRows == null)
+                {
+                    MessageBox.Show("Hãy Nhập mã Kho Hàng Bạn Muốn Xóa hoặc Chọn Tại Bảng!", "Thông Báo");
+                    tbx_makho.Focus();
+                }
+                else
+                {
+                    if (MessageBox.Show("Bạn có Chắc Chắn Muốn xóa Kho này?", "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //acc.Custom_ByQuery("UPDATE DANHMUC SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
+                        //acc.Custom_ByQuery("UPDATE PHIEUNHAPKHO SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
+                        //acc.Custom_ByQuery("UPDATE PHIEUXUAT SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
+                        //acc.Custom_ByQuery("UPDATE BOPHAN SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
+                        //acc.Custom_ByQuery("UPDATE BAOCAOTHONGKE SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");                    
+                        acc.XOA_KHOHANG(tbx_makho.Text);
+                        KhoHang_Load(sender, e);
+                        clearText();
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "")
+            {
+                MessageBox.Show("Hãy Nhập Thông Tin cần Tìm Kiếm", "Thông Báo");
+                tbx_timkiem.Focus();
+                return;
+            }
+            else
+            {
+                groupBox_ketquatimkiem.Text = "Kết Quả Tìm Kiếm";
+                dgvKHOHANG.DataSource = acc.Select_Data("SELECT * FROM KHOHANG WHERE MAKHO LIKE '%" + tbx_timkiem.Text + "%' OR TENKHO LIKE '%" + tbx_timkiem.Text + "%' OR TONGSODMSP LIKE '%" + tbx_timkiem.Text + "%' OR GHICHU LIKE '%" + tbx_timkiem.Text + "%'");
+                tbx_timkiem.Clear();
+                dgvKHOHANG.ClearSelection();
+            }
+        }
+
+        private void btlammoi_Click(object sender, EventArgs e)
+        {
+            KhoHang_Load(sender, e);
         }
     }
 }

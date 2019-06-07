@@ -37,7 +37,7 @@ namespace QuanLyKhoHang
         private void KhachHang_Load(object sender, EventArgs e)
         {
             acc.AutoComplete(tbx_makh, "SELECT MAKH FROM KHACHHANG");
-            dgvKhachHang.DataSource = acc.Select_Data("SELECT * FROM KHACHHANG");
+            dgvKhachHang.DataSource = acc.Select_Data("Select Row_number() over(order by MAKH) STT,* from KhachHangMua");
             ClearText();
             btn_sua.Enabled = true;
             btn_them.Enabled = true;
@@ -59,14 +59,14 @@ namespace QuanLyKhoHang
             dgvKhachHang.Columns["DIENTHOAI"].HeaderText = "Điện Thoại";
             dgvKhachHang.Columns["EMAIL"].HeaderText = "Email";
             dgvKhachHang.Columns["FAX"].HeaderText = "Fax";
-
-            dgvKhachHang.Columns["MAKH"].Width=130;
-            dgvKhachHang.Columns["TENKH"].Width=150;
-            dgvKhachHang.Columns["DIACHI"].Width=110;
-            dgvKhachHang.Columns["GIOITINH"].Width=90;
-            dgvKhachHang.Columns["DIENTHOAI"].Width=120;
-            dgvKhachHang.Columns["EMAIL"].Width=160;
-            dgvKhachHang.Columns["FAX"].Width=100;
+            dgvKhachHang.Columns[0].Width = 50;
+            dgvKhachHang.Columns[1].Width=100;
+            dgvKhachHang.Columns[2].Width=150;
+            dgvKhachHang.Columns[3].Width=110;
+            dgvKhachHang.Columns[4].Width=90;
+            dgvKhachHang.Columns[5].Width=120;
+            dgvKhachHang.Columns[6].Width=160;
+            dgvKhachHang.Columns[7].Width=100;
         }
 
       

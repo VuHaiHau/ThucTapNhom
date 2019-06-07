@@ -70,10 +70,11 @@ namespace QuanLyKhoHang
             dgvDANHMUC.Columns[4].HeaderText = "Ghi Chú";
 
             //căn độ rộng cột:
-            dgvDANHMUC.Columns[1].Width = 100;
-            dgvDANHMUC.Columns[2].Width = 100;
-            dgvDANHMUC.Columns[3].Width = 160;
-
+            dgvDANHMUC.Columns[0].Width = 50;
+            dgvDANHMUC.Columns[1].Width = 125;
+            dgvDANHMUC.Columns[2].Width = 185;
+            dgvDANHMUC.Columns[3].Width = 200;
+            dgvDANHMUC.Columns[4].Width = 200;
 
             btn_ghinhan.Enabled = false;
             bt_them.Enabled = true;
@@ -358,7 +359,7 @@ namespace QuanLyKhoHang
             bt_xoa.Enabled = false;
             bt_them.Enabled = false;
             bt_chophepsua.Enabled = false;
-            btn_ghinhan.Enabled = true;
+            btn_ghinhan.Enabled = false;
             //key = 3;
             Disable();
             tbx_madm.Enabled = true;
@@ -397,13 +398,18 @@ namespace QuanLyKhoHang
                 {
                     var itemMakho = tbx_makho.GetItemText(tbx_makho.SelectedItem);
                     ThongTinMaKho(itemMakho);
-                    DataTable dtdm = acc.CheckSql("SELECT * From DANHMUC where MADANHMUC='" + tbx_madm.Text + "'");
-                    if (dtdm.Rows.Count > 0)
+                    DataTable dtdm = new DataTable();
+                    DataTable dttdm = new DataTable();
+                    dtdm = acc.CheckSql("SELECT * From DANHMUC where MADANHMUC='" + tbx_madm.Text + "' ");
+                    dttdm = acc.CheckSql("select * from DanhMuc where TENDANHMUC like N'" + tbx_tendm.Text + "'");
+                    if (dtdm.Rows.Count > 0 || dttdm.Rows.Count > 0)
                     {
-                        MessageBox.Show("Mã Danh Mục đã Tồn tại!", "Cảnh báo");
+                        MessageBox.Show("Mã danh mục đã tồn tại!", "Cảnh báo");
                         tbx_madm.Clear();
+                        tbx_tendm.Clear();
                         tbx_madm.Focus();
                     }
+                   
                     else
                     {
                         if (MessageBox.Show("Bạn có chắc chắn muốn thêm danh mục này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -468,6 +474,15 @@ namespace QuanLyKhoHang
         {
             cleartext();
             DanhMucSP_Load(sender, e);
+        }
+
+        private void txtTenDanhMuc(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Tên Danh Mục phải là kí tự chữ ", "Thông Báo ");
+            }
         }
     }
 }

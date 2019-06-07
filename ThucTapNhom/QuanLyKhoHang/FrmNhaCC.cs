@@ -40,7 +40,7 @@ namespace QuanLyKhoHang
         private void NhaCC_Load(object sender, EventArgs e)
         {
             acc.AutoComplete(tbx_MaNCC, "SELECT MANCC FROM NHACUNGCAP");
-            dgv_nhacungcap.DataSource = acc.Select_Data("SELECT * FROM NHACUNGCAP");
+            dgv_nhacungcap.DataSource = acc.Select_Data("Select Row_number() over(order by MANCC) STT,* from NhaCungCapSanPham");
             ClearText();
             btn_them.Enabled = true;
             btn_sua.Enabled = true;
@@ -51,17 +51,18 @@ namespace QuanLyKhoHang
             tbx_TenNCC.Enabled = false;
             btn_ghinhan.Enabled = false;
             tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            dgv_nhacungcap.Columns[0].HeaderText = "STT";
+            dgv_nhacungcap.Columns[1].HeaderText = "Mã Nhà Cung Cấp";
+            dgv_nhacungcap.Columns[2].HeaderText = "Tên Nhà Cung Cấp";
+            dgv_nhacungcap.Columns[3].HeaderText = "Địa Chỉ";
+            dgv_nhacungcap.Columns[4].HeaderText = "Ghi Chú";
 
-            dgv_nhacungcap.Columns[0].HeaderText = "Mã Nhà Cung Cấp";
-            dgv_nhacungcap.Columns[1].HeaderText = "Tên Nhà Cung Cấp";
-            dgv_nhacungcap.Columns[2].HeaderText = "Địa Chỉ";
-            dgv_nhacungcap.Columns[3].HeaderText = "Ghi Chú";
 
-
-            dgv_nhacungcap.Columns[0].Width = 100;
-            dgv_nhacungcap.Columns[1].Width = 230;
-            dgv_nhacungcap.Columns[2].Width = 180;
-            dgv_nhacungcap.Columns[3].Width = 220;
+            dgv_nhacungcap.Columns[0].Width = 40;
+            dgv_nhacungcap.Columns[1].Width = 150;
+            dgv_nhacungcap.Columns[2].Width = 200;
+            dgv_nhacungcap.Columns[3].Width = 180;
+            dgv_nhacungcap.Columns[4].Width = 180;
         }
 
 

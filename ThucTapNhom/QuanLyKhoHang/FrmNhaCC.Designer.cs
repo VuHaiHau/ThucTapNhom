@@ -73,7 +73,7 @@
             this.dgv_nhacungcap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_nhacungcap.Location = new System.Drawing.Point(16, 70);
             this.dgv_nhacungcap.Name = "dgv_nhacungcap";
-            this.dgv_nhacungcap.Size = new System.Drawing.Size(781, 158);
+            this.dgv_nhacungcap.Size = new System.Drawing.Size(781, 226);
             this.dgv_nhacungcap.TabIndex = 11;
             this.dgv_nhacungcap.TabStop = false;
             this.dgv_nhacungcap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_nhacungcap_CellClick);
@@ -93,7 +93,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(9, 259);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(816, 234);
+            this.groupBox2.Size = new System.Drawing.Size(816, 302);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Nhà CC";
@@ -309,10 +309,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(251, 6);
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(243, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(374, 31);
+            this.label1.Size = new System.Drawing.Size(379, 32);
             this.label1.TabIndex = 15;
             this.label1.Text = "NHÀ CUNG CẤP SẢN PHẨM";
             // 
@@ -321,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(831, 499);
+            this.ClientSize = new System.Drawing.Size(831, 561);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bt_quaylai);

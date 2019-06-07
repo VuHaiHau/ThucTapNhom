@@ -23,9 +23,17 @@ namespace QuanLyKhoHang
 
         private void btn_nhanv_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmNhanVIen nhanvien = new FrmNhanVIen();
-            nhanvien.ShowDialog();
+            if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
+            {
+                this.Hide();
+                FrmNhanVIen nhanvien = new FrmNhanVIen();
+                nhanvien.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn Phải là ADMIN thì mới có quyền thực hiện được thao tác này!");
+            }
+            
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,9 +80,18 @@ namespace QuanLyKhoHang
 
         private void btn_luong_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmBoPhan bophan = new FrmBoPhan();
-            bophan.ShowDialog();
+            if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
+            {
+                this.Hide();
+                FrmBoPhan bophan = new FrmBoPhan();
+                bophan.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn Phải là ADMIN thì mới có quyền thực hiện được thao tác này!");
+            }
+
+            
         }
 
         private void btn_nhacc_Click(object sender, EventArgs e)
@@ -86,9 +103,17 @@ namespace QuanLyKhoHang
         
         private void btn_khohang_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmKhoHang kho = new FrmKhoHang();
-            kho.ShowDialog();
+            if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
+            {
+                this.Hide();
+                FrmKhoHang kho = new FrmKhoHang();
+                kho.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn Phải là ADMIN thì mới có quyền thực hiện được thao tác này!");
+            }
+           
         }
 
         private void btn_xuatnhap_Click(object sender, EventArgs e)
@@ -203,6 +228,8 @@ namespace QuanLyKhoHang
             {
                 MessageBox.Show("Bạn Phải là ADMIN thì mới có quyền thực hiện được thao tác này!");
             }
+               
+            
            
         }
 
@@ -278,9 +305,17 @@ namespace QuanLyKhoHang
 
         private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmDoiQuyen dq = new FrmDoiQuyen();
-            dq.ShowDialog();
+            if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
+            {
+                this.Hide();
+                FrmDoiQuyen dq = new FrmDoiQuyen();
+                dq.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn Phải là ADMIN thì mới có quyền thực hiện được thao tác này!");
+            }
+           
 
         }
 

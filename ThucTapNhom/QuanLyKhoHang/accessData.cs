@@ -628,7 +628,7 @@ namespace QuanLyKhoHang
             OpenConnect();
             cmd = new SqlCommand("THEM_DANHMUC", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.Add(new SqlParameter("@STT", STT));
+            
             cmd.Parameters.Add(new SqlParameter("@MADANHMUC", MADANHMUC));
             cmd.Parameters.Add(new SqlParameter("@TENDANHMUC", TENDANHMUC));
             cmd.Parameters.Add(new SqlParameter("@GHICHU", GHICHU));

@@ -274,10 +274,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(372, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 31);
+            this.label1.Size = new System.Drawing.Size(297, 32);
             this.label1.TabIndex = 28;
             this.label1.Text = "QUẢN LÝ NHÂN VIÊN";
             // 

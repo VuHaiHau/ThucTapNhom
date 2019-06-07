@@ -125,7 +125,7 @@ namespace QuanLyKhoHang
             acc.AutoCompletecbx(tbx_MaKho, "SELECT TENKHO FROM KHOHANG", "TENKHO");
             acc.AutoCompletecbx(tbx_NQL, "SELECT TENNV FROM NHANVIEN", "TENNV");
 
-            dgv_BoPhan.DataSource = acc.Select_Data("SELECT BOPHAN.MABP, TENBP, BOPHAN.DIENTHOAI, TENKHO, TENNV FROM BOPHAN left join NHANVIEN on BOPHAN.NQL = NHANVIEN.MANV left join KHOHANG on BOPHAN.MAKHO = KHOHANG.MAKHO");
+            dgv_BoPhan.DataSource = acc.Select_Data("Select Row_number() over(order by MABP) STT,* from BP");
 
             dgv_BoPhan.Columns["MABP"].Width = 80;
             dgv_BoPhan.Columns["TENBP"].Width = 150;
@@ -142,14 +142,14 @@ namespace QuanLyKhoHang
             dgv_BoPhan.ClearSelection();
             ClearText();
 
-            if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
-            {
-                btn_xoa.Enabled = true;
-            }
-            else
-            {
-                btn_xoa.Enabled = false;
-            }
+            //if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
+            //{
+            //    btn_xoa.Enabled = true;
+            //}
+            //else
+            //{
+            //    btn_xoa.Enabled = false;
+            //}
         }
 
         private void dgv_BoPhan_KeyDown(object sender, KeyEventArgs e)
@@ -289,42 +289,42 @@ namespace QuanLyKhoHang
                 }
                 dgv_BoPhan.EndEdit();
             }
-            if (key == 3)
-            {
-                if (tbx_MaBP.Text.Trim() == "")
-                {
-                    MessageBox.Show("Hãy Nhập Mã Bộ Phận Hoặc Chọn Dòng Bạn Muốn Xóa!", "Thông Báo!");
-                    tbx_MaBP.Focus();
-                }
-                else
-                {
-                    DataTable dtnv = new DataTable();
-                    dtnv = acc.CheckSql("select * from NHANVIEN where MABP ='" + tbx_MaBP.Text + "'");
-                    if (dtnv.Rows.Count > 0)
-                    {
-                        if (MessageBox.Show("Bộ Phận Đang Tốn Tại Ơ Bảng Nhân Viên! Bạn Chắc Chắn Muốn Xóa!Toàn Bộ Thông Tin Liên Quan Đến Bộ Phận Sẽ Chuyển Về Default!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            acc.CheckSql("Update NHANVIEN SET MABP = null WHERE MABP = '" + tbx_MaBP.Text + "'");
-                            acc.Xoa_BoPhan(tbx_MaBP.Text);
-                            MessageBox.Show("Xóa Thành Công!", "Thông Báo");
-                            BoPhan_Load(sender, e);
-                        }
-                    }
-                    else
-                    {
-                        if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Bộ Phận Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            acc.Xoa_BoPhan(tbx_MaBP.Text);
-                            MessageBox.Show("Xóa Thành Công!", "Thông Báo");
-                            BoPhan_Load(sender, e);
-                        }
-                        else
-                        {
+            //if (key == 3)
+            //{
+            //    if (tbx_MaBP.Text.Trim() == "")
+            //    {
+            //        MessageBox.Show("Hãy Nhập Mã Bộ Phận Hoặc Chọn Dòng Bạn Muốn Xóa!", "Thông Báo!");
+            //        tbx_MaBP.Focus();
+            //    }
+            //    else
+            //    {
+            //        DataTable dtnv = new DataTable();
+            //        dtnv = acc.CheckSql("select * from NHANVIEN where MABP ='" + tbx_MaBP.Text + "'");
+            //        if (dtnv.Rows.Count > 0)
+            //        {
+            //            if (MessageBox.Show("Bộ Phận Đang Tốn Tại Ơ Bảng Nhân Viên! Bạn Chắc Chắn Muốn Xóa!Toàn Bộ Thông Tin Liên Quan Đến Bộ Phận Sẽ Chuyển Về Default!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //            {
+            //                acc.CheckSql("Update NHANVIEN SET MABP = null WHERE MABP = '" + tbx_MaBP.Text + "'");
+            //                acc.Xoa_BoPhan(tbx_MaBP.Text);
+            //                MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+            //                BoPhan_Load(sender, e);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Bộ Phận Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //            {
+            //                acc.Xoa_BoPhan(tbx_MaBP.Text);
+            //                MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+            //                BoPhan_Load(sender, e);
+            //            }
+            //            else
+            //            {
 
-                        }
-                    }
-                }
-            }
+            //            }
+            //        }
+               // }
+           // }
         }
 
         private void btn_lammoi_Click_1(object sender, EventArgs e)
@@ -445,6 +445,7 @@ namespace QuanLyKhoHang
             Disablebtn();
             Disabletbx();
             tbx_MaBP.Enabled = true;
+            
             //if (key == 3)
             //{
                 if (tbx_MaBP.Text.Trim() == "")
