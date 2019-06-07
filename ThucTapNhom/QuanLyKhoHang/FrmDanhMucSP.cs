@@ -60,18 +60,18 @@ namespace QuanLyKhoHang
             tbx_tendm.Focus();
             acc.AutoCompletecbx(tbx_makho, "SELECT TENKHO FROM KHOHANG", "TENKHO");
             tbx_madm.Enabled = false;
-            dgvDANHMUC.DataSource = acc.Select_Data("SELECT DM.MADANHMUC,TENDANHMUC,KHOHANG.TENKHO,DM.GHICHU from DANHMUC DM left join KHOHANG on KHOHANG.MAKHO=DM.MAKHO");
+            dgvDANHMUC.DataSource = acc.Select_Data("Select Row_number() over(order by MADANHMUC) STT,* from DANHMUCSP");
             dgvDANHMUC.ClearSelection();
             tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             //hiển thị tiêu đề của các cột:
-            dgvDANHMUC.Columns[0].HeaderText = "Mã Danh Mục";
-            dgvDANHMUC.Columns[1].HeaderText = "Tên Danh Mục";
-            dgvDANHMUC.Columns[2].HeaderText = "Tên Kho";
-            dgvDANHMUC.Columns[3].HeaderText = "Ghi Chú";
+            dgvDANHMUC.Columns[1].HeaderText = "Mã Danh Mục";
+            dgvDANHMUC.Columns[2].HeaderText = "Tên Danh Mục";
+            dgvDANHMUC.Columns[3].HeaderText = "Tên Kho";
+            dgvDANHMUC.Columns[4].HeaderText = "Ghi Chú";
 
             //căn độ rộng cột:
-            dgvDANHMUC.Columns[1].Width = 200;
-            dgvDANHMUC.Columns[2].Width = 200;
+            dgvDANHMUC.Columns[1].Width = 100;
+            dgvDANHMUC.Columns[2].Width = 100;
             dgvDANHMUC.Columns[3].Width = 160;
 
 
@@ -110,13 +110,6 @@ namespace QuanLyKhoHang
         }
        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //bt_them.Enabled = true; bt_xoa.Enabled = false; btn_ghinhan.Enabled = false; bt_chophepsua.Enabled = false;
-            //cleartext();
-            //Enable();
-            DanhMucSP_Load(sender, e);
-        }
 
         private void vềTtrangChủToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -214,7 +207,7 @@ namespace QuanLyKhoHang
                     }
                     else
                     {
-
+                        
                         acc.THEM_DANHMUC(tbx_madm.Text, tbx_tendm.Text, tbx_ghichu.Text, MAKHO);
                         DanhMucSP_Load(sender, e);
                         MessageBox.Show("Thêm THành Công Danh Mục!", "Thông Báo");
@@ -335,6 +328,146 @@ namespace QuanLyKhoHang
             {
                 tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             }
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            tbx_tendm.Focus();
+            Enable();
+            tbx_madm.Enabled = true;
+            key = 1;
+            bt_them.Enabled = false;
+            bt_xoa.Enabled = false;
+            bt_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            Enable();
+            bt_xoa.Enabled = false;
+            bt_them.Enabled = false;
+            bt_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            key = 2;
+            tbx_madm.Enabled = false;
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            bt_xoa.Enabled = false;
+            bt_them.Enabled = false;
+            bt_chophepsua.Enabled = false;
+            btn_ghinhan.Enabled = true;
+            //key = 3;
+            Disable();
+            tbx_madm.Enabled = true;
+            if (tbx_madm.Text == "" || dgvDANHMUC.SelectedRows == null)
+            {
+                MessageBox.Show("Hãy Nhập thông tin mã Danh Mục cần xóa hoặc chọn trên Bảng Dữ liệu");
+                tbx_madm.Focus();
+                tbx_madm.Enabled = true;
+                tbx_madm.BackColor = Color.White;
+            }
+            else
+            {
+                if (MessageBox.Show("Bạn có Chắc chắn muốn xóa danh mục này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    acc.XOA_DANHMUC("UPDATE SANPHAM SET MADANHMUC=NULL WHERE MADANHMUC='" + tbx_madm.Text + "'");
+                    acc.XOA_DANHMUC(tbx_madm.Text);
+                    DanhMucSP_Load(sender, e);
+                    MessageBox.Show("Xóa Thành Công Danh Mục!", "Thông Báo");
+                    //lb_thongbao.Text = "Xóa Thành Công";
+                    cleartext();
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (key == 1)
+            {
+                if (tbx_tendm.Text == "" || tbx_makho.Text == "")
+                {
+                    MessageBox.Show("Hãy Nhập đủ thông tin vào các trường", "ThônG Báo");
+                    tbx_madm.Focus();
+
+                }
+                else
+                {
+                    var itemMakho = tbx_makho.GetItemText(tbx_makho.SelectedItem);
+                    ThongTinMaKho(itemMakho);
+                    DataTable dtdm = acc.CheckSql("SELECT * From DANHMUC where MADANHMUC='" + tbx_madm.Text + "'");
+                    if (dtdm.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Mã Danh Mục đã Tồn tại!", "Cảnh báo");
+                        tbx_madm.Clear();
+                        tbx_madm.Focus();
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Bạn có chắc chắn muốn thêm danh mục này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            acc.THEM_DANHMUC(tbx_madm.Text, tbx_tendm.Text, tbx_ghichu.Text, MAKHO);
+                            DanhMucSP_Load(sender, e);
+                            MessageBox.Show("Thêm Thành Công Danh Mục!", "Thông Báo");
+                            //lb_thongbao.Text = "Thêm Thành Công";
+                            cleartext();
+                            tbx_tendm.Focus();
+                        }
+                       
+                    }
+                }
+
+
+            }
+            if (key == 2)
+            {
+                if (tbx_madm.Text == "" || dgvDANHMUC.SelectedRows == null)
+                {
+                    MessageBox.Show("Hãy Nhập Mã Danh mục cần sửa đổi hoặc chọn trực tiếp trên bảng", "Cảnh báo");
+                    tbx_madm.Focus();
+                }
+                else
+                {
+
+                    var itemMakho = tbx_makho.GetItemText(tbx_makho.SelectedItem);
+                    ThongTinMaKho(itemMakho);
+                    if (MessageBox.Show("Bạn có chắc chắn muốn sửa danh mục này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.SUA_DANHMUC(tbx_madm.Text, tbx_tendm.Text, tbx_ghichu.Text, MAKHO);
+                        DanhMucSP_Load(sender, e);
+                        cleartext();
+                        MessageBox.Show("Sửa Thành Công Danh Mục!", "Thông Báo");
+                        //lb_thongbao.Text = "Sửa Thành Công";
+                    }
+                   
+
+                }
+            }
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                dgvDANHMUC.DataSource = acc.Select_Data("SELECT DM.MADANHMUC,TENDANHMUC,KHOHANG.TENKHO,DM.GHICHU from DANHMUC DM left join KHOHANG on KHOHANG.MAKHO=DM.MAKHO WHERE ( MADANHMUC like N'%" + tbx_timkiem.Text + "%' OR TENDANHMUC like N'%" + tbx_timkiem.Text + "%' OR KHOHANG.TENKHO like N'%" + tbx_timkiem.Text + "%' OR DM.GHICHU like N'%" + tbx_timkiem.Text + "%' )");
+                tbx_timkiem.Clear();
+                dgvDANHMUC.ClearSelection();
+            }
+
+        }
+
+        private void btlammoi_Click(object sender, EventArgs e)
+        {
+            cleartext();
+            DanhMucSP_Load(sender, e);
         }
     }
 }

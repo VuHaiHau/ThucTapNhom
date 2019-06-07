@@ -72,7 +72,7 @@
             // btThoat
             // 
             this.btThoat.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThoat.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoat.ForeColor = System.Drawing.Color.White;
             this.btThoat.Location = new System.Drawing.Point(263, 218);
             this.btThoat.Name = "btThoat";
@@ -85,11 +85,11 @@
             // btDangNhap
             // 
             this.btDangNhap.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDangNhap.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangNhap.ForeColor = System.Drawing.Color.White;
             this.btDangNhap.Location = new System.Drawing.Point(138, 218);
             this.btDangNhap.Name = "btDangNhap";
-            this.btDangNhap.Size = new System.Drawing.Size(110, 39);
+            this.btDangNhap.Size = new System.Drawing.Size(110, 40);
             this.btDangNhap.TabIndex = 3;
             this.btDangNhap.Text = "Đăng nhập";
             this.btDangNhap.UseVisualStyleBackColor = false;
@@ -98,11 +98,11 @@
             // checkMK
             // 
             this.checkMK.AutoSize = true;
-            this.checkMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkMK.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.checkMK.Location = new System.Drawing.Point(169, 178);
             this.checkMK.Name = "checkMK";
-            this.checkMK.Size = new System.Drawing.Size(115, 23);
+            this.checkMK.Size = new System.Drawing.Size(135, 25);
             this.checkMK.TabIndex = 2;
             this.checkMK.Text = "Hiện mật khẩu";
             this.checkMK.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(107, 138);
+            this.txtMatKhau.Location = new System.Drawing.Point(107, 137);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(244, 20);
             this.txtMatKhau.TabIndex = 1;

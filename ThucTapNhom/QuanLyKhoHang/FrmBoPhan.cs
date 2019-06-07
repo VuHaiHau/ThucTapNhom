@@ -422,5 +422,231 @@ namespace QuanLyKhoHang
                 tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            key = 1;
+            Disablebtn();
+            Enabletbx();
+            tbx_MaBP.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            key = 2;
+            Disablebtn();
+            Enabletbx();
+            tbx_MaBP.Enabled = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //key = 3;
+            Disablebtn();
+            Disabletbx();
+            tbx_MaBP.Enabled = true;
+            //if (key == 3)
+            //{
+                if (tbx_MaBP.Text.Trim() == "")
+                {
+                    MessageBox.Show("Hãy Nhập Mã Bộ Phận Hoặc Chọn Dòng Bạn Muốn Xóa!", "Thông Báo!");
+                    tbx_MaBP.Focus();
+                }
+                else
+                {
+                    DataTable dtnv = new DataTable();
+                    dtnv = acc.CheckSql("select * from NHANVIEN where MABP ='" + tbx_MaBP.Text + "'");
+                    if (dtnv.Rows.Count > 0)
+                    {
+                        if (MessageBox.Show("Bộ Phận Đang Tốn Tại Ơ Bảng Nhân Viên! Bạn Chắc Chắn Muốn Xóa!Toàn Bộ Thông Tin Liên Quan Đến Bộ Phận Sẽ Chuyển Về Default!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            acc.CheckSql("Update NHANVIEN SET MABP = null WHERE MABP = '" + tbx_MaBP.Text + "'");
+                            acc.Xoa_BoPhan(tbx_MaBP.Text);
+                            MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+                            BoPhan_Load(sender, e);
+                        }
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Bộ Phận Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            acc.Xoa_BoPhan(tbx_MaBP.Text);
+                            MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+                            BoPhan_Load(sender, e);
+                        }
+                        else
+                        {
+
+                        }
+                    //}
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (key == 1)
+            {
+                if (tbx_TenBP.Text.Trim() == "" || tbx_Dienthoai.Text.Trim() == "" || tbx_MaKho.Text.Trim() == "" || tbx_NQL.Text.Trim() == "")
+                {
+                    MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin!", "Thông Báo!");
+                    tbx_MaBP.Focus();
+                }
+                else
+                {
+                    var itemnv = tbx_NQL.GetItemText(tbx_NQL.SelectedItem);
+                    ThongTinMaNV(itemnv);
+                    var itemkho = tbx_MaKho.GetItemText(tbx_MaKho.SelectedItem);
+                    ThongTinMaKho(itemkho);
+                    DataTable dtkho = new DataTable();
+                    DataTable dtbp = new DataTable();
+                    DataTable dtnql = new DataTable();
+                    DataTable dttbp = new DataTable();
+                    dtnql = acc.CheckSql("select * from NHANVIEN where TENNV like N'" + itemnv + "'");
+                    dtkho = acc.CheckSql("select * from KHOHANG where TENKHO like N'" + itemkho + "'");
+                    dtbp = acc.CheckSql("select * from BOPHAN where MABP ='" + tbx_MaBP.Text + "'");
+                    dttbp = acc.CheckSql("select * from BOPHAN where TENBP like N'" + tbx_TenBP.Text + "'");
+                    if (dtbp.Rows.Count > 0 || dttbp.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Bộ Phận đã tồn tại!", "Lỗi");
+                        tbx_MaBP.Clear();
+                        tbx_MaBP.Focus();
+                    }
+                    else if (dtkho.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Kho Hàng không tồn tại!", "Lỗi");
+                        tbx_MaKho.ResetText();
+                    }
+                    else if (dtnql.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Người Quản Lý không tồn tại!", "Lỗi");
+                        tbx_NQL.ResetText();
+                    }
+                    else
+                    {
+                        if (tbx_MaBP.Text == dgv_BoPhan.CurrentRow.Cells["MABP"].Value.ToString() && tbx_TenBP.Text == dgv_BoPhan.CurrentRow.Cells["TENBP"].Value.ToString().Trim() && tbx_MaKho.Text == dgv_BoPhan.CurrentRow.Cells["TENKHO"].Value.ToString().Trim() && tbx_NQL.Text == dgv_BoPhan.CurrentRow.Cells["TENNV"].Value.ToString().Trim() && tbx_Dienthoai.Text == dgv_BoPhan.CurrentRow.Cells["DIENTHOAI"].Value.ToString().Trim())
+                        {
+                            MessageBox.Show("Toàn Bộ Thông Tin Bộ Phận Đã Tồn Tại. Vui Lòng Sủa Lại!", "Thông Báo!");
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Bạn Chắc Chắn Muốn Thêm Bộ Phận Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                acc.Them_BoPhan(tbx_MaBP.Text, tbx_TenBP.Text, tbx_Dienthoai.Text, MAKHO, MANV);
+                                BoPhan_Load(sender, e);
+                                MessageBox.Show("Thêm Thành Công!", "Thông Báo");
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            if (key == 2)
+            {
+                dgv_BoPhan.BeginEdit(true);
+                if (tbx_MaBP.Text.Trim() == "" || tbx_NQL.Text.Trim() == "" || tbx_MaKho.Text.Trim() == "")
+                {
+                    MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin Hoặc Chọn Dòng Bạn Muốn Sửa. Tối Thiểu MABP + MAKHO + NQL!", "Thông Báo!");
+                    tbx_MaBP.Focus();
+                }
+                else
+                {
+                    var itemnv = tbx_NQL.GetItemText(tbx_NQL.SelectedItem);
+                    ThongTinMaNV(itemnv);
+                    var itemkho = tbx_MaKho.GetItemText(tbx_MaKho.SelectedItem);
+                    ThongTinMaKho(itemkho);
+                    DataTable dtkho = new DataTable();
+                    DataTable dtnql = new DataTable();
+                    dtnql = acc.CheckSql("select * from NHANVIEN where TENNV like N'" + itemnv + "'");
+                    dtkho = acc.CheckSql("select * from KHOHANG where TENKHO like N'" + itemkho + "'");
+                    if (tbx_MaBP.Text != dgv_BoPhan.CurrentRow.Cells["MABP"].Value.ToString().Trim())
+                    {
+                        MessageBox.Show("Mã Bộ Phận đã bị thay đổi!", "Lỗi");
+                        tbx_MaBP.Text = dgv_BoPhan.CurrentRow.Cells["MABP"].Value.ToString().Trim();
+                    }
+                    else if (dtkho.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Kho Hàng không tồn tại!", "Lỗi");
+                        tbx_NQL.Text = dgv_BoPhan.CurrentRow.Cells["TENNV"].Value.ToString().Trim();
+                        tbx_MaKho.Text = dgv_BoPhan.CurrentRow.Cells["TENKHO"].Value.ToString().Trim();
+                    }
+                    else if (dtnql.Rows.Count < 1)
+                    {
+                        MessageBox.Show("Người Quản Lý không tồn tại!", "Lỗi");
+                        tbx_NQL.Text = dgv_BoPhan.CurrentRow.Cells["TENNV"].Value.ToString().Trim();
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Bạn Chắc Chắn Muốn Sửa Bộ Phận Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            acc.CapNhat_BoPhan(tbx_MaBP.Text, tbx_TenBP.Text, tbx_Dienthoai.Text, MAKHO, MANV);
+                            MessageBox.Show("Sửa Thành Công!", "Thông Báo");
+                            BoPhan_Load(sender, e);
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+                dgv_BoPhan.EndEdit();
+            }
+            //if (key == 3)
+            //{
+            //    if (tbx_MaBP.Text.Trim() == "")
+            //    {
+            //        MessageBox.Show("Hãy Nhập Mã Bộ Phận Hoặc Chọn Dòng Bạn Muốn Xóa!", "Thông Báo!");
+            //        tbx_MaBP.Focus();
+            //    }
+            //    else
+            //    {
+            //        DataTable dtnv = new DataTable();
+            //        dtnv = acc.CheckSql("select * from NHANVIEN where MABP ='" + tbx_MaBP.Text + "'");
+            //        if (dtnv.Rows.Count > 0)
+            //        {
+            //            if (MessageBox.Show("Bộ Phận Đang Tốn Tại Ơ Bảng Nhân Viên! Bạn Chắc Chắn Muốn Xóa!Toàn Bộ Thông Tin Liên Quan Đến Bộ Phận Sẽ Chuyển Về Default!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //            {
+            //                acc.CheckSql("Update NHANVIEN SET MABP = null WHERE MABP = '" + tbx_MaBP.Text + "'");
+            //                acc.Xoa_BoPhan(tbx_MaBP.Text);
+            //                MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+            //                BoPhan_Load(sender, e);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Bộ Phận Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //            {
+            //                acc.Xoa_BoPhan(tbx_MaBP.Text);
+            //                MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+            //                BoPhan_Load(sender, e);
+            //            }
+            //            else
+            //            {
+
+            //            }
+            //        }
+            //    }
+            //}
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                dgv_BoPhan.DataSource = acc.Select_Data("SELECT BOPHAN.MABP, TENBP, BOPHAN.DIENTHOAI, TENKHO, TENNV FROM BOPHAN left join NHANVIEN on BOPHAN.NQL = NHANVIEN.MANV left join KHOHANG on BOPHAN.MAKHO = KHOHANG.MAKHO WHERE ( BOPHAN.MABP like N'%" + tbx_timkiem.Text + "%' OR TENBP like N'%" + tbx_timkiem.Text + "%' OR BOPHAN.DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR TENKHO like N'%" + tbx_timkiem.Text + "%' OR TENNV like N'%" + tbx_timkiem.Text + "%')");
+                tbx_timkiem.Clear();
+                dgv_BoPhan.ClearSelection();
+            }
+        }
+
+        private void btlammoi_Click(object sender, EventArgs e)
+        {
+            BoPhan_Load(sender, e);
+        }
     }
 }

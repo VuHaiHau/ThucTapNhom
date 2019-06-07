@@ -39,14 +39,14 @@ namespace QuanLyKhoHang
             acc.AutoComplete(tbx_makh, "SELECT MAKH FROM KHACHHANG");
             dgvKhachHang.DataSource = acc.Select_Data("SELECT * FROM KHACHHANG");
             ClearText();
-            btn1.Enabled = true;
-            btn2.Enabled = true;
-            btn3.Enabled = true;
+            btn_sua.Enabled = true;
+            btn_them.Enabled = true;
+            bt_xoa.Enabled = true;
             tbx_diachi.Enabled = false;
             tbx_dienthoai.Enabled = false;
             tbx_email.Enabled = false;
             tbx_fax.Enabled = false;
-            btn_ghinhan.Enabled = false;
+            bt_luu.Enabled = false;
             tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             tbx_gioitinh.Enabled = false;
             tbx_makh.Enabled = false;
@@ -109,56 +109,50 @@ namespace QuanLyKhoHang
         private void btn1_Click(object sender, EventArgs e)
         {
             ClearText();
-            btn1.Enabled = false;
-            btn2.Enabled = false;
-            btn3.Enabled = false;
+            btn_them.Enabled = false;
+            btn_sua.Enabled = false;
+            bt_xoa.Enabled = false;
             tbx_diachi.Enabled = true;
             tbx_dienthoai.Enabled = true;
             tbx_email.Enabled = true;
             tbx_fax.Enabled = true;
-            btn_ghinhan.Enabled = true;
-            
             tbx_gioitinh.Enabled = true;
             tbx_makh.Enabled = true;
             tbx_tenkh.Enabled = true;
-            btn_ghinhan.Enabled = true;
+            bt_luu.Enabled = true;
             key = 1;
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
             ClearText();
-            btn1.Enabled = false;
-            btn2.Enabled = false;
-            btn3.Enabled = false;
+            btn_them.Enabled = false;
+            btn_sua.Enabled = false;
+            bt_xoa.Enabled = false;
             tbx_diachi.Enabled = true;
             tbx_dienthoai.Enabled = true;
             tbx_email.Enabled = true;
             tbx_fax.Enabled = true;
-            btn_ghinhan.Enabled = true;
-           
             tbx_gioitinh.Enabled = true;
             tbx_makh.Enabled = true;
             tbx_tenkh.Enabled = true;
-            btn_ghinhan.Enabled = true;
+            bt_luu.Enabled = true;
             key = 2;
         }
 
         private void btn3_Click_1(object sender, EventArgs e)
         {
-            btn1.Enabled = false;
-            btn2.Enabled = false;
-            btn3.Enabled = false;
+            btn_them.Enabled = false;
+            btn_sua.Enabled = false;
+            bt_xoa.Enabled = false;
             tbx_diachi.Enabled = false;
             tbx_dienthoai.Enabled = false;
             tbx_email.Enabled = false;
             tbx_fax.Enabled = false;
-            btn_ghinhan.Enabled = false;
-            
             tbx_gioitinh.Enabled = false;
             tbx_makh.Enabled = true;
             tbx_tenkh.Enabled = false;
-            btn_ghinhan.Enabled = true;
+            bt_luu.Enabled = true;
             key = 3;
 
         }
@@ -270,25 +264,7 @@ namespace QuanLyKhoHang
             }
         }
 
-        private void btn_huy_Click_1(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn Chắc Chắn Muốn Hủy ?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                ClearText();
-                btn1.Enabled = true;
-                btn2.Enabled = true;
-                btn3.Enabled = true;
-                tbx_diachi.Enabled = false;
-                tbx_dienthoai.Enabled = false;
-                tbx_email.Enabled = false;
-                tbx_fax.Enabled = false;
-                btn_ghinhan.Enabled = false;
-               
-                tbx_gioitinh.Enabled = false;
-                tbx_makh.Enabled = false;
-                tbx_tenkh.Enabled = false;
-            }
-        }
+      
 
         private void btn_timkiem_Click_1(object sender, EventArgs e)
         {
@@ -378,6 +354,218 @@ namespace QuanLyKhoHang
             if (tbx_timkiem.Text == "")
             {
                 tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            //ClearText();
+            btn_them.Enabled = false;
+            btn_sua.Enabled = false;
+            bt_xoa.Enabled = false;
+            tbx_diachi.Enabled = true;
+            tbx_dienthoai.Enabled = true;
+            tbx_email.Enabled = true;
+            tbx_fax.Enabled = true;
+            bt_luu.Enabled = true;
+
+            tbx_gioitinh.Enabled = true;
+            tbx_makh.Enabled = true;
+            tbx_tenkh.Enabled = true;
+           
+            key = 1;
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            //ClearText();
+            btn_them.Enabled = false;
+            btn_sua.Enabled = false;
+            bt_xoa.Enabled = false;
+            tbx_diachi.Enabled = true;
+            tbx_dienthoai.Enabled = true;
+            tbx_email.Enabled = true;
+            tbx_fax.Enabled = true;
+            tbx_gioitinh.Enabled = true;
+            tbx_makh.Enabled = true;
+            tbx_tenkh.Enabled = true;
+            bt_luu.Enabled = true;
+            key = 2;
+        }
+
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+            //btn_them.Enabled = false;
+            //btn_sua.Enabled = false;
+            //bt_xoa.Enabled = false;
+            //tbx_diachi.Enabled = false;
+            //tbx_dienthoai.Enabled = false;
+            //tbx_email.Enabled = false;
+            //tbx_fax.Enabled = false;
+            //tbx_gioitinh.Enabled = false;
+            //tbx_makh.Enabled = true;
+            //tbx_tenkh.Enabled = false;
+            //bt_luu.Enabled = true;
+            //key = 3;
+            if (tbx_makh.Text.Trim() == "" || dgvKhachHang.SelectedRows == null)
+            {
+                MessageBox.Show("Hãy Nhập Mã Khách Hàng Muốn Xóa Hoặc Chọn Dòng Muốm Xóa!,", "Cảnh Báo!");
+
+            }
+            else
+            {
+                DataTable dtpx = new DataTable();
+                dtpx = acc.CheckSql("select * from PHIEUXUAT where MAKH ='" + tbx_makh.Text + "'");
+
+                if (dtpx.Rows.Count > 0)
+                {
+                    if (MessageBox.Show("Khách Hàng  Đang Tốn Tại Ơ Bảng PHIEUXUAT, PHIEUNHAP! Bạn Có Muốn Xóa Thông Tin KH Này!", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.CheckSql("Update PHIEUXUAT SET MAKH = null WHERE MAKH = '" + tbx_makh.Text + "'");
+                    }
+
+                }
+                else
+                {
+                    if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Khách Hàng Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.Xoa_KhachHang(tbx_makh.Text);
+                        KhachHang_Load(sender, e);
+                        MessageBox.Show("Xóa Thành Công!", "Thông Báo!");
+                    }
+                    else
+                    {
+
+                    }
+                }
+            
+        }
+    }
+
+        private void btlammoi_Click(object sender, EventArgs e)
+        {
+            KhachHang_Load(sender, e);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Càn Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                dgvKhachHang.DataSource = acc.Select_Data("Select  * from KHACHHANG Where MAKH like N'%" + tbx_timkiem.Text + "%' OR TENKH like N'%" + tbx_timkiem.Text + "%' OR DIACHI like N'%" + tbx_timkiem.Text + "%' OR GIOITINH like N'%" + tbx_timkiem.Text + "%' OR DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR EMAIL like N'%" + tbx_timkiem.Text + "%'");
+                tbx_timkiem.Clear();
+                dgvKhachHang.ClearSelection();
+            }
+        }
+
+        private void bt_luu_Click(object sender, EventArgs e)
+        {
+            if (key == 1)
+            {
+                if (tbx_tenkh.Text.Trim() == "" || tbx_diachi.Text.Trim() == "" || tbx_dienthoai.Text.Trim() == "")
+                {
+                    MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin!,", "Thông Báo!");
+                    tbx_makh.Focus();
+                }
+                else
+                {
+                    DataTable dtkho = new DataTable();
+                    dtkho = acc.CheckSql("select * from KHACHHANG where MAKH ='" + tbx_makh.Text + "'");
+                    if (dtkho.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Mã Khách Hàng đã tồn tại!", "Lỗi");
+                        ClearText();
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Bạn Chắc Chắn Muốn Thêm Khách Hàng Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            acc.Them_KhachHang(tbx_makh.Text, tbx_tenkh.Text, tbx_diachi.Text, tbx_gioitinh.Text, tbx_dienthoai.Text, tbx_email.Text, tbx_fax.Text);
+                            KhachHang_Load(sender, e);
+                            MessageBox.Show("Thêm Thành Công!", "Thông Báo!");
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+            }
+            if (key == 2)
+            {
+                dgvKhachHang.BeginEdit(true);
+                if (tbx_tenkh.Text == "" || tbx_diachi.Text == "" || tbx_gioitinh.Text == "" || tbx_dienthoai.Text == "" || tbx_email.Text == "" || tbx_fax.Text == "")
+                {
+                    MessageBox.Show("Chọn Dòng Bạn Muốn Sửa", "Thông Báo!");
+                    tbx_makh.Focus();
+                }
+                else
+                {
+                    if (tbx_makh.Text != dgvKhachHang.CurrentRow.Cells["MAKH"].Value.ToString().Trim() || tbx_makh.Text == "")
+                    {
+                        MessageBox.Show("Mã Khách Hàng chưa được nhập hoặc đã bị thay đổi!", "Lỗi");
+                    }
+                    else
+                    {
+                        if (tbx_tenkh.Text == dgvKhachHang.CurrentRow.Cells["TENKH"].Value.ToString().Trim() && tbx_makh.Text == dgvKhachHang.CurrentRow.Cells["MAKH"].Value.ToString().Trim() && tbx_diachi.Text == dgvKhachHang.CurrentRow.Cells["DIACHI"].Value.ToString().Trim() && tbx_gioitinh.Text == dgvKhachHang.CurrentRow.Cells["GIOITINH"].Value.ToString().Trim() && tbx_dienthoai.Text == dgvKhachHang.CurrentRow.Cells["DIENTHOAI"].Value.ToString().Trim() && tbx_email.Text == dgvKhachHang.CurrentRow.Cells["EMAIL"].Value.ToString().Trim() && tbx_fax.Text == dgvKhachHang.CurrentRow.Cells["FAX"].Value.ToString().Trim())
+                        {
+                            MessageBox.Show("Toàn Bộ Thông Tin Khách Hàng Đã Tồn Tại. Vui Lòng Sủa Lại!", "Thông Báo!");
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Bạn Chắc Chắn Muốn Sửa Khách Hàng Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                acc.CapNhat_KhachHang(tbx_makh.Text, tbx_tenkh.Text, tbx_diachi.Text, tbx_gioitinh.Text, tbx_dienthoai.Text, tbx_email.Text, tbx_fax.Text);
+                                KhachHang_Load(sender, e);
+                                MessageBox.Show("Sửa Thành Công!", "Thông Báo!");
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                    }
+                }
+                dgvKhachHang.EndEdit();
+            }
+            if (key == 3)
+            {
+            //    if (tbx_makh.Text.Trim() == "" || dgvKhachHang.SelectedRows == null)
+            //    {
+            //        MessageBox.Show("Hãy Nhập Mã Khách Hàng Muốn Xóa Hoặc Chọn Dòng Muốm Xóa!,", "Cảnh Báo!");
+
+            //    }
+            //    else
+            //    {
+            //        DataTable dtpx = new DataTable();
+            //        dtpx = acc.CheckSql("select * from PHIEUXUAT where MAKH ='" + tbx_makh.Text + "'");
+
+            //        if (dtpx.Rows.Count > 0)
+            //        {
+            //            if (MessageBox.Show("Khách Hàng  Đang Tốn Tại Ơ Bảng PHIEUXUAT, PHIEUNHAP! Bạn Có Muốn Xóa Thông Tin KH Này!", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //            {
+            //                acc.CheckSql("Update PHIEUXUAT SET MAKH = null WHERE MAKH = '" + tbx_makh.Text + "'");
+            //            }
+
+            //        }
+            //        else
+            //        {
+            //            if (MessageBox.Show("Bạn Chắc Chắn Muốn Xóa Khách Hàng Này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //            {
+            //                acc.Xoa_KhachHang(tbx_makh.Text);
+            //                KhachHang_Load(sender, e);
+            //                MessageBox.Show("Xóa Thành Công!", "Thông Báo!");
+            //            }
+            //            else
+            //            {
+
+            //            }
+            //        }
+            //    }
             }
         }
     }

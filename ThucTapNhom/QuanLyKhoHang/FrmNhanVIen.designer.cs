@@ -63,12 +63,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbx_MaNV = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_xoa = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btlammoi = new System.Windows.Forms.Button();
             this.btn_ghinhan = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
-            this.bt_xoa = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.pn_radio.SuspendLayout();
@@ -246,7 +246,7 @@
             // 
             // tbx_DiaChi
             // 
-            this.tbx_DiaChi.Location = new System.Drawing.Point(365, 59);
+            this.tbx_DiaChi.Location = new System.Drawing.Point(365, 61);
             this.tbx_DiaChi.Name = "tbx_DiaChi";
             this.tbx_DiaChi.Size = new System.Drawing.Size(206, 26);
             this.tbx_DiaChi.TabIndex = 9;
@@ -308,7 +308,7 @@
             // 
             // tbx_TenNV
             // 
-            this.tbx_TenNV.Location = new System.Drawing.Point(84, 59);
+            this.tbx_TenNV.Location = new System.Drawing.Point(84, 60);
             this.tbx_TenNV.Name = "tbx_TenNV";
             this.tbx_TenNV.Size = new System.Drawing.Size(193, 26);
             this.tbx_TenNV.TabIndex = 2;
@@ -434,6 +434,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "QL Nhân Viên";
             // 
+            // bt_xoa
+            // 
+            this.bt_xoa.BackColor = System.Drawing.SystemColors.Control;
+            this.bt_xoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_xoa.ForeColor = System.Drawing.Color.Black;
+            this.bt_xoa.Image = ((System.Drawing.Image)(resources.GetObject("bt_xoa.Image")));
+            this.bt_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_xoa.Location = new System.Drawing.Point(344, 182);
+            this.bt_xoa.Name = "bt_xoa";
+            this.bt_xoa.Size = new System.Drawing.Size(110, 50);
+            this.bt_xoa.TabIndex = 136;
+            this.bt_xoa.Text = "Xóa";
+            this.bt_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_xoa.UseVisualStyleBackColor = false;
+            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click_1);
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.SystemColors.Control;
@@ -515,22 +531,6 @@
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.bt_them_Click);
-            // 
-            // bt_xoa
-            // 
-            this.bt_xoa.BackColor = System.Drawing.SystemColors.Control;
-            this.bt_xoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_xoa.ForeColor = System.Drawing.Color.Black;
-            this.bt_xoa.Image = ((System.Drawing.Image)(resources.GetObject("bt_xoa.Image")));
-            this.bt_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_xoa.Location = new System.Drawing.Point(344, 182);
-            this.bt_xoa.Name = "bt_xoa";
-            this.bt_xoa.Size = new System.Drawing.Size(110, 50);
-            this.bt_xoa.TabIndex = 136;
-            this.bt_xoa.Text = "Xóa";
-            this.bt_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bt_xoa.UseVisualStyleBackColor = false;
-            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click_1);
             // 
             // FrmNhanVIen
             // 
