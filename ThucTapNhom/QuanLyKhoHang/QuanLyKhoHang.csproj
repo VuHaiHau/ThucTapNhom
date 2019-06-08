@@ -147,6 +147,12 @@
     <Compile Include="FrmNhapHang.Designer.cs">
       <DependentUpon>FrmNhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThongKeSLTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongKeSLTonKho.Designer.cs">
+      <DependentUpon>FrmThongKeSLTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmXuatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKHDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKhoHangDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhoHangDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +268,9 @@
     <EmbeddedResource Include="FrmNhapHang.resx">
       <DependentUpon>FrmNhapHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongKeSLTonKho.resx">
+      <DependentUpon>FrmThongKeSLTonKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmXuatHang.resx">
       <DependentUpon>FrmXuatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +313,7 @@
     <EmbeddedResource Include="ReportPhieuXuat.resx">
       <DependentUpon>ReportPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report_Tk_SoLuong.rdlc" />
     <None Include="HoaDonMuaHang.xsc">
       <DependentUpon>HoaDonMuaHang.xsd</DependentUpon>
     </None>
@@ -346,6 +361,17 @@
     </None>
     <None Include="QLKHDataSet1.xss">
       <DependentUpon>QLKHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhoHangDataSet2.xsc">
+      <DependentUpon>QuanLyKhoHangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhoHangDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhoHangDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhoHangDataSet2.xss">
+      <DependentUpon>QuanLyKhoHangDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Resources\staff.png" />
   </ItemGroup>

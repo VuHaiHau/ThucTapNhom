@@ -124,6 +124,24 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TK_SoLuongTableAdapter" GeneratorDataComponentClassName="TK_SoLuongTableAdapter" Name="TK_SoLuong" UserDataComponentName="TK_SoLuongTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyKhoHangConnectionString (Settings)" DbObjectName="QuanLyKhoHang.dbo.TK_SoLuong" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MASP, TenSP, SOLUONG FROM dbo.TK_SoLuong</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MASP" DataSetColumn="MASP" />
+              <Mapping SourceColumn="TenSP" DataSetColumn="TenSP" />
+              <Mapping SourceColumn="SOLUONG" DataSetColumn="SOLUONG" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -132,7 +150,7 @@
   <xs:element name="HoaDonMuaHang" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HoaDonMuaHang" msprop:Generator_UserDSName="HoaDonMuaHang">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="HOADONMUAHANG" msprop:Generator_TableClassName="HOADONMUAHANGDataTable" msprop:Generator_TableVarName="tableHOADONMUAHANG" msprop:Generator_RowChangedName="HOADONMUAHANGRowChanged" msprop:Generator_TablePropName="HOADONMUAHANG" msprop:Generator_RowDeletingName="HOADONMUAHANGRowDeleting" msprop:Generator_RowChangingName="HOADONMUAHANGRowChanging" msprop:Generator_RowEvHandlerName="HOADONMUAHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="HOADONMUAHANGRowDeleted" msprop:Generator_RowClassName="HOADONMUAHANGRow" msprop:Generator_UserTableName="HOADONMUAHANG" msprop:Generator_RowEvArgName="HOADONMUAHANGRowChangeEvent">
+        <xs:element name="HOADONMUAHANG" msprop:Generator_TableClassName="HOADONMUAHANGDataTable" msprop:Generator_TableVarName="tableHOADONMUAHANG" msprop:Generator_TablePropName="HOADONMUAHANG" msprop:Generator_RowDeletingName="HOADONMUAHANGRowDeleting" msprop:Generator_RowChangingName="HOADONMUAHANGRowChanging" msprop:Generator_RowEvHandlerName="HOADONMUAHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="HOADONMUAHANGRowDeleted" msprop:Generator_UserTableName="HOADONMUAHANG" msprop:Generator_RowChangedName="HOADONMUAHANGRowChanged" msprop:Generator_RowEvArgName="HOADONMUAHANGRowChangeEvent" msprop:Generator_RowClassName="HOADONMUAHANGRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MASP" msprop:Generator_ColumnVarNameInTable="columnMASP" msprop:Generator_ColumnPropNameInRow="MASP" msprop:Generator_ColumnPropNameInTable="MASPColumn" msprop:Generator_UserColumnName="MASP">
@@ -169,7 +187,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HOADONBANHANG" msprop:Generator_TableClassName="HOADONBANHANGDataTable" msprop:Generator_TableVarName="tableHOADONBANHANG" msprop:Generator_RowChangedName="HOADONBANHANGRowChanged" msprop:Generator_TablePropName="HOADONBANHANG" msprop:Generator_RowDeletingName="HOADONBANHANGRowDeleting" msprop:Generator_RowChangingName="HOADONBANHANGRowChanging" msprop:Generator_RowEvHandlerName="HOADONBANHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="HOADONBANHANGRowDeleted" msprop:Generator_RowClassName="HOADONBANHANGRow" msprop:Generator_UserTableName="HOADONBANHANG" msprop:Generator_RowEvArgName="HOADONBANHANGRowChangeEvent">
+        <xs:element name="HOADONBANHANG" msprop:Generator_TableClassName="HOADONBANHANGDataTable" msprop:Generator_TableVarName="tableHOADONBANHANG" msprop:Generator_TablePropName="HOADONBANHANG" msprop:Generator_RowDeletingName="HOADONBANHANGRowDeleting" msprop:Generator_RowChangingName="HOADONBANHANGRowChanging" msprop:Generator_RowEvHandlerName="HOADONBANHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="HOADONBANHANGRowDeleted" msprop:Generator_UserTableName="HOADONBANHANG" msprop:Generator_RowChangedName="HOADONBANHANGRowChanged" msprop:Generator_RowEvArgName="HOADONBANHANGRowChangeEvent" msprop:Generator_RowClassName="HOADONBANHANGRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MASP" msprop:Generator_ColumnVarNameInTable="columnMASP" msprop:Generator_ColumnPropNameInRow="MASP" msprop:Generator_ColumnPropNameInTable="MASPColumn" msprop:Generator_UserColumnName="MASP">
@@ -213,7 +231,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BCN" msprop:Generator_TableClassName="BCNDataTable" msprop:Generator_TableVarName="tableBCN" msprop:Generator_TablePropName="BCN" msprop:Generator_RowDeletingName="BCNRowDeleting" msprop:Generator_RowChangingName="BCNRowChanging" msprop:Generator_RowEvHandlerName="BCNRowChangeEventHandler" msprop:Generator_RowDeletedName="BCNRowDeleted" msprop:Generator_UserTableName="BCN" msprop:Generator_RowChangedName="BCNRowChanged" msprop:Generator_RowEvArgName="BCNRowChangeEvent" msprop:Generator_RowClassName="BCNRow">
+        <xs:element name="BCN" msprop:Generator_TableClassName="BCNDataTable" msprop:Generator_TableVarName="tableBCN" msprop:Generator_RowChangedName="BCNRowChanged" msprop:Generator_TablePropName="BCN" msprop:Generator_RowDeletingName="BCNRowDeleting" msprop:Generator_RowChangingName="BCNRowChanging" msprop:Generator_RowEvHandlerName="BCNRowChangeEventHandler" msprop:Generator_RowDeletedName="BCNRowDeleted" msprop:Generator_RowClassName="BCNRow" msprop:Generator_UserTableName="BCN" msprop:Generator_RowEvArgName="BCNRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAPN" msprop:Generator_ColumnVarNameInTable="columnMAPN" msprop:Generator_ColumnPropNameInRow="MAPN" msprop:Generator_ColumnPropNameInTable="MAPNColumn" msprop:Generator_UserColumnName="MAPN">
@@ -257,7 +275,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BCX" msprop:Generator_TableClassName="BCXDataTable" msprop:Generator_TableVarName="tableBCX" msprop:Generator_TablePropName="BCX" msprop:Generator_RowDeletingName="BCXRowDeleting" msprop:Generator_RowChangingName="BCXRowChanging" msprop:Generator_RowEvHandlerName="BCXRowChangeEventHandler" msprop:Generator_RowDeletedName="BCXRowDeleted" msprop:Generator_UserTableName="BCX" msprop:Generator_RowChangedName="BCXRowChanged" msprop:Generator_RowEvArgName="BCXRowChangeEvent" msprop:Generator_RowClassName="BCXRow">
+        <xs:element name="BCX" msprop:Generator_TableClassName="BCXDataTable" msprop:Generator_TableVarName="tableBCX" msprop:Generator_RowChangedName="BCXRowChanged" msprop:Generator_TablePropName="BCX" msprop:Generator_RowDeletingName="BCXRowDeleting" msprop:Generator_RowChangingName="BCXRowChanging" msprop:Generator_RowEvHandlerName="BCXRowChangeEventHandler" msprop:Generator_RowDeletedName="BCXRowDeleted" msprop:Generator_RowClassName="BCXRow" msprop:Generator_UserTableName="BCX" msprop:Generator_RowEvArgName="BCXRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAPX" msprop:Generator_ColumnVarNameInTable="columnMAPX" msprop:Generator_ColumnPropNameInRow="MAPX" msprop:Generator_ColumnPropNameInTable="MAPXColumn" msprop:Generator_UserColumnName="MAPX">
@@ -301,6 +319,27 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TK_SoLuong" msprop:Generator_TableClassName="TK_SoLuongDataTable" msprop:Generator_TableVarName="tableTK_SoLuong" msprop:Generator_TablePropName="TK_SoLuong" msprop:Generator_RowDeletingName="TK_SoLuongRowDeleting" msprop:Generator_RowChangingName="TK_SoLuongRowChanging" msprop:Generator_RowEvHandlerName="TK_SoLuongRowChangeEventHandler" msprop:Generator_RowDeletedName="TK_SoLuongRowDeleted" msprop:Generator_UserTableName="TK_SoLuong" msprop:Generator_RowChangedName="TK_SoLuongRowChanged" msprop:Generator_RowEvArgName="TK_SoLuongRowChangeEvent" msprop:Generator_RowClassName="TK_SoLuongRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MASP" msprop:Generator_ColumnVarNameInTable="columnMASP" msprop:Generator_ColumnPropNameInRow="MASP" msprop:Generator_ColumnPropNameInTable="MASPColumn" msprop:Generator_UserColumnName="MASP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenSP" msprop:Generator_ColumnVarNameInTable="columnTenSP" msprop:Generator_ColumnPropNameInRow="TenSP" msprop:Generator_ColumnPropNameInTable="TenSPColumn" msprop:Generator_UserColumnName="TenSP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLUONG" msprop:Generator_ColumnVarNameInTable="columnSOLUONG" msprop:Generator_ColumnPropNameInRow="SOLUONG" msprop:Generator_ColumnPropNameInTable="SOLUONGColumn" msprop:Generator_UserColumnName="SOLUONG" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -318,6 +357,10 @@
     <xs:unique name="BCX_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:BCX" />
       <xs:field xpath="mstns:MAPX" />
+    </xs:unique>
+    <xs:unique name="TK_SoLuong_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TK_SoLuong" />
+      <xs:field xpath="mstns:MASP" />
     </xs:unique>
   </xs:element>
 </xs:schema>

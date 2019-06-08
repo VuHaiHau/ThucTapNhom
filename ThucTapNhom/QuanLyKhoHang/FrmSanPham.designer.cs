@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSanPham));
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btlammoi = new System.Windows.Forms.Button();
             this.btn_themmoi = new System.Windows.Forms.Button();
             this.btn_chophepsua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dtpicker_hsd = new System.Windows.Forms.DateTimePicker();
             this.dtpicker_nsx = new System.Windows.Forms.DateTimePicker();
             this.txb_ghichu = new System.Windows.Forms.TextBox();
@@ -86,7 +87,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btn_xoa);
             this.groupBox1.Controls.Add(this.btlammoi);
             this.groupBox1.Controls.Add(this.btn_themmoi);
@@ -97,23 +98,17 @@
             this.groupBox1.Size = new System.Drawing.Size(378, 169);
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
-            //this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(253, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 50);
-            this.button1.TabIndex = 157;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(258, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 62);
+            this.button2.TabIndex = 76;
+            this.button2.Text = "Xuất Thống Kê";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // btn_xoa
             // 
@@ -196,6 +191,22 @@
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1087, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 50);
+            this.button1.TabIndex = 157;
+            this.button1.Text = "Tìm Kiếm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtpicker_hsd
             // 
@@ -420,7 +431,7 @@
             this.txb_timkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txb_timkiem.Location = new System.Drawing.Point(172, 31);
             this.txb_timkiem.Name = "txb_timkiem";
-            this.txb_timkiem.Size = new System.Drawing.Size(1030, 26);
+            this.txb_timkiem.Size = new System.Drawing.Size(906, 26);
             this.txb_timkiem.TabIndex = 1;
             this.txb_timkiem.Enter += new System.EventHandler(this.txt_tk_Enter);
             this.txb_timkiem.Leave += new System.EventHandler(this.txt_tk_Leave);
@@ -478,6 +489,7 @@
             // 
             // groupBox_DSSP
             // 
+            this.groupBox_DSSP.Controls.Add(this.button1);
             this.groupBox_DSSP.Controls.Add(this.txb_timkiem);
             this.groupBox_DSSP.Controls.Add(this.dgv_SANPHAM);
             this.groupBox_DSSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -581,5 +593,6 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_themmoi;
         private System.Windows.Forms.Button btn_chophepsua;
+        private System.Windows.Forms.Button button2;
     }
 }

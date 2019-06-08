@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QuanLyKhoHangDataSet2" targetNamespace="http://tempuri.org/QuanLyKhoHangDataSet2.xsd" xmlns:mstns="http://tempuri.org/QuanLyKhoHangDataSet2.xsd" xmlns="http://tempuri.org/QuanLyKhoHangDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyKhoHangConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyKhoHangConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyKhoHang.Properties.Settings.GlobalReference.Default.QuanLyKhoHangConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TK_SoLuongTableAdapter" GeneratorDataComponentClassName="TK_SoLuongTableAdapter" Name="TK_SoLuong" UserDataComponentName="TK_SoLuongTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyKhoHangConnectionString1 (Settings)" DbObjectName="QuanLyKhoHang.dbo.TK_SoLuong" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MASP, TenSP, SOLUONG FROM dbo.TK_SoLuong</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MASP" DataSetColumn="MASP" />
+              <Mapping SourceColumn="TenSP" DataSetColumn="TenSP" />
+              <Mapping SourceColumn="SOLUONG" DataSetColumn="SOLUONG" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QuanLyKhoHangDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QuanLyKhoHangDataSet2" msprop:Generator_UserDSName="QuanLyKhoHangDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TK_SoLuong" msprop:Generator_TableClassName="TK_SoLuongDataTable" msprop:Generator_TableVarName="tableTK_SoLuong" msprop:Generator_TablePropName="TK_SoLuong" msprop:Generator_RowDeletingName="TK_SoLuongRowDeleting" msprop:Generator_RowChangingName="TK_SoLuongRowChanging" msprop:Generator_RowEvHandlerName="TK_SoLuongRowChangeEventHandler" msprop:Generator_RowDeletedName="TK_SoLuongRowDeleted" msprop:Generator_UserTableName="TK_SoLuong" msprop:Generator_RowChangedName="TK_SoLuongRowChanged" msprop:Generator_RowEvArgName="TK_SoLuongRowChangeEvent" msprop:Generator_RowClassName="TK_SoLuongRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MASP" msprop:Generator_ColumnVarNameInTable="columnMASP" msprop:Generator_ColumnPropNameInRow="MASP" msprop:Generator_ColumnPropNameInTable="MASPColumn" msprop:Generator_UserColumnName="MASP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenSP" msprop:Generator_ColumnVarNameInTable="columnTenSP" msprop:Generator_ColumnPropNameInRow="TenSP" msprop:Generator_ColumnPropNameInTable="TenSPColumn" msprop:Generator_UserColumnName="TenSP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLUONG" msprop:Generator_ColumnVarNameInTable="columnSOLUONG" msprop:Generator_ColumnPropNameInRow="SOLUONG" msprop:Generator_ColumnPropNameInTable="SOLUONGColumn" msprop:Generator_UserColumnName="SOLUONG" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TK_SoLuong" />
+      <xs:field xpath="mstns:MASP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

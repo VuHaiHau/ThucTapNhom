@@ -569,5 +569,10 @@ namespace QuanLyKhoHang
             }
         }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FrmThongKeSLTonKho TK = new FrmThongKeSLTonKho();
+            TK.ShowDialog();
+        }
     }
 }
