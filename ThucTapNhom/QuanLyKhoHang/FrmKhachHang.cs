@@ -409,7 +409,7 @@ namespace QuanLyKhoHang
             //key = 3;
             if (tbx_makh.Text.Trim() == "" || dgvKhachHang.SelectedRows == null)
             {
-                MessageBox.Show("Hãy Nhập Mã Khách Hàng Muốn Xóa Hoặc Chọn Dòng Muốm Xóa!,", "Cảnh Báo!");
+                MessageBox.Show("Hãy Nhập Mã Khách Hàng Muốn Xóa Hoặc Chọn Dòng Muốn Xóa!,", "Cảnh Báo!");
 
             }
             else

@@ -75,32 +75,38 @@ namespace QuanLyKhoHang
             tbx_masp.Text = " ";
             label_thongbaoSP.Text = "";
             txb_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
-            dgv_SANPHAM.DataSource = acc.Select_Data("SELECT MASP,TENSP,GIA,SERIAL,NHACUNGCAP.TENNHACC,DANHMUC.TENDANHMUC ,NGAYSANXUAT,HANSUDUNG,SOLUONG,PHANLOAI,HINHANH,SP.GHICHU  FROM SANPHAM SP LEFT JOIN DANHMUC on DANHMUC.MADANHMUC = SP.MADANHMUC left join NHACUNGCAP on NHACUNGCAP.MANCC = SP.MANCC");
+            dgv_SANPHAM.DataSource = acc.Select_Data("Select Row_number() over(order by MASP) STT,* from SanPham1");
             dgv_SANPHAM.ClearSelection();
             groupBox_DSSP.Text = "Danh Sách Sản Phẩm";
 
             // CUSTOM SIZE COLUMN:
-            dgv_SANPHAM.Columns[0].Width = 70;
-            dgv_SANPHAM.Columns[1].Width = 150;
-            dgv_SANPHAM.Columns[2].Width = 100;
-            dgv_SANPHAM.Columns[3].Width = 100;
-            dgv_SANPHAM.Columns[4].Width = 200;
-            dgv_SANPHAM.Columns[5].Width = 180;
-            dgv_SANPHAM.Columns[8].Width = 50;
-            dgv_SANPHAM.Columns[9].Width = 150;
+            dgv_SANPHAM.Columns[0].Width = 50;
+            dgv_SANPHAM.Columns[1].Width = 130;
+            dgv_SANPHAM.Columns[2].Width = 200;
+            dgv_SANPHAM.Columns[3].Width = 130;
+            dgv_SANPHAM.Columns[4].Width = 130;
+            dgv_SANPHAM.Columns[5].Width = 200;
+            dgv_SANPHAM.Columns[6].Width = 130;
+            dgv_SANPHAM.Columns[7].Width = 130;
+            dgv_SANPHAM.Columns[8].Width = 150;
+            dgv_SANPHAM.Columns[9].Width = 120;
+            dgv_SANPHAM.Columns[10].Width = 150;
+            dgv_SANPHAM.Columns[11].Width = 150;
+            dgv_SANPHAM.Columns[12].Width = 150;
+      
             // hiển thị tiêu đề của các cột:
-            dgv_SANPHAM.Columns[0].HeaderText = "Mã Sản Phẩm";
-            dgv_SANPHAM.Columns[1].HeaderText = "Tên Sản Phẩm";
-            dgv_SANPHAM.Columns[2].HeaderText = "Giá";
-            dgv_SANPHAM.Columns[3].HeaderText = "Serial";
-            dgv_SANPHAM.Columns[4].HeaderText = "Tên Nhà Cung Cấp";
-            dgv_SANPHAM.Columns[5].HeaderText = "Tên Danh Mục";
-            dgv_SANPHAM.Columns[6].HeaderText = "Ngày Sản Xuất";
-            dgv_SANPHAM.Columns[7].HeaderText = "Hạn Sử Dụng";
-            dgv_SANPHAM.Columns[8].HeaderText = "Số Lượng";
-            dgv_SANPHAM.Columns[9].HeaderText = "Phân Loại";
-            dgv_SANPHAM.Columns[10].HeaderText = "Hình Ảnh ";
-            dgv_SANPHAM.Columns[11].HeaderText = "Ghi Chú";
+            dgv_SANPHAM.Columns[1].HeaderText = "Mã sản phẩm";
+            dgv_SANPHAM.Columns[2].HeaderText = "Tên sản phẩm";
+            dgv_SANPHAM.Columns[3].HeaderText = "Giá bán";
+            dgv_SANPHAM.Columns[4].HeaderText = "Serial";
+            dgv_SANPHAM.Columns[5].HeaderText = "Tên nhà cung cấp";
+            dgv_SANPHAM.Columns[6].HeaderText = "Tên danh mục";
+            dgv_SANPHAM.Columns[7].HeaderText = "Ngày sản xuất";
+            dgv_SANPHAM.Columns[8].HeaderText = "Hạn sử dụng";
+            dgv_SANPHAM.Columns[9].HeaderText = "Số lượng";
+            dgv_SANPHAM.Columns[10].HeaderText = "Phân loại";
+            dgv_SANPHAM.Columns[11].HeaderText = "Hình ảnh ";
+            dgv_SANPHAM.Columns[12].HeaderText = "Ghi chú";
             //
 
             //textBox_showpart.Enabled = false;
@@ -108,7 +114,7 @@ namespace QuanLyKhoHang
             btn_themmoi.Enabled = true;
             btn_xoa.Enabled = true;
             btn_chophepsua.Enabled = true;
-            btn_ghinhan.Enabled = false;
+            btn_themmoi.Enabled = false;
 
         }
 
@@ -155,7 +161,7 @@ namespace QuanLyKhoHang
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn Có Chắc Chắn Muốn Thoát Ứng Dụng", "Quản Lý KHo Hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát ứng dụng!", "Quản Lý KHo Hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -166,13 +172,13 @@ namespace QuanLyKhoHang
         private void btn_themmoi_Click(object sender, EventArgs e)
         {
             key = 1;
-            cleartext();
+           
             Enable();
             tbx_tensp.Focus();
             btn_themmoi.Enabled = false;
             btn_xoa.Enabled = false;
             btn_chophepsua.Enabled = false;
-            btn_ghinhan.Enabled = true;
+            btn_themmoi.Enabled = true;
         }
 
         private void btn_chophepsua_Click(object sender, EventArgs e)
@@ -182,7 +188,7 @@ namespace QuanLyKhoHang
             btn_themmoi.Enabled = false;
             btn_xoa.Enabled = false;
             btn_chophepsua.Enabled = false;
-            btn_ghinhan.Enabled = true;
+            btn_themmoi.Enabled = true;
             key = 2;
             dtpicker_nsx.Text = DateTime.Now.ToShortDateString();
             dtpicker_hsd.Text = DateTime.Now.ToShortDateString();
@@ -194,7 +200,7 @@ namespace QuanLyKhoHang
             btn_themmoi.Enabled = false;
             btn_xoa.Enabled = false;
             btn_chophepsua.Enabled = false;
-            btn_ghinhan.Enabled = true;
+            btn_themmoi.Enabled = true;
             key = 3;
         }
 
@@ -205,45 +211,9 @@ namespace QuanLyKhoHang
             mainmenu.ShowDialog();
         }
 
-        private void btn_huynhap_Click_1(object sender, EventArgs e)
-        {
-            if (tbx_tensp.Text != "" || txb_madm.Text != "")
-            {
-                if (MessageBox.Show("Bạn có chắc chắn muốn hủy Nhập", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    cleartext();
-                }
-            }
-            else
-            {
-                cleartext();
-                string masp = "";
-                SqlDataReader sda = acc.ExecuteReader("Select TOP 1 MASP FROM SANPHAM ORDER BY MASP DESC");
-                if (sda.Read() == true)
-                {
-                    masp = sda[0].ToString();
-                    SqlDataReader sp = acc.ExecuteReader("SELECT MASP,TENSP,GIA,SERIAL,(SELECT TENNHACC FROM NHACUNGCAP WHERE MANCC=SP.MANCC) AS TENNCC,(SELECT TENDANHMUC FROM DANHMUC WHERE MADANHMUC=SP.MADANHMUC) AS TENDANHMUC,NGAYSANXUAT,HANSUDUNG,SOLUONG,PHANLOAI,HINHANH,GHICHU  FROM SANPHAM SP WHERE MASP='" + masp + "'");
-                    if (sp.Read() == true)
-                    {
-                        tbx_masp.Text = sp[0].ToString(); tbx_tensp.Text = sp[1].ToString(); txb_ncc.Text = sp[4].ToString(); txb_madm.Text = sp[5].ToString();
-                        txb_serial.Text = sp[3].ToString(); dtpicker_nsx.Text = sp[6].ToString(); dtpicker_hsd.Text = sp[7].ToString(); txb_soluong.Value = Convert.ToInt16(sp[8].ToString());
-                        txb_phanloai.Text = sp[9].ToString(); txb_giasp.Text = sp[2].ToString(); txb_ghichu.Text = sp[11].ToString();
-                        filename = sp[10].ToString(); pictureBox_sanpham.Image = Image.FromFile(Application.StartupPath + "\\Images\\" + filename.ToString());
-                        //textBox_showpart.Text = filename.ToString();
-                        pictureBox_sanpham.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
-                }
-                if (MessageBox.Show("Bạn có chắc chắn muốn hủy sản phẩm vừa được thêm ", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    acc.XOA_SANPHAM(masp);
-                    MessageBox.Show("Hủy Thành Công");
-                    SANPHAM_Load(sender, e);
-                }
-            }
-            cleartext();
-        }
+       
 
-        private void dgv_SANPHAM_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_SANPHAM_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
@@ -281,115 +251,7 @@ namespace QuanLyKhoHang
             }
         }
 
-        private void btn_ghinhan_Click(object sender, EventArgs e)
-        {
-            if (key == 1)
-            {
-                if (tbx_tensp.Text == "" || txb_madm.Text == "" || txb_ncc.Text == "" || txb_phanloai.Text == "" || txb_serial.Text == "" || txb_soluong.Value == 0)
-                {
-                    MessageBox.Show("Hãy Điền đủ thông tin vào Các Mục", "Thông Báo");
-                    tbx_masp.Focus();
-                }
-                else if (filepart == "")
-                {
-                    MessageBox.Show("Hãy Chọn ảnh Sản Phẩm", "Cảnh Báo");
-                    button8.Focus();
-                }
-                else
-                {
-                    DataTable dtncc = new DataTable();
-                    DataTable dtdm = new DataTable();
-                    DataTable dtsp = acc.CheckSql("select *from SANPHAM where MASP='" + tbx_masp.Text + "'");
-                    dtncc = acc.CheckSql("Select *from NHACUNGCAP WHERE MANCC='" + txb_ncc.Text + "'");
-                    dtdm = acc.CheckSql("SELECT *FROM DANHMUC WHERE MADANHMUC='" + txb_madm.Text + "'");
-                    if (dtncc.Rows.Count < 0)
-                    {
-                        MessageBox.Show("NHÀ CUNG CẤP CHƯA TỒN TẠI", "Thông Báo");
-                        tbx_masp.Clear();
-                        txb_madm.ResetText();
-                        txb_madm.Focus();
-                    }
-                    else if (dtdm.Rows.Count < 0)
-                    {
-                        MessageBox.Show("DANH MỤC CHƯA TỒN TẠI", "THÔNG BÁO");
-                        txb_madm.ResetText();
-                        txb_madm.Focus();
-                    }
-                    else if (dtsp.Rows.Count > 0)
-                    {
-                        MessageBox.Show("MÃ SẢN PHẨM ĐÃ TỒN TẠI", "THÔNG BÁO");
-                        tbx_masp.Clear();
-                        tbx_masp.Focus();
-                    }
-                    else
-                    {
-                        var itemNCC = txb_ncc.GetItemText(txb_ncc.SelectedItem);
-                        ThongTinNCC(itemNCC);
-                        var itemDM = txb_madm.GetItemText(txb_madm.SelectedItem);
-                        ThongTinDM(itemDM);
-                        //filepart = openFile_PictureSP.FileName;
-                        acc.THEM_SANPHAM(tbx_masp.Text, tbx_tensp.Text, MANCC, float.Parse(txb_giasp.Text), MADM, txb_serial.Text, filename, dtpicker_nsx.Value, dtpicker_hsd.Value, txb_ghichu.Text, Convert.ToInt32(txb_soluong.Value), txb_phanloai.Text);
-                        SANPHAM_Load(sender, e);
-                        cleartext();
-                        dgv_SANPHAM.ClearSelection();
-                        label_thongbaoSP.Text = "Thêm THành Công Sản Phẩm mới";
-                        tbx_tensp.Focus();
-
-                    }
-
-
-                }
-            }
-            if (key == 2)
-            {
-                DataTable dtdm = acc.CheckSql("SELECT *From DANHMUC where MADANHMUC='" + txb_madm.Text + "'");
-                DataTable dtncc = acc.CheckSql("SELECT *From NHACUNGCAP where MANCC='" + txb_ncc.Text + "'");
-                if (dtdm.Rows.Count < 0)
-                {
-                    MessageBox.Show("Mã danh mục không tồn tại", "THông báo");
-                    txb_madm.ResetText();
-                    txb_madm.Focus();
-                }
-                else if (dtncc.Rows.Count < 0)
-                {
-                    MessageBox.Show("MÃ nhà cung cấp không tồn tại", "Thông Báo");
-                    txb_ncc.ResetText();
-                    txb_ncc.Focus();
-                }
-                else
-                {
-                    var itemNCC = txb_ncc.GetItemText(txb_ncc.SelectedItem);
-                    ThongTinNCC(itemNCC);
-                    var itemDM = txb_madm.GetItemText(txb_madm.SelectedItem);
-                    ThongTinDM(itemDM);
-                    //filepart = openFile_PictureSP.FileName;
-                    acc.SUA_SANPHAM(tbx_masp.Text, tbx_tensp.Text, MANCC, float.Parse(txb_giasp.Text), MADM, txb_serial.Text, filename, dtpicker_nsx.Value, dtpicker_hsd.Value, txb_ghichu.Text, Convert.ToInt32(txb_soluong.Value), txb_phanloai.Text);
-                    SANPHAM_Load(sender, e);
-                    dgv_SANPHAM.ClearSelection();
-                    cleartext();
-                    label_thongbaoSP.Text = "Sửa Thông Tin thành công";
-                }
-            }
-            if (key == 3)
-            {
-                if (dgv_SANPHAM.SelectedRows == null || tbx_masp.Text == "")
-                {
-                    MessageBox.Show("Hãy chọn 1 sản phẩm để xóa", "Cảnh Báo");
-
-                }
-                else
-                {
-                    if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này", "cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        acc.XOA_SANPHAM(tbx_masp.Text);
-                        SANPHAM_Load(sender, e);
-                        dgv_SANPHAM.ClearSelection();
-                        cleartext();
-                        label_thongbaoSP.Text = "Đã xóa thành công";
-                    }
-                }
-            }
-        }
+       
 
         private void button8_Click_1(object sender, EventArgs e)
         {
@@ -435,7 +297,7 @@ namespace QuanLyKhoHang
         {
             if (txb_timkiem.Text == "")
             {
-                MessageBox.Show("Nhập Từ Khóa Tìm Kiếm", "thông Báo");
+                MessageBox.Show("Hãy nhập từ khóa tìm kiếm", "Thông Báo");
                 txb_timkiem.Focus();
             }
             else
@@ -469,7 +331,7 @@ namespace QuanLyKhoHang
             if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Tên Sản Phẩm phải là kí tự chữ ", "Thông Báo ");
+                MessageBox.Show("Tên sản phẩm phải là kí tự chữ! ", "Thông Báo ");
             }
         }
 
@@ -493,5 +355,219 @@ namespace QuanLyKhoHang
         {
             SANPHAM_Load(sender, e);
         }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            key = 1;
+            tbx_masp.Enabled = true;
+            Enable();
+            tbx_tensp.Focus();
+            btn_themmoi.Enabled = false;
+            btn_xoa.Enabled = false;
+            btn_chophepsua.Enabled = false;
+            btn_themmoi.Enabled = true;
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            Enable();
+            tbx_masp.Enabled = false;
+            btn_themmoi.Enabled = false;
+            btn_xoa.Enabled = false;
+            btn_chophepsua.Enabled = false;
+            btn_themmoi.Enabled = true;
+            key = 2;
+            dtpicker_nsx.Text = DateTime.Now.ToShortDateString();
+            dtpicker_hsd.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tbx_masp.Enabled = true;
+            btn_themmoi.Enabled = false;
+            btn_xoa.Enabled = false;
+            btn_chophepsua.Enabled = false;
+            btn_themmoi.Enabled = true;
+            // key = 3;
+            if (dgv_SANPHAM.SelectedRows == null || tbx_masp.Text == "")
+            {
+                MessageBox.Show("Hãy chọn 1 sản phẩm để xóa!", "Thông Báo");
+
+            }
+            else
+            {
+                DataTable dtctpn = new DataTable();
+                dtctpn = acc.CheckSql("select * from CHITIETPHIEUNHAP where MASP ='" + tbx_masp.Text + "'");
+                DataTable dtctpx = new DataTable();
+                dtctpx = acc.CheckSql("select * from CHITIETPHIEUXUAT where MASP ='" + tbx_masp.Text + "'");
+                if (dtctpn.Rows.Count > 0 || dtctpx.Rows.Count > 0)
+                {
+                    if (MessageBox.Show("Sản phẩm này đang tồn tại ở bảng Chi Tiết Phiếu Nhập Xuất! Bạn chắc chắn muốn xóa!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.CheckSql("DELETE CHITIETPHIEUNHAP WHERE MASP = '" + tbx_masp.Text + "'");
+                        acc.CheckSql("DELETE CHITIETPHIEUXUAT WHERE MASP = '" + tbx_masp.Text + "'");
+                        acc.XOA_SANPHAM(tbx_masp.Text);
+                        MessageBox.Show("Xóa thành công!", "Thông Báo!");
+
+                        SANPHAM_Load(sender, e);
+                        key = 0;
+                    }
+                }
+            else
+            {
+                    if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này", "cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.XOA_SANPHAM(tbx_masp.Text);
+                        SANPHAM_Load(sender, e);
+                        dgv_SANPHAM.ClearSelection();
+                        cleartext();
+                        // label_thongbaoSP.Text = "Đã xóa thành công";
+                        MessageBox.Show("Xóa thành công!", "Thông Báo");
+                    }
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (key == 1)
+            {
+                if (tbx_tensp.Text == "" || txb_madm.Text == "" || txb_ncc.Text == "" || txb_phanloai.Text == "" || txb_serial.Text == "" || txb_soluong.Value == 0)
+                {
+                    MessageBox.Show("Hãy điền đủ thông tin vào các mục!", "Thông Báo");
+                    tbx_masp.Focus();
+                }
+                else if (filepart == "")
+                {
+                    MessageBox.Show("Hãy chọn ảnh sản phẩm", "Thông Báo");
+                    button8.Focus();
+                }
+                else
+                {
+                    DataTable dtncc = new DataTable();
+                    DataTable dtdm = new DataTable();
+                    DataTable dtmsp = new DataTable();
+                    DataTable dttsp = new DataTable();
+                    dtmsp = acc.CheckSql("select *from SANPHAM where MASP='" + tbx_masp.Text + "'");
+                    dtncc = acc.CheckSql("Select *from NHACUNGCAP WHERE MANCC='" + txb_ncc.Text + "'");
+                    dtdm = acc.CheckSql("SELECT *FROM DANHMUC WHERE MADANHMUC='" + txb_madm.Text + "'");
+                    dttsp= acc.CheckSql("SELECT *FROM SANPHAM WHERE TENSP='" + tbx_tensp.Text + "'");
+                    if (dtncc.Rows.Count < 0)
+                    {
+                        MessageBox.Show("Nhà cung cấp chưa tồn tại", "Thông Báo");
+                        tbx_masp.Clear();
+                        txb_madm.ResetText();
+                        txb_madm.Focus();
+                    }
+                    else if (dtdm.Rows.Count < 0)
+                    {
+                        MessageBox.Show("Danh mục chưa tồn tại", "Thông Báo");
+                        txb_madm.ResetText();
+                        txb_madm.Focus();
+                    }
+                    else if (dtmsp.Rows.Count > 0 || dttsp.Rows.Count > 0) 
+                    {
+                        MessageBox.Show("Sản phẩm này đã tồn tại!", "Thông Báo");
+                        tbx_masp.Clear();
+                        tbx_masp.Focus();
+                        tbx_tensp.Clear();
+                        tbx_tensp.Focus();
+                    }
+                   
+                    else
+                    {
+                        var itemNCC = txb_ncc.GetItemText(txb_ncc.SelectedItem);
+                        ThongTinNCC(itemNCC);
+                        var itemDM = txb_madm.GetItemText(txb_madm.SelectedItem);
+                        ThongTinDM(itemDM);
+                        //filepart = openFile_PictureSP.FileName;
+                        if (MessageBox.Show("Bạn chắc chắn muốn thêm sản phẩm này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            acc.THEM_SANPHAM(tbx_masp.Text, tbx_tensp.Text, MANCC, float.Parse(txb_giasp.Text), MADM, txb_serial.Text, filename, dtpicker_nsx.Value, dtpicker_hsd.Value, txb_ghichu.Text, Convert.ToInt32(txb_soluong.Value), txb_phanloai.Text);
+                            SANPHAM_Load(sender, e);
+                            cleartext();
+                            dgv_SANPHAM.ClearSelection();
+                            //label_thongbaoSP.Text = "Thêm THành Công Sản Phẩm mới";
+                            MessageBox.Show("Thêm thành công!", "Thông Báo");
+                            tbx_tensp.Focus();
+                        }
+                        //acc.THEM_SANPHAM(tbx_masp.Text, tbx_tensp.Text, MANCC, float.Parse(txb_giasp.Text), MADM, txb_serial.Text, filename, dtpicker_nsx.Value, dtpicker_hsd.Value, txb_ghichu.Text, Convert.ToInt32(txb_soluong.Value), txb_phanloai.Text);
+                        //SANPHAM_Load(sender, e);
+                        //cleartext();
+                        //dgv_SANPHAM.ClearSelection();
+                        ////label_thongbaoSP.Text = "Thêm THành Công Sản Phẩm mới";
+                        //MessageBox.Show("Thêm thành công!","Thông Báo");
+                        //tbx_tensp.Focus();
+
+                    }
+
+
+                }
+            }
+            if (key == 2)
+            {
+                DataTable dtdm = acc.CheckSql("SELECT *From DANHMUC where MADANHMUC='" + txb_madm.Text + "'");
+                DataTable dtncc = acc.CheckSql("SELECT *From NHACUNGCAP where MANCC='" + txb_ncc.Text + "'");
+                if (dtdm.Rows.Count < 0)
+                {
+                    MessageBox.Show("Mã danh mục không tồn tại", "THông báo");
+                    txb_madm.ResetText();
+                    txb_madm.Focus();
+                }
+                else if (dtncc.Rows.Count < 0)
+                {
+                    MessageBox.Show("Mã nhà cung cấp không tồn tại", "Thông Báo");
+                    txb_ncc.ResetText();
+                    txb_ncc.Focus();
+                }
+                else
+                {
+                    var itemNCC = txb_ncc.GetItemText(txb_ncc.SelectedItem);
+                    ThongTinNCC(itemNCC);
+                    var itemDM = txb_madm.GetItemText(txb_madm.SelectedItem);
+                    ThongTinDM(itemDM);
+                    if (MessageBox.Show("Bạn chắc chắn muốn sửa sản phẩm này?", "Xác Nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.SUA_SANPHAM(tbx_masp.Text, tbx_tensp.Text, MANCC, float.Parse(txb_giasp.Text), MADM, txb_serial.Text, filename, dtpicker_nsx.Value, dtpicker_hsd.Value, txb_ghichu.Text, Convert.ToInt32(txb_soluong.Value), txb_phanloai.Text);
+                        SANPHAM_Load(sender, e);
+                        dgv_SANPHAM.ClearSelection();
+                        cleartext();
+                        //label_thongbaoSP.Text = "Sửa Thông Tin thành công";
+                        MessageBox.Show("Sửa thông tin thành công!", "Thông Báo");
+                    }
+                    //filepart = openFile_PictureSP.FileName;
+                    //acc.SUA_SANPHAM(tbx_masp.Text, tbx_tensp.Text, MANCC, float.Parse(txb_giasp.Text), MADM, txb_serial.Text, filename, dtpicker_nsx.Value, dtpicker_hsd.Value, txb_ghichu.Text, Convert.ToInt32(txb_soluong.Value), txb_phanloai.Text);
+                    //SANPHAM_Load(sender, e);
+                    //dgv_SANPHAM.ClearSelection();
+                    //cleartext();
+                    ////label_thongbaoSP.Text = "Sửa Thông Tin thành công";
+                    //MessageBox.Show("Sửa thông tin thành công!", "Thông Báo");
+                }
+            }
+            
+        }
+
+        private void btlammoi_Click(object sender, EventArgs e)
+        {
+            SANPHAM_Load(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txb_timkiem.Text == "")
+            {
+                MessageBox.Show("Nhập từ khóa tìm kiếm!", "thông Báo");
+                txb_timkiem.Focus();
+            }
+            else
+            {
+                dgv_SANPHAM.DataSource = acc.Select_Data("SELECT MASP,TENSP,GIA,SERIAL,NHACUNGCAP.TENNHACC,DANHMUC.TENDANHMUC ,NGAYSANXUAT,HANSUDUNG,SOLUONG,PHANLOAI,HINHANH,SANPHAM.GHICHU  FROM SANPHAM  LEFT JOIN DANHMUC on DANHMUC.MADANHMUC = SANPHAM.MADANHMUC left join NHACUNGCAP on NHACUNGCAP.MANCC = SANPHAM.MANCC WHERE (MASP like N'%" + txb_timkiem.Text + "%' OR TENSP like N'%" + txb_timkiem.Text + "%' OR TENNHACC like N'%" + txb_timkiem.Text + "%' OR  GIA like N'%" + txb_timkiem.Text + "%' OR TENDANHMUC like N'%" + txb_timkiem.Text + "%' OR SERIAL like N'%" + txb_timkiem.Text + "%' OR  PHANLOAI like N'%" + txb_timkiem.Text + "%' OR SANPHAM.GHICHU like N'%" + txb_timkiem.Text + "%')");
+                txb_timkiem.Clear();
+                dgv_SANPHAM.ClearSelection();
+                groupBox_DSSP.Text = "Kết Quả Tìm Kiếm";
+
+            }
+        }
+
     }
 }

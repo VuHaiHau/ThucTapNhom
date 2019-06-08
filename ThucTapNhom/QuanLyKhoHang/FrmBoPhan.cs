@@ -127,13 +127,14 @@ namespace QuanLyKhoHang
 
             dgv_BoPhan.DataSource = acc.Select_Data("Select Row_number() over(order by MABP) STT,* from BP");
 
-            dgv_BoPhan.Columns["MABP"].Width = 80;
-            dgv_BoPhan.Columns["TENBP"].Width = 150;
-            dgv_BoPhan.Columns["DIENTHOAI"].Width = 120;
-            dgv_BoPhan.Columns["TENKHO"].Width = 145;
-            dgv_BoPhan.Columns["TENNV"].Width = 150;
+            dgv_BoPhan.Columns[0].Width = 50;
+            dgv_BoPhan.Columns[1].Width = 100;
+            dgv_BoPhan.Columns[2].Width = 200;
+            dgv_BoPhan.Columns[3].Width = 120;
+            dgv_BoPhan.Columns[4].Width = 200;
+            dgv_BoPhan.Columns[5].Width = 160;
 
-            dgv_BoPhan.Columns["MABP"].HeaderText = "Mã BP";
+            dgv_BoPhan.Columns["MABP"].HeaderText = "Mã Bộ Phận";
             dgv_BoPhan.Columns["DIENTHOAI"].HeaderText = "Điện Thoại";
             dgv_BoPhan.Columns["TENKHO"].HeaderText = "Kho";
             dgv_BoPhan.Columns["TENNV"].HeaderText = "Nhân Viên";

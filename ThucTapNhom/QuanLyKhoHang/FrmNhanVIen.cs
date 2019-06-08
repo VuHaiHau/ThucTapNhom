@@ -164,14 +164,18 @@ namespace QuanLyKhoHang
             dgvNhanVien.Columns["LUONG"].HeaderText = "Lương";
             dgvNhanVien.Columns["TENBP"].HeaderText = "Bộ Phận";
 
-            dgvNhanVien.Columns["TRANGTHAI"].Width = 30;
-            dgvNhanVien.Columns["MANV"].Width = 70;
-            dgvNhanVien.Columns["GT"].Width = 60;
-            dgvNhanVien.Columns["TENNV"].Width = 150;
-            dgvNhanVien.Columns["TENBP"].Width = 170;
-            dgvNhanVien.Columns["EMAIL"].Width = 150;
-            dgvNhanVien.Columns["CHUCVU"].Width = 150;
-
+            dgvNhanVien.Columns[0].Width = 30;
+            dgvNhanVien.Columns[1].Width = 100;
+            dgvNhanVien.Columns[2].Width = 150;
+            dgvNhanVien.Columns[3].Width = 150;
+            dgvNhanVien.Columns[4].Width = 100;
+            dgvNhanVien.Columns[5].Width = 60;
+            dgvNhanVien.Columns[6].Width = 100;
+            dgvNhanVien.Columns[7].Width = 150;
+            dgvNhanVien.Columns[8].Width = 150;
+            dgvNhanVien.Columns[9].Width = 120;
+            dgvNhanVien.Columns[10].Width = 100;
+            dgvNhanVien.Columns[11].Width = 190;
             dgvNhanVien.CurrentRow.Cells["TRANGTHAI"].ReadOnly = false;
 
             if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
@@ -723,6 +727,10 @@ namespace QuanLyKhoHang
             Enabletbx();
             tbx_MaNV.Enabled = true;
             key = 1;
+            if (keyall == 4)
+            {
+                cbx_trangthai.Enabled = true;
+            }
         }
 
         private void bt_Sua_Click(object sender, EventArgs e)
@@ -893,11 +901,17 @@ namespace QuanLyKhoHang
                             dtbp = acc.CheckSql("select * from BOPHAN where NQL ='" + tbx_MaNV.Text + "'");
                             DataTable dtnv = new DataTable();
                             dtnv = acc.CheckSql("select * from DANGNHAP where MANV ='" + tbx_MaNV.Text + "'");
+                            //DataTable dtpx = new DataTable();
+                            //dtpx = acc.CheckSql("select * from  PHIEUXUAT where NVXUAT ='" + tbx_MaNV.Text + "'");
+                            //DataTable dtpn = new DataTable();
+                            //dtpn = acc.CheckSql("select * from  PHIEUNHAPKHO where NVNHAP ='" + tbx_MaNV.Text + "'");
                             if (dtbp.Rows.Count > 0 || dtnv.Rows.Count > 0)
                             {
                                 if (MessageBox.Show("Nhân Viên Đang Tốn Tại Ơ Bảng Bộ Phận, Đăng Nhập! Bạn Chắc Chắn Muốn Xóa! Toàn Bộ Thông Tin Liên Quan Đến Nhân Viên Sẽ Chuyển Về Default!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 {
                                     acc.CheckSql("Update BOPHAN SET NQL = null WHERE NQL = '" + tbx_MaNV.Text + "'");
+                                    //acc.CheckSql("DELETE PHIEUXUAT  WHERE NVXUAT = '" + tbx_MaNV.Text + "'");
+                                    //acc.CheckSql("DELETE PHIEUNHAPKHO WHERE NVNHAP = '" + tbx_MaNV.Text + "'");
                                     acc.CheckSql("DELETE DANGNHAP WHERE MANV = '" + tbx_MaNV.Text + "'");
                                     acc.Xoa_NhanVien(tbx_MaNV.Text);
                                     MessageBox.Show("Xóa Thành Công!", "Thông Báo!");
