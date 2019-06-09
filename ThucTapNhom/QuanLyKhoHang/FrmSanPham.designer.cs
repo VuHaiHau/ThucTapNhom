@@ -31,13 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSanPham));
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btlammoi = new System.Windows.Forms.Button();
             this.btn_themmoi = new System.Windows.Forms.Button();
             this.btn_chophepsua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dtpicker_hsd = new System.Windows.Forms.DateTimePicker();
             this.dtpicker_nsx = new System.Windows.Forms.DateTimePicker();
             this.txb_ghichu = new System.Windows.Forms.TextBox();
@@ -78,16 +77,16 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(380, 0);
+            this.label11.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(380, 2);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(254, 29);
+            this.label11.Size = new System.Drawing.Size(289, 32);
             this.label11.TabIndex = 74;
             this.label11.Text = "QUẢN LÝ SẢN PHẨM";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_xoa);
             this.groupBox1.Controls.Add(this.btlammoi);
             this.groupBox1.Controls.Add(this.btn_themmoi);
@@ -99,16 +98,21 @@
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             // 
-            // button2
+            // button1
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(258, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 62);
-            this.button2.TabIndex = 76;
-            this.button2.Text = "Xuất Thống Kê";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(254, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 50);
+            this.button1.TabIndex = 157;
+            this.button1.Text = "Tìm Kiếm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_xoa
             // 
@@ -192,22 +196,6 @@
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1087, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 50);
-            this.button1.TabIndex = 157;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dtpicker_hsd
             // 
             this.dtpicker_hsd.CustomFormat = "MM/dd/yyyy";
@@ -230,6 +218,7 @@
             // 
             // txb_ghichu
             // 
+            this.txb_ghichu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ghichu.Location = new System.Drawing.Point(557, 149);
             this.txb_ghichu.Multiline = true;
             this.txb_ghichu.Name = "txb_ghichu";
@@ -249,27 +238,34 @@
             // 
             // txb_soluong
             // 
-            this.txb_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_soluong.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_soluong.Location = new System.Drawing.Point(311, 159);
+            this.txb_soluong.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.txb_soluong.Name = "txb_soluong";
-            this.txb_soluong.Size = new System.Drawing.Size(126, 21);
+            this.txb_soluong.Size = new System.Drawing.Size(126, 25);
             this.txb_soluong.TabIndex = 72;
             this.txb_soluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txb_ncc
             // 
+            this.txb_ncc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ncc.FormattingEnabled = true;
             this.txb_ncc.Location = new System.Drawing.Point(79, 124);
             this.txb_ncc.Name = "txb_ncc";
-            this.txb_ncc.Size = new System.Drawing.Size(128, 21);
+            this.txb_ncc.Size = new System.Drawing.Size(128, 23);
             this.txb_ncc.TabIndex = 71;
             // 
             // txb_madm
             // 
+            this.txb_madm.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_madm.FormattingEnabled = true;
             this.txb_madm.Location = new System.Drawing.Point(79, 160);
             this.txb_madm.Name = "txb_madm";
-            this.txb_madm.Size = new System.Drawing.Size(128, 21);
+            this.txb_madm.Size = new System.Drawing.Size(128, 23);
             this.txb_madm.TabIndex = 70;
             // 
             // lb_tiente
@@ -294,6 +290,7 @@
             // 
             // txb_giasp
             // 
+            this.txb_giasp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_giasp.Location = new System.Drawing.Point(557, 96);
             this.txb_giasp.Multiline = true;
             this.txb_giasp.Name = "txb_giasp";
@@ -324,6 +321,7 @@
             // 
             // txb_phanloai
             // 
+            this.txb_phanloai.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_phanloai.Location = new System.Drawing.Point(557, 53);
             this.txb_phanloai.Multiline = true;
             this.txb_phanloai.Name = "txb_phanloai";
@@ -332,6 +330,7 @@
             // 
             // txb_serial
             // 
+            this.txb_serial.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_serial.Location = new System.Drawing.Point(311, 53);
             this.txb_serial.Multiline = true;
             this.txb_serial.Name = "txb_serial";
@@ -340,16 +339,17 @@
             // 
             // tbx_tensp
             // 
+            this.tbx_tensp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_tensp.Location = new System.Drawing.Point(79, 88);
             this.tbx_tensp.Multiline = true;
             this.tbx_tensp.Name = "tbx_tensp";
             this.tbx_tensp.Size = new System.Drawing.Size(128, 25);
             this.tbx_tensp.TabIndex = 59;
-            this.tbx_tensp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_tensp_TextChanged);
             // 
             // tbx_masp
             // 
             this.tbx_masp.BackColor = System.Drawing.SystemColors.Window;
+            this.tbx_masp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_masp.Location = new System.Drawing.Point(79, 56);
             this.tbx_masp.Multiline = true;
             this.tbx_masp.Name = "tbx_masp";
@@ -431,7 +431,7 @@
             this.txb_timkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txb_timkiem.Location = new System.Drawing.Point(172, 31);
             this.txb_timkiem.Name = "txb_timkiem";
-            this.txb_timkiem.Size = new System.Drawing.Size(906, 26);
+            this.txb_timkiem.Size = new System.Drawing.Size(1030, 26);
             this.txb_timkiem.TabIndex = 1;
             this.txb_timkiem.Enter += new System.EventHandler(this.txt_tk_Enter);
             this.txb_timkiem.Leave += new System.EventHandler(this.txt_tk_Leave);
@@ -489,7 +489,6 @@
             // 
             // groupBox_DSSP
             // 
-            this.groupBox_DSSP.Controls.Add(this.button1);
             this.groupBox_DSSP.Controls.Add(this.txb_timkiem);
             this.groupBox_DSSP.Controls.Add(this.dgv_SANPHAM);
             this.groupBox_DSSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -593,6 +592,5 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_themmoi;
         private System.Windows.Forms.Button btn_chophepsua;
-        private System.Windows.Forms.Button button2;
     }
 }

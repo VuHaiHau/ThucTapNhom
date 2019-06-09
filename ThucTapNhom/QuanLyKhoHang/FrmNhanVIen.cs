@@ -170,7 +170,7 @@ namespace QuanLyKhoHang
             dgvNhanVien.Columns[3].Width = 150;
             dgvNhanVien.Columns[4].Width = 100;
             dgvNhanVien.Columns[5].Width = 60;
-            dgvNhanVien.Columns[6].Width = 100;
+            dgvNhanVien.Columns[6].Width = 120;
             dgvNhanVien.Columns[7].Width = 150;
             dgvNhanVien.Columns[8].Width = 150;
             dgvNhanVien.Columns[9].Width = 120;
@@ -987,6 +987,20 @@ namespace QuanLyKhoHang
             tbx_MaNV.Focus();
             key = 3;
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (tbx_MaNV.Text == null || tbx_MaNV.Text == "")
+            {
+                MessageBox.Show("Hãy chọn 1 nhân viên để xem thông tin chi tiết!");
+            }
+            else
+            {
+                //ReportPhieuXuat.MAPX = txb_maPX.Text;
+                FrmThongTinNhanVien TT = new FrmThongTinNhanVien(tbx_MaNV.Text);
+                TT.ShowDialog();
+            }
         }
     }
 }

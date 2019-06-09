@@ -41,14 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bt_quaylai = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_them = new System.Windows.Forms.Button();
             this.btlammoi = new System.Windows.Forms.Button();
             this.btn_ghinhan = new System.Windows.Forms.Button();
             this.btn_chophepsua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bt_quaylai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbx_tongdmsp)).BeginInit();
             this.groupBox_ketquatimkiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKHOHANG)).BeginInit();
@@ -58,6 +58,11 @@
             // tbx_tongdmsp
             // 
             this.tbx_tongdmsp.Location = new System.Drawing.Point(552, 31);
+            this.tbx_tongdmsp.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.tbx_tongdmsp.Name = "tbx_tongdmsp";
             this.tbx_tongdmsp.Size = new System.Drawing.Size(80, 26);
             this.tbx_tongdmsp.TabIndex = 64;
@@ -187,27 +192,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Trị Kho Hàng";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(405, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 32);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "KHO HÀNG";
-            // 
-            // bt_quaylai
-            // 
-            this.bt_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_quaylai.Image = ((System.Drawing.Image)(resources.GetObject("bt_quaylai.Image")));
-            this.bt_quaylai.Location = new System.Drawing.Point(15, 5);
-            this.bt_quaylai.Name = "bt_quaylai";
-            this.bt_quaylai.Size = new System.Drawing.Size(70, 40);
-            this.bt_quaylai.TabIndex = 22;
-            this.bt_quaylai.UseVisualStyleBackColor = true;
-            this.bt_quaylai.Click += new System.EventHandler(this.bt_quaylai_Click_1);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
@@ -305,6 +289,27 @@
             this.btn_them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(405, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "KHO HÀNG";
+            // 
+            // bt_quaylai
+            // 
+            this.bt_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_quaylai.Image = ((System.Drawing.Image)(resources.GetObject("bt_quaylai.Image")));
+            this.bt_quaylai.Location = new System.Drawing.Point(15, 5);
+            this.bt_quaylai.Name = "bt_quaylai";
+            this.bt_quaylai.Size = new System.Drawing.Size(70, 40);
+            this.bt_quaylai.TabIndex = 22;
+            this.bt_quaylai.UseVisualStyleBackColor = true;
+            this.bt_quaylai.Click += new System.EventHandler(this.bt_quaylai_Click_1);
             // 
             // FrmKhoHang
             // 

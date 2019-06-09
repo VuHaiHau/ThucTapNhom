@@ -69,6 +69,7 @@
             this.btn_ghinhan = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.pn_radio.SuspendLayout();
@@ -396,6 +397,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.bt_xoa);
             this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.btlammoi);
@@ -532,6 +534,16 @@
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.bt_them_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(644, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FrmNhanVIen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,5 +614,6 @@
         private System.Windows.Forms.Button btn_ghinhan;
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button bt_xoa;
+        private System.Windows.Forms.Button button1;
     }
 }

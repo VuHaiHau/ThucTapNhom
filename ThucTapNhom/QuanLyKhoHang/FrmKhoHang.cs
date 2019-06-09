@@ -315,7 +315,7 @@ namespace QuanLyKhoHang
         {
             Enable();
             tbx_tenkho.Focus();
-            tbx_makho.Enabled = false;
+            tbx_makho.Enabled = true;
             btn_ghinhan.Enabled = true;
             bt_them.Enabled = false;
             bt_them.Enabled = false;

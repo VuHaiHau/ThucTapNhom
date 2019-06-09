@@ -153,6 +153,12 @@
     <Compile Include="FrmThongKeSLTonKho.Designer.cs">
       <DependentUpon>FrmThongKeSLTonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinNhanVien.Designer.cs">
+      <DependentUpon>FrmThongTinNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmXuatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyKhoHangDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKhoHangDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhoHangDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +282,9 @@
     <EmbeddedResource Include="FrmThongKeSLTonKho.resx">
       <DependentUpon>FrmThongKeSLTonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinNhanVien.resx">
+      <DependentUpon>FrmThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmXuatHang.resx">
       <DependentUpon>FrmXuatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +328,7 @@
       <DependentUpon>ReportPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Tk_SoLuong.rdlc" />
+    <EmbeddedResource Include="ThongTinNhanVien.rdlc" />
     <None Include="HoaDonMuaHang.xsc">
       <DependentUpon>HoaDonMuaHang.xsd</DependentUpon>
     </None>
@@ -372,6 +387,17 @@
     </None>
     <None Include="QuanLyKhoHangDataSet2.xss">
       <DependentUpon>QuanLyKhoHangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhoHangDataSet3.xsc">
+      <DependentUpon>QuanLyKhoHangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhoHangDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhoHangDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhoHangDataSet3.xss">
+      <DependentUpon>QuanLyKhoHangDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Resources\staff.png" />
   </ItemGroup>

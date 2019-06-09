@@ -335,3 +335,4 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLy
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmThongKeSLTonKho.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmThongTinNhanVien.resources

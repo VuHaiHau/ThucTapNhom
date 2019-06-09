@@ -326,14 +326,7 @@ namespace QuanLyKhoHang
         }
 
      
-        private void tbx_tensp_TextChanged(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Tên sản phẩm phải là kí tự chữ! ", "Thông Báo ");
-            }
-        }
+       
 
         private void txt_tk_Enter(object sender, EventArgs e)
         {
@@ -549,6 +542,7 @@ namespace QuanLyKhoHang
 
         private void btlammoi_Click(object sender, EventArgs e)
         {
+            cleartext();
             SANPHAM_Load(sender, e);
         }
 
@@ -569,10 +563,7 @@ namespace QuanLyKhoHang
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            FrmThongKeSLTonKho TK = new FrmThongKeSLTonKho();
-            TK.ShowDialog();
-        }
+       
+       
     }
 }

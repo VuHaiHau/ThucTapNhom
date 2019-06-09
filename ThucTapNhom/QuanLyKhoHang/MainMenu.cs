@@ -344,5 +344,14 @@ namespace QuanLyKhoHang
             FrmBaoCao bc = new FrmBaoCao();
             bc.ShowDialog();
         }
+
+        private void thốngKêHàngTồnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmThongKeSLTonKho TK = new FrmThongKeSLTonKho();
+            TK.ShowDialog();
+            MainMenu m = new MainMenu();
+            m.ShowDialog();
+        }
     }
 }
