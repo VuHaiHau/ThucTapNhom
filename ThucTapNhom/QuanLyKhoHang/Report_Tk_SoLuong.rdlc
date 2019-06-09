@@ -601,7 +601,12 @@
       </Textbox>
     </ReportItems>
     <Height>10.02772cm</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundColor>Aqua</BackgroundColor>
+    </Style>
   </Body>
   <Width>18.90448cm</Width>
   <Page>

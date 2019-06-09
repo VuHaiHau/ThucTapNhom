@@ -287,6 +287,10 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.cspr
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.CopyComplete
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\EnvDTE.dll
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmDoiQuyen.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -297,11 +301,9 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\HoaDon
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe.config
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.pdb
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\EnvDTE.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\stdole.dll
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\Microsoft.MSXML.dll
@@ -313,8 +315,9 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLy
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmDangNhapHeThong.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmDanhMucSP.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmDoimatkhau.resources
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmDoiQuyen.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmNhapHang.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmThongKeSLTonKho.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmThongTinNhanVien.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmXuatHang.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmKhachHang.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmKhoHang.resources
@@ -332,7 +335,4 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\RdlCom
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\RdlCompile.compiled
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.CoreCompileInputs.cache
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.CopyComplete
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.exe
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmThongKeSLTonKho.resources
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.FrmThongTinNhanVien.resources

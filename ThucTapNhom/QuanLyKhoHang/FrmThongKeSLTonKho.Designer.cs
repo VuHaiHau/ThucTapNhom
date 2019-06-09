@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.QuanLyKhoHangDataSet2 = new QuanLyKhoHang.QuanLyKhoHangDataSet2();
             this.TK_SoLuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.QuanLyKhoHangDataSet2 = new QuanLyKhoHang.QuanLyKhoHangDataSet2();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.TK_SoLuongTableAdapter = new QuanLyKhoHang.QuanLyKhoHangDataSet2TableAdapters.TK_SoLuongTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.QuanLyKhoHangDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TK_SoLuongBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyKhoHangDataSet2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TK_SoLuongBindingSource
+            // 
+            this.TK_SoLuongBindingSource.DataMember = "TK_SoLuong";
+            this.TK_SoLuongBindingSource.DataSource = this.QuanLyKhoHangDataSet2;
+            // 
+            // QuanLyKhoHangDataSet2
+            // 
+            this.QuanLyKhoHangDataSet2.DataSetName = "QuanLyKhoHangDataSet2";
+            this.QuanLyKhoHangDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,31 +61,21 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // QuanLyKhoHangDataSet2
-            // 
-            this.QuanLyKhoHangDataSet2.DataSetName = "QuanLyKhoHangDataSet2";
-            this.QuanLyKhoHangDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TK_SoLuongBindingSource
-            // 
-            this.TK_SoLuongBindingSource.DataMember = "TK_SoLuong";
-            this.TK_SoLuongBindingSource.DataSource = this.QuanLyKhoHangDataSet2;
-            // 
             // TK_SoLuongTableAdapter
             // 
             this.TK_SoLuongTableAdapter.ClearBeforeFill = true;
             // 
-            // FrmThongKeSL
+            // FrmThongKeSLTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmThongKeSL";
-            this.Text = "FrmThongKeSL";
+            this.Name = "FrmThongKeSLTonKho";
+            this.Text = "PHẦN MỀM QUẢN LÝ KHO HÀNG";
             this.Load += new System.EventHandler(this.FrmThongKeSL_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.QuanLyKhoHangDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TK_SoLuongBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyKhoHangDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }

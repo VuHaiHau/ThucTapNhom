@@ -165,7 +165,7 @@ namespace QuanLyKhoHang
             dgvNhanVien.Columns["TENBP"].HeaderText = "Bộ Phận";
 
             dgvNhanVien.Columns[0].Width = 30;
-            dgvNhanVien.Columns[1].Width = 100;
+            dgvNhanVien.Columns[1].Width = 135;
             dgvNhanVien.Columns[2].Width = 150;
             dgvNhanVien.Columns[3].Width = 150;
             dgvNhanVien.Columns[4].Width = 100;
@@ -763,6 +763,15 @@ namespace QuanLyKhoHang
         {
             if (key == 1)
             {
+                //int count = 0;
+                //count = dgvNhanVien.Rows.Count;
+                //string chuoi = "";
+                //int chuoi2 = 0;
+                //chuoi = Convert.ToString(dgvNhanVien.Rows[count - 2].Cells[0].Value);
+                //chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                //if (chuoi2 + 1 < 10)
+                //    tbx_MaNV.Text = "NV0" + (chuoi2 + 1).ToString();
+
                 lbx_trangthai.Visible = false;
                 cbx_trangthai.Visible = false;
                 if (tbx_TenNV.Text.Trim() == "" || tbx_Email.Text.Trim() == "" || tbx_DienThoai.Text.Trim() == "" || tbx_DiaChi.Text.Trim() == "" || tbx_luong.Text.Trim() == "" || tbx_MaBP.Text.Trim() == "")
@@ -989,7 +998,8 @@ namespace QuanLyKhoHang
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void button7_Click(object sender, EventArgs e)
         {
             if (tbx_MaNV.Text == null || tbx_MaNV.Text == "")
             {
@@ -997,7 +1007,6 @@ namespace QuanLyKhoHang
             }
             else
             {
-                //ReportPhieuXuat.MAPX = txb_maPX.Text;
                 FrmThongTinNhanVien TT = new FrmThongTinNhanVien(tbx_MaNV.Text);
                 TT.ShowDialog();
             }

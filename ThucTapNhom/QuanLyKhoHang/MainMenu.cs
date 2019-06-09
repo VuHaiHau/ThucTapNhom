@@ -265,24 +265,24 @@ namespace QuanLyKhoHang
 
         private void hướngDẫnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("                               Hướng Dẫn Sử Dụng\n"
+            MessageBox.Show("                               HƯỚNG DẪN SỬ DỤNG\n\n"
 
      + " Phần mềm được thiết kế với tất cả chức năng nằm ở thanh Menu bên trên cùng.\n"
      + " Các chức năng chính sẽ hiển thị bên dưới. \n\n"
-     + "Ở mỗi giao diện chính nếu muốn trở lại hãy sử dụng thanh tác vụ BACK ở trên cùng bên trái để trở lại.\n \n"
+     + " Ở mỗi giao diện chính nếu muốn trở lại hãy sử dụng thanh tác vụ BACK ở trên cùng bên trái để trở lại.\n \n"
      + " Bạn có thể sử dụng các phím tắt bên dưới để truy cập nhanh. \n"
-     + "Thông Tin Phần Mềm: F1. \n"
-     + "Thông Tin Nhà Phát Hành: F1. \n"
-     + "Hướng Dẫn Sử Dụng: F11.\n"
-     + "Tài Liệu Vận Hành: F12.\n"
-     + "Thông Tin Người Dùng: Alt+F1.\n"
-     + "Tạo Tài Khoản: Alt+F2.\n"
-     + "Đổi Mật Khẩu: Alt+F3.\n"
-     + "Đổi Quyền: Alt+F4.\n"
-     + "Đăng xuất: Alt+F5.\n"
+     + " Thông Tin Phần Mềm: F1. \n"
+     + " Thông Tin Nhà Phát Hành: F1. \n"
+     + " Hướng Dẫn Sử Dụng: F11.\n"
+     + " Tài Liệu Vận Hành: F12.\n"
+     + " Thông Tin Người Dùng: Alt+F1.\n"
+     + " Tạo Tài Khoản: Alt+F2.\n"
+     + " Đổi Mật Khẩu: Alt+F3.\n"
+     + " Đổi Quyền: Alt+F4.\n"
+     + " Đăng xuất: Alt+F5.\n"
      + " Thoát chương trình: Ctrl+W. \n"
-     + "Chúng tôi rất vui khi bạn đã sử dụng phần mềm của chúng tôi\n\n"
-     + "Chúc Bạn Làm Việc Hiệu Quả", "Hướng Dẫn",
+     + " Chúng tôi rất vui khi bạn đã sử dụng phần mềm của chúng tôi\n\n"
+     + " Chúc Bạn Làm Việc Hiệu Quả", "Hướng Dẫn",
      MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -290,16 +290,16 @@ namespace QuanLyKhoHang
 
         private void thôngTinNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("                               Thông Tin Nhà Phát Hành\n"
+            MessageBox.Show("                               THÔNG TIN NHÀ PHÁT HÀNH\n\n"
 
-       + "   Phần Mềm Được Thực Hiện Bởi Các Thành Viên Trong Nhóm Gồm: \n\n"
+       + "   Phần mềm được thực hiện bởi các thành viên trong nhóm gồm:\n\n"
        + "                                        1. Vũ Hải Hậu\n "
        + "                                       2. Trần Hồng Dương\n"
        + "                                        3. Đỗ Đăng Khải \n"
        + "                                        4. Triệu Văn Linh \n"
        + "                                        5. Nguyễn Quang Huy\n\n"
-       + "Ngày Phát Hành Phần Mềm: 14/05/2019\n"
-       + "Phần Mềm Quản Lý Kho Hàng Được Thiết Kế Đơn Giản Với Nhiều Chức Năng Chính Cơ Bản Giúp Người Sử Dụng Một Cách Dễ Dàng.", "Thông Tin",
+       + "  Ngày phát hành phần mềm: 14/05/2019\n"
+       + "  Phần mềm Quản Lý Kho Hàng được thiết kế đơn giản với nhiều chức năng chính cơ bản giúp người sử dụng một cách dễ dàng.", "Thông Tin",
        MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

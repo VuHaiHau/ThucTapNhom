@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "BaoCaoX_F";
-            this.Text = "BaoCaoX_F";
+            this.Text = "PHẦN MỀM QUẢN LÝ KHO HÀNG";
             this.Load += new System.EventHandler(this.BaoCaoX_F_Load);
             this.ResumeLayout(false);
 

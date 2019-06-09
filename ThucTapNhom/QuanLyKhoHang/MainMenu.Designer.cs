@@ -72,7 +72,6 @@
             this.đăngXuấtToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.thốngKêTiêuThụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUser.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -321,8 +320,7 @@
             this.nhậpXuấtToolStripMenuItem,
             this.báoCáoToolStripMenuItem,
             this.báoCáoToolStripMenuItem1,
-            this.thốngKêHàngTồnToolStripMenuItem,
-            this.thốngKêTiêuThụToolStripMenuItem});
+            this.thốngKêHàngTồnToolStripMenuItem});
             this.quảnLýKhoHàngToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLýKhoHàngToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýKhoHàngToolStripMenuItem.Image")));
             this.quảnLýKhoHàngToolStripMenuItem.Name = "quảnLýKhoHàngToolStripMenuItem";
@@ -511,12 +509,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // thốngKêTiêuThụToolStripMenuItem
-            // 
-            this.thốngKêTiêuThụToolStripMenuItem.Name = "thốngKêTiêuThụToolStripMenuItem";
-            this.thốngKêTiêuThụToolStripMenuItem.Size = new System.Drawing.Size(219, 24);
-            this.thốngKêTiêuThụToolStripMenuItem.Text = "Thống Kê Tiêu Thụ";
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,6 +586,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem thốngKêHàngTồnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêTiêuThụToolStripMenuItem;
     }
 }
