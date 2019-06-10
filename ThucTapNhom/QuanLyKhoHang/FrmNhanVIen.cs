@@ -763,15 +763,7 @@ namespace QuanLyKhoHang
         {
             if (key == 1)
             {
-                //int count = 0;
-                //count = dgvNhanVien.Rows.Count;
-                //string chuoi = "";
-                //int chuoi2 = 0;
-                //chuoi = Convert.ToString(dgvNhanVien.Rows[count - 2].Cells[0].Value);
-                //chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-                //if (chuoi2 + 1 < 10)
-                //    tbx_MaNV.Text = "NV0" + (chuoi2 + 1).ToString();
-
+               
                 lbx_trangthai.Visible = false;
                 cbx_trangthai.Visible = false;
                 if (tbx_TenNV.Text.Trim() == "" || tbx_Email.Text.Trim() == "" || tbx_DienThoai.Text.Trim() == "" || tbx_DiaChi.Text.Trim() == "" || tbx_luong.Text.Trim() == "" || tbx_MaBP.Text.Trim() == "")
@@ -955,14 +947,43 @@ namespace QuanLyKhoHang
 
         }
 
-        private void btlammoi_Click(object sender, EventArgs e)
+     
+     
+
+      
+
+        private void bt_xoa_Click_2(object sender, EventArgs e)
+        {
+            Disablebtn();
+            Disabletbx();
+            //ClearText();
+            btn_file.Enabled = false;
+            tbx_MaNV.Enabled = true;
+            tbx_MaNV.Focus();
+            key = 3;
+        }
+
+        private void btlammoi_Click_1(object sender, EventArgs e)
         {
             NhanVIen_Load(sender, e);
             ClearText();
             key = 0;
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            if (tbx_MaNV.Text == null || tbx_MaNV.Text == "")
+            {
+                MessageBox.Show("Hãy chọn 1 nhân viên để xem thông tin chi tiết!");
+            }
+            else
+            {
+                FrmThongTinNhanVien TT = new FrmThongTinNhanVien(tbx_MaNV.Text);
+                TT.ShowDialog();
+            }
+        }
+
+        private void btnTimKiem_Click_1(object sender, EventArgs e)
         {
             if (tbx_timkiem.Text.Trim() == "")
             {
@@ -983,32 +1004,6 @@ namespace QuanLyKhoHang
                     tbx_timkiem.Clear();
                     dgvNhanVien.ClearSelection();
                 }
-            }
-        }
-
-        private void bt_xoa_Click_1(object sender, EventArgs e)
-        {
-            Disablebtn();
-            Disabletbx();
-            //ClearText();
-            btn_file.Enabled = false;
-            tbx_MaNV.Enabled = true;
-            tbx_MaNV.Focus();
-            key = 3;
-
-        }
-
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            if (tbx_MaNV.Text == null || tbx_MaNV.Text == "")
-            {
-                MessageBox.Show("Hãy chọn 1 nhân viên để xem thông tin chi tiết!");
-            }
-            else
-            {
-                FrmThongTinNhanVien TT = new FrmThongTinNhanVien(tbx_MaNV.Text);
-                TT.ShowDialog();
             }
         }
     }

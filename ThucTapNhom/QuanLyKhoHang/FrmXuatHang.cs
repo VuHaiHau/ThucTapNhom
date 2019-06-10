@@ -136,6 +136,7 @@ namespace QuanLyKhoHang
 
         private void FrmXuatHang_Load(object sender, EventArgs e)
         {
+            txtMaPN.Enabled = false;
             SqlConnection con1 = new SqlConnection();
             con1.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
             con1.Open();
@@ -338,27 +339,44 @@ namespace QuanLyKhoHang
             string idNCC = cbNCCCT.Text.Trim();
             DateTime ngayN = dtNgayN.Value;
             string gc = textBox1.Text.Trim();
-            if (idPN == "")
+            int count = 0;
+            count = dtgrPN.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dtgrPN.Rows[count - 2].Cells[0].Value);
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+            if (chuoi2 + 1 < 10)
+                txtMaPN.Text = "PX00" + (chuoi2 + 1).ToString();
+            else if (chuoi2 + 1 < 100)
+                txtMaPN.Text = "PX0" + (chuoi2 + 1).ToString();
+            //if (idPN == "")
+            //{
+            //    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
+            //}
+            //else
+            //{
+            //    SqlConnection con = new SqlConnection();
+            //    con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
+            //    DataTable dt = new DataTable();
+            //    string sql = "select MAPX, MAKHO, NVXUAT, NGAYXUAT, GHICHU from PHIEUXUAT where MAPX = '" + idPN + "'";
+            //    SqlCommand cmd = new SqlCommand(sql, con);
+            //    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            //    sda.Fill(dt);
+            //    if (dt.Rows.Count > 0)
+            //    {
+            //        MessageBox.Show("Mã Phiếu xuất đã tồn tại!", "Lỗi");
+
+            //    }
+            try
             {
-                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
-            }
-            else
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                DataTable dt = new DataTable();
-                string sql = "select MAPX, MAKHO, NVXUAT, NGAYXUAT, GHICHU from PHIEUXUAT where MAPX = '" + idPN + "'";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                sda.Fill(dt);
-                if (dt.Rows.Count > 0)
+                if (idPN == "")
                 {
-                    MessageBox.Show("Mã Phiếu xuất đã tồn tại!", "Lỗi");
-                    //txtMaNCC.Clear();
-                    //txtMaNCC.Focus();
+                    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
                 }
                 else
                 {
+                    SqlConnection con = new SqlConnection();
+                    con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                     string sql2 = "INSERT into PHIEUXUAT VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + ngayN + "',N'" + idNCC + "', N'" + gc + "')";
                     SqlCommand cmd2 = new SqlCommand(sql2, con);
                     con.Open();
@@ -368,7 +386,10 @@ namespace QuanLyKhoHang
                     Load_dtgrNLK();
                     Load_dtgrPN();
                 }
+            
             }
+            catch { }
+            //}
         }
 
         private void btn_chophepsua_Click(object sender, EventArgs e)

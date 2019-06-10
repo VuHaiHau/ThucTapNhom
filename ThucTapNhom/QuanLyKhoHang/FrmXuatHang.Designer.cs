@@ -65,8 +65,6 @@
             this.txtTimPN = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cblhd = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -480,8 +478,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.cblhd);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button1);
@@ -503,22 +499,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chi tiết phiếu xuất";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 191);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 19);
-            this.label2.TabIndex = 174;
-            this.label2.Text = "Số lượng tồn";
-            // 
-            // cblhd
-            // 
-            this.cblhd.Location = new System.Drawing.Point(119, 188);
-            this.cblhd.Name = "cblhd";
-            this.cblhd.Size = new System.Drawing.Size(306, 26);
-            this.cblhd.TabIndex = 173;
             // 
             // button3
             // 
@@ -755,7 +735,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btlammoi;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox cblhd;
     }
 }

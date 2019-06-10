@@ -450,7 +450,7 @@
             this.button7.Text = "In Phiếu";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = false;
-            //this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // bt_xoa
             // 
@@ -466,7 +466,7 @@
             this.bt_xoa.Text = "Xóa";
             this.bt_xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_xoa.UseVisualStyleBackColor = false;
-          //  this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click_1);
+            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click_2);
             // 
             // btnTimKiem
             // 
@@ -482,7 +482,7 @@
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
-           // this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click_1);
             // 
             // btlammoi
             // 
@@ -498,7 +498,7 @@
             this.btlammoi.Text = "Refresh";
             this.btlammoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btlammoi.UseVisualStyleBackColor = false;
-           // this.btlammoi.Click += new System.EventHandler(this.btlammoi_Click);
+            this.btlammoi.Click += new System.EventHandler(this.btlammoi_Click_1);
             // 
             // btn_ghinhan
             // 
