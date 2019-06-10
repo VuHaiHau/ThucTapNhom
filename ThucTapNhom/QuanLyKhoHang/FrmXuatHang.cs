@@ -172,6 +172,7 @@ namespace QuanLyKhoHang
             cbNLKCT.ValueMember = "MASP";
             txtTimPN.Text = "Hãy nhập từ khóa tìm kiếm..";
             txtTimCT.Text = "Hãy nhập từ khóa tìm kiếm..";
+            ClearText();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -320,6 +321,10 @@ namespace QuanLyKhoHang
         public void ClearText()
         {
             txtMaPN.Clear();
+            cbLP.ResetText();
+            cbNCCCT.ResetText();
+            cbNV.ResetText();
+            cbNLKCT.ResetText();
             txtSL.Clear();
             txtMaPNCT.Clear();
             txtSLCT.Clear();
@@ -349,47 +354,31 @@ namespace QuanLyKhoHang
                 txtMaPN.Text = "PX00" + (chuoi2 + 1).ToString();
             else if (chuoi2 + 1 < 100)
                 txtMaPN.Text = "PX0" + (chuoi2 + 1).ToString();
-            //if (idPN == "")
-            //{
-            //    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
-            //}
-            //else
-            //{
-            //    SqlConnection con = new SqlConnection();
-            //    con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-            //    DataTable dt = new DataTable();
-            //    string sql = "select MAPX, MAKHO, NVXUAT, NGAYXUAT, GHICHU from PHIEUXUAT where MAPX = '" + idPN + "'";
-            //    SqlCommand cmd = new SqlCommand(sql, con);
-            //    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            //    sda.Fill(dt);
-            //    if (dt.Rows.Count > 0)
-            //    {
-            //        MessageBox.Show("Mã Phiếu xuất đã tồn tại!", "Lỗi");
-
-            //    }
+          
             try
             {
-                if (idPN == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
-                }
-                else
-                {
+                
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                    string sql2 = "INSERT into PHIEUXUAT VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + ngayN + "',N'" + idNCC + "', N'" + gc + "')";
-                    SqlCommand cmd2 = new SqlCommand(sql2, con);
-                    con.Open();
-                    cmd2.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK);
-                    Load_dtgrNLK();
-                    Load_dtgrPN();
-                }
-            
+                   
+                        string sql2 = "INSERT into PHIEUXUAT VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + ngayN + "',N'" + idNCC + "', N'" + gc + "')";
+                        SqlCommand cmd2 = new SqlCommand(sql2, con);
+                        con.Open();
+                        cmd2.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK);
+                        Load_dtgrNLK();
+                        Load_dtgrPN();
+           
+
+                
+
             }
-            catch { }
-            //}
+            catch
+            {
+               
+            }
+            
         }
 
         private void btn_chophepsua_Click(object sender, EventArgs e)

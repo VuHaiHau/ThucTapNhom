@@ -359,7 +359,7 @@ namespace QuanLyKhoHang
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            //ClearText();
+            
             btn_them.Enabled = false;
             btn_sua.Enabled = false;
             bt_xoa.Enabled = false;

@@ -34,7 +34,7 @@ namespace QuanLyKhoHang
 
         private void Load_dtgrNLK()
         {
-            txtMaPNCT.Text = "";
+            //txtMaPNCT.Text = "";
             cbNLKCT.Text = "";
 
             
@@ -187,6 +187,7 @@ namespace QuanLyKhoHang
             cbNV.DataSource = acc.Select_Data("Select * from NHANVIEN");
             cbLP.DataSource = acc.Select_Data("Select * from KHOHANG");
             cbNCCCT.DataSource = acc.Select_Data("Select * from NHACUNGCAP");
+            idPNCT.DataSource = acc.Select_Data("Select * from PHIEUNHAPKHO");
             cbNV.DisplayMember = "MANV";
             cbNV.ValueMember = "MANV";
             cbLP.DisplayMember = "MAKHO";
@@ -195,8 +196,11 @@ namespace QuanLyKhoHang
             cbNCCCT.ValueMember = "MANCC";
             cbNLKCT.DisplayMember = "MASP";
             cbNLKCT.ValueMember = "MASP";
+            idPNCT.DisplayMember = "MAPN";
+            idPNCT.ValueMember = "MAPN";
             txtTimPN.Text = "Hãy nhập từ khóa tìm kiếm..";
             txtTimCT.Text = "Hãy nhập từ khóa tìm kiếm..";
+            ClearText();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -244,14 +248,14 @@ namespace QuanLyKhoHang
 
         private void btnThemCT_Click(object sender, EventArgs e)
         {
-            string idPNCT = txtMaPNCT.Text.Trim();
+           string idPNCTa = idPNCT.Text.Trim();
             string idNLKCT = cbNLKCT.Text.Trim();
 
 
             string dg = txtDGNCT.Text.Trim();
             string sl = txtSLCT.Text.Trim();
 
-            if (idPNCT == "" || idNLKCT == "")
+            if (idPNCTa == "" || idNLKCT == "")
             {
                 MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
             }
@@ -260,7 +264,7 @@ namespace QuanLyKhoHang
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 DataTable dt = new DataTable();
-                string sql = "select * from ChiTietPhieuNhap where MAPN = '" + idPNCT + "' and MASP = '" + idNLKCT + "'";
+                string sql = "select * from ChiTietPhieuNhap where MAPN = '" + idPNCTa + "' and MASP = '" + idNLKCT + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
@@ -272,7 +276,7 @@ namespace QuanLyKhoHang
                 }
                 else
                 {
-                    string sql2 = "INSERT into ChiTietPhieuNhap VALUES (N'" + idPNCT + "', N'" + idNLKCT + "', " + dg + ", " + sl + ",null)";
+                    string sql2 = "INSERT into ChiTietPhieuNhap VALUES (N'" + idPNCTa + "', N'" + idNLKCT + "', " + dg + ", " + sl + ",null)";
                     SqlCommand cmd2 = new SqlCommand(sql2, con);
                     con.Open();
                     cmd2.ExecuteNonQuery();
@@ -286,7 +290,7 @@ namespace QuanLyKhoHang
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaPNCT.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            idPNCT.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             cbNLKCT.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
 
             txtDGNCT.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
@@ -361,10 +365,15 @@ namespace QuanLyKhoHang
         {
             txtMaPN.Clear();
             txtDGNCT.Clear();
-            txtMaPNCT.Clear();
+            //txtMaPNCT.Clear();
             txtSLCT.Clear();
             txtTongTien.Clear();
+            cbLP.ResetText();
+            cbNCCCT.ResetText();
+            cbNLKCT.ResetText();
+            cbNV.ResetText();
             
+
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -379,36 +388,33 @@ namespace QuanLyKhoHang
             string idNCC = cbNCCCT.Text.Trim();
             // DateTime ngayN = dtNgayN.Value;
             string gc = textBox1.Text.Trim();
-            if (idPN == "")
-            {
-                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
-            }
-            else
+            int count = 0;
+            count = dtgrPN.Rows.Count;
+            string sql = "INSERT into PHIEUNHAPKHO VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',N'" + idNCC + "', N'" + gc + "')";
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dtgrPN.Rows[count - 2].Cells[0].Value);
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+            if (chuoi2 + 1 < 10)
+                txtMaPN.Text = "PN00" + (chuoi2 + 1).ToString();
+            else if (chuoi2 + 1 < 100)
+                txtMaPN.Text = "PN0" + (chuoi2 + 1).ToString();
+            try
             {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                DataTable dt = new DataTable();
-                string sql = "select MAPN, MAKHO, NVNHAP, NGAYNHAP, GHICHU from PHIEUNHAPKHO where MAPN = '" + idPN + "'";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                sda.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    MessageBox.Show("Mã phiếu nhập đã tồn tại!", "Lỗi");
-                    //txtMaNCC.Clear();
-                    //txtMaNCC.Focus();
-                }
-                else
-                {
-                    string sql2 = "INSERT into PHIEUNHAPKHO VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',N'" + idNCC + "', N'" + gc + "')";
-                    SqlCommand cmd2 = new SqlCommand(sql2, con);
-                    con.Open();
-                    cmd2.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK);
-                    Load_dtgrPN();
-                }
+
+                string sql2 = "INSERT into PHIEUNHAPKHO VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',N'" + idNCC + "', N'" + gc + "')";
+                SqlCommand cmd2 = new SqlCommand(sql2, con);
+                con.Open();
+                cmd2.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK);
+                Load_dtgrNLK();
+                Load_dtgrPN();
             }
+            catch { }
+
         }
 
         private void btn_chophepsua_Click(object sender, EventArgs e)
@@ -527,14 +533,14 @@ namespace QuanLyKhoHang
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            string idPNCT = txtMaPNCT.Text.Trim();
+           string idPNCTa = idPNCT.Text.Trim();
             string idNLKCT = cbNLKCT.Text.Trim();
 
 
             string dg = txtDGNCT.Text.Trim();
             string sl = txtSLCT.Text.Trim();
 
-            if (idPNCT == "" || idNLKCT == "")
+            if (idPNCTa == "" || idNLKCT == "")
             {
                 MessageBox.Show("Bạn chưa nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK);
             }
@@ -543,7 +549,7 @@ namespace QuanLyKhoHang
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 DataTable dt = new DataTable();
-                string sql = "select * from ChiTietPhieuNhap where MAPN = '" + idPNCT + "' and MASP = '" + idNLKCT + "'";
+                string sql = "select * from ChiTietPhieuNhap where MAPN = '" + idPNCTa + "' and MASP = '" + idNLKCT + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
@@ -569,12 +575,12 @@ namespace QuanLyKhoHang
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string idPNCT = txtMaPNCT.Text.Trim();
+           string idPNCTa = idPNCT.Text.Trim();
             string idNLKCT = cbNLKCT.Text.Trim();
             string dg = txtDGNCT.Text.Trim();
             string sl = txtSLCT.Text.Trim();
 
-            if (idPNCT == "" || idNLKCT == "")
+            if (idPNCTa == "" || idNLKCT == "")
             {
                 MessageBox.Show("Bạn chưa điền đủ thông tin", "Thông báo", MessageBoxButtons.OK);
             }
@@ -583,7 +589,7 @@ namespace QuanLyKhoHang
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                 DataTable dt = new DataTable();
-                string sql = "select * from ChiTietPhieuNhap where MAPN = '" + idPNCT + "' and MASP = '" + idNLKCT + "'";
+                string sql = "select * from ChiTietPhieuNhap where MAPN = '" + idPNCTa + "' and MASP = '" + idNLKCT + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
@@ -612,7 +618,8 @@ namespace QuanLyKhoHang
         private void button3_Click(object sender, EventArgs e)
         {
             string idNCC = cbNLKCT.Text;
-            if (idNCC == "" || txtMaPNCT.Text == "")
+           
+            if (idNCC == "" || idPNCT.Text == "")
             {
                 MessageBox.Show("Bạn cần chọn sản phẩm muốn xóa", "Thông báo");
             }
@@ -622,8 +629,8 @@ namespace QuanLyKhoHang
                 {
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                    string idPNCT = txtMaPNCT.Text;
-                    string sql = "delete ChiTietPhieuNhap where MAPN = '" + idPNCT + "' and MASP = '" + idNCC + "'";
+                    string idPNCTa = idPNCT.Text;
+                    string sql = "delete ChiTietPhieuNhap where MAPN = '" + idPNCTa + "' and MASP = '" + idNCC + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     con.Open();
                     cmd.ExecuteNonQuery();
