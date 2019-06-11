@@ -390,7 +390,6 @@ namespace QuanLyKhoHang
             string gc = textBox1.Text.Trim();
             int count = 0;
             count = dtgrPN.Rows.Count;
-            string sql = "INSERT into PHIEUNHAPKHO VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',N'" + idNCC + "', N'" + gc + "')";
             string chuoi = "";
             int chuoi2 = 0;
             chuoi = Convert.ToString(dtgrPN.Rows[count - 2].Cells[0].Value);
@@ -561,7 +560,7 @@ namespace QuanLyKhoHang
                 }
                 else
                 {
-                    string sql2 = "INSERT into ChiTietPhieuNhap VALUES (N'" + idPNCT + "', N'" + idNLKCT + "', " + dg + ", " + sl + ",null)";
+                    string sql2 = "INSERT into ChiTietPhieuNhap VALUES (N'" + idPNCTa + "', N'" + idNLKCT + "', " + dg + ", " + sl + ",null) update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuNhap WHERE MASP='" + idNLKCT + "' AND MAPN='" + idPNCTa + "') where MASP='" + idNLKCT + "'";
                     SqlCommand cmd2 = new SqlCommand(sql2, con);
                     con.Open();
                     cmd2.ExecuteNonQuery();
@@ -630,7 +629,7 @@ namespace QuanLyKhoHang
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                     string idPNCTa = idPNCT.Text;
-                    string sql = "delete ChiTietPhieuNhap where MAPN = '" + idPNCTa + "' and MASP = '" + idNCC + "'";
+                    string sql = "update SANPHAM set SOLUONG=SOLUONG-(SELECT SoLuong FROM ChiTietPhieuNhap WHERE MASP='" + idNCC + "' AND MAPN='" + idPNCTa + "') where MASP='" + idNCC + "' delete ChiTietPhieuNhap where MAPN = '" + idPNCTa + "' and MASP = '" + idNCC + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     con.Open();
                     cmd.ExecuteNonQuery();

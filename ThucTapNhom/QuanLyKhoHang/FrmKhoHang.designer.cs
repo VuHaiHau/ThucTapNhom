@@ -72,7 +72,7 @@
             // 
             this.groupBox_ketquatimkiem.Controls.Add(this.dgvKHOHANG);
             this.groupBox_ketquatimkiem.Controls.Add(this.tbx_timkiem);
-            this.groupBox_ketquatimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_ketquatimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_ketquatimkiem.Location = new System.Drawing.Point(15, 199);
             this.groupBox_ketquatimkiem.Name = "groupBox_ketquatimkiem";
             this.groupBox_ketquatimkiem.Size = new System.Drawing.Size(967, 303);
@@ -137,7 +137,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(670, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 19);
+            this.label5.Size = new System.Drawing.Size(64, 19);
             this.label5.TabIndex = 3;
             this.label5.Text = "Ghi Chú";
             // 
@@ -146,7 +146,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(481, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 19);
+            this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tổng  SP";
             // 
@@ -155,7 +155,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(199, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 19);
+            this.label3.Size = new System.Drawing.Size(67, 19);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên Kho";
             // 
@@ -164,7 +164,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 19);
+            this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Kho";
             // 
@@ -184,7 +184,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(14, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(968, 146);
@@ -316,7 +316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(994, 501);
+            this.ClientSize = new System.Drawing.Size(994, 473);
             this.Controls.Add(this.bt_quaylai);
             this.Controls.Add(this.groupBox_ketquatimkiem);
             this.Controls.Add(this.groupBox1);

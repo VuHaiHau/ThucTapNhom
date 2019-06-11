@@ -369,7 +369,8 @@ namespace QuanLyKhoHang
                         MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK);
                         Load_dtgrNLK();
                         Load_dtgrPN();
-           
+                        int sl_ton;
+                        sl_ton = Convert.ToInt32(label12.Text); 
 
                 
 
@@ -504,7 +505,7 @@ namespace QuanLyKhoHang
                     }
                     else
                     {
-                        string sql2 = "INSERT into ChiTietPhieuXuat VALUES (N'" + idPNCT + "', N'" + idNLKCT + "', " + dg + ", " + sl + ",null)";
+                        string sql2 = "INSERT into ChiTietPhieuXuat VALUES (N'" + idPNCT + "', N'" + idNLKCT + "', " + dg + ", " + sl + ",null) update SANPHAM set SOLUONG=SOLUONG-(SELECT SoLuong FROM ChiTietPhieuXuat WHERE MASP='"+idNLKCT+"' AND MAPX='"+idPNCT+"') where MASP='"+idNLKCT+"'";
                         SqlCommand cmd2 = new SqlCommand(sql2, con);
                         con.Open();
                         cmd2.ExecuteNonQuery();
@@ -517,47 +518,7 @@ namespace QuanLyKhoHang
             }
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            string idPNCT = txtMaPNCT.Text.Trim();
-            string idNLKCT = cbNLKCT.Text.Trim();
-            string dg = txtSL.Text.Trim();
-            string sl = txtSLCT.Text.Trim();
-
-            if (idPNCT == "" || idNLKCT == "")
-            {
-                MessageBox.Show("Bạn chưa điền đủ thông tin", "Thông báo", MessageBoxButtons.OK);
-            }
-            else
-            {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                DataTable dt = new DataTable();
-                string sql = "select * from ChiTietPhieuXuat where MAPX = '" + idPNCT + "' and MASP = '" + idNLKCT + "'";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                sda.Fill(dt);
-                if (dt.Rows.Count == 0)
-                {
-                    MessageBox.Show("Mã phiếu xuất hoặc mã sản phẩm không tồn tại!", "Lỗi");
-                    //txtMaNCC.Clear();
-                    //txtMaNCC.Focus();
-                }
-                else
-                {
-                    SqlConnection con1 = new SqlConnection();
-                    con1.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
-                    string sql1 = "update ChiTietPhieuXuat set MASP = N'" + idNLKCT + "', DONGIAX = " + dg + ", SOLUONG = " + sl + " where MAPX = N'" + idPNCT + "' and MASP = N'" + idNLKCT + "'";
-                    SqlCommand cmd1 = new SqlCommand(sql1, con1);
-                    con1.Open();
-                    cmd1.ExecuteNonQuery();
-                    con1.Close();
-                    MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK);
-                    Load_dtgrNLK();
-                    Load_dtgrPN();
-                }
-            }
-        }
+       
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -573,7 +534,7 @@ namespace QuanLyKhoHang
                     SqlConnection con = new SqlConnection();
                     con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
                     string idPNCT = txtMaPNCT.Text;
-                    string sql = "delete ChiTietPhieuXuat where MAPX = '" + idPNCT + "' and MASP = '" + idNCC + "'";
+                    string sql = "update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuXuat WHERE MASP='" + idNCC + "' AND MAPX='" + idPNCT + "') where MASP='" + idNCC + "' delete ChiTietPhieuXuat where MAPX = '" + idPNCT + "' and MASP = '" + idNCC + "'";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     con.Open();
                     cmd.ExecuteNonQuery();

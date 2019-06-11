@@ -640,7 +640,7 @@ namespace QuanLyKhoHang
             }
             else
             {
-                dgv_BoPhan.DataSource = acc.Select_Data("SELECT BOPHAN.MABP, TENBP, BOPHAN.DIENTHOAI, TENKHO, TENNV FROM BOPHAN left join NHANVIEN on BOPHAN.NQL = NHANVIEN.MANV left join KHOHANG on BOPHAN.MAKHO = KHOHANG.MAKHO WHERE ( BOPHAN.MABP like N'%" + tbx_timkiem.Text + "%' OR TENBP like N'%" + tbx_timkiem.Text + "%' OR BOPHAN.DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR TENKHO like N'%" + tbx_timkiem.Text + "%' OR TENNV like N'%" + tbx_timkiem.Text + "%')");
+                dgv_BoPhan.DataSource = acc.Select_Data("SELECT Row_number() over(order by MABP) STT,*from BP WHERE ( BP.MABP like N'%" + tbx_timkiem.Text + "%' OR TENBP like N'%" + tbx_timkiem.Text + "%' OR BP.DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR TENKHO like N'%" + tbx_timkiem.Text + "%' OR TENNV like N'%" + tbx_timkiem.Text + "%')");
                 tbx_timkiem.Clear();
                 dgv_BoPhan.ClearSelection();
             }

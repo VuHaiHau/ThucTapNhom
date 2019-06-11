@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace QuanLyKhoHang
 {
     public partial class FrmKhachHang : Form
@@ -16,10 +16,10 @@ namespace QuanLyKhoHang
         {
             InitializeComponent();
         }
-
+        
         accessData acc = new accessData();
         private int key = 0;
-
+      
         public void ClearText()
         {
             tbx_makh.Clear();
@@ -36,6 +36,7 @@ namespace QuanLyKhoHang
 
         private void KhachHang_Load(object sender, EventArgs e)
         {
+           
             acc.AutoComplete(tbx_makh, "SELECT MAKH FROM KHACHHANG");
             dgvKhachHang.DataSource = acc.Select_Data("Select Row_number() over(order by MAKH) STT,* from KhachHangMua");
             ClearText();
@@ -51,7 +52,7 @@ namespace QuanLyKhoHang
             tbx_gioitinh.Enabled = false;
             tbx_makh.Enabled = false;
             tbx_tenkh.Enabled = false;
-
+           
             dgvKhachHang.Columns["MAKH"].HeaderText = "Mã Khách Hàng";
             dgvKhachHang.Columns["TENKH"].HeaderText = "Tên Khách Hàng";
             dgvKhachHang.Columns["DIACHI"].HeaderText = "Địa Chỉ";
@@ -372,10 +373,10 @@ namespace QuanLyKhoHang
             tbx_gioitinh.Enabled = true;
             tbx_makh.Enabled = true;
             tbx_tenkh.Enabled = true;
-           
+          
             key = 1;
         }
-
+        
         private void btn_sua_Click(object sender, EventArgs e)
         {
             //ClearText();
@@ -445,6 +446,7 @@ namespace QuanLyKhoHang
         private void btlammoi_Click(object sender, EventArgs e)
         {
             KhachHang_Load(sender, e);
+         
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -456,7 +458,7 @@ namespace QuanLyKhoHang
             }
             else
             {
-                dgvKhachHang.DataSource = acc.Select_Data("Select  * from KHACHHANG Where MAKH like N'%" + tbx_timkiem.Text + "%' OR TENKH like N'%" + tbx_timkiem.Text + "%' OR DIACHI like N'%" + tbx_timkiem.Text + "%' OR GIOITINH like N'%" + tbx_timkiem.Text + "%' OR DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR EMAIL like N'%" + tbx_timkiem.Text + "%'");
+                dgvKhachHang.DataSource = acc.Select_Data("Select Row_number() over(order by MAKH) STT,  * from KHACHHANGMUA Where MAKH like N'%" + tbx_timkiem.Text + "%' OR TENKH like N'%" + tbx_timkiem.Text + "%' OR DIACHI like N'%" + tbx_timkiem.Text + "%' OR GIOITINH like N'%" + tbx_timkiem.Text + "%' OR DIENTHOAI like N'%" + tbx_timkiem.Text + "%' OR EMAIL like N'%" + tbx_timkiem.Text + "%'");
                 tbx_timkiem.Clear();
                 dgvKhachHang.ClearSelection();
             }

@@ -336,3 +336,4 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\RdlCom
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.CoreCompileInputs.cache
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.CopyComplete
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\bin\Debug\DevComponents.DotNetBar2.xml

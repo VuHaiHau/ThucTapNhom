@@ -55,20 +55,20 @@
             // lbxNS
             // 
             this.lbxNS.AutoSize = true;
-            this.lbxNS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxNS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxNS.Location = new System.Drawing.Point(153, 118);
             this.lbxNS.Name = "lbxNS";
-            this.lbxNS.Size = new System.Drawing.Size(72, 19);
+            this.lbxNS.Size = new System.Drawing.Size(78, 19);
             this.lbxNS.TabIndex = 34;
             this.lbxNS.Text = "Ngày Sinh";
             // 
             // lbxDT
             // 
             this.lbxDT.AutoSize = true;
-            this.lbxDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxDT.Location = new System.Drawing.Point(153, 183);
             this.lbxDT.Name = "lbxDT";
-            this.lbxDT.Size = new System.Drawing.Size(75, 19);
+            this.lbxDT.Size = new System.Drawing.Size(83, 19);
             this.lbxDT.TabIndex = 33;
             this.lbxDT.Text = "Điện Thoại";
             // 
@@ -95,40 +95,40 @@
             // lbxCV
             // 
             this.lbxCV.AutoSize = true;
-            this.lbxCV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxCV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxCV.Location = new System.Drawing.Point(153, 219);
             this.lbxCV.Name = "lbxCV";
-            this.lbxCV.Size = new System.Drawing.Size(65, 19);
+            this.lbxCV.Size = new System.Drawing.Size(68, 19);
             this.lbxCV.TabIndex = 29;
             this.lbxCV.Text = "Chức Vụ";
             // 
             // lbxGT
             // 
             this.lbxGT.AutoSize = true;
-            this.lbxGT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxGT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxGT.Location = new System.Drawing.Point(153, 151);
             this.lbxGT.Name = "lbxGT";
-            this.lbxGT.Size = new System.Drawing.Size(64, 19);
+            this.lbxGT.Size = new System.Drawing.Size(72, 19);
             this.lbxGT.TabIndex = 28;
             this.lbxGT.Text = "Giới Tính";
             // 
             // lbxUserName
             // 
             this.lbxUserName.AutoSize = true;
-            this.lbxUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxUserName.Location = new System.Drawing.Point(153, 88);
             this.lbxUserName.Name = "lbxUserName";
-            this.lbxUserName.Size = new System.Drawing.Size(75, 19);
+            this.lbxUserName.Size = new System.Drawing.Size(81, 19);
             this.lbxUserName.TabIndex = 27;
             this.lbxUserName.Text = "UserName";
             // 
             // lbxNameUser
             // 
             this.lbxNameUser.AutoSize = true;
-            this.lbxNameUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxNameUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxNameUser.Location = new System.Drawing.Point(153, 56);
             this.lbxNameUser.Name = "lbxNameUser";
-            this.lbxNameUser.Size = new System.Drawing.Size(75, 19);
+            this.lbxNameUser.Size = new System.Drawing.Size(81, 19);
             this.lbxNameUser.TabIndex = 26;
             this.lbxNameUser.Text = "NameUser";
             // 
