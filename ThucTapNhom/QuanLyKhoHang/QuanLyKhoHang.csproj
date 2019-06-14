@@ -32,15 +32,220 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxInterop.SHDocVw">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Balloon">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Balloon.exe</HintPath>
+    </Reference>
+    <Reference Include="BarFromCode">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BarFromCode.exe</HintPath>
+    </Reference>
+    <Reference Include="BarH_CancerStats">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BarH_CancerStats.exe</HintPath>
+    </Reference>
+    <Reference Include="BarH_Orders">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BarH_Orders.exe</HintPath>
+    </Reference>
+    <Reference Include="BarH_Revenue">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BarH_Revenue.exe</HintPath>
+    </Reference>
+    <Reference Include="BarV_Population">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BarV_Population.exe</HintPath>
+    </Reference>
+    <Reference Include="BarV_Sales">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BarV_Sales.exe</HintPath>
+    </Reference>
+    <Reference Include="BarV_Sound">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BarV_Sound.exe</HintPath>
+    </Reference>
+    <Reference Include="Browser">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Browser.exe</HintPath>
+    </Reference>
+    <Reference Include="BubbleBar">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BubbleBar.exe</HintPath>
+    </Reference>
+    <Reference Include="BubblePlot_CrimeRate">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BubblePlot_CrimeRate.exe</HintPath>
+    </Reference>
+    <Reference Include="BubblePlot_Life">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BubblePlot_Life.exe</HintPath>
+    </Reference>
+    <Reference Include="BubblePlot_Map">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BubblePlot_Map.exe</HintPath>
+    </Reference>
+    <Reference Include="BubblePlot_WaClimate">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\BubblePlot_WaClimate.exe</HintPath>
+    </Reference>
+    <Reference Include="ButtonX">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ButtonX.exe</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressControl">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\CircularProgressControl.exe</HintPath>
+    </Reference>
+    <Reference Include="ClassExplorer">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ClassExplorer.exe</HintPath>
+    </Reference>
+    <Reference Include="ControlHosting">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ControlHosting.exe</HintPath>
+    </Reference>
+    <Reference Include="Controls">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Controls.exe</HintPath>
+    </Reference>
+    <Reference Include="CrumbBar">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\CrumbBar.exe</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CustomRendering">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\CustomRendering.exe</HintPath>
+    </Reference>
+    <Reference Include="DataGridViewX">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DataGridViewX.exe</HintPath>
+    </Reference>
+    <Reference Include="DemoChartControl">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DemoChartControl.exe</HintPath>
+    </Reference>
+    <Reference Include="DesktopAlertSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DesktopAlertSample.exe</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=7.2.0.10, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="DockableWindows">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DockableWindows.exe</HintPath>
+    </Reference>
+    <Reference Include="DockingFromCode">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DockingFromCode.exe</HintPath>
+    </Reference>
+    <Reference Include="DocumentDocking">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DocumentDocking.exe</HintPath>
+    </Reference>
+    <Reference Include="DotNetBarExplorer">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DotNetBarExplorer.exe</HintPath>
+    </Reference>
+    <Reference Include="DotNetNote">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DotNetNote.exe</HintPath>
+    </Reference>
+    <Reference Include="DotPlot_BirthWeight">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DotPlot_BirthWeight.exe</HintPath>
+    </Reference>
+    <Reference Include="DotPlot_Children">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DotPlot_Children.exe</HintPath>
+    </Reference>
+    <Reference Include="DotPlot_OfficeAge">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DotPlot_OfficeAge.exe</HintPath>
+    </Reference>
+    <Reference Include="DropDownGalleries">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\DropDownGalleries.exe</HintPath>
+    </Reference>
+    <Reference Include="EditorsDateNumericCalendar">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\EditorsDateNumericCalendar.exe</HintPath>
+    </Reference>
+    <Reference Include="ExpandablePanel">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ExpandablePanel.exe</HintPath>
+    </Reference>
+    <Reference Include="ExpandableSplitter">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ExpandableSplitter.exe</HintPath>
+    </Reference>
+    <Reference Include="ExplorerBar">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ExplorerBar.exe</HintPath>
+    </Reference>
+    <Reference Include="ExplorerBarWithControl">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ExplorerBarWithControl.exe</HintPath>
+    </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FlatSideBar">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\FlatSideBar.exe</HintPath>
+    </Reference>
+    <Reference Include="FlyoutSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\FlyoutSample.exe</HintPath>
+    </Reference>
+    <Reference Include="GaugeControlSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\GaugeControlSample.exe</HintPath>
+    </Reference>
+    <Reference Include="Highlighter">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Highlighter.exe</HintPath>
+    </Reference>
+    <Reference Include="HiLoPlot_HiLo1">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\HiLoPlot_HiLo1.exe</HintPath>
+    </Reference>
+    <Reference Include="HiLoPlot_HiLo2">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\HiLoPlot_HiLo2.exe</HintPath>
+    </Reference>
+    <Reference Include="HiLoPlot_HiLo3">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\HiLoPlot_HiLo3.exe</HintPath>
+    </Reference>
+    <Reference Include="Interop.SHDocVw">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Interop.SHDocVw.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ItemPanel">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ItemPanel.exe</HintPath>
+    </Reference>
+    <Reference Include="KnobControlSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\KnobControlSample.exe</HintPath>
+    </Reference>
+    <Reference Include="LayoutControlSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LayoutControlSample.exe</HintPath>
+    </Reference>
+    <Reference Include="LineArea_Nuclear">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LineArea_Nuclear.exe</HintPath>
+    </Reference>
+    <Reference Include="LineArea_Popularity">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LineArea_Popularity.exe</HintPath>
+    </Reference>
+    <Reference Include="LineArea_Spline">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LineArea_Spline.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_Appetites">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_Appetites.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_Biorhythm">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_Biorhythm.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_Equation">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_Equation.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_GlacialMelt">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_GlacialMelt.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_Matrix">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_Matrix.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_Salary">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_Salary.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_UnitSales">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_UnitSales.exe</HintPath>
+    </Reference>
+    <Reference Include="LinePlot_UserDraw">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\LinePlot_UserDraw.exe</HintPath>
+    </Reference>
+    <Reference Include="ListBoxAdvSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ListBoxAdvSample.exe</HintPath>
+    </Reference>
+    <Reference Include="ListViewEx">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ListViewEx.exe</HintPath>
+    </Reference>
+    <Reference Include="Menu">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Menu.exe</HintPath>
+    </Reference>
+    <Reference Include="MenuFromCode">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\MenuFromCode.exe</HintPath>
+    </Reference>
+    <Reference Include="MetroBill">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\MetroBill.exe</HintPath>
+    </Reference>
+    <Reference Include="MetroTilePanel">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\MetroTilePanel.exe</HintPath>
+    </Reference>
+    <Reference Include="MicroCharts">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\MicroCharts.exe</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -59,8 +264,155 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="MindMapping">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\MindMapping.exe</HintPath>
+    </Reference>
+    <Reference Include="MoneyStyle">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\MoneyStyle.exe</HintPath>
+    </Reference>
+    <Reference Include="MultiColumnComboBoxEx">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\MultiColumnComboBoxEx.exe</HintPath>
+    </Reference>
+    <Reference Include="NavigationPane">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\NavigationPane.exe</HintPath>
+    </Reference>
+    <Reference Include="Notepad">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Notepad.exe</HintPath>
+    </Reference>
+    <Reference Include="OutlookSideBar">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\OutlookSideBar.exe</HintPath>
+    </Reference>
+    <Reference Include="PanelEx">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PanelEx.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_Chronic">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_Chronic.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_ElectionCost">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_ElectionCost.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_FantasyLand">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_FantasyLand.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_GeekLife">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_GeekLife.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_Insurance">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_Insurance.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_LifeTasks">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_LifeTasks.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_MtCO2">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_MtCO2.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_NorthWind">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_NorthWind.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_ProgressBar">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_ProgressBar.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_States">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_States.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_VehicleProduction">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_VehicleProduction.exe</HintPath>
+    </Reference>
+    <Reference Include="PieChart_WorkMusic">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PieChart_WorkMusic.exe</HintPath>
+    </Reference>
+    <Reference Include="PointPlot_InsPlan">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PointPlot_InsPlan.exe</HintPath>
+    </Reference>
+    <Reference Include="Popup">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Popup.exe</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="ProgressStepsControl">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ProgressStepsControl.exe</HintPath>
+    </Reference>
+    <Reference Include="PropertyGrid">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\PropertyGrid.exe</HintPath>
+    </Reference>
+    <Reference Include="RadialMenu">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RadialMenu.exe</HintPath>
+    </Reference>
+    <Reference Include="RangeBarH_Income">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RangeBarH_Income.exe</HintPath>
+    </Reference>
+    <Reference Include="RangeBarH_Tasks">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RangeBarH_Tasks.exe</HintPath>
+    </Reference>
+    <Reference Include="RangeBarV_Oil">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RangeBarV_Oil.exe</HintPath>
+    </Reference>
+    <Reference Include="RangeBarV_Precip">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RangeBarV_Precip.exe</HintPath>
+    </Reference>
+    <Reference Include="RangeSliderSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RangeSliderSample.exe</HintPath>
+    </Reference>
+    <Reference Include="RealTimePlot">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RealTimePlot.exe</HintPath>
+    </Reference>
+    <Reference Include="ReflectionControls">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ReflectionControls.exe</HintPath>
+    </Reference>
+    <Reference Include="RibbonMerge">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RibbonMerge.exe</HintPath>
+    </Reference>
+    <Reference Include="RibbonPad">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\RibbonPad.exe</HintPath>
+    </Reference>
+    <Reference Include="ScatterPlot_Baseball">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ScatterPlot_Baseball.exe</HintPath>
+    </Reference>
+    <Reference Include="ScatterPlot_Football">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ScatterPlot_Football.exe</HintPath>
+    </Reference>
+    <Reference Include="ScatterPlot_Matrix">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ScatterPlot_Matrix.exe</HintPath>
+    </Reference>
+    <Reference Include="ScheduleCustomItems">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ScheduleCustomItems.exe</HintPath>
+    </Reference>
+    <Reference Include="ScheduleMultiTestProject">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ScheduleMultiTestProject.exe</HintPath>
+    </Reference>
+    <Reference Include="ScheduleTestProject">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ScheduleTestProject.exe</HintPath>
+    </Reference>
+    <Reference Include="SideNavSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\SideNavSample.exe</HintPath>
+    </Reference>
+    <Reference Include="StepLine_Displacement">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\StepLine_Displacement.exe</HintPath>
+    </Reference>
+    <Reference Include="StepLine_Logic">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\StepLine_Logic.exe</HintPath>
+    </Reference>
+    <Reference Include="StepLine_Performance">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\StepLine_Performance.exe</HintPath>
+    </Reference>
+    <Reference Include="StepLine_Sales">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\StepLine_Sales.exe</HintPath>
+    </Reference>
+    <Reference Include="StripPlot_Donors">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\StripPlot_Donors.exe</HintPath>
+    </Reference>
+    <Reference Include="SuperGridDemo">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\SuperGridDemo.exe</HintPath>
+    </Reference>
+    <Reference Include="SuperTabControlDemo">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\SuperTabControlDemo.exe</HintPath>
+    </Reference>
+    <Reference Include="SuperTabControlDemo2">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\SuperTabControlDemo2.exe</HintPath>
+    </Reference>
+    <Reference Include="SuperTooltip">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\SuperTooltip.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -75,9 +427,42 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TabControl">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\TabControl.exe</HintPath>
+    </Reference>
+    <Reference Include="TabFormSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\TabFormSample.exe</HintPath>
+    </Reference>
+    <Reference Include="TaskDialogTester">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\TaskDialogTester.exe</HintPath>
+    </Reference>
+    <Reference Include="TestVirtualKeyboard">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\TestVirtualKeyboard.exe</HintPath>
+    </Reference>
+    <Reference Include="Toast">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Toast.exe</HintPath>
+    </Reference>
+    <Reference Include="TokenEditorDemo">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\TokenEditorDemo.exe</HintPath>
+    </Reference>
+    <Reference Include="ToolboxControlSample">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\ToolboxControlSample.exe</HintPath>
+    </Reference>
+    <Reference Include="TreeControl">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\TreeControl.exe</HintPath>
+    </Reference>
     <Reference Include="UIAutomationProvider" />
+    <Reference Include="Validation">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Validation.exe</HintPath>
+    </Reference>
+    <Reference Include="VisualStudio2012Style">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\VisualStudio2012Style.exe</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Wizard">
+      <HintPath>C:\Users\sic.compoter\Documents\DotNetBar WinForms Samples\Wizard.exe</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accessData.cs" />

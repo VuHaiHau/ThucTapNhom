@@ -423,7 +423,7 @@ namespace QuanLyKhoHang
             else
             {
                 groupBox_ketquatimkiem.Text = "Kết Quả Tìm Kiếm";
-                dgvKHOHANG.DataSource = acc.Select_Data("SELECT * FROM KHOHANG WHERE MAKHO LIKE '%" + tbx_timkiem.Text + "%' OR TENKHO LIKE '%" + tbx_timkiem.Text + "%' OR TONGSODMSP LIKE '%" + tbx_timkiem.Text + "%' OR GHICHU LIKE '%" + tbx_timkiem.Text + "%'");
+                dgvKHOHANG.DataSource = acc.Select_Data("SELECT Row_number() over(order by MAKHO) STT,* from KhoHang1 WHERE MAKHO LIKE '%" + tbx_timkiem.Text + "%' OR TENKHO LIKE '%" + tbx_timkiem.Text + "%' OR TONGSODMSP LIKE '%" + tbx_timkiem.Text + "%' OR GHICHU LIKE '%" + tbx_timkiem.Text + "%'");
                 tbx_timkiem.Clear();
                 dgvKHOHANG.ClearSelection();
             }

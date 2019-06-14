@@ -524,7 +524,7 @@ namespace QuanLyKhoHang
             }
             else
             {
-                dgv_nhacungcap.DataSource = acc.Select_Data("Select  * from NHACUNGCAP Where MANCC like N'%" + tbx_timkiem.Text + "%' OR TENNHACC like N'%" + tbx_timkiem.Text + "%' OR DIACHI like N'%" + tbx_timkiem.Text + "%'");
+                dgv_nhacungcap.DataSource = acc.Select_Data("Select  Row_number() over(order by MANCC) STT,* from NhaCungCapSanPham Where MANCC like N'%" + tbx_timkiem.Text + "%' OR TENNHACC like N'%" + tbx_timkiem.Text + "%' OR DIACHI like N'%" + tbx_timkiem.Text + "%'");
                 tbx_timkiem.Clear();
                 dgv_nhacungcap.ClearSelection();
             }

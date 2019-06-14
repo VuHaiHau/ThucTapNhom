@@ -463,7 +463,7 @@ namespace QuanLyKhoHang
             }
             else
             {
-                dgvDANHMUC.DataSource = acc.Select_Data("SELECT DM.MADANHMUC,TENDANHMUC,KHOHANG.TENKHO,DM.GHICHU from DANHMUC DM left join KHOHANG on KHOHANG.MAKHO=DM.MAKHO WHERE ( MADANHMUC like N'%" + tbx_timkiem.Text + "%' OR TENDANHMUC like N'%" + tbx_timkiem.Text + "%' OR KHOHANG.TENKHO like N'%" + tbx_timkiem.Text + "%' OR DM.GHICHU like N'%" + tbx_timkiem.Text + "%' )");
+                dgvDANHMUC.DataSource = acc.Select_Data("SELECT Row_number() over(order by MADANHMUC) STT,*from DanhMucSP WHERE ( MADANHMUC like N'%" + tbx_timkiem.Text + "%' OR TENDANHMUC like N'%" + tbx_timkiem.Text + "%' OR DanhMucSP.TENKHO like N'%" + tbx_timkiem.Text + "%' OR DanhMucSP.GHICHU like N'%" + tbx_timkiem.Text + "%' )");
                 tbx_timkiem.Clear();
                 dgvDANHMUC.ClearSelection();
             }

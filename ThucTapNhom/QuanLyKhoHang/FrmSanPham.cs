@@ -387,25 +387,25 @@ namespace QuanLyKhoHang
                 MessageBox.Show("Hãy chọn 1 sản phẩm để xóa!", "Thông Báo");
 
             }
-            else
-            {
-                DataTable dtctpn = new DataTable();
-                dtctpn = acc.CheckSql("select * from CHITIETPHIEUNHAP where MASP ='" + tbx_masp.Text + "'");
-                DataTable dtctpx = new DataTable();
-                dtctpx = acc.CheckSql("select * from CHITIETPHIEUXUAT where MASP ='" + tbx_masp.Text + "'");
-                if (dtctpn.Rows.Count > 0 || dtctpx.Rows.Count > 0)
-                {
-                    if (MessageBox.Show("Sản phẩm này đang tồn tại ở bảng Chi Tiết Phiếu Nhập Xuất! Bạn chắc chắn muốn xóa!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        acc.CheckSql("DELETE CHITIETPHIEUNHAP WHERE MASP = '" + tbx_masp.Text + "'");
-                        acc.CheckSql("DELETE CHITIETPHIEUXUAT WHERE MASP = '" + tbx_masp.Text + "'");
-                        acc.XOA_SANPHAM(tbx_masp.Text);
-                        MessageBox.Show("Xóa thành công!", "Thông Báo!");
+            //else
+            //{
+            //    DataTable dtctpn = new DataTable();
+            //    dtctpn = acc.CheckSql("select * from CHITIETPHIEUNHAP where MASP ='" + tbx_masp.Text + "'");
+            //    DataTable dtctpx = new DataTable();
+            //    dtctpx = acc.CheckSql("select * from CHITIETPHIEUXUAT where MASP ='" + tbx_masp.Text + "'");
+            //    if (dtctpn.Rows.Count > 0 || dtctpx.Rows.Count > 0)
+            //    {
+            //        if (MessageBox.Show("Sản phẩm này đang tồn tại ở bảng Chi Tiết Phiếu Nhập Xuất! Bạn chắc chắn muốn xóa!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //        {
+            //            acc.CheckSql("DELETE CHITIETPHIEUNHAP WHERE MASP = '" + tbx_masp.Text + "'");
+            //            acc.CheckSql("DELETE CHITIETPHIEUXUAT WHERE MASP = '" + tbx_masp.Text + "'");
+            //            acc.XOA_SANPHAM(tbx_masp.Text);
+            //            MessageBox.Show("Xóa thành công!", "Thông Báo!");
 
-                        SANPHAM_Load(sender, e);
-                        key = 0;
-                    }
-                }
+            //            SANPHAM_Load(sender, e);
+            //            key = 0;
+            //        }
+            //    }
             else
             {
                     if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này", "cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -418,7 +418,7 @@ namespace QuanLyKhoHang
                         MessageBox.Show("Xóa thành công!", "Thông Báo");
                     }
                 }
-            }
+           // }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -555,7 +555,7 @@ namespace QuanLyKhoHang
             }
             else
             {
-                dgv_SANPHAM.DataSource = acc.Select_Data("SELECT MASP,TENSP,GIA,SERIAL,NHACUNGCAP.TENNHACC,DANHMUC.TENDANHMUC ,NGAYSANXUAT,HANSUDUNG,SOLUONG,PHANLOAI,HINHANH,SANPHAM.GHICHU  FROM SANPHAM  LEFT JOIN DANHMUC on DANHMUC.MADANHMUC = SANPHAM.MADANHMUC left join NHACUNGCAP on NHACUNGCAP.MANCC = SANPHAM.MANCC WHERE (MASP like N'%" + txb_timkiem.Text + "%' OR TENSP like N'%" + txb_timkiem.Text + "%' OR TENNHACC like N'%" + txb_timkiem.Text + "%' OR  GIA like N'%" + txb_timkiem.Text + "%' OR TENDANHMUC like N'%" + txb_timkiem.Text + "%' OR SERIAL like N'%" + txb_timkiem.Text + "%' OR  PHANLOAI like N'%" + txb_timkiem.Text + "%' OR SANPHAM.GHICHU like N'%" + txb_timkiem.Text + "%')");
+                dgv_SANPHAM.DataSource = acc.Select_Data("SELECT Row_number() over(order by MASP) STT,* from SanPham1 WHERE (MASP like N'%" + txb_timkiem.Text + "%' OR TENSP like N'%" + txb_timkiem.Text + "%' OR TENNHACC like N'%" + txb_timkiem.Text + "%' OR  GIA like N'%" + txb_timkiem.Text + "%' OR TENDANHMUC like N'%" + txb_timkiem.Text + "%' OR SERIAL like N'%" + txb_timkiem.Text + "%' OR  PHANLOAI like N'%" + txb_timkiem.Text + "%' OR GHICHU like N'%" + txb_timkiem.Text + "%')");
                 txb_timkiem.Clear();
                 dgv_SANPHAM.ClearSelection();
                 groupBox_DSSP.Text = "Kết Quả Tìm Kiếm";
@@ -563,7 +563,6 @@ namespace QuanLyKhoHang
             }
         }
 
-       
-       
+        
     }
 }

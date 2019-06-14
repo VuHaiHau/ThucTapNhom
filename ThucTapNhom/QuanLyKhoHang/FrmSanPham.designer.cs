@@ -199,17 +199,17 @@
             // dtpicker_hsd
             // 
             this.dtpicker_hsd.CustomFormat = "MM/dd/yyyy";
-            this.dtpicker_hsd.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpicker_hsd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpicker_hsd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpicker_hsd.Location = new System.Drawing.Point(311, 123);
             this.dtpicker_hsd.Name = "dtpicker_hsd";
-            this.dtpicker_hsd.Size = new System.Drawing.Size(126, 25);
+            this.dtpicker_hsd.Size = new System.Drawing.Size(126, 26);
             this.dtpicker_hsd.TabIndex = 64;
             // 
             // dtpicker_nsx
             // 
             this.dtpicker_nsx.CustomFormat = "MM/dd/yyyy";
-            this.dtpicker_nsx.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpicker_nsx.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpicker_nsx.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpicker_nsx.Location = new System.Drawing.Point(311, 88);
             this.dtpicker_nsx.Name = "dtpicker_nsx";
@@ -218,7 +218,7 @@
             // 
             // txb_ghichu
             // 
-            this.txb_ghichu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ghichu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ghichu.Location = new System.Drawing.Point(557, 149);
             this.txb_ghichu.Multiline = true;
             this.txb_ghichu.Name = "txb_ghichu";
@@ -238,7 +238,7 @@
             // 
             // txb_soluong
             // 
-            this.txb_soluong.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_soluong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_soluong.Location = new System.Drawing.Point(311, 159);
             this.txb_soluong.Maximum = new decimal(new int[] {
             1000,
@@ -246,26 +246,26 @@
             0,
             0});
             this.txb_soluong.Name = "txb_soluong";
-            this.txb_soluong.Size = new System.Drawing.Size(126, 25);
+            this.txb_soluong.Size = new System.Drawing.Size(126, 26);
             this.txb_soluong.TabIndex = 72;
             this.txb_soluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txb_ncc
             // 
-            this.txb_ncc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ncc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_ncc.FormattingEnabled = true;
             this.txb_ncc.Location = new System.Drawing.Point(79, 124);
             this.txb_ncc.Name = "txb_ncc";
-            this.txb_ncc.Size = new System.Drawing.Size(128, 23);
+            this.txb_ncc.Size = new System.Drawing.Size(128, 27);
             this.txb_ncc.TabIndex = 71;
             // 
             // txb_madm
             // 
-            this.txb_madm.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_madm.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_madm.FormattingEnabled = true;
             this.txb_madm.Location = new System.Drawing.Point(79, 160);
             this.txb_madm.Name = "txb_madm";
-            this.txb_madm.Size = new System.Drawing.Size(128, 23);
+            this.txb_madm.Size = new System.Drawing.Size(128, 27);
             this.txb_madm.TabIndex = 70;
             // 
             // lb_tiente
@@ -290,7 +290,7 @@
             // 
             // txb_giasp
             // 
-            this.txb_giasp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_giasp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_giasp.Location = new System.Drawing.Point(557, 96);
             this.txb_giasp.Multiline = true;
             this.txb_giasp.Name = "txb_giasp";
@@ -321,7 +321,7 @@
             // 
             // txb_phanloai
             // 
-            this.txb_phanloai.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_phanloai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_phanloai.Location = new System.Drawing.Point(557, 53);
             this.txb_phanloai.Multiline = true;
             this.txb_phanloai.Name = "txb_phanloai";
@@ -330,7 +330,7 @@
             // 
             // txb_serial
             // 
-            this.txb_serial.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_serial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_serial.Location = new System.Drawing.Point(311, 53);
             this.txb_serial.Multiline = true;
             this.txb_serial.Name = "txb_serial";
@@ -339,7 +339,7 @@
             // 
             // tbx_tensp
             // 
-            this.tbx_tensp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_tensp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_tensp.Location = new System.Drawing.Point(79, 88);
             this.tbx_tensp.Multiline = true;
             this.tbx_tensp.Name = "tbx_tensp";
@@ -349,7 +349,7 @@
             // tbx_masp
             // 
             this.tbx_masp.BackColor = System.Drawing.SystemColors.Window;
-            this.tbx_masp.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_masp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_masp.Location = new System.Drawing.Point(79, 56);
             this.tbx_masp.Multiline = true;
             this.tbx_masp.Name = "tbx_masp";
@@ -440,7 +440,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 161);
+            this.label4.Location = new System.Drawing.Point(0, 163);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 19);
             this.label4.TabIndex = 50;
@@ -486,6 +486,7 @@
             this.dgv_SANPHAM.Size = new System.Drawing.Size(1195, 249);
             this.dgv_SANPHAM.TabIndex = 0;
             this.dgv_SANPHAM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SANPHAM_CellClick);
+        //    this.dgv_SANPHAM.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_SANPHAM_CellContentClick);
             // 
             // groupBox_DSSP
             // 
