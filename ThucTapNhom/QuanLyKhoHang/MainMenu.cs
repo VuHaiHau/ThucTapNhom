@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using QuanLyKhoHang.CT;
 
 namespace QuanLyKhoHang
 {
@@ -26,55 +27,55 @@ namespace QuanLyKhoHang
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
                 this.Hide();
-                FrmNhanVIen nhanvien = new FrmNhanVIen();
+                Frm_NhanVien nhanvien = new Frm_NhanVien();
                 nhanvien.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Bạn Phải là ADMIN thì mới có quyền thực hiện được thao tác này!");
             }
-            
+
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmDangNhapHeThong DN = new FrmDangNhapHeThong();
+            Frm_DangNhap DN = new Frm_DangNhap();
             DN.ShowDialog();
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bạn Phải là ADMIN thì mới đổi được mật khẩu cho tài khoản khác!");
-            FrmDoimatkhau dmk = new FrmDoimatkhau();
+            Frm_DoiMatKhau dmk = new Frm_DoiMatKhau();
             dmk.ShowDialog();
         }
         
 
         private void ngườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmNguoiDung ND = new FrmNguoiDung();
+            ThongTinNguoiDung ND = new ThongTinNguoiDung();
             ND.ShowDialog();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            FrmNhanVIen.QUYENHD = Quyenhan.Trim();
-            FrmBoPhan.QUYENHD = Quyenhan.Trim();
-            FrmThemTaiKhoan.QUYENHD = Quyenhan.Trim();
+            Frm_NhanVien.QUYENHD = Quyenhan.Trim();
+            Frm_BoPhan.QUYENHD = Quyenhan.Trim();
+            Frm_TaiKhoan.QUYENHD = Quyenhan.Trim();
         }
 
         private void btn_baocao_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmBaoCao BC = new FrmBaoCao();
+            Frm_BaoCao BC = new Frm_BaoCao();
             BC.ShowDialog();
         }
 
         private void btn_danhmuc_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmDanhMucSP DMSP = new FrmDanhMucSP();
+            Frm_DanhMucSP DMSP = new Frm_DanhMucSP();
             DMSP.ShowDialog();
         }
 
@@ -83,7 +84,7 @@ namespace QuanLyKhoHang
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
                 this.Hide();
-                FrmBoPhan bophan = new FrmBoPhan();
+                Frm_BoPhan bophan = new Frm_BoPhan();
                 bophan.ShowDialog();
             }
             else
@@ -97,7 +98,7 @@ namespace QuanLyKhoHang
         private void btn_nhacc_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmNhaCC nhacc = new FrmNhaCC();
+            Frm_NhaCungCap nhacc = new Frm_NhaCungCap();
             nhacc.ShowDialog();
         }
         
@@ -106,7 +107,7 @@ namespace QuanLyKhoHang
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
                 this.Hide();
-                FrmKhoHang kho = new FrmKhoHang();
+                Frm_KhoHang kho = new Frm_KhoHang();
                 kho.ShowDialog();
             }
             else
@@ -119,14 +120,14 @@ namespace QuanLyKhoHang
         private void btn_xuatnhap_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmNhapHang nhapxuat = new FrmNhapHang();
+            Frm_NhapHang nhapxuat = new Frm_NhapHang();
             nhapxuat.ShowDialog();
         }
 
         private void btn_khachhang_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmKhachHang khachhang = new FrmKhachHang();
+            Frm_KhachHang khachhang = new Frm_KhachHang();
             khachhang.ShowDialog();
         }
 
@@ -140,7 +141,7 @@ namespace QuanLyKhoHang
         {
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
-                FrmDoiQuyen quyen = new FrmDoiQuyen();
+                Frm_DoiQuyen quyen = new Frm_DoiQuyen();
                 quyen.ShowDialog();
             }
             else
@@ -152,56 +153,56 @@ namespace QuanLyKhoHang
         private void btn_sanpham_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmSanPham sanpham = new FrmSanPham();
+            Frm_SanPham sanpham = new Frm_SanPham();
             sanpham.ShowDialog();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmNhanVIen nv = new FrmNhanVIen();
+            Frm_NhanVien nv = new Frm_NhanVien();
             nv.ShowDialog();
         }
 
         private void bộPhậnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmBoPhan bp = new FrmBoPhan();
+            Frm_BoPhan bp = new Frm_BoPhan();
             bp.ShowDialog();
         }
 
         private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmNhaCC cc = new FrmNhaCC();
+            Frm_NhaCungCap cc = new Frm_NhaCungCap();
             cc.ShowDialog();
         }
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmKhachHang kh = new FrmKhachHang();
+            Frm_KhachHang kh = new Frm_KhachHang();
             kh.ShowDialog();
         }
 
         private void khoHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmKhoHang k = new FrmKhoHang();
+            Frm_KhoHang k = new Frm_KhoHang();
             k.ShowDialog();
         }
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmSanPham sp = new FrmSanPham();
+            Frm_SanPham sp = new Frm_SanPham();
             sp.ShowDialog();
         }
 
         private void danhMụcSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmDanhMucSP dm = new FrmDanhMucSP();
+            Frm_DanhMucSP dm = new Frm_DanhMucSP();
             dm.ShowDialog();
         }
 
@@ -210,7 +211,7 @@ namespace QuanLyKhoHang
         private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmXuatHang bc = new FrmXuatHang();
+            Frm_XuatHang bc = new Frm_XuatHang();
             bc.ShowDialog();
         }
 
@@ -221,7 +222,7 @@ namespace QuanLyKhoHang
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
                 this.Hide();
-                FrmThemTaiKhoan ttk = new FrmThemTaiKhoan();
+                Frm_TaiKhoan ttk = new Frm_TaiKhoan();
                 ttk.ShowDialog();
             }
             else
@@ -236,7 +237,7 @@ namespace QuanLyKhoHang
         private void đổiQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmDoimatkhau dmk= new FrmDoimatkhau();
+            Frm_DoiMatKhau dmk= new Frm_DoiMatKhau();
             dmk.ShowDialog();
         }
 
@@ -244,14 +245,14 @@ namespace QuanLyKhoHang
         private void đăngXuấtToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmDangNhapHeThong dn = new FrmDangNhapHeThong();
+            Frm_DangNhap dn = new Frm_DangNhap();
             dn.ShowDialog();
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmNguoiDung nd = new FrmNguoiDung();
+            ThongTinNguoiDung nd = new ThongTinNguoiDung();
             nd.ShowDialog();
         }
 
@@ -308,7 +309,7 @@ namespace QuanLyKhoHang
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
                 this.Hide();
-                FrmDoiQuyen dq = new FrmDoiQuyen();
+                Frm_DoiQuyen dq = new Frm_DoiQuyen();
                 dq.ShowDialog();
             }
             else
@@ -327,28 +328,28 @@ namespace QuanLyKhoHang
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmXuatHang xh = new FrmXuatHang();
+            Frm_XuatHang xh = new Frm_XuatHang();
             xh.ShowDialog();
         }
 
         private void nhậpXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmNhapHang xh = new FrmNhapHang();
+            Frm_NhapHang xh = new Frm_NhapHang();
             xh.ShowDialog();
         }
 
         private void báoCáoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmBaoCao bc = new FrmBaoCao();
+            Frm_BaoCao bc = new Frm_BaoCao();
             bc.ShowDialog();
         }
 
         private void thốngKêHàngTồnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmThongKeSLTonKho TK = new FrmThongKeSLTonKho();
+            ThongKeSLTonKho TK = new ThongKeSLTonKho();
             TK.ShowDialog();
             MainMenu m = new MainMenu();
             m.ShowDialog();

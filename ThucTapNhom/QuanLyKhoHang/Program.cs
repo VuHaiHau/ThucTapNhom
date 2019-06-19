@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using QuanLyKhoHang.CT;
+
 namespace QuanLyKhoHang
 {
     static class Program
@@ -14,7 +16,7 @@ namespace QuanLyKhoHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDangNhapHeThong());
+            Application.Run(new Frm_DangNhap());
         }
     }
 }
