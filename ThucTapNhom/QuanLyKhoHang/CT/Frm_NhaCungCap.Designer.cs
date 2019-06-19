@@ -55,10 +55,10 @@
             // 
             this.tbx_Diachi.Border.Class = "TextBoxBorder";
             this.tbx_Diachi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_Diachi.Location = new System.Drawing.Point(296, 124);
+            this.tbx_Diachi.Location = new System.Drawing.Point(293, 124);
             this.tbx_Diachi.Name = "tbx_Diachi";
             this.tbx_Diachi.PreventEnterBeep = true;
-            this.tbx_Diachi.Size = new System.Drawing.Size(193, 20);
+            this.tbx_Diachi.Size = new System.Drawing.Size(184, 20);
             this.tbx_Diachi.TabIndex = 28;
             // 
             // labelX5
@@ -67,7 +67,7 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(239, 122);
+            this.labelX5.Location = new System.Drawing.Point(236, 122);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(49, 23);
             this.labelX5.TabIndex = 20;
@@ -123,9 +123,9 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_nhacungcap.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_nhacungcap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgv_nhacungcap.Location = new System.Drawing.Point(14, 217);
+            this.dgv_nhacungcap.Location = new System.Drawing.Point(495, 17);
             this.dgv_nhacungcap.Name = "dgv_nhacungcap";
-            this.dgv_nhacungcap.Size = new System.Drawing.Size(475, 256);
+            this.dgv_nhacungcap.Size = new System.Drawing.Size(525, 388);
             this.dgv_nhacungcap.TabIndex = 25;
             this.dgv_nhacungcap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Nhacungcap);
             // 
@@ -175,7 +175,7 @@
             this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_lammoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_lammoi.Location = new System.Drawing.Point(414, 17);
+            this.btn_lammoi.Location = new System.Drawing.Point(402, 17);
             this.btn_lammoi.Name = "btn_lammoi";
             this.btn_lammoi.Size = new System.Drawing.Size(75, 23);
             this.btn_lammoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -188,7 +188,7 @@
             this.btn_ghinhan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_ghinhan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btn_ghinhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ghinhan.Location = new System.Drawing.Point(314, 17);
+            this.btn_ghinhan.Location = new System.Drawing.Point(305, 17);
             this.btn_ghinhan.Name = "btn_ghinhan";
             this.btn_ghinhan.Size = new System.Drawing.Size(75, 23);
             this.btn_ghinhan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -201,7 +201,7 @@
             this.btn_xoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_xoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.Location = new System.Drawing.Point(214, 17);
+            this.btn_xoa.Location = new System.Drawing.Point(208, 17);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(75, 23);
             this.btn_xoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -214,7 +214,7 @@
             this.btn_sua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_sua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(114, 17);
+            this.btn_sua.Location = new System.Drawing.Point(111, 17);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(75, 23);
             this.btn_sua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -242,10 +242,10 @@
             // 
             this.tbx_Ghichu.Border.Class = "TextBoxBorder";
             this.tbx_Ghichu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_Ghichu.Location = new System.Drawing.Point(296, 163);
+            this.tbx_Ghichu.Location = new System.Drawing.Point(293, 163);
             this.tbx_Ghichu.Name = "tbx_Ghichu";
             this.tbx_Ghichu.PreventEnterBeep = true;
-            this.tbx_Ghichu.Size = new System.Drawing.Size(193, 20);
+            this.tbx_Ghichu.Size = new System.Drawing.Size(184, 20);
             this.tbx_Ghichu.TabIndex = 29;
             // 
             // labelX3
@@ -254,7 +254,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(238, 161);
+            this.labelX3.Location = new System.Drawing.Point(235, 161);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(49, 23);
             this.labelX3.TabIndex = 30;
@@ -264,7 +264,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 491);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.tbx_Ghichu);
             this.Controls.Add(this.tbx_Diachi);
@@ -283,8 +282,7 @@
             this.Controls.Add(this.btn_them);
             this.DoubleBuffered = true;
             this.Name = "Frm_NhaCungCap";
-            this.Text = "Quản Lý Nhà Cung Cấp";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NhaCungCap);
+            this.Size = new System.Drawing.Size(1041, 420);
             this.Load += new System.EventHandler(this.Frm_NhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhacungcap)).EndInit();
             this.ResumeLayout(false);

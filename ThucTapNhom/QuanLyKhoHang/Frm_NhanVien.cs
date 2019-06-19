@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang
 {
-    public partial class Frm_NhanVien : DevComponents.DotNetBar.Office2007Form
+    public partial class Frm_NhanVien : UserControl
     {
         public Frm_NhanVien()
         {

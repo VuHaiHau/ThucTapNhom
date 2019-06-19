@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_KhoHang : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_KhoHang : UserControl
     {
         public Frm_KhoHang()
         {

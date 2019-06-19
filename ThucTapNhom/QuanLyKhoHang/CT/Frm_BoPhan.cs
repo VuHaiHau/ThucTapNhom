@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_BoPhan : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_BoPhan : UserControl
     {
         public Frm_BoPhan()
         {

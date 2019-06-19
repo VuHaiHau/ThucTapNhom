@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_lammoi = new DevComponents.DotNetBar.ButtonX();
             this.btn_ghinhan = new DevComponents.DotNetBar.ButtonX();
             this.btn_xoa = new DevComponents.DotNetBar.ButtonX();
@@ -242,18 +242,18 @@
             // dgvKHOHANG
             // 
             this.dgvKHOHANG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKHOHANG.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKHOHANG.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKHOHANG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvKHOHANG.Location = new System.Drawing.Point(13, 188);
+            this.dgvKHOHANG.Location = new System.Drawing.Point(534, 12);
             this.dgvKHOHANG.Name = "dgvKHOHANG";
-            this.dgvKHOHANG.Size = new System.Drawing.Size(475, 250);
+            this.dgvKHOHANG.Size = new System.Drawing.Size(490, 250);
             this.dgvKHOHANG.TabIndex = 70;
             this.dgvKHOHANG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKHOHANG_CellContentClick);
             // 
@@ -261,7 +261,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 450);
             this.Controls.Add(this.dgvKHOHANG);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.labelX3);
@@ -280,7 +279,7 @@
             this.Controls.Add(this.bt_them);
             this.DoubleBuffered = true;
             this.Name = "Frm_KhoHang";
-            this.Text = "Frm_KhoHang";
+            this.Size = new System.Drawing.Size(1040, 440);
             this.Load += new System.EventHandler(this.Frm_KhoHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbx_tongdmsp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKHOHANG)).EndInit();

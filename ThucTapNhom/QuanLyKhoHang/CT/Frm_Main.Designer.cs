@@ -117,8 +117,8 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,7 +206,7 @@
             this.ribbonBar1.Location = new System.Drawing.Point(4, 0);
             this.ribbonBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar1.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             // 
@@ -593,10 +593,10 @@
             this.ribbonBar2.DragDropSupport = true;
             this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem15});
-            this.ribbonBar2.Location = new System.Drawing.Point(137, 0);
+            this.ribbonBar2.Location = new System.Drawing.Point(103, 0);
             this.ribbonBar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar2.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 1;
             // 
@@ -633,10 +633,10 @@
             this.ribbonBar3.DragDropSupport = true;
             this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem16});
-            this.ribbonBar3.Location = new System.Drawing.Point(270, 0);
+            this.ribbonBar3.Location = new System.Drawing.Point(202, 0);
             this.ribbonBar3.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar3.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 2;
             // 
@@ -673,10 +673,10 @@
             this.ribbonBar4.DragDropSupport = true;
             this.ribbonBar4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem17});
-            this.ribbonBar4.Location = new System.Drawing.Point(403, 0);
+            this.ribbonBar4.Location = new System.Drawing.Point(301, 0);
             this.ribbonBar4.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar4.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar4.TabIndex = 3;
             // 
@@ -713,10 +713,10 @@
             this.ribbonBar5.DragDropSupport = true;
             this.ribbonBar5.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem18});
-            this.ribbonBar5.Location = new System.Drawing.Point(536, 0);
+            this.ribbonBar5.Location = new System.Drawing.Point(400, 0);
             this.ribbonBar5.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar5.Name = "ribbonBar5";
-            this.ribbonBar5.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar5.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar5.TabIndex = 4;
             // 
@@ -756,7 +756,7 @@
             this.ribbonBar6.Location = new System.Drawing.Point(4, 0);
             this.ribbonBar6.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar6.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 1;
             // 
@@ -776,6 +776,7 @@
             this.buttonItem19.Name = "buttonItem19";
             this.buttonItem19.SubItemsExpandWidth = 14;
             this.buttonItem19.Text = "<div width=\"80\" align=\"center\">Nhân Viên</div>";
+            this.buttonItem19.Click += new System.EventHandler(this.buttonItem19_Click_1);
             // 
             // ribbonBar7
             // 
@@ -793,10 +794,10 @@
             this.ribbonBar7.DragDropSupport = true;
             this.ribbonBar7.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem20});
-            this.ribbonBar7.Location = new System.Drawing.Point(137, 0);
+            this.ribbonBar7.Location = new System.Drawing.Point(103, 0);
             this.ribbonBar7.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar7.Name = "ribbonBar7";
-            this.ribbonBar7.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar7.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar7.TabIndex = 2;
             // 
@@ -816,6 +817,7 @@
             this.buttonItem20.Name = "buttonItem20";
             this.buttonItem20.SubItemsExpandWidth = 14;
             this.buttonItem20.Text = "<div width=\"80\" align=\"center\">Khách Hàng</div>";
+            this.buttonItem20.Click += new System.EventHandler(this.buttonItem20_Click);
             // 
             // ribbonBar8
             // 
@@ -833,10 +835,10 @@
             this.ribbonBar8.DragDropSupport = true;
             this.ribbonBar8.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem21});
-            this.ribbonBar8.Location = new System.Drawing.Point(270, 0);
+            this.ribbonBar8.Location = new System.Drawing.Point(202, 0);
             this.ribbonBar8.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar8.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 3;
             // 
@@ -856,6 +858,7 @@
             this.buttonItem21.Name = "buttonItem21";
             this.buttonItem21.SubItemsExpandWidth = 14;
             this.buttonItem21.Text = "<div width=\"80\" align=\"center\">Nhà Cung Cấp</div>";
+            this.buttonItem21.Click += new System.EventHandler(this.buttonItem21_Click);
             // 
             // ribbonBar9
             // 
@@ -873,10 +876,10 @@
             this.ribbonBar9.DragDropSupport = true;
             this.ribbonBar9.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem22});
-            this.ribbonBar9.Location = new System.Drawing.Point(403, 0);
+            this.ribbonBar9.Location = new System.Drawing.Point(301, 0);
             this.ribbonBar9.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar9.Name = "ribbonBar9";
-            this.ribbonBar9.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar9.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar9.TabIndex = 4;
             // 
@@ -896,6 +899,7 @@
             this.buttonItem22.Name = "buttonItem22";
             this.buttonItem22.SubItemsExpandWidth = 14;
             this.buttonItem22.Text = "<div width=\"80\" align=\"center\">Bộ Phận</div>";
+            this.buttonItem22.Click += new System.EventHandler(this.buttonItem22_Click);
             // 
             // ribbonBar10
             // 
@@ -913,10 +917,10 @@
             this.ribbonBar10.DragDropSupport = true;
             this.ribbonBar10.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem23});
-            this.ribbonBar10.Location = new System.Drawing.Point(536, 0);
+            this.ribbonBar10.Location = new System.Drawing.Point(400, 0);
             this.ribbonBar10.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar10.Name = "ribbonBar10";
-            this.ribbonBar10.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar10.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar10.TabIndex = 5;
             // 
@@ -936,6 +940,7 @@
             this.buttonItem23.Name = "buttonItem23";
             this.buttonItem23.SubItemsExpandWidth = 14;
             this.buttonItem23.Text = "<div width=\"80\" align=\"center\">Kho Hàng</div>";
+            this.buttonItem23.Click += new System.EventHandler(this.buttonItem23_Click);
             // 
             // ribbonBar11
             // 
@@ -953,10 +958,10 @@
             this.ribbonBar11.DragDropSupport = true;
             this.ribbonBar11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem24});
-            this.ribbonBar11.Location = new System.Drawing.Point(669, 0);
+            this.ribbonBar11.Location = new System.Drawing.Point(499, 0);
             this.ribbonBar11.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar11.Name = "ribbonBar11";
-            this.ribbonBar11.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar11.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar11.TabIndex = 6;
             // 
@@ -993,10 +998,10 @@
             this.ribbonBar12.DragDropSupport = true;
             this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem25});
-            this.ribbonBar12.Location = new System.Drawing.Point(802, 0);
+            this.ribbonBar12.Location = new System.Drawing.Point(598, 0);
             this.ribbonBar12.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar12.Name = "ribbonBar12";
-            this.ribbonBar12.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar12.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar12.TabIndex = 7;
             // 
@@ -1033,10 +1038,10 @@
             this.ribbonBar13.DragDropSupport = true;
             this.ribbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem26});
-            this.ribbonBar13.Location = new System.Drawing.Point(935, 0);
+            this.ribbonBar13.Location = new System.Drawing.Point(697, 0);
             this.ribbonBar13.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar13.Name = "ribbonBar13";
-            this.ribbonBar13.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar13.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar13.TabIndex = 8;
             // 
@@ -1073,10 +1078,10 @@
             this.ribbonBar14.DragDropSupport = true;
             this.ribbonBar14.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem27});
-            this.ribbonBar14.Location = new System.Drawing.Point(1068, 0);
+            this.ribbonBar14.Location = new System.Drawing.Point(796, 0);
             this.ribbonBar14.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar14.Name = "ribbonBar14";
-            this.ribbonBar14.Size = new System.Drawing.Size(133, 106);
+            this.ribbonBar14.Size = new System.Drawing.Size(99, 106);
             this.ribbonBar14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar14.TabIndex = 9;
             // 

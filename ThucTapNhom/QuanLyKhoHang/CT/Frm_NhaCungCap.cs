@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_NhaCungCap : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_NhaCungCap : UserControl
     {
         DataAccess acc = new DataAccess();
         public int key = 0;

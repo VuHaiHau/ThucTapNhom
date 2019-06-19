@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbx_nv = new System.Windows.Forms.ComboBox();
             this.lbx_nv = new System.Windows.Forms.Label();
             this.cbx_trangthai = new System.Windows.Forms.CheckBox();
@@ -78,7 +78,7 @@
             "Đang Làm",
             "Đã Nghỉ",
             "Tất Cả"});
-            this.cbx_nv.Location = new System.Drawing.Point(761, 527);
+            this.cbx_nv.Location = new System.Drawing.Point(861, 384);
             this.cbx_nv.Name = "cbx_nv";
             this.cbx_nv.Size = new System.Drawing.Size(154, 21);
             this.cbx_nv.TabIndex = 19;
@@ -88,7 +88,7 @@
             // 
             this.lbx_nv.AutoSize = true;
             this.lbx_nv.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbx_nv.Location = new System.Drawing.Point(609, 524);
+            this.lbx_nv.Location = new System.Drawing.Point(703, 384);
             this.lbx_nv.Name = "lbx_nv";
             this.lbx_nv.Size = new System.Drawing.Size(137, 22);
             this.lbx_nv.TabIndex = 1;
@@ -98,7 +98,7 @@
             // 
             this.cbx_trangthai.AutoSize = true;
             this.cbx_trangthai.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.cbx_trangthai.Location = new System.Drawing.Point(625, 161);
+            this.cbx_trangthai.Location = new System.Drawing.Point(667, 135);
             this.cbx_trangthai.Name = "cbx_trangthai";
             this.cbx_trangthai.Size = new System.Drawing.Size(88, 17);
             this.cbx_trangthai.TabIndex = 29;
@@ -203,9 +203,9 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(27, 76);
+            this.labelX1.Location = new System.Drawing.Point(27, 58);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.Size = new System.Drawing.Size(48, 23);
             this.labelX1.TabIndex = 40;
             this.labelX1.Text = "Mã NV";
             // 
@@ -216,10 +216,10 @@
             // 
             this.tbx_MaNV.Border.Class = "TextBoxBorder";
             this.tbx_MaNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_MaNV.Location = new System.Drawing.Point(93, 79);
+            this.tbx_MaNV.Location = new System.Drawing.Point(96, 60);
             this.tbx_MaNV.Name = "tbx_MaNV";
             this.tbx_MaNV.PreventEnterBeep = true;
-            this.tbx_MaNV.Size = new System.Drawing.Size(100, 20);
+            this.tbx_MaNV.Size = new System.Drawing.Size(157, 20);
             this.tbx_MaNV.TabIndex = 48;
             // 
             // labelX2
@@ -228,9 +228,9 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(27, 121);
+            this.labelX2.Location = new System.Drawing.Point(27, 92);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(48, 23);
             this.labelX2.TabIndex = 49;
             this.labelX2.Text = "Tên NV";
             // 
@@ -241,10 +241,10 @@
             // 
             this.tbx_TenNV.Border.Class = "TextBoxBorder";
             this.tbx_TenNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_TenNV.Location = new System.Drawing.Point(93, 121);
+            this.tbx_TenNV.Location = new System.Drawing.Point(96, 95);
             this.tbx_TenNV.Name = "tbx_TenNV";
             this.tbx_TenNV.PreventEnterBeep = true;
-            this.tbx_TenNV.Size = new System.Drawing.Size(100, 20);
+            this.tbx_TenNV.Size = new System.Drawing.Size(157, 20);
             this.tbx_TenNV.TabIndex = 50;
             // 
             // labelX3
@@ -253,9 +253,9 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(12, 164);
+            this.labelX3.Location = new System.Drawing.Point(27, 128);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(75, 23);
+            this.labelX3.Size = new System.Drawing.Size(63, 23);
             this.labelX3.TabIndex = 51;
             this.labelX3.Text = "Ngày Sinh";
             // 
@@ -269,7 +269,7 @@
             this.dateTimePicker_NS.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dateTimePicker_NS.ButtonDropDown.Visible = true;
             this.dateTimePicker_NS.IsPopupCalendarOpen = false;
-            this.dateTimePicker_NS.Location = new System.Drawing.Point(93, 167);
+            this.dateTimePicker_NS.Location = new System.Drawing.Point(96, 130);
             // 
             // 
             // 
@@ -300,7 +300,7 @@
             this.dateTimePicker_NS.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dateTimePicker_NS.MonthCalendar.TodayButtonVisible = true;
             this.dateTimePicker_NS.Name = "dateTimePicker_NS";
-            this.dateTimePicker_NS.Size = new System.Drawing.Size(118, 20);
+            this.dateTimePicker_NS.Size = new System.Drawing.Size(157, 20);
             this.dateTimePicker_NS.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimePicker_NS.TabIndex = 57;
             // 
@@ -308,9 +308,9 @@
             // 
             this.pn_radio.Controls.Add(this.rbtn_Nu);
             this.pn_radio.Controls.Add(this.rbtn_Nam);
-            this.pn_radio.Location = new System.Drawing.Point(93, 213);
+            this.pn_radio.Location = new System.Drawing.Point(96, 165);
             this.pn_radio.Name = "pn_radio";
-            this.pn_radio.Size = new System.Drawing.Size(118, 31);
+            this.pn_radio.Size = new System.Drawing.Size(157, 31);
             this.pn_radio.TabIndex = 58;
             // 
             // rbtn_Nu
@@ -341,9 +341,9 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(15, 221);
+            this.labelX4.Location = new System.Drawing.Point(27, 168);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(75, 23);
+            this.labelX4.Size = new System.Drawing.Size(60, 23);
             this.labelX4.TabIndex = 59;
             this.labelX4.Text = "Giới Tính";
             // 
@@ -354,10 +354,10 @@
             // 
             this.tbx_chucvu.Border.Class = "TextBoxBorder";
             this.tbx_chucvu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_chucvu.Location = new System.Drawing.Point(378, 79);
+            this.tbx_chucvu.Location = new System.Drawing.Point(373, 58);
             this.tbx_chucvu.Name = "tbx_chucvu";
             this.tbx_chucvu.PreventEnterBeep = true;
-            this.tbx_chucvu.Size = new System.Drawing.Size(100, 20);
+            this.tbx_chucvu.Size = new System.Drawing.Size(175, 20);
             this.tbx_chucvu.TabIndex = 60;
             // 
             // labelX5
@@ -366,9 +366,9 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(297, 76);
+            this.labelX5.Location = new System.Drawing.Point(297, 56);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(75, 23);
+            this.labelX5.Size = new System.Drawing.Size(60, 23);
             this.labelX5.TabIndex = 61;
             this.labelX5.Text = "Chức Vụ";
             // 
@@ -378,9 +378,9 @@
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(297, 121);
+            this.labelX6.Location = new System.Drawing.Point(297, 92);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(75, 23);
+            this.labelX6.Size = new System.Drawing.Size(60, 23);
             this.labelX6.TabIndex = 62;
             this.labelX6.Text = "Địa Chỉ";
             // 
@@ -391,10 +391,10 @@
             // 
             this.tbx_DiaChi.Border.Class = "TextBoxBorder";
             this.tbx_DiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_DiaChi.Location = new System.Drawing.Point(378, 121);
+            this.tbx_DiaChi.Location = new System.Drawing.Point(373, 95);
             this.tbx_DiaChi.Name = "tbx_DiaChi";
             this.tbx_DiaChi.PreventEnterBeep = true;
-            this.tbx_DiaChi.Size = new System.Drawing.Size(100, 20);
+            this.tbx_DiaChi.Size = new System.Drawing.Size(175, 20);
             this.tbx_DiaChi.TabIndex = 63;
             // 
             // tbx_luong
@@ -404,10 +404,10 @@
             // 
             this.tbx_luong.Border.Class = "TextBoxBorder";
             this.tbx_luong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_luong.Location = new System.Drawing.Point(378, 164);
+            this.tbx_luong.Location = new System.Drawing.Point(373, 131);
             this.tbx_luong.Name = "tbx_luong";
             this.tbx_luong.PreventEnterBeep = true;
-            this.tbx_luong.Size = new System.Drawing.Size(100, 20);
+            this.tbx_luong.Size = new System.Drawing.Size(175, 20);
             this.tbx_luong.TabIndex = 64;
             // 
             // labelX7
@@ -416,9 +416,9 @@
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(284, 161);
+            this.labelX7.Location = new System.Drawing.Point(297, 130);
             this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(75, 23);
+            this.labelX7.Size = new System.Drawing.Size(46, 23);
             this.labelX7.TabIndex = 65;
             this.labelX7.Text = "Lương";
             // 
@@ -429,10 +429,10 @@
             // 
             this.tbx_Email.Border.Class = "TextBoxBorder";
             this.tbx_Email.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_Email.Location = new System.Drawing.Point(378, 202);
+            this.tbx_Email.Location = new System.Drawing.Point(373, 168);
             this.tbx_Email.Name = "tbx_Email";
             this.tbx_Email.PreventEnterBeep = true;
-            this.tbx_Email.Size = new System.Drawing.Size(100, 20);
+            this.tbx_Email.Size = new System.Drawing.Size(175, 20);
             this.tbx_Email.TabIndex = 66;
             // 
             // labelX8
@@ -441,9 +441,9 @@
             // 
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(297, 199);
+            this.labelX8.Location = new System.Drawing.Point(297, 167);
             this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(75, 23);
+            this.labelX8.Size = new System.Drawing.Size(46, 23);
             this.labelX8.TabIndex = 67;
             this.labelX8.Text = "Email";
             // 
@@ -453,7 +453,7 @@
             // 
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Location = new System.Drawing.Point(551, 79);
+            this.labelX9.Location = new System.Drawing.Point(595, 59);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(75, 23);
             this.labelX9.TabIndex = 68;
@@ -466,10 +466,10 @@
             // 
             this.tbx_DienThoai.Border.Class = "TextBoxBorder";
             this.tbx_DienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_DienThoai.Location = new System.Drawing.Point(613, 79);
+            this.tbx_DienThoai.Location = new System.Drawing.Point(667, 61);
             this.tbx_DienThoai.Name = "tbx_DienThoai";
             this.tbx_DienThoai.PreventEnterBeep = true;
-            this.tbx_DienThoai.Size = new System.Drawing.Size(100, 20);
+            this.tbx_DienThoai.Size = new System.Drawing.Size(127, 20);
             this.tbx_DienThoai.TabIndex = 69;
             // 
             // labelX10
@@ -478,7 +478,7 @@
             // 
             // 
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Location = new System.Drawing.Point(531, 121);
+            this.labelX10.Location = new System.Drawing.Point(595, 94);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(75, 23);
             this.labelX10.TabIndex = 70;
@@ -490,9 +490,9 @@
             this.tbx_MaBP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.tbx_MaBP.FormattingEnabled = true;
             this.tbx_MaBP.ItemHeight = 14;
-            this.tbx_MaBP.Location = new System.Drawing.Point(615, 121);
+            this.tbx_MaBP.Location = new System.Drawing.Point(667, 95);
             this.tbx_MaBP.Name = "tbx_MaBP";
-            this.tbx_MaBP.Size = new System.Drawing.Size(121, 20);
+            this.tbx_MaBP.Size = new System.Drawing.Size(127, 20);
             this.tbx_MaBP.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.tbx_MaBP.TabIndex = 71;
             // 
@@ -510,7 +510,7 @@
             // 
             this.btn_file.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_file.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_file.Location = new System.Drawing.Point(933, 189);
+            this.btn_file.Location = new System.Drawing.Point(898, 161);
             this.btn_file.Name = "btn_file";
             this.btn_file.Size = new System.Drawing.Size(75, 23);
             this.btn_file.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -524,9 +524,9 @@
             // 
             // 
             this.lbx_trangthai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbx_trangthai.Location = new System.Drawing.Point(531, 157);
+            this.lbx_trangthai.Location = new System.Drawing.Point(595, 131);
             this.lbx_trangthai.Name = "lbx_trangthai";
-            this.lbx_trangthai.Size = new System.Drawing.Size(75, 23);
+            this.lbx_trangthai.Size = new System.Drawing.Size(66, 23);
             this.lbx_trangthai.TabIndex = 74;
             this.lbx_trangthai.Text = "Trạng Thái";
             // 
@@ -534,27 +534,26 @@
             // 
             this.dgvNhanVien.AllowUserToAddRows = false;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvNhanVien.Location = new System.Drawing.Point(12, 264);
+            this.dgvNhanVien.Location = new System.Drawing.Point(12, 211);
             this.dgvNhanVien.Name = "dgvNhanVien";
-            this.dgvNhanVien.Size = new System.Drawing.Size(1003, 219);
+            this.dgvNhanVien.Size = new System.Drawing.Size(1003, 160);
             this.dgvNhanVien.TabIndex = 75;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
-            // FrmNhanVien
+            // Frm_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(1041, 588);
             this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.lbx_trangthai);
             this.Controls.Add(this.btn_file);
@@ -590,10 +589,8 @@
             this.Controls.Add(this.lbx_nv);
             this.Controls.Add(this.cbx_trangthai);
             this.DoubleBuffered = true;
-            this.Name = "FrmNhanVien";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản Lý Nhân Viên";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NhanVIen_FormClosed);
+            this.Name = "Frm_NhanVien";
+            this.Size = new System.Drawing.Size(1041, 424);
             this.Load += new System.EventHandler(this.NhanVIen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePicker_NS)).EndInit();
             this.pn_radio.ResumeLayout(false);

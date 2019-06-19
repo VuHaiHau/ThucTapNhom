@@ -28,7 +28,7 @@ namespace QuanLyKhoHang
             {
                 this.Hide();
                 Frm_NhanVien nhanvien = new Frm_NhanVien();
-                nhanvien.ShowDialog();
+                nhanvien.Show();
             }
             else
             {
@@ -85,7 +85,7 @@ namespace QuanLyKhoHang
             {
                 this.Hide();
                 Frm_BoPhan bophan = new Frm_BoPhan();
-                bophan.ShowDialog();
+                bophan.Show();
             }
             else
             {
@@ -99,7 +99,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_NhaCungCap nhacc = new Frm_NhaCungCap();
-            nhacc.ShowDialog();
+            nhacc.Show();
         }
         
         private void btn_khohang_Click(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace QuanLyKhoHang
             {
                 this.Hide();
                 Frm_KhoHang kho = new Frm_KhoHang();
-                kho.ShowDialog();
+                kho.Show();
             }
             else
             {
@@ -128,7 +128,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_KhachHang khachhang = new Frm_KhachHang();
-            khachhang.ShowDialog();
+            khachhang.Show();
         }
 
         private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -161,35 +161,35 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_NhanVien nv = new Frm_NhanVien();
-            nv.ShowDialog();
+            nv.Show();
         }
 
         private void bộPhậnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Frm_BoPhan bp = new Frm_BoPhan();
-            bp.ShowDialog();
+            bp.Show();
         }
 
         private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Frm_NhaCungCap cc = new Frm_NhaCungCap();
-            cc.ShowDialog();
+            cc.Show();
         }
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Frm_KhachHang kh = new Frm_KhachHang();
-            kh.ShowDialog();
+            kh.Show();
         }
 
         private void khoHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Frm_KhoHang k = new Frm_KhoHang();
-            k.ShowDialog();
+            k.Show();
         }
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
