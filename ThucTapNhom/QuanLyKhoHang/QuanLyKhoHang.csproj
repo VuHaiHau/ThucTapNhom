@@ -396,6 +396,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CT\Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\Nhap.Designer.cs">
+      <DependentUpon>Nhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT\Xuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT\Xuat.Designer.cs">
+      <DependentUpon>Xuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="Frm_BaoCaoN_F.cs">
       <SubType>Form</SubType>
@@ -562,6 +580,15 @@
       <DependentUpon>HoaDonBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="CT\Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\Nhap.resx">
+      <DependentUpon>Nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT\Xuat.resx">
+      <DependentUpon>Xuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_BaoCaoN_F.resx">
       <DependentUpon>Frm_BaoCaoN_F.cs</DependentUpon>
     </EmbeddedResource>

@@ -572,5 +572,10 @@ namespace QuanLyKhoHang
                 dataGridView1.DataSource = dataTable;
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

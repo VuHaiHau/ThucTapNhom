@@ -474,6 +474,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(589, 239);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox3
             // 
@@ -641,14 +642,14 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
-            // FrmXuatHang
+            // Frm_XuatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1113, 621);
             this.Controls.Add(this.tabControl1);
-            this.Name = "FrmXuatHang";
+            this.Name = "Frm_XuatHang";
             this.Text = "PHẦN MỀM QUẢN LÝ KHO HÀNG";
             this.Load += new System.EventHandler(this.FrmXuatHang_Load);
             this.tabControl1.ResumeLayout(false);
