@@ -251,9 +251,9 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKHOHANG.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKHOHANG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvKHOHANG.Location = new System.Drawing.Point(534, 12);
+            this.dgvKHOHANG.Location = new System.Drawing.Point(505, 12);
             this.dgvKHOHANG.Name = "dgvKHOHANG";
-            this.dgvKHOHANG.Size = new System.Drawing.Size(490, 250);
+            this.dgvKHOHANG.Size = new System.Drawing.Size(502, 250);
             this.dgvKHOHANG.TabIndex = 70;
             this.dgvKHOHANG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKHOHANG_CellContentClick);
             // 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_TaiKhoan : DevComponents.DotNetBar.Office2007Form
+    public partial class Frm_TaiKhoan : UserControl
     {
         public Frm_TaiKhoan()
         {

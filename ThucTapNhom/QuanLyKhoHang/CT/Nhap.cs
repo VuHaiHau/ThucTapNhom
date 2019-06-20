@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Nhap : DevComponents.DotNetBar.OfficeForm
+    public partial class Nhap : UserControl
     {
 
         private void Load_dtgrNLK()

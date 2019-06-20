@@ -50,7 +50,7 @@ namespace QuanLyKhoHang.CT
 
                 this.Hide();
                 MessageBox.Show("Chào Mừng Bạn Đã Đến Với Hệ Thống Quản Lý Kho Hàng Của Chúng Tôi!");
-                MainMenu menu = new MainMenu();
+                Frm_Main menu = new Frm_Main();
                 menu.ShowDialog();
             }
             else if (user == "" || pass == "")

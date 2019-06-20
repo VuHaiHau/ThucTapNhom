@@ -595,3 +595,5 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Nhap.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Xuat.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_Main.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.ThongTinPhanMem.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_LienHe.resources

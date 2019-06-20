@@ -48,14 +48,14 @@ namespace QuanLyKhoHang
         {
             MessageBox.Show("Bạn Phải là ADMIN thì mới đổi được mật khẩu cho tài khoản khác!");
             Frm_DoiMatKhau dmk = new Frm_DoiMatKhau();
-            dmk.ShowDialog();
+            dmk.Show();
         }
         
 
         private void ngườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ThongTinNguoiDung ND = new ThongTinNguoiDung();
-            ND.ShowDialog();
+            ND.Show();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_DanhMucSP DMSP = new Frm_DanhMucSP();
-            DMSP.ShowDialog();
+            DMSP.Show();
         }
 
         private void btn_luong_Click(object sender, EventArgs e)
@@ -142,7 +142,7 @@ namespace QuanLyKhoHang
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
                 Frm_DoiQuyen quyen = new Frm_DoiQuyen();
-                quyen.ShowDialog();
+                quyen.Show();
             }
             else
             {
@@ -154,7 +154,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_SanPham sanpham = new Frm_SanPham();
-            sanpham.ShowDialog();
+            sanpham.Show();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -196,14 +196,14 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_SanPham sp = new Frm_SanPham();
-            sp.ShowDialog();
+            sp.Show();
         }
 
         private void danhMụcSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Frm_DanhMucSP dm = new Frm_DanhMucSP();
-            dm.ShowDialog();
+            dm.Show();
         }
 
         
@@ -223,7 +223,7 @@ namespace QuanLyKhoHang
             {
                 this.Hide();
                 Frm_TaiKhoan ttk = new Frm_TaiKhoan();
-                ttk.ShowDialog();
+                ttk.Show();
             }
             else
             {
@@ -238,7 +238,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_DoiMatKhau dmk= new Frm_DoiMatKhau();
-            dmk.ShowDialog();
+            dmk.Show();
         }
 
         
@@ -253,7 +253,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             ThongTinNguoiDung nd = new ThongTinNguoiDung();
-            nd.ShowDialog();
+            nd.Show();
         }
 
         private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -310,7 +310,7 @@ namespace QuanLyKhoHang
             {
                 this.Hide();
                 Frm_DoiQuyen dq = new Frm_DoiQuyen();
-                dq.ShowDialog();
+                dq.Show();
             }
             else
             {

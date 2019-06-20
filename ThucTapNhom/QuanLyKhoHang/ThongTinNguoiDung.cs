@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang
 {
-    public partial class ThongTinNguoiDung : DevComponents.DotNetBar.OfficeForm
+    public partial class ThongTinNguoiDung : UserControl
     {
         DataAccess acc = new DataAccess();
         public static string QuyenHan = "";
@@ -147,7 +147,7 @@ namespace QuanLyKhoHang
             if (QuyenHan.Trim() == "ADMIN" || QuyenHan.Trim() == "Admin" || QuyenHan.Trim() == "admin")
             {
                 Frm_TaiKhoan Them = new Frm_TaiKhoan();
-                Them.ShowDialog();
+                Them.Show();
             }
             else
             {

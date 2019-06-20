@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_DoiQuyen : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_DoiQuyen : UserControl
     {
         public Frm_DoiQuyen()
         {

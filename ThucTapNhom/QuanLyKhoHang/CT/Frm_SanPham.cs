@@ -12,7 +12,7 @@ using System.IO;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_SanPham : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_SanPham : UserControl
     {
         public Frm_SanPham()
         {

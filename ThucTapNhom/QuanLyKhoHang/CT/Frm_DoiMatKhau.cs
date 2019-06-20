@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_DoiMatKhau : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_DoiMatKhau : UserControl
     {
         public static string USERNAME = "";
         public static string QUYENHAN = "";

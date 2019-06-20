@@ -57,7 +57,7 @@
             this.tbx_makho.ItemHeight = 14;
             this.tbx_makho.Location = new System.Drawing.Point(307, 125);
             this.tbx_makho.Name = "tbx_makho";
-            this.tbx_makho.Size = new System.Drawing.Size(182, 20);
+            this.tbx_makho.Size = new System.Drawing.Size(177, 20);
             this.tbx_makho.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.tbx_makho.TabIndex = 26;
             // 
@@ -146,9 +146,9 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDANHMUC.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDANHMUC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvDANHMUC.Location = new System.Drawing.Point(14, 217);
+            this.dgvDANHMUC.Location = new System.Drawing.Point(504, 17);
             this.dgvDANHMUC.Name = "dgvDANHMUC";
-            this.dgvDANHMUC.Size = new System.Drawing.Size(475, 256);
+            this.dgvDANHMUC.Size = new System.Drawing.Size(515, 404);
             this.dgvDANHMUC.TabIndex = 25;
             this.dgvDANHMUC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_DANHMUC);
             // 
@@ -160,7 +160,7 @@
             this.tbx_timkiem.Border.Class = "TextBoxBorder";
             this.tbx_timkiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbx_timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_timkiem.Location = new System.Drawing.Point(14, 66);
+            this.tbx_timkiem.Location = new System.Drawing.Point(14, 67);
             this.tbx_timkiem.Name = "tbx_timkiem";
             this.tbx_timkiem.PreventEnterBeep = true;
             this.tbx_timkiem.Size = new System.Drawing.Size(195, 22);
@@ -196,7 +196,7 @@
             this.btn_lammoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_lammoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btn_lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_lammoi.Location = new System.Drawing.Point(414, 17);
+            this.btn_lammoi.Location = new System.Drawing.Point(409, 17);
             this.btn_lammoi.Name = "btn_lammoi";
             this.btn_lammoi.Size = new System.Drawing.Size(75, 23);
             this.btn_lammoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -209,7 +209,7 @@
             this.bt_ghinhan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_ghinhan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.bt_ghinhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_ghinhan.Location = new System.Drawing.Point(314, 17);
+            this.bt_ghinhan.Location = new System.Drawing.Point(309, 17);
             this.bt_ghinhan.Name = "bt_ghinhan";
             this.bt_ghinhan.Size = new System.Drawing.Size(75, 23);
             this.bt_ghinhan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -222,7 +222,7 @@
             this.bt_xoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_xoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.bt_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_xoa.Location = new System.Drawing.Point(214, 17);
+            this.bt_xoa.Location = new System.Drawing.Point(209, 17);
             this.bt_xoa.Name = "bt_xoa";
             this.bt_xoa.Size = new System.Drawing.Size(75, 23);
             this.bt_xoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -235,7 +235,7 @@
             this.bt_chophepsua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_chophepsua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.bt_chophepsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_chophepsua.Location = new System.Drawing.Point(114, 17);
+            this.bt_chophepsua.Location = new System.Drawing.Point(109, 17);
             this.bt_chophepsua.Name = "bt_chophepsua";
             this.bt_chophepsua.Size = new System.Drawing.Size(75, 23);
             this.bt_chophepsua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -266,14 +266,13 @@
             this.tbx_ghichu.Location = new System.Drawing.Point(307, 163);
             this.tbx_ghichu.Name = "tbx_ghichu";
             this.tbx_ghichu.PreventEnterBeep = true;
-            this.tbx_ghichu.Size = new System.Drawing.Size(182, 20);
+            this.tbx_ghichu.Size = new System.Drawing.Size(177, 20);
             this.tbx_ghichu.TabIndex = 27;
             // 
             // Frm_DanhMucSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 491);
             this.Controls.Add(this.tbx_ghichu);
             this.Controls.Add(this.tbx_makho);
             this.Controls.Add(this.labelX5);
@@ -293,7 +292,7 @@
             this.Controls.Add(this.bt_them);
             this.DoubleBuffered = true;
             this.Name = "Frm_DanhMucSP";
-            this.Text = "Frm_DanhMucSP";
+            this.Size = new System.Drawing.Size(1040, 440);
             this.Load += new System.EventHandler(this.Frm_DanhMucSP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDANHMUC)).EndInit();
             this.ResumeLayout(false);

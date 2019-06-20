@@ -283,7 +283,7 @@
             this.Controls.Add(this.lbxNameUser);
             this.DoubleBuffered = true;
             this.Name = "FrmNguoiDung";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+         //   this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Người Dùng";
             this.Load += new System.EventHandler(this.NguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pc_nguoidung)).EndInit();

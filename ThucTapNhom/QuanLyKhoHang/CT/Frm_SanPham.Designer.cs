@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_themmoi = new DevComponents.DotNetBar.ButtonX();
             this.btn_chophepsua = new DevComponents.DotNetBar.ButtonX();
             this.btn_xoa = new DevComponents.DotNetBar.ButtonX();
@@ -84,7 +84,7 @@
             // 
             this.btn_chophepsua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_chophepsua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_chophepsua.Location = new System.Drawing.Point(124, 12);
+            this.btn_chophepsua.Location = new System.Drawing.Point(119, 12);
             this.btn_chophepsua.Name = "btn_chophepsua";
             this.btn_chophepsua.Size = new System.Drawing.Size(75, 23);
             this.btn_chophepsua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -96,7 +96,7 @@
             // 
             this.btn_xoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_xoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_xoa.Location = new System.Drawing.Point(242, 12);
+            this.btn_xoa.Location = new System.Drawing.Point(237, 12);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(75, 23);
             this.btn_xoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -108,7 +108,7 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(477, 12);
+            this.buttonX4.Location = new System.Drawing.Point(472, 12);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(75, 23);
             this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -120,7 +120,7 @@
             // 
             this.bt_luu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_luu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_luu.Location = new System.Drawing.Point(356, 12);
+            this.bt_luu.Location = new System.Drawing.Point(351, 12);
             this.bt_luu.Name = "bt_luu";
             this.bt_luu.Size = new System.Drawing.Size(75, 23);
             this.bt_luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -132,7 +132,7 @@
             // 
             this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX6.Location = new System.Drawing.Point(835, 12);
+            this.buttonX6.Location = new System.Drawing.Point(788, 12);
             this.buttonX6.Name = "buttonX6";
             this.buttonX6.Size = new System.Drawing.Size(75, 23);
             this.buttonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -143,7 +143,7 @@
             // pictureBox_sanpham
             // 
             this.pictureBox_sanpham.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pictureBox_sanpham.Location = new System.Drawing.Point(956, 12);
+            this.pictureBox_sanpham.Location = new System.Drawing.Point(903, 12);
             this.pictureBox_sanpham.Name = "pictureBox_sanpham";
             this.pictureBox_sanpham.Size = new System.Drawing.Size(117, 141);
             this.pictureBox_sanpham.TabIndex = 58;
@@ -153,7 +153,7 @@
             // 
             this.button8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button8.Location = new System.Drawing.Point(981, 176);
+            this.button8.Location = new System.Drawing.Point(927, 173);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -168,10 +168,10 @@
             // 
             this.txb_timkiem.Border.Class = "TextBoxBorder";
             this.txb_timkiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txb_timkiem.Location = new System.Drawing.Point(613, 14);
+            this.txb_timkiem.Location = new System.Drawing.Point(587, 14);
             this.txb_timkiem.Name = "txb_timkiem";
             this.txb_timkiem.PreventEnterBeep = true;
-            this.txb_timkiem.Size = new System.Drawing.Size(216, 20);
+            this.txb_timkiem.Size = new System.Drawing.Size(195, 20);
             this.txb_timkiem.TabIndex = 60;
             this.txb_timkiem.Enter += new System.EventHandler(this.txt_tk_enter);
             this.txb_timkiem.Leave += new System.EventHandler(this.txt_timkiem_leave);
@@ -182,7 +182,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(21, 63);
+            this.labelX1.Location = new System.Drawing.Point(21, 66);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 61;
@@ -194,7 +194,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(21, 101);
+            this.labelX2.Location = new System.Drawing.Point(21, 103);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 62;
@@ -206,7 +206,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(21, 130);
+            this.labelX3.Location = new System.Drawing.Point(21, 137);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(75, 23);
             this.labelX3.TabIndex = 63;
@@ -218,7 +218,7 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(21, 159);
+            this.labelX4.Location = new System.Drawing.Point(21, 173);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(75, 23);
             this.labelX4.TabIndex = 64;
@@ -230,9 +230,9 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(242, 63);
+            this.labelX5.Location = new System.Drawing.Point(328, 66);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(75, 23);
+            this.labelX5.Size = new System.Drawing.Size(64, 23);
             this.labelX5.TabIndex = 65;
             this.labelX5.Text = "Serial ";
             // 
@@ -242,9 +242,9 @@
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(229, 162);
+            this.labelX6.Location = new System.Drawing.Point(328, 175);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(75, 23);
+            this.labelX6.Size = new System.Drawing.Size(62, 23);
             this.labelX6.TabIndex = 66;
             this.labelX6.Text = "Số Lượng";
             // 
@@ -254,9 +254,9 @@
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(219, 101);
+            this.labelX7.Location = new System.Drawing.Point(328, 104);
             this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(75, 23);
+            this.labelX7.Size = new System.Drawing.Size(58, 23);
             this.labelX7.TabIndex = 67;
             this.labelX7.Text = "Ngày SX";
             // 
@@ -266,9 +266,9 @@
             // 
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(229, 127);
+            this.labelX8.Location = new System.Drawing.Point(328, 141);
             this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(75, 23);
+            this.labelX8.Size = new System.Drawing.Size(58, 23);
             this.labelX8.TabIndex = 68;
             this.labelX8.Text = "HSD";
             // 
@@ -278,7 +278,7 @@
             // 
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Location = new System.Drawing.Point(544, 66);
+            this.labelX9.Location = new System.Drawing.Point(610, 69);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(75, 23);
             this.labelX9.TabIndex = 69;
@@ -290,9 +290,9 @@
             // 
             // 
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Location = new System.Drawing.Point(544, 101);
+            this.labelX10.Location = new System.Drawing.Point(610, 102);
             this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(75, 23);
+            this.labelX10.Size = new System.Drawing.Size(60, 23);
             this.labelX10.TabIndex = 70;
             this.labelX10.Text = "Giá";
             // 
@@ -302,9 +302,9 @@
             // 
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.Location = new System.Drawing.Point(544, 159);
+            this.labelX11.Location = new System.Drawing.Point(610, 141);
             this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(75, 23);
+            this.labelX11.Size = new System.Drawing.Size(60, 23);
             this.labelX11.TabIndex = 71;
             this.labelX11.Text = "Ghi Chú";
             // 
@@ -315,10 +315,10 @@
             // 
             this.tbx_masp.Border.Class = "TextBoxBorder";
             this.tbx_masp.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_masp.Location = new System.Drawing.Point(99, 63);
+            this.tbx_masp.Location = new System.Drawing.Point(111, 69);
             this.tbx_masp.Name = "tbx_masp";
             this.tbx_masp.PreventEnterBeep = true;
-            this.tbx_masp.Size = new System.Drawing.Size(100, 20);
+            this.tbx_masp.Size = new System.Drawing.Size(181, 20);
             this.tbx_masp.TabIndex = 72;
             // 
             // tbx_tensp
@@ -328,10 +328,10 @@
             // 
             this.tbx_tensp.Border.Class = "TextBoxBorder";
             this.tbx_tensp.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_tensp.Location = new System.Drawing.Point(99, 101);
+            this.tbx_tensp.Location = new System.Drawing.Point(111, 105);
             this.tbx_tensp.Name = "tbx_tensp";
             this.tbx_tensp.PreventEnterBeep = true;
-            this.tbx_tensp.Size = new System.Drawing.Size(100, 20);
+            this.tbx_tensp.Size = new System.Drawing.Size(181, 20);
             this.tbx_tensp.TabIndex = 73;
             // 
             // txb_serial
@@ -341,10 +341,10 @@
             // 
             this.txb_serial.Border.Class = "TextBoxBorder";
             this.txb_serial.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txb_serial.Location = new System.Drawing.Point(288, 66);
+            this.txb_serial.Location = new System.Drawing.Point(396, 69);
             this.txb_serial.Name = "txb_serial";
             this.txb_serial.PreventEnterBeep = true;
-            this.txb_serial.Size = new System.Drawing.Size(100, 20);
+            this.txb_serial.Size = new System.Drawing.Size(170, 20);
             this.txb_serial.TabIndex = 74;
             // 
             // txb_phanloai
@@ -354,10 +354,10 @@
             // 
             this.txb_phanloai.Border.Class = "TextBoxBorder";
             this.txb_phanloai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txb_phanloai.Location = new System.Drawing.Point(608, 69);
+            this.txb_phanloai.Location = new System.Drawing.Point(676, 69);
             this.txb_phanloai.Name = "txb_phanloai";
             this.txb_phanloai.PreventEnterBeep = true;
-            this.txb_phanloai.Size = new System.Drawing.Size(100, 20);
+            this.txb_phanloai.Size = new System.Drawing.Size(187, 20);
             this.txb_phanloai.TabIndex = 75;
             // 
             // txb_ncc
@@ -366,23 +366,23 @@
             this.txb_ncc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_ncc.FormattingEnabled = true;
             this.txb_ncc.ItemHeight = 14;
-            this.txb_ncc.Location = new System.Drawing.Point(102, 130);
+            this.txb_ncc.Location = new System.Drawing.Point(111, 143);
             this.txb_ncc.Name = "txb_ncc";
-            this.txb_ncc.Size = new System.Drawing.Size(121, 20);
+            this.txb_ncc.Size = new System.Drawing.Size(181, 20);
             this.txb_ncc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.txb_ncc.TabIndex = 77;
             // 
             // txb_soluong
             // 
-            this.txb_soluong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_soluong.Location = new System.Drawing.Point(288, 173);
+            this.txb_soluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_soluong.Location = new System.Drawing.Point(396, 176);
             this.txb_soluong.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.txb_soluong.Name = "txb_soluong";
-            this.txb_soluong.Size = new System.Drawing.Size(126, 26);
+            this.txb_soluong.Size = new System.Drawing.Size(170, 20);
             this.txb_soluong.TabIndex = 79;
             this.txb_soluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -396,7 +396,7 @@
             this.dtpicker_nsx.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtpicker_nsx.ButtonDropDown.Visible = true;
             this.dtpicker_nsx.IsPopupCalendarOpen = false;
-            this.dtpicker_nsx.Location = new System.Drawing.Point(288, 101);
+            this.dtpicker_nsx.Location = new System.Drawing.Point(396, 105);
             // 
             // 
             // 
@@ -427,7 +427,7 @@
             this.dtpicker_nsx.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpicker_nsx.MonthCalendar.TodayButtonVisible = true;
             this.dtpicker_nsx.Name = "dtpicker_nsx";
-            this.dtpicker_nsx.Size = new System.Drawing.Size(200, 20);
+            this.dtpicker_nsx.Size = new System.Drawing.Size(170, 20);
             this.dtpicker_nsx.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtpicker_nsx.TabIndex = 80;
             // 
@@ -441,7 +441,7 @@
             this.dtpicker_hsd.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtpicker_hsd.ButtonDropDown.Visible = true;
             this.dtpicker_hsd.IsPopupCalendarOpen = false;
-            this.dtpicker_hsd.Location = new System.Drawing.Point(288, 140);
+            this.dtpicker_hsd.Location = new System.Drawing.Point(396, 143);
             // 
             // 
             // 
@@ -472,7 +472,7 @@
             this.dtpicker_hsd.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpicker_hsd.MonthCalendar.TodayButtonVisible = true;
             this.dtpicker_hsd.Name = "dtpicker_hsd";
-            this.dtpicker_hsd.Size = new System.Drawing.Size(200, 20);
+            this.dtpicker_hsd.Size = new System.Drawing.Size(170, 20);
             this.dtpicker_hsd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtpicker_hsd.TabIndex = 81;
             // 
@@ -483,27 +483,27 @@
             // 
             this.txb_ghichu.Border.Class = "TextBoxBorder";
             this.txb_ghichu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txb_ghichu.Location = new System.Drawing.Point(613, 159);
+            this.txb_ghichu.Location = new System.Drawing.Point(676, 143);
             this.txb_ghichu.Name = "txb_ghichu";
             this.txb_ghichu.PreventEnterBeep = true;
-            this.txb_ghichu.Size = new System.Drawing.Size(100, 20);
+            this.txb_ghichu.Size = new System.Drawing.Size(187, 20);
             this.txb_ghichu.TabIndex = 82;
             // 
             // dgv_SANPHAM
             // 
             this.dgv_SANPHAM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_SANPHAM.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_SANPHAM.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_SANPHAM.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgv_SANPHAM.Location = new System.Drawing.Point(12, 223);
             this.dgv_SANPHAM.Name = "dgv_SANPHAM";
-            this.dgv_SANPHAM.Size = new System.Drawing.Size(1061, 255);
+            this.dgv_SANPHAM.Size = new System.Drawing.Size(1008, 186);
             this.dgv_SANPHAM.TabIndex = 83;
             this.dgv_SANPHAM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sp);
             // 
@@ -514,10 +514,10 @@
             // 
             this.txb_giasp.Border.Class = "TextBoxBorder";
             this.txb_giasp.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txb_giasp.Location = new System.Drawing.Point(608, 104);
+            this.txb_giasp.Location = new System.Drawing.Point(676, 105);
             this.txb_giasp.Name = "txb_giasp";
             this.txb_giasp.PreventEnterBeep = true;
-            this.txb_giasp.Size = new System.Drawing.Size(100, 20);
+            this.txb_giasp.Size = new System.Drawing.Size(187, 20);
             this.txb_giasp.TabIndex = 84;
             // 
             // txb_madm
@@ -526,9 +526,9 @@
             this.txb_madm.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_madm.FormattingEnabled = true;
             this.txb_madm.ItemHeight = 14;
-            this.txb_madm.Location = new System.Drawing.Point(99, 156);
+            this.txb_madm.Location = new System.Drawing.Point(111, 176);
             this.txb_madm.Name = "txb_madm";
-            this.txb_madm.Size = new System.Drawing.Size(121, 20);
+            this.txb_madm.Size = new System.Drawing.Size(181, 20);
             this.txb_madm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.txb_madm.TabIndex = 85;
             // 
@@ -536,7 +536,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 490);
             this.Controls.Add(this.txb_madm);
             this.Controls.Add(this.txb_giasp);
             this.Controls.Add(this.dgv_SANPHAM);
@@ -571,7 +570,7 @@
             this.Controls.Add(this.btn_themmoi);
             this.DoubleBuffered = true;
             this.Name = "Frm_SanPham";
-            this.Text = "Quản Lý Sản Phẩm";
+            this.Size = new System.Drawing.Size(1036, 433);
             this.Load += new System.EventHandler(this.Frm_SanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_sanpham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txb_soluong)).EndInit();

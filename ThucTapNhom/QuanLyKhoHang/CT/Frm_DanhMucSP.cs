@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_DanhMucSP : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_DanhMucSP : UserControl
     {
         public Frm_DanhMucSP()
         {

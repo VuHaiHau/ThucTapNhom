@@ -486,7 +486,7 @@ namespace QuanLyKhoHang
         private void lbx_tennv_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ThongTinNguoiDung nd = new ThongTinNguoiDung();
-            nd.ShowDialog();
+            nd.Show();
         }
 
         private void lbx_ngaythanglap_Click(object sender, EventArgs e)

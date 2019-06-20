@@ -76,5 +76,70 @@ namespace QuanLyKhoHang.CT
             Frm_KhoHang kh = new Frm_KhoHang();
             ThemTab("Quản Lý Kho Hàng", kh);
         }
+
+        private void buttonItem14_Click(object sender, EventArgs e)
+        {
+            Frm_DoiMatKhau dmk = new Frm_DoiMatKhau();
+            ThemTab("Đổi Mật Khẩu", dmk);
+        }
+
+        private void buttonItem17_Click(object sender, EventArgs e)
+        {
+            Frm_DoiQuyen dq = new Frm_DoiQuyen();
+            ThemTab("Đổi Quyền", dq);
+        }
+
+        private void buttonItem16_Click(object sender, EventArgs e)
+        {
+            Frm_TaiKhoan tk = new Frm_TaiKhoan();
+            ThemTab("Thêm Tài Khoản", tk);
+        }
+
+        private void buttonItem15_Click(object sender, EventArgs e)
+        {
+            ThongTinNguoiDung nd = new ThongTinNguoiDung();
+            ThemTab("Thông Tin Người Dùng", nd);
+        }
+
+        private void buttonItem18_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn Có Chắc Chắn Muốn Đăng Xuất", "Quản Lý Kho Hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Frm_DangNhap dn = new Frm_DangNhap();
+                dn.ShowDialog();
+            }
+           
+        }
+
+        private void buttonItem24_Click(object sender, EventArgs e)
+        {        
+            Frm_SanPham sp = new Frm_SanPham();
+            ThemTab("Quản Lý Sản Phẩm", sp);
+        }
+
+        private void buttonItem25_Click(object sender, EventArgs e)
+        {
+            Frm_DanhMucSP dm = new Frm_DanhMucSP();
+            ThemTab("Danh Mục Sản Phẩm", dm);
+        }
+
+        private void buttonItem26_Click(object sender, EventArgs e)
+        {
+            Nhap nh = new Nhap();
+            ThemTab("Quản Lý Nhập Hàng", nh);
+        }
+
+        private void buttonItem31_Click(object sender, EventArgs e)
+        {
+            ThongTinPhanMem pm = new ThongTinPhanMem();
+            ThemTab("Thông Tin Phần Mềm", pm);
+        }
+
+        private void buttonItem33_Click(object sender, EventArgs e)
+        {
+            Frm_LienHe lh = new Frm_LienHe();
+            ThemTab("Liên Hệ", lh);
+        }
     }
 }

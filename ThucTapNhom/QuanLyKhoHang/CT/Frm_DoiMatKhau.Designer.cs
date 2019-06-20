@@ -182,7 +182,7 @@
             // 
             // Frm_DoiMatKhau
             // 
-            this.AcceptButton = this.buttonX1;
+           // this.AcceptButton = this.buttonX1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 253);
@@ -200,7 +200,7 @@
             this.DoubleBuffered = true;
             this.Name = "Frm_DoiMatKhau";
             this.Text = "Frm_DoiMatKhau";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Doimk);
+       //     this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Doimk);
             this.Load += new System.EventHandler(this.Frm_DoiMatKhau_Load);
             this.ResumeLayout(false);
 
