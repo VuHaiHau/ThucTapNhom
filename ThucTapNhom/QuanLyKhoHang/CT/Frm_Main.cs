@@ -141,5 +141,13 @@ namespace QuanLyKhoHang.CT
             Frm_LienHe lh = new Frm_LienHe();
             ThemTab("Liên Hệ", lh);
         }
+
+        private void buttonItem35_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn Có Chắc Chắn Muốn Thoát Ứng Dụng", "Quản Lý Kho Hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
