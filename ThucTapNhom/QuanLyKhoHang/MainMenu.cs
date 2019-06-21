@@ -350,7 +350,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             ThongKeSLTonKho TK = new ThongKeSLTonKho();
-            TK.ShowDialog();
+            TK.Show();
             MainMenu m = new MainMenu();
             m.ShowDialog();
         }

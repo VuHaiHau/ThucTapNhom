@@ -54,7 +54,7 @@
             reportDataSource1.Name = "ThongKe_SoLuong";
             reportDataSource1.Value = this.TK_SoLuongBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyKhoHang.Report_Tk_SoLuong.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyKhoHang.ThongKeSLTonKho.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -65,14 +65,13 @@
             // 
             this.TK_SoLuongTableAdapter.ClearBeforeFill = true;
             // 
-            // FrmThongKeSLTonKho
+            // ThongKeSLTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmThongKeSLTonKho";
-            this.Text = "PHẦN MỀM QUẢN LÝ KHO HÀNG";
+            this.Name = "ThongKeSLTonKho";
+            this.Size = new System.Drawing.Size(800, 450);
             this.Load += new System.EventHandler(this.FrmThongKeSL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TK_SoLuongBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLyKhoHangDataSet2)).EndInit();

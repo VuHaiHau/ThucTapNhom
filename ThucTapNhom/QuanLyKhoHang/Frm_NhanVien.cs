@@ -172,18 +172,18 @@ namespace QuanLyKhoHang
             dgvNhanVien.Columns[11].Width = 190;
             dgvNhanVien.CurrentRow.Cells["TRANGTHAI"].ReadOnly = false;
 
-            if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
-            {
-                bt_xoa.Enabled = true;
-                lbx_nv.Enabled = true;
-                cbx_nv.Enabled = true;
-            }
-            else
-            {
-                bt_xoa.Enabled = false;
-                lbx_nv.Enabled = false;
-                cbx_nv.Enabled = false;
-            }
+            //if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
+            //{
+            //    bt_xoa.Enabled = true;
+            //    lbx_nv.Enabled = true;
+            //    cbx_nv.Enabled = true;
+            //}
+            //else
+            //{
+            //    bt_xoa.Enabled = false;
+            //    lbx_nv.Enabled = false;
+            //    cbx_nv.Enabled = false;
+            //}
         }
 
       
@@ -414,6 +414,16 @@ namespace QuanLyKhoHang
         {
             if (key == 1)
             {
+                int count = 0;
+                count = dgvNhanVien.Rows.Count;
+                string chuoi = "";
+                int chuoi2 = 0;
+                chuoi = Convert.ToString(dgvNhanVien.Rows[count - 2].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                if (chuoi2 + 1 < 10)
+                    tbx_MaNV.Text = "NV00" + (chuoi2 + 2).ToString();
+                else if (chuoi2 + 1 < 100)
+                    tbx_MaNV.Text = "NV0" + (chuoi2 + 2).ToString();
                 lbx_trangthai.Visible = false;
                 cbx_trangthai.Visible = false;
                 if (tbx_TenNV.Text.Trim() == "" || tbx_Email.Text.Trim() == "" || tbx_DienThoai.Text.Trim() == "" || tbx_DiaChi.Text.Trim() == "" || tbx_luong.Text.Trim() == "" || tbx_MaBP.Text.Trim() == "")
@@ -442,15 +452,15 @@ namespace QuanLyKhoHang
                     }
                     else
                     {
-                        string gt = "NAM";
+                        string gt = "Nam";
                         if (rbtn_Nu.Checked == true)
                         {
-                            gt = "NỮ";
+                            gt = "Nữ";
                         }
-                        if (tbx_TenNV.Text == dgvNhanVien.CurrentRow.Cells["TENNV"].Value.ToString().Trim())
-                        {
-                            MessageBox.Show("Nhân Viên Này Đã Tồn Tại. Vui Lòng Sửa Lại!", "Thông Báo!");
-                        }
+                        //if (tbx_TenNV.Text == dgvNhanVien.CurrentRow.Cells["TENNV"].Value.ToString().Trim())
+                        //{
+                        //    MessageBox.Show("Nhân Viên Này Đã Tồn Tại. Vui Lòng Sửa Lại!", "Thông Báo!");
+                        //}
                         else
                         {
                             acc.Them_NhanVien(tbx_MaNV.Text, tbx_TenNV.Text, tbx_Email.Text, dateTimePicker_NS.Value, gt, tbx_DienThoai.Text, tbx_chucvu.Text, filename, tbx_DiaChi.Text, float.Parse(tbx_luong.Text), MaBP);
@@ -653,76 +663,7 @@ namespace QuanLyKhoHang
             }
         }
 
-        //private void dgvNhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-        //    {
-        //        dgvNhanVien.Rows[e.RowIndex].Cells["TRANGTHAI"].ReadOnly = true;
-        //        tbx_MaNV.Text = dgvNhanVien.CurrentRow.Cells["MANV"].Value.ToString().Trim();
-        //        tbx_TenNV.Text = dgvNhanVien.CurrentRow.Cells["TENNV"].Value.ToString().Trim();
-        //        tbx_Email.Text = dgvNhanVien.CurrentRow.Cells["EMAIL"].Value.ToString().Trim();
-        //        tbx_DienThoai.Text = dgvNhanVien.CurrentRow.Cells["DIENTHOAI"].Value.ToString().Trim();
-        //        tbx_DiaChi.Text = dgvNhanVien.CurrentRow.Cells["DIACHI"].Value.ToString().Trim();
-        //        tbx_luong.Text = dgvNhanVien.CurrentRow.Cells["LUONG"].Value.ToString().Trim();
-        //        tbx_MaBP.Text = dgvNhanVien.CurrentRow.Cells["TENBP"].Value.ToString().Trim();
-        //        if (dgvNhanVien.CurrentRow.Cells["GT"].Value.ToString() == "NAM")
-        //        {
-        //            rbtn_Nam.Checked = true;
-        //        }
-        //        else
-        //        {
-        //            rbtn_Nu.Checked = true;
-        //        }
-
-        //        if (Convert.ToBoolean(dgvNhanVien.CurrentRow.Cells["TRANGTHAI"].Value) == true)
-        //        {
-        //            if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
-        //            {
-        //                if (key == 1 || key == 2 || key == 3 || cbx_nv.SelectedIndex == 1)
-        //                {
-        //                    bt_xoa.Enabled = false;
-        //                   cbx_trangthai.Checked = true;
-        //                }
-        //                else
-        //                {
-        //                    bt_xoa.Enabled = true;
-        //                    cbx_trangthai.Checked = true;
-        //                }
-
-        //            }
-        //            else
-        //            {
-        //                bt_xoa.Enabled = false;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            cbx_trangthai.Checked = false;
-        //            bt_xoa.Enabled = false;
-        //        }
-        //        tbx_chucvu.Text = dgvNhanVien.CurrentRow.Cells["CHUCVU"].Value.ToString().Trim();
-        //        dateTimePicker_NS.Text = dgvNhanVien.CurrentRow.Cells["NS"].Value.ToString().Trim();
-        //        filename = dgvNhanVien.CurrentRow.Cells["HINHANH"].Value.ToString().Trim();
-        //        if (filename == "")
-        //        {
-        //            pc_nhanvien.Image = null;
-        //        }
-        //        else
-        //        {
-        //            filepath = Application.StartupPath + "\\Images\\" + filename;
-        //            if (!File.Exists(filepath))
-        //            {
-        //                pc_nhanvien.Image = null;
-        //            }
-        //            else
-        //            {
-        //                pc_nhanvien.Image = Image.FromFile(filepath.ToString());
-        //                pc_nhanvien.SizeMode = PictureBoxSizeMode.StretchImage;
-        //            }
-        //        }
-        //    }
-        //}
-
+     
         private void btn_lammoi_Click(object sender, EventArgs e)
         {
             ClearText();
@@ -741,19 +682,21 @@ namespace QuanLyKhoHang
                 tbx_DiaChi.Text = dgvNhanVien.CurrentRow.Cells["DIACHI"].Value.ToString().Trim();
                 tbx_luong.Text = dgvNhanVien.CurrentRow.Cells["LUONG"].Value.ToString().Trim();
                 tbx_MaBP.Text = dgvNhanVien.CurrentRow.Cells["TENBP"].Value.ToString().Trim();
-                if (dgvNhanVien.CurrentRow.Cells["GT"].Value.ToString() == "NAM")
+                if (dgvNhanVien.CurrentRow.Cells["GT"].Value.ToString() == "Nam")
                 {
                     rbtn_Nam.Checked = true;
+                    rbtn_Nu.Checked = false;
                 }
                 else
                 {
+                    rbtn_Nam.Checked = false;
                     rbtn_Nu.Checked = true;
                 }
 
                 if (Convert.ToBoolean(dgvNhanVien.CurrentRow.Cells["TRANGTHAI"].Value) == true)
                 {
-                    if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
-                    {
+                    //if (QUYENHD == "ADMIN" || QUYENHD == "Admin" || QUYENHD == "admin")
+                    //{
                         if (key == 1 || key == 2 || key == 3 || cbx_nv.SelectedIndex == 1)
                         {
                             bt_xoa.Enabled = false;
@@ -765,11 +708,11 @@ namespace QuanLyKhoHang
                             cbx_trangthai.Checked = true;
                         }
 
-                    }
-                    else
-                    {
-                        bt_xoa.Enabled = false;
-                    }
+                    //}
+                    //else
+                    //{
+                    //    bt_xoa.Enabled = false;
+                    //}
                 }
                 else
                 {
@@ -798,5 +741,7 @@ namespace QuanLyKhoHang
                 }
             }
         }
+
+     
     }
 }

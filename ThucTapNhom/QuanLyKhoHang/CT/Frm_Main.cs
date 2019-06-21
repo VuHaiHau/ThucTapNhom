@@ -126,10 +126,11 @@ namespace QuanLyKhoHang.CT
 
         private void buttonItem26_Click(object sender, EventArgs e)
         {
-            Nhap nh = new Nhap();
-            ThemTab("Quản Lý Nhập Hàng", nh);
+            Frm_PhieuNhap ph = new Frm_PhieuNhap();
+            //ThemTab("Quản Lý Nhập Hàng", ph);
         }
 
+     
         private void buttonItem31_Click(object sender, EventArgs e)
         {
             ThongTinPhanMem pm = new ThongTinPhanMem();
@@ -148,6 +149,34 @@ namespace QuanLyKhoHang.CT
             {
                 Application.Exit();
             }
+        }
+       
+
+        private void DongTap(object sender, TabStripActionEventArgs e)
+        {
+            TabItem chontab = tabControl1.SelectedTab;
+            tabControl1.Tabs.Remove(chontab);
+        }
+
+        private void buttonItem30_Click(object sender, EventArgs e)
+        {
+            ThongKeSLTonKho tk = new ThongKeSLTonKho();
+            ThemTab("Thống Kê Số Kượng Tồn", tk);
+        }
+
+        private void ribbonPanel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControlPanel5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

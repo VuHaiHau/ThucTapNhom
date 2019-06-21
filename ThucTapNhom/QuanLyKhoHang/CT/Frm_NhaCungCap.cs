@@ -95,6 +95,16 @@ namespace QuanLyKhoHang.CT
         {
             if (key == 1)
             {
+                int count = 0;
+                count = dgv_nhacungcap.Rows.Count;
+                string chuoi = "";
+                int chuoi2 = 0;
+                chuoi = Convert.ToString(dgv_nhacungcap.Rows[count - 2].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    tbx_MaNCC.Text = "NCC0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    tbx_MaNCC.Text = "NCC" + (chuoi2 + 1).ToString();
                 if (tbx_TenNCC.Text.Trim() == "" || tbx_Diachi.Text.Trim() == "")
                 {
                     MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin!,", "Thông Báo!");

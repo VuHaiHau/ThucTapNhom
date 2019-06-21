@@ -605,7 +605,7 @@
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundColor>Aqua</BackgroundColor>
+      <BackgroundColor>#16adff</BackgroundColor>
     </Style>
   </Body>
   <Width>18.90448cm</Width>

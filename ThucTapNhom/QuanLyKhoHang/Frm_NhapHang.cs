@@ -24,7 +24,7 @@ namespace QuanLyKhoHang
         }
 
 
-
+        DataAccess acc = new DataAccess();
 
 
 
@@ -404,10 +404,7 @@ namespace QuanLyKhoHang
                 con.ConnectionString = @"Data Source=DESKTOP-3SFFPGN\HAUMTA;Initial Catalog=QuanLyKhoHang;Integrated Security=True";
 
                 string sql2 = "INSERT into PHIEUNHAPKHO VALUES (N'" + idPN + "', N'" + idLP + "', N'" + idNV + "', N'" + DateTime.Parse(dtNgayN.Text.ToString()) + "',N'" + idNCC + "', N'" + gc + "')";
-                SqlCommand cmd2 = new SqlCommand(sql2, con);
-                con.Open();
-                cmd2.ExecuteNonQuery();
-                con.Close();
+               
                 MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK);
                 Load_dtgrNLK();
                 Load_dtgrPN();

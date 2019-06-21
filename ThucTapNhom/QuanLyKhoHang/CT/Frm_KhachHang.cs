@@ -148,6 +148,16 @@ namespace QuanLyKhoHang.CT
         {
             if (key == 1)
             {
+                int count = 0;
+                count = dgvKhachHang.Rows.Count;
+                string chuoi = "";
+                int chuoi2 = 0;
+                chuoi = Convert.ToString(dgvKhachHang.Rows[count - 2].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                if (chuoi2 + 1 < 10)
+                    tbx_makh.Text = "KH00" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    tbx_makh.Text = "KH0" + (chuoi2 + 1).ToString();
                 if (tbx_tenkh.Text.Trim() == "" || tbx_diachi.Text.Trim() == "" || tbx_dienthoai.Text.Trim() == "")
                 {
                     MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin!,", "Thông Báo!");
