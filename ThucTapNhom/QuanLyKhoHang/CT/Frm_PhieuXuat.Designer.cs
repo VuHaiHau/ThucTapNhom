@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgrPN = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MAPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENKHO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYXUAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GHICHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XEMCT = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
             this.btnLuu = new DevComponents.DotNetBar.ButtonX();
             this.cb_NCC = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
@@ -55,14 +63,6 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.MAPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENKHO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYXUAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GHICHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XEMCT = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrPN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_ngaynhap)).BeginInit();
             this.groupPanel1.SuspendLayout();
@@ -72,14 +72,14 @@
             // 
             this.dtgrPN.AllowUserToAddRows = false;
             this.dtgrPN.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrPN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrPN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgrPN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrPN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAPX,
@@ -90,28 +90,77 @@
             this.GHICHU,
             this.TENKH,
             this.XEMCT});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrPN.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrPN.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgrPN.EnableHeadersVisualStyles = false;
             this.dtgrPN.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dtgrPN.Location = new System.Drawing.Point(213, 54);
             this.dtgrPN.Name = "dtgrPN";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrPN.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrPN.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrPN.Size = new System.Drawing.Size(796, 320);
             this.dtgrPN.TabIndex = 25;
+            // 
+            // MAPX
+            // 
+            this.MAPX.DataPropertyName = "MAPX";
+            this.MAPX.HeaderText = "Mã Phiếu Xuất";
+            this.MAPX.Name = "MAPX";
+            // 
+            // TENKHO
+            // 
+            this.TENKHO.DataPropertyName = "TENKHO";
+            this.TENKHO.HeaderText = "Tên Kho";
+            this.TENKHO.Name = "TENKHO";
+            // 
+            // TENNV
+            // 
+            this.TENNV.DataPropertyName = "TENNV";
+            this.TENNV.HeaderText = "Tên Nhân Viên";
+            this.TENNV.Name = "TENNV";
+            // 
+            // NGAYXUAT
+            // 
+            this.NGAYXUAT.DataPropertyName = "NGAYXUAT";
+            this.NGAYXUAT.HeaderText = "Ngày Xuất";
+            this.NGAYXUAT.Name = "NGAYXUAT";
+            // 
+            // TONGTIEN
+            // 
+            this.TONGTIEN.DataPropertyName = "TONGTIEN";
+            this.TONGTIEN.HeaderText = "Tổng Tiền";
+            this.TONGTIEN.Name = "TONGTIEN";
+            // 
+            // GHICHU
+            // 
+            this.GHICHU.DataPropertyName = "GHICHU";
+            this.GHICHU.HeaderText = "Ghi Chú";
+            this.GHICHU.Name = "GHICHU";
+            // 
+            // TENKH
+            // 
+            this.TENKH.DataPropertyName = "TENKH";
+            this.TENKH.HeaderText = "Tên Khách Hàng";
+            this.TENKH.Name = "TENKH";
+            // 
+            // XEMCT
+            // 
+            this.XEMCT.HeaderText = "Thao Tác";
+            this.XEMCT.Name = "XEMCT";
+            this.XEMCT.Text = "Xem Chi Tiết";
+            this.XEMCT.UseColumnTextForButtonValue = true;
             // 
             // btnLuu
             // 
@@ -204,6 +253,7 @@
             this.btXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btXoa.TabIndex = 17;
             this.btXoa.Text = "Xóa";
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click_1);
             // 
             // btSua
             // 
@@ -468,55 +518,6 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 1;
             this.groupPanel1.Text = "Phiếu Xuất Hàng";
-            // 
-            // MAPX
-            // 
-            this.MAPX.DataPropertyName = "MAPX";
-            this.MAPX.HeaderText = "Mã Phiếu Xuất";
-            this.MAPX.Name = "MAPX";
-            // 
-            // TENKHO
-            // 
-            this.TENKHO.DataPropertyName = "TENKHO";
-            this.TENKHO.HeaderText = "Tên Kho";
-            this.TENKHO.Name = "TENKHO";
-            // 
-            // TENNV
-            // 
-            this.TENNV.DataPropertyName = "TENNV";
-            this.TENNV.HeaderText = "Tên Nhân Viên";
-            this.TENNV.Name = "TENNV";
-            // 
-            // NGAYXUAT
-            // 
-            this.NGAYXUAT.DataPropertyName = "NGAYXUAT";
-            this.NGAYXUAT.HeaderText = "Ngày Xuất";
-            this.NGAYXUAT.Name = "NGAYXUAT";
-            // 
-            // TONGTIEN
-            // 
-            this.TONGTIEN.DataPropertyName = "TONGTIEN";
-            this.TONGTIEN.HeaderText = "Tổng Tiền";
-            this.TONGTIEN.Name = "TONGTIEN";
-            // 
-            // GHICHU
-            // 
-            this.GHICHU.DataPropertyName = "GHICHU";
-            this.GHICHU.HeaderText = "Ghi Chú";
-            this.GHICHU.Name = "GHICHU";
-            // 
-            // TENKH
-            // 
-            this.TENKH.DataPropertyName = "TENKH";
-            this.TENKH.HeaderText = "Tên Khách Hàng";
-            this.TENKH.Name = "TENKH";
-            // 
-            // XEMCT
-            // 
-            this.XEMCT.HeaderText = "Thao Tác";
-            this.XEMCT.Name = "XEMCT";
-            this.XEMCT.Text = "Xem Chi Tiết";
-            this.XEMCT.UseColumnTextForButtonValue = true;
             // 
             // Frm_PhieuXuat
             // 

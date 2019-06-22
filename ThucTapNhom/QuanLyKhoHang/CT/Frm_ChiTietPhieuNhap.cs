@@ -29,7 +29,7 @@ namespace QuanLyKhoHang.CT
         }
         private void Enabletbx()
         {
-            cb_maphieu.Enabled = false;
+            cb_maphieu.Enabled = true;
             cb_sanpham.Enabled = true;
             txt_soluong.Enabled = true;
             txt_dongia.Enabled = true;
@@ -69,7 +69,7 @@ namespace QuanLyKhoHang.CT
         private void Frm_ChiTietPhieuNhap_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt= acc.Select_Data("select MAPN ,  sp.MASP ,TENSP , ctp.DONGIAN , ctp.SOLUONG  from ChiTietPhieuNhap ctp, SanPham sp where  ctp.MASP=sp.MASP and MAPN='" + maphieunhap + "' ");
+            dt = acc.Select_Data("select MAPN ,  sp.MASP ,TENSP , ctp.DONGIAN , ctp.SOLUONG  from ChiTietPhieuNhap ctp, SanPham sp where  ctp.MASP=sp.MASP and MAPN='" + maphieunhap + "' ");
             ClearText();
             Disabletbx();
             Enablebtn();
@@ -136,7 +136,7 @@ namespace QuanLyKhoHang.CT
         {
             if(key==1)
             {
-                acc.Select_Data("INSERT into ChiTietPhieuNhap VALUES (N'" + cb_maphieu.SelectedValue + "', N'" + cb_sanpham.SelectedValue + "', " + txt_soluong.Text + "," + txt_dongia.Text + " ) update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuNhap WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPN='" + cb_maphieu.SelectedValue + "') where MASP='" + cb_sanpham.SelectedValue + "'");
+                acc.Select_Data("INSERT into ChiTietPhieuNhap VALUES (N'" + maphieunhap + "', N'" + cb_sanpham.SelectedValue + "', " + txt_soluong.Text + "," + txt_dongia.Text + " ) update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuNhap WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPN='" + maphieunhap + "') where MASP='" + cb_sanpham.SelectedValue + "'");
                 ClearText();
                 MessageBox.Show("Thêm Thành Công!", "Thông Báo");
                 Frm_ChiTietPhieuNhap_Load(sender, e);

@@ -236,5 +236,10 @@ namespace QuanLyKhoHang.CT
             dtgrPN.DataSource = acc.Select_Data("select pnx.MAPX ,TENKHO , TENNV  , NGAYXUAT , sum(DONGIAX*SOLUONG) as TONGTIEN , pnx.GHICHU ,TENKH from PHIEUXUAT pnx Left Outer Join CHITIETPHIEUXUAT ctp on pnx.MAPX=ctp.MAPX Left Outer Join NHANVIEN nv on pnx.NVXUAT=nv.MANV Left Outer Join KHOHANG k on pnx.MAKHO=k.MAKHO Left Outer Join KHACHHANG n on pnx.MAKH=n.MAKH group by pnx.MAPX,TENKHO,TENNV, NGAYXUAT,TENKH, pnx.GHICHU ");
             dtgrPN.ClearSelection();
         }
+
+        private void btXoa_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_PhieuNhap : Form
+    public partial class Frm_PhieuNhap : UserControl
     {
         public Frm_PhieuNhap()
         {

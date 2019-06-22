@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SanPham));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_themmoi = new DevComponents.DotNetBar.ButtonX();
             this.btn_chophepsua = new DevComponents.DotNetBar.ButtonX();
@@ -72,9 +73,12 @@
             // 
             this.btn_themmoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_themmoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_themmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themmoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_themmoi.Image")));
+            this.btn_themmoi.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.btn_themmoi.Location = new System.Drawing.Point(12, 12);
             this.btn_themmoi.Name = "btn_themmoi";
-            this.btn_themmoi.Size = new System.Drawing.Size(75, 23);
+            this.btn_themmoi.Size = new System.Drawing.Size(75, 30);
             this.btn_themmoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_themmoi.TabIndex = 0;
             this.btn_themmoi.Text = "Thêm";
@@ -84,9 +88,12 @@
             // 
             this.btn_chophepsua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_chophepsua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_chophepsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_chophepsua.Image = ((System.Drawing.Image)(resources.GetObject("btn_chophepsua.Image")));
+            this.btn_chophepsua.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.btn_chophepsua.Location = new System.Drawing.Point(119, 12);
             this.btn_chophepsua.Name = "btn_chophepsua";
-            this.btn_chophepsua.Size = new System.Drawing.Size(75, 23);
+            this.btn_chophepsua.Size = new System.Drawing.Size(75, 30);
             this.btn_chophepsua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_chophepsua.TabIndex = 1;
             this.btn_chophepsua.Text = "Sửa";
@@ -96,9 +103,12 @@
             // 
             this.btn_xoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_xoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa.Image")));
+            this.btn_xoa.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.btn_xoa.Location = new System.Drawing.Point(237, 12);
             this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(75, 23);
+            this.btn_xoa.Size = new System.Drawing.Size(75, 30);
             this.btn_xoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_xoa.TabIndex = 2;
             this.btn_xoa.Text = "Xóa";
@@ -108,9 +118,12 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX4.Image = ((System.Drawing.Image)(resources.GetObject("buttonX4.Image")));
+            this.buttonX4.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonX4.Location = new System.Drawing.Point(472, 12);
             this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Size = new System.Drawing.Size(75, 23);
+            this.buttonX4.Size = new System.Drawing.Size(85, 30);
             this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX4.TabIndex = 3;
             this.buttonX4.Text = "Refresh ";
@@ -120,9 +133,12 @@
             // 
             this.bt_luu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_luu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_luu.Image = ((System.Drawing.Image)(resources.GetObject("bt_luu.Image")));
+            this.bt_luu.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.bt_luu.Location = new System.Drawing.Point(351, 12);
             this.bt_luu.Name = "bt_luu";
-            this.bt_luu.Size = new System.Drawing.Size(75, 23);
+            this.bt_luu.Size = new System.Drawing.Size(75, 30);
             this.bt_luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_luu.TabIndex = 4;
             this.bt_luu.Text = "Lưu";
@@ -132,9 +148,12 @@
             // 
             this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX6.Image = ((System.Drawing.Image)(resources.GetObject("buttonX6.Image")));
+            this.buttonX6.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonX6.Location = new System.Drawing.Point(788, 12);
             this.buttonX6.Name = "buttonX6";
-            this.buttonX6.Size = new System.Drawing.Size(75, 23);
+            this.buttonX6.Size = new System.Drawing.Size(90, 30);
             this.buttonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX6.TabIndex = 5;
             this.buttonX6.Text = "Tìm Kiếm";
@@ -153,9 +172,10 @@
             // 
             this.button8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(927, 173);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(75, 30);
             this.button8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.button8.TabIndex = 59;
             this.button8.Text = "Tải Ảnh";
@@ -168,7 +188,7 @@
             // 
             this.txb_timkiem.Border.Class = "TextBoxBorder";
             this.txb_timkiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txb_timkiem.Location = new System.Drawing.Point(587, 14);
+            this.txb_timkiem.Location = new System.Drawing.Point(587, 17);
             this.txb_timkiem.Name = "txb_timkiem";
             this.txb_timkiem.PreventEnterBeep = true;
             this.txb_timkiem.Size = new System.Drawing.Size(195, 20);
@@ -503,7 +523,7 @@
             this.dgv_SANPHAM.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgv_SANPHAM.Location = new System.Drawing.Point(12, 223);
             this.dgv_SANPHAM.Name = "dgv_SANPHAM";
-            this.dgv_SANPHAM.Size = new System.Drawing.Size(1008, 186);
+            this.dgv_SANPHAM.Size = new System.Drawing.Size(1008, 203);
             this.dgv_SANPHAM.TabIndex = 83;
             this.dgv_SANPHAM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sp);
             // 
@@ -570,7 +590,7 @@
             this.Controls.Add(this.btn_themmoi);
             this.DoubleBuffered = true;
             this.Name = "Frm_SanPham";
-            this.Size = new System.Drawing.Size(1036, 433);
+            this.Size = new System.Drawing.Size(1041, 441);
             this.Load += new System.EventHandler(this.Frm_SanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_sanpham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txb_soluong)).EndInit();

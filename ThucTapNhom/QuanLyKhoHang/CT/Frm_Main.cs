@@ -127,7 +127,7 @@ namespace QuanLyKhoHang.CT
         private void buttonItem26_Click(object sender, EventArgs e)
         {
             Frm_PhieuNhap ph = new Frm_PhieuNhap();
-            //ThemTab("Quản Lý Nhập Hàng", ph);
+            ThemTab("Quản Lý Nhập Hàng", ph);
         }
 
      

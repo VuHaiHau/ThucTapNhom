@@ -111,6 +111,7 @@
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
@@ -118,6 +119,8 @@
             this.ribbonPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabControlPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -1517,6 +1520,7 @@
             // 
             // tabControlPanel2
             // 
+            this.tabControlPanel2.Controls.Add(this.pictureBox1);
             this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
@@ -1540,6 +1544,17 @@
             this.tabItem3.Name = "tabItem3";
             this.tabItem3.Text = "Giới Thiệu";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1203, 260);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1558,6 +1573,8 @@
             this.ribbonPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabControlPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1645,5 +1662,6 @@
         private DevComponents.DotNetBar.TabControl tabControl1;
         private DevComponents.DotNetBar.TabControlPanel tabControlPanel2;
         private DevComponents.DotNetBar.TabItem tabItem3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

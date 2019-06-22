@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinPhanMem));
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -39,6 +41,7 @@
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.labelX1);
+            this.groupPanel1.Controls.Add(this.pictureBox1);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,6 +79,17 @@
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "Thông Tin Phần Mềm";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1018, 371);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // labelX1
             // 
             // 
@@ -83,10 +97,10 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(9, 42);
+            this.labelX1.Location = new System.Drawing.Point(9, 25);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(1000, 320);
-            this.labelX1.TabIndex = 0;
+            this.labelX1.TabIndex = 1;
             this.labelX1.Text = resources.GetString("labelX1.Text");
             // 
             // ThongTinPhanMem
@@ -98,6 +112,7 @@
             this.Name = "ThongTinPhanMem";
             this.Size = new System.Drawing.Size(1024, 401);
             this.groupPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +121,6 @@
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.LabelX labelX1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
