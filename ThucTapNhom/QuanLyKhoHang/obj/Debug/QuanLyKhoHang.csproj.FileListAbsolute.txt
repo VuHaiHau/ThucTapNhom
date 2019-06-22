@@ -567,14 +567,11 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.F
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.ThongTinPhanMem.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_BaoCaoN_F.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_BaoCaoX_F.resources
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_BoPhan.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_DangNhap.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_DanhMucSP.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_DoiMatKhau.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_DoiQuyen.resources
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_KhachHang.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_KhoHang.resources
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_NhaCungCap.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_SanPham.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_TaiKhoan.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_BaoCao.resources
@@ -583,7 +580,6 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Thon
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_XuatHang.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.MainMenu.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.ThongTinNguoiDung.resources
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_NhanVien.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Properties.Resources.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.PhieuNhapKho.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.HoaDonBanHang.resources
@@ -597,3 +593,7 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.pdb
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_ChiTietPhieuNhap.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_PhieuNhap.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_PhieuXuat.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_BoPhanDaXong.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_KhachHangDaXong.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.Frm_NhaCungCapDaXong.resources
+F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_NhanVienDaXong.resources

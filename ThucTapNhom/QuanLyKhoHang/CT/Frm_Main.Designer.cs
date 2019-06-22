@@ -110,8 +110,8 @@
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
@@ -130,10 +130,10 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -203,6 +203,7 @@
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
             this.ribbonPanel2.Click += new System.EventHandler(this.ribbonPanel2_Click);
             // 
             // ribbonBar14
@@ -989,7 +990,6 @@
             // 
             this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
             // 
             // ribbonBar22
             // 
@@ -1207,7 +1207,6 @@
             // 
             // ribbonTabItem2
             // 
-            this.ribbonTabItem2.Checked = true;
             this.ribbonTabItem2.Name = "ribbonTabItem2";
             this.ribbonTabItem2.Panel = this.ribbonPanel2;
             this.ribbonTabItem2.Text = "Danh Mục Quản Lý";
@@ -1220,6 +1219,7 @@
             // 
             // ribbonTabItem4
             // 
+            this.ribbonTabItem4.Checked = true;
             this.ribbonTabItem4.Name = "ribbonTabItem4";
             this.ribbonTabItem4.Panel = this.ribbonPanel4;
             this.ribbonTabItem4.Text = "Trợ Giúp";
@@ -1537,13 +1537,6 @@
             this.tabControlPanel2.TabIndex = 1;
             this.tabControlPanel2.TabItem = this.tabItem3;
             // 
-            // tabItem3
-            // 
-            this.tabItem3.AttachedControl = this.tabControlPanel2;
-            this.tabItem3.CloseButtonVisible = false;
-            this.tabItem3.Name = "tabItem3";
-            this.tabItem3.Text = "Giới Thiệu";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1554,6 +1547,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.AttachedControl = this.tabControlPanel2;
+            this.tabItem3.CloseButtonVisible = false;
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Text = "Giới Thiệu";
             // 
             // Frm_Main
             // 

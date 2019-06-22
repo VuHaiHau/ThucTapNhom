@@ -49,25 +49,25 @@ namespace QuanLyKhoHang.CT
 
         private void buttonItem19_Click_1(object sender, EventArgs e)
         {
-            Frm_NhanVien nv = new Frm_NhanVien();
+            Frm_NhanVienDaXong nv = new Frm_NhanVienDaXong();
             ThemTab("Quản Lý Nhân Viên", nv);
         }
 
         private void buttonItem20_Click(object sender, EventArgs e)
         {
-            Frm_KhachHang kh = new Frm_KhachHang();
+            Frm_KhachHangDaXong kh = new Frm_KhachHangDaXong();
             ThemTab("Quản Lý Khách Hàng", kh);
         }
 
         private void buttonItem21_Click(object sender, EventArgs e)
         {
-            Frm_NhaCungCap ncc = new Frm_NhaCungCap();
+            Frm_NhaCungCapDaXong ncc = new Frm_NhaCungCapDaXong();
             ThemTab("Quản Lý Nhà Cung Cấp", ncc);
         }
 
         private void buttonItem22_Click(object sender, EventArgs e)
         {
-            Frm_BoPhan bp = new Frm_BoPhan();
+            Frm_BoPhanDaXong bp = new Frm_BoPhanDaXong();
             ThemTab("Quản Lý Bộ Phận", bp);
         }
 

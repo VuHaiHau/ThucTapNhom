@@ -57,7 +57,7 @@ namespace QuanLyKhoHang.CT
         {
             tbx_tendm.Focus();
             Enable();
-            tbx_madm.Enabled = true;
+            tbx_madm.Enabled = false;
             key = 1;
             bt_them.Enabled = false;
             bt_xoa.Enabled = false;

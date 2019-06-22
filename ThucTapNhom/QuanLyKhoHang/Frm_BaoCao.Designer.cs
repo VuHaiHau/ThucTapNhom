@@ -764,7 +764,7 @@
             this.btn_quaylai.UseVisualStyleBackColor = true;
             this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
             // 
-            // FrmBaoCao
+            // Frm_BaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -778,7 +778,7 @@
             this.Controls.Add(this.lbx_tennv);
             this.Controls.Add(this.btn_huythaotac);
             this.MaximizeBox = false;
-            this.Name = "FrmBaoCao";
+            this.Name = "Frm_BaoCao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PHẦN MỀM QUẢN LÝ KHO HÀNG";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaoCao_FormClosed);

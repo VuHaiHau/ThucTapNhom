@@ -445,11 +445,11 @@
     <Compile Include="Frm_BaoCaoX_F.Designer.cs">
       <DependentUpon>Frm_BaoCaoX_F.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\Frm_BoPhan.cs">
+    <Compile Include="CT\Frm_BoPhanDaXong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\Frm_BoPhan.Designer.cs">
-      <DependentUpon>Frm_BoPhan.cs</DependentUpon>
+    <Compile Include="CT\Frm_BoPhanDaXong.Designer.cs">
+      <DependentUpon>Frm_BoPhanDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="CT\Frm_DangNhap.cs">
       <SubType>Form</SubType>
@@ -475,11 +475,11 @@
     <Compile Include="CT\Frm_DoiQuyen.Designer.cs">
       <DependentUpon>Frm_DoiQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\Frm_KhachHang.cs">
+    <Compile Include="CT\Frm_KhachHangDaXong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\Frm_KhachHang.Designer.cs">
-      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
+    <Compile Include="CT\Frm_KhachHangDaXong.Designer.cs">
+      <DependentUpon>Frm_KhachHangDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="CT\Frm_KhoHang.cs">
       <SubType>UserControl</SubType>
@@ -487,11 +487,11 @@
     <Compile Include="CT\Frm_KhoHang.Designer.cs">
       <DependentUpon>Frm_KhoHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\Frm_NhaCungCap.cs">
+    <Compile Include="CT\Frm_NhaCungCapDaXong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\Frm_NhaCungCap.Designer.cs">
-      <DependentUpon>Frm_NhaCungCap.cs</DependentUpon>
+    <Compile Include="CT\Frm_NhaCungCapDaXong.Designer.cs">
+      <DependentUpon>Frm_NhaCungCapDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="CT\Frm_SanPham.cs">
       <SubType>UserControl</SubType>
@@ -546,11 +546,11 @@
     <Compile Include="ThongTinNguoiDung.Designer.cs">
       <DependentUpon>ThongTinNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_NhanVien.cs">
+    <Compile Include="Frm_NhanVienDaXong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Frm_NhanVien.designer.cs">
-      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
+    <Compile Include="Frm_NhanVienDaXong.designer.cs">
+      <DependentUpon>Frm_NhanVienDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -616,8 +616,8 @@
     <EmbeddedResource Include="Frm_BaoCaoX_F.resx">
       <DependentUpon>Frm_BaoCaoX_F.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\Frm_BoPhan.resx">
-      <DependentUpon>Frm_BoPhan.cs</DependentUpon>
+    <EmbeddedResource Include="CT\Frm_BoPhanDaXong.resx">
+      <DependentUpon>Frm_BoPhanDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CT\Frm_DangNhap.resx">
       <DependentUpon>Frm_DangNhap.cs</DependentUpon>
@@ -631,14 +631,14 @@
     <EmbeddedResource Include="CT\Frm_DoiQuyen.resx">
       <DependentUpon>Frm_DoiQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\Frm_KhachHang.resx">
-      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="CT\Frm_KhachHangDaXong.resx">
+      <DependentUpon>Frm_KhachHangDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CT\Frm_KhoHang.resx">
       <DependentUpon>Frm_KhoHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\Frm_NhaCungCap.resx">
-      <DependentUpon>Frm_NhaCungCap.cs</DependentUpon>
+    <EmbeddedResource Include="CT\Frm_NhaCungCapDaXong.resx">
+      <DependentUpon>Frm_NhaCungCapDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CT\Frm_SanPham.resx">
       <DependentUpon>Frm_SanPham.cs</DependentUpon>
@@ -673,8 +673,8 @@
     <EmbeddedResource Include="ThongTinNguoiDung.resx">
       <DependentUpon>ThongTinNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_NhanVien.resx">
-      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_NhanVienDaXong.resx">
+      <DependentUpon>Frm_NhanVienDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuNhapKho.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
