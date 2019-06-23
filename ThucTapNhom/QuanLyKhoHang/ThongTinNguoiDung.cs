@@ -146,7 +146,7 @@ namespace QuanLyKhoHang
         {
             if (QuyenHan.Trim() == "ADMIN" || QuyenHan.Trim() == "Admin" || QuyenHan.Trim() == "admin")
             {
-                Frm_TaiKhoan Them = new Frm_TaiKhoan();
+                Frm_TaiKhoanDaXong Them = new Frm_TaiKhoanDaXong();
                 Them.Show();
             }
             else

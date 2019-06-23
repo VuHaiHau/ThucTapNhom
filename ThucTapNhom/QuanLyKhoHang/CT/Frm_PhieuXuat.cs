@@ -81,130 +81,7 @@ namespace QuanLyKhoHang.CT
             cb_NCC.ValueMember = "MAKH";
         }
 
-       
-        private void btThem_Click(object sender, EventArgs e)
-        {
-            //txt_maphieu.Clear();
-            Disablebtn();
-            Enabletbx();
-            btnLuu.Enabled = true;
-            key = 1;
-        }
-
-        private void btSua_Click(object sender, EventArgs e)
-        {
-            Disablebtn();
-            Enabletbx();
-            btnLuu.Enabled = true;
-            key = 2;
-        }
-
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            Disabletbx();
-            if (txt_maphieu.Text.Length != 0)
-            {
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu xuất này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    try
-                    {
-                        string query = @"DELETE FROM PHIEUNXUAT Where MAPX='" + txt_maphieu.Text + "'";
-                        acc.Select_Data("DELETE FROM CHITIETPHIEUXUAT Where MAPX ='" + txt_maphieu.Text + "'");
-                        acc.Select_Data(query);
-                        ClearText();
-                        MessageBox.Show("Xóa thành công!");
-                        //Frm_PhieuNhap_Load(sender, e);
-                        key = 0;
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Bạn không thể xóa phiếu xuất này !", "Thông báo");
-                    }
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn");
-            }
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (key == 1)
-            {
-                int count = 0;
-                count = dtgrPN.Rows.Count;
-                string chuoi = "";
-                int chuoi2 = 0;
-                chuoi = Convert.ToString(dtgrPN.Rows[count - 1].Cells[1].Value);
-                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-                if (chuoi2 + 1 < 10)
-                    txt_maphieu.Text = "PX00" + (chuoi2 + 1).ToString();
-                else if (chuoi2 + 1 < 100)
-                    txt_maphieu.Text = "PX0" + (chuoi2 + 1).ToString();
-                if (txt_maphieu.Text != "")
-                {
-                    if (txt_maphieu.Text == dtgrPN.CurrentRow.Cells["MAPX"].Value.ToString().Trim())
-                    {
-                        MessageBox.Show("Phiếu xuất đã tồn tại!", "Lỗi");
-                        txt_maphieu.Clear();
-                        txt_maphieu.Focus();
-                    }
-                    else
-                    {
-                        acc.Select_Data("INSERT INTO PHIEUXUAT(MAPX,MAKHO,NVXUAT ,NGAYXUAT,MAKH,GHICHU)VALUES('" + txt_maphieu.Text + "', N'" + cb_khohang.SelectedValue + "', N'" + cb_NhanVien.SelectedValue + "', '" + dt_ngaynhap.Value + "','" + cb_NCC.SelectedValue + "','" + txt_ghichu.Text + "')");
-                        ClearText();
-                        MessageBox.Show("Thêm Thành Công!", "Thông Báo");
-                       // Frm_PhieuNhap_Load(sender, e);
-                        key = 0;
-                    }
-                }
-                else
-                    MessageBox.Show("Bạn cần nhập đủ thông tin ");
-            }
-
-            if (key == 2)
-            {
-                if (txt_maphieu.Text != "")
-                {
-                    acc.Select_Data("UPDATE PHIEUXUAT SET MAKHO='" + cb_khohang.SelectedValue + "', NVXUAT='" + cb_NhanVien.SelectedValue + "',NGAYXUAT='" + dt_ngaynhap.Value + "',MAKH='" + cb_NCC.SelectedValue + "',GHICHU='" + txt_ghichu + "' WHERE MAPX='" + txt_maphieu.Text + "'");
-                    ClearText();
-                    MessageBox.Show("Sửa Thành Công", "Thông Báo!");
-                    //Frm_PhieuNhap_Load(sender, e);
-                    key = 0;
-
-                }
-                else
-                    MessageBox.Show("Chọn dòng bạn muốn sửa và hãy nhập đầy đủ thông tin");
-
-            }
-        }
-
-        private void dtgrPN_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txt_maphieu.Text = dtgrPN.CurrentRow.Cells["MAPX"].Value.ToString();
-            cb_khohang.Text = dtgrPN.CurrentRow.Cells["TENKHO"].Value.ToString();
-            cb_NhanVien.Text = dtgrPN.CurrentRow.Cells["TENNV"].Value.ToString();
-            dt_ngaynhap.Value = DateTime.Parse((dtgrPN.CurrentRow.Cells["NGAYXUAT"].Value).ToString());
-            txt_ghichu.Text = dtgrPN.CurrentRow.Cells["GHICHU"].Value.ToString();
-            txtTongTien.Text = dtgrPN.CurrentRow.Cells["TONGTIEN"].Value.ToString();
-            cb_NCC.Text = dtgrPN.CurrentRow.Cells["TENKH"].Value.ToString();
-            try
-            {
-                if (dtgrPN.Columns[e.ColumnIndex].Name == "XEMCT")
-                {
-                    string mph = txt_maphieu.Text;
-                    Frm_ChiTietPhieuNhap dn = new Frm_ChiTietPhieuNhap(mph);
-                    dn.ShowDialog();
-                }
-            }
-            catch
-            {
-               // Frm_PhieuNhap_Load(sender, e);
-            }
-
-        }
+   
 
         private void buttonX4_Click(object sender, EventArgs e)
         {
@@ -239,7 +116,124 @@ namespace QuanLyKhoHang.CT
 
         private void btXoa_Click_1(object sender, EventArgs e)
         {
+            Disabletbx();
+            if (txt_maphieu.Text.Length != 0)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu xuất này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string query = @"DELETE FROM PHIEUNXUAT Where MAPX='" + txt_maphieu.Text + "'";
+                        acc.Select_Data("DELETE FROM CHITIETPHIEUXUAT Where MAPX ='" + txt_maphieu.Text + "'");
+                        acc.Select_Data(query);
+                        ClearText();
+                        MessageBox.Show("Xóa thành công!");
+                        //Frm_PhieuNhap_Load(sender, e);
+                        key = 0;
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Bạn không thể xóa phiếu xuất này !", "Thông báo");
+                    }
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn");
+            }
+        }
+
+        private void btThem_Click_1(object sender, EventArgs e)
+        {
+            Disablebtn();
+            Enabletbx();
+            btnLuu.Enabled = true;
+            key = 1;
+        }
+
+        private void btSua_Click_1(object sender, EventArgs e)
+        {
+            Disablebtn();
+            Enabletbx();
+            btnLuu.Enabled = true;
+            key = 2;
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+            if (key == 1)
+            {
+                int count = 0;
+                count = dtgrPN.Rows.Count;
+                string chuoi = "";
+                int chuoi2 = 0;
+                chuoi = Convert.ToString(dtgrPN.Rows[count - 1].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                if (chuoi2 + 1 < 10)
+                    txt_maphieu.Text = "PX00" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    txt_maphieu.Text = "PX0" + (chuoi2 + 1).ToString();
+                if (txt_maphieu.Text != "")
+                {
+                    if (txt_maphieu.Text == dtgrPN.CurrentRow.Cells["MAPX"].Value.ToString().Trim())
+                    {
+                        MessageBox.Show("Phiếu xuất đã tồn tại!", "Lỗi");
+                        txt_maphieu.Clear();
+                        txt_maphieu.Focus();
+                    }
+                    else
+                    {
+                        acc.Select_Data("INSERT INTO PHIEUXUAT(MAPX,MAKHO,NVXUAT ,NGAYXUAT,MAKH,GHICHU)VALUES('" + txt_maphieu.Text + "', N'" + cb_khohang.SelectedValue + "', N'" + cb_NhanVien.SelectedValue + "', '" + dt_ngaynhap.Value + "','" + cb_NCC.SelectedValue + "','" + txt_ghichu.Text + "')");
+                        ClearText();
+                        MessageBox.Show("Thêm Thành Công!", "Thông Báo");
+                        // Frm_PhieuNhap_Load(sender, e);
+                        key = 0;
+                    }
+                }
+                else
+                    MessageBox.Show("Bạn cần nhập đủ thông tin ");
+            }
+
+            if (key == 2)
+            {
+                if (txt_maphieu.Text != "")
+                {
+                    acc.Select_Data("UPDATE PHIEUXUAT SET MAKHO='" + cb_khohang.SelectedValue + "', NVXUAT='" + cb_NhanVien.SelectedValue + "',NGAYXUAT='" + dt_ngaynhap.Value + "',MAKH='" + cb_NCC.SelectedValue + "',GHICHU='" + txt_ghichu + "' WHERE MAPX='" + txt_maphieu.Text + "'");
+                    ClearText();
+                    MessageBox.Show("Sửa Thành Công", "Thông Báo!");
+                    //Frm_PhieuNhap_Load(sender, e);
+                    key = 0;
+
+                }
+                else
+                    MessageBox.Show("Chọn dòng bạn muốn sửa và hãy nhập đầy đủ thông tin");
+
+            }
+        }
+
+        private void dtgrPN_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_maphieu.Text = dtgrPN.CurrentRow.Cells["MAPX"].Value.ToString();
+            cb_khohang.Text = dtgrPN.CurrentRow.Cells["TENKHO"].Value.ToString();
+            cb_NhanVien.Text = dtgrPN.CurrentRow.Cells["TENNV"].Value.ToString();
+            dt_ngaynhap.Value = DateTime.Parse((dtgrPN.CurrentRow.Cells["NGAYXUAT"].Value).ToString());
+            txt_ghichu.Text = dtgrPN.CurrentRow.Cells["GHICHU"].Value.ToString();
+            txtTongTien.Text = dtgrPN.CurrentRow.Cells["TONGTIEN"].Value.ToString();
+            cb_NCC.Text = dtgrPN.CurrentRow.Cells["TENKH"].Value.ToString();
+            try
+            {
+                if (dtgrPN.Columns[e.ColumnIndex].Name == "XEMCT")
+                {
+                    //string mph = txt_maphieu.Text;
+                    Frm_ChiTietPhieuXuat dn = new Frm_ChiTietPhieuXuat();
+                    dn.ShowDialog();
+                }
+            }
+            catch
+            {
+                Frm_PhieuXuat_Load(sender, e);
+            }
         }
     }
 }

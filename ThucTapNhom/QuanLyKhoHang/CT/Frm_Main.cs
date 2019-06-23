@@ -79,19 +79,19 @@ namespace QuanLyKhoHang.CT
 
         private void buttonItem14_Click(object sender, EventArgs e)
         {
-            Frm_DoiMatKhau dmk = new Frm_DoiMatKhau();
+            Frm_DoiMatKhauDaXong dmk = new Frm_DoiMatKhauDaXong();
             ThemTab("Đổi Mật Khẩu", dmk);
         }
 
         private void buttonItem17_Click(object sender, EventArgs e)
         {
-            Frm_DoiQuyen dq = new Frm_DoiQuyen();
+            Frm_DoiQuyenDaXong dq = new Frm_DoiQuyenDaXong();
             ThemTab("Đổi Quyền", dq);
         }
 
         private void buttonItem16_Click(object sender, EventArgs e)
         {
-            Frm_TaiKhoan tk = new Frm_TaiKhoan();
+            Frm_TaiKhoanDaXong tk = new Frm_TaiKhoanDaXong();
             ThemTab("Thêm Tài Khoản", tk);
         }
 
@@ -106,7 +106,7 @@ namespace QuanLyKhoHang.CT
             if (MessageBox.Show("Bạn Có Chắc Chắn Muốn Đăng Xuất", "Quản Lý Kho Hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
-                Frm_DangNhap dn = new Frm_DangNhap();
+                Frm_DangNhapDaXong dn = new Frm_DangNhapDaXong();
                 dn.ShowDialog();
             }
            
@@ -114,7 +114,7 @@ namespace QuanLyKhoHang.CT
 
         private void buttonItem24_Click(object sender, EventArgs e)
         {        
-            Frm_SanPham sp = new Frm_SanPham();
+            Frm_SanPhamDaXong sp = new Frm_SanPhamDaXong();
             ThemTab("Quản Lý Sản Phẩm", sp);
         }
 

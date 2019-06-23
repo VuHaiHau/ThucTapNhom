@@ -112,6 +112,7 @@
             this.dtgrPN.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrPN.Size = new System.Drawing.Size(796, 320);
             this.dtgrPN.TabIndex = 25;
+            this.dtgrPN.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrPN_CellContentClick);
             // 
             // MAPX
             // 
@@ -172,6 +173,7 @@
             this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnLuu.TabIndex = 24;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
             // 
             // cb_NCC
             // 
@@ -265,6 +267,7 @@
             this.btSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btSua.TabIndex = 16;
             this.btSua.Text = "Sửa";
+            this.btSua.Click += new System.EventHandler(this.btSua_Click_1);
             // 
             // btThem
             // 
@@ -276,6 +279,7 @@
             this.btThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btThem.TabIndex = 15;
             this.btThem.Text = "Thêm";
+            this.btThem.Click += new System.EventHandler(this.btThem_Click_1);
             // 
             // txt_ghichu
             // 
