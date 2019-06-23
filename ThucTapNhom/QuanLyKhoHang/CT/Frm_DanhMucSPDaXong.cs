@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_DanhMucSP : UserControl
+    public partial class Frm_DanhMucSPDaXong : UserControl
     {
-        public Frm_DanhMucSP()
+        public Frm_DanhMucSPDaXong()
         {
             InitializeComponent();
         }
@@ -84,7 +84,7 @@ namespace QuanLyKhoHang.CT
             bt_ghinhan.Enabled = false;
             //key = 3;
             Disable();
-            tbx_madm.Enabled = true;
+            tbx_madm.Enabled = false;
             if (tbx_madm.Text == "" || dgvDANHMUC.SelectedRows == null)
             {
                 MessageBox.Show("Hãy Nhập thông tin mã Danh Mục cần xóa hoặc chọn trên Bảng Dữ liệu");
@@ -100,7 +100,7 @@ namespace QuanLyKhoHang.CT
                     acc.XOA_DANHMUC(tbx_madm.Text);
                     Frm_DanhMucSP_Load(sender, e);
                     MessageBox.Show("Xóa Thành Công Danh Mục!", "Thông Báo");
-                    //lb_thongbao.Text = "Xóa Thành Công";
+                    
                     cleartext();
                 }
             }
@@ -110,9 +110,19 @@ namespace QuanLyKhoHang.CT
         {
             if (key == 1)
             {
+                int count = 0;
+                count = dgvDANHMUC.Rows.Count;
+                string chuoi = "";
+                int chuoi2 = 0;
+                chuoi = Convert.ToString(dgvDANHMUC.Rows[count - 2].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                if (chuoi2 + 1 < 10)
+                    tbx_madm.Text = "DM0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    tbx_madm.Text = "DM" + (chuoi2 + 1).ToString();
                 if (tbx_tendm.Text == "" || tbx_makho.Text == "")
                 {
-                    MessageBox.Show("Hãy Nhập đủ thông tin vào các trường", "ThônG Báo");
+                    MessageBox.Show("Hãy Nhập đủ thông tin vào các trường", "Thông Báo");
                     tbx_madm.Focus();
 
                 }
@@ -126,8 +136,8 @@ namespace QuanLyKhoHang.CT
                     dttdm = acc.CheckSql("select * from DanhMuc where TENDANHMUC like N'" + tbx_tendm.Text + "'");
                     if (dtdm.Rows.Count > 0 || dttdm.Rows.Count > 0)
                     {
-                        MessageBox.Show("Mã danh mục đã tồn tại!", "Cảnh báo");
-                        tbx_madm.Clear();
+                        MessageBox.Show("Danh mục đã tồn tại!", "Cảnh báo");
+                        
                         tbx_tendm.Clear();
                         tbx_madm.Focus();
                     }
@@ -240,6 +250,22 @@ namespace QuanLyKhoHang.CT
         {
             cleartext();
             Frm_DanhMucSP_Load(sender, e);
+        }
+
+        private void txt_timkiem_leave(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "")
+            {
+                tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
+
+        private void txt_timkiem_Enter(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                tbx_timkiem.Text = "";
+            }
         }
     }
 }

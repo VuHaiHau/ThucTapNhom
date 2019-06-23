@@ -113,18 +113,21 @@ namespace QuanLyKhoHang.CT
                 else
                 {
                     DataTable dtncc = new DataTable();
+                    DataTable dttncc = new DataTable();
                     dtncc = acc.CheckSql("select * from NHACUNGCAP where MANCC ='" + tbx_MaNCC.Text + "'");
-                    if (dtncc.Rows.Count > 0)
+                    dttncc = acc.CheckSql("select * from NHACUNGCAP where TENNHACC ='" + tbx_TenNCC.Text + "'");
+                    if (dtncc.Rows.Count > 0 || dttncc.Rows.Count > 0) 
                     {
-                        MessageBox.Show("Mã Nhà Cung Cấp đã tồn tại!", "Lỗi");
+                        MessageBox.Show("Nhà Cung Cấp đã tồn tại!", "Lỗi");
                         tbx_MaNCC.Clear();
+                        tbx_TenNCC.Clear();
                         tbx_MaNCC.Focus();
                     }
                     else
                     {
-                        if (tbx_MaNCC.Text == dgv_nhacungcap.CurrentRow.Cells["MANCC"].Value.ToString().Trim() && tbx_TenNCC.Text == dgv_nhacungcap.CurrentRow.Cells["TENNHACC"].Value.ToString().Trim() && tbx_Ghichu.Text == dgv_nhacungcap.CurrentRow.Cells["GHICHU"].Value.ToString().Trim() && tbx_Diachi.Text == dgv_nhacungcap.CurrentRow.Cells["DIACHI"].Value.ToString().Trim())
+                        if (tbx_TenNCC.Text == dgv_nhacungcap.CurrentRow.Cells["TENNHACC"].Value.ToString().Trim() && tbx_Ghichu.Text == dgv_nhacungcap.CurrentRow.Cells["GHICHU"].Value.ToString().Trim() && tbx_Diachi.Text == dgv_nhacungcap.CurrentRow.Cells["DIACHI"].Value.ToString().Trim())
                         {
-                            MessageBox.Show("Toàn Bộ Thông Tin Nhà Cung Cấp Đã Tồn Tại. Vui Lòng Sủa Lại!", "Thông Báo!");
+                            MessageBox.Show("Thông Tin Nhà Cung Cấp Đã Tồn Tại. Vui Lòng Sủa Lại!", "Thông Báo!");
                         }
                         else
                         {

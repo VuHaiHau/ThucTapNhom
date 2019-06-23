@@ -75,7 +75,7 @@ namespace QuanLyKhoHang
         private void btn_danhmuc_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_DanhMucSP DMSP = new Frm_DanhMucSP();
+            Frm_DanhMucSPDaXong DMSP = new Frm_DanhMucSPDaXong();
             DMSP.Show();
         }
 
@@ -107,7 +107,7 @@ namespace QuanLyKhoHang
             if (Quyenhan.Trim() == "ADMIN" || Quyenhan.Trim() == "Admin" || Quyenhan.Trim() == "admin")
             {
                 this.Hide();
-                Frm_KhoHang kho = new Frm_KhoHang();
+                Frm_KhoHangDaXong kho = new Frm_KhoHangDaXong();
                 kho.Show();
             }
             else
@@ -188,7 +188,7 @@ namespace QuanLyKhoHang
         private void khoHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_KhoHang k = new Frm_KhoHang();
+            Frm_KhoHangDaXong k = new Frm_KhoHangDaXong();
             k.Show();
         }
 
@@ -202,7 +202,7 @@ namespace QuanLyKhoHang
         private void danhMụcSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_DanhMucSP dm = new Frm_DanhMucSP();
+            Frm_DanhMucSPDaXong dm = new Frm_DanhMucSPDaXong();
             dm.Show();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhoHang.CT
 {
-    partial class Frm_KhoHang
+    partial class Frm_KhoHangDaXong
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_KhoHang));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_KhoHangDaXong));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_lammoi = new DevComponents.DotNetBar.ButtonX();
             this.btn_ghinhan = new DevComponents.DotNetBar.ButtonX();
             this.btn_xoa = new DevComponents.DotNetBar.ButtonX();
@@ -145,11 +145,13 @@
             // 
             this.tbx_timkiem.Border.Class = "TextBoxBorder";
             this.tbx_timkiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_timkiem.Location = new System.Drawing.Point(13, 67);
+            this.tbx_timkiem.Location = new System.Drawing.Point(13, 68);
             this.tbx_timkiem.Name = "tbx_timkiem";
             this.tbx_timkiem.PreventEnterBeep = true;
             this.tbx_timkiem.Size = new System.Drawing.Size(194, 20);
             this.tbx_timkiem.TabIndex = 11;
+            this.tbx_timkiem.Enter += new System.EventHandler(this.txt_timkiem_EnTer);
+            this.tbx_timkiem.Leave += new System.EventHandler(this.txt_timkiem_leave);
             // 
             // tbx_makho
             // 
@@ -254,20 +256,20 @@
             // dgvKHOHANG
             // 
             this.dgvKHOHANG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKHOHANG.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKHOHANG.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKHOHANG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvKHOHANG.Location = new System.Drawing.Point(505, 12);
             this.dgvKHOHANG.Name = "dgvKHOHANG";
-            this.dgvKHOHANG.Size = new System.Drawing.Size(502, 250);
+            this.dgvKHOHANG.Size = new System.Drawing.Size(515, 414);
             this.dgvKHOHANG.TabIndex = 70;
-            this.dgvKHOHANG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKHOHANG_CellContentClick);
+            this.dgvKHOHANG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKHOHANG_CellClick);
             // 
             // Frm_KhoHang
             // 

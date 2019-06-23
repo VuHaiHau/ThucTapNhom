@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_KhoHang : UserControl
+    public partial class Frm_KhoHangDaXong : UserControl
     {
-        public Frm_KhoHang()
+        public Frm_KhoHangDaXong()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace QuanLyKhoHang.CT
         {
             Enable();
             tbx_tenkho.Focus();
-            tbx_makho.Enabled = true;
+            tbx_makho.Enabled = false;
             btn_ghinhan.Enabled = true;
             bt_them.Enabled = false;
             btn_xoa.Enabled = false;
@@ -53,7 +53,7 @@ namespace QuanLyKhoHang.CT
             tbx_makho.Enabled = false;
             btn_ghinhan.Enabled = true;
             bt_them.Enabled = false;
-            bt_them.Enabled = false;
+            btn_xoa.Enabled = false;
             btn_chophepsua.Enabled = false;
             key = 2;
         }
@@ -61,10 +61,10 @@ namespace QuanLyKhoHang.CT
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             Disable();
-            tbx_makho.Enabled = true;
+            tbx_makho.Enabled = false;
             btn_ghinhan.Enabled = true;
             bt_them.Enabled = false;
-            bt_them.Enabled = false;
+            btn_xoa.Enabled = false;
             btn_chophepsua.Enabled = false;
             key = 3;
         }
@@ -73,27 +73,38 @@ namespace QuanLyKhoHang.CT
         {
             if (key == 1)
             {
-                if (tbx_tenkho.Text == "" || tbx_tongdmsp.Value == 0)
+                int count = 0;
+                count = dgvKHOHANG.Rows.Count;
+                string chuoi = "";
+                int chuoi2 = 0;
+                chuoi = Convert.ToString(dgvKHOHANG.Rows[count - 2].Cells[1].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+                if (chuoi2 + 1 < 10)
+                    tbx_makho.Text = "KHO0" + (chuoi2 + 1).ToString();
+                else if (chuoi2 + 1 < 100)
+                    tbx_makho.Text = "KHO" + (chuoi2 + 1).ToString();
+              
+               
+                    DataTable dtkh = acc.CheckSql("SELECT *FROM KHOHANG WHERE TENKHO=N'" + tbx_tenkho.Text + "'");
+                    if (dtkh.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Kho Hàng đã tồn tại!!", "Cảnh Báo");
+                        tbx_tenkho.Clear();
+                        tbx_tenkho.Focus();
+                    }
+                else if (tbx_tenkho.Text == "" || tbx_tongdmsp.Value == 0)
                 {
-                    MessageBox.Show("Hãy Nhập Đủ hết thông tin", "Lỗi Nhập!");
+                    MessageBox.Show("Bạn hãy nhập đầy đủ hết thông tin", "Lỗi Nhập!");
                     tbx_makho.Focus();
                 }
                 else
-                {
-                    DataTable dtkh = acc.CheckSql("SELECT *FROM KHOHANG WHERE MAKHO='" + tbx_makho.Text + "'");
-                    if (dtkh.Rows.Count > 0)
-                    {
-                        MessageBox.Show("Mã Kho đã tồn tại!!", "Cảnh Báo");
-                        tbx_makho.Clear();
-                        tbx_makho.Focus();
-                    }
-                    else
                     {
                         acc.THEM_KHOHANG(tbx_makho.Text, tbx_tenkho.Text, Convert.ToInt32(tbx_tongdmsp.Value), tbx_ghichu.Text);
+                        MessageBox.Show("Thêm thành công!","Thông Báo");
                         Frm_KhoHang_Load(sender, e);
                         clearText();
                     }
-                }
+                
             }
             if (key == 2)
             {
@@ -105,6 +116,7 @@ namespace QuanLyKhoHang.CT
                 else
                 {
                     acc.SUA_KHOHANG(tbx_makho.Text, tbx_tenkho.Text, Convert.ToInt32(tbx_tongdmsp.Value), tbx_ghichu.Text);
+                    MessageBox.Show("Sửa thành công!","Thông Báo");
                     Frm_KhoHang_Load(sender, e);
                     clearText();
                     //bt_them.Enabled = true; bt_xoa.Enabled = false;
@@ -122,12 +134,9 @@ namespace QuanLyKhoHang.CT
                 {
                     if (MessageBox.Show("Bạn có Chắc Chắn Muốn xóa Kho này?", "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        //acc.Custom_ByQuery("UPDATE DANHMUC SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
-                        //acc.Custom_ByQuery("UPDATE PHIEUNHAPKHO SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
-                        //acc.Custom_ByQuery("UPDATE PHIEUXUAT SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
-                        //acc.Custom_ByQuery("UPDATE BOPHAN SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");
-                        //acc.Custom_ByQuery("UPDATE BAOCAOTHONGKE SET MAKHO=NULL WHERE MAKHO='" + this.tbx_makho.Text + "'");                    
+                                           
                         acc.XOA_KHOHANG(tbx_makho.Text);
+                        MessageBox.Show("Xóa thành công!","Thông Báo");
                         Frm_KhoHang_Load(sender, e);
                         clearText();
                     }
@@ -161,27 +170,27 @@ namespace QuanLyKhoHang.CT
             tbx_tenkho.Focus();
             Disable();
             tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
-            //btn_chophepsua.Enabled = false; btn_ghinhan.Enabled = false; bt_xoa.Enabled = false;
+          
             //hiển thị tiêu đề của cột:
             dgvKHOHANG.Columns[1].HeaderText = "Mã Kho";
             dgvKHOHANG.Columns[2].HeaderText = "Tên Kho";
-            dgvKHOHANG.Columns[3].HeaderText = "Tổng Số Sản Phẩm";
+            dgvKHOHANG.Columns[3].HeaderText = "Tổng Số DMSP";
             dgvKHOHANG.Columns[4].HeaderText = "Ghi Chú";
 
             // can chinh do rong cot:
             dgvKHOHANG.Columns[0].Width = 60;
             dgvKHOHANG.Columns[1].Width = 100;
             dgvKHOHANG.Columns[2].Width = 300;
-            dgvKHOHANG.Columns[3].Width = 155;
+            dgvKHOHANG.Columns[3].Width = 150;
             dgvKHOHANG.Columns[4].Width = 340;
 
             btn_ghinhan.Enabled = false;
             bt_them.Enabled = true;
-            bt_them.Enabled = true;
+            btn_xoa.Enabled = true;
             btn_chophepsua.Enabled = true;
         }
 
-        private void dgvKHOHANG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvKHOHANG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
@@ -197,6 +206,22 @@ namespace QuanLyKhoHang.CT
         {
             clearText();
             Frm_KhoHang_Load(sender, e);
+        }
+
+        private void txt_timkiem_leave(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "")
+            {
+                tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
+
+        private void txt_timkiem_EnTer(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                tbx_timkiem.Text = "";
+            }
         }
     }
 }

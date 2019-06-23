@@ -73,7 +73,7 @@ namespace QuanLyKhoHang.CT
 
         private void buttonItem23_Click(object sender, EventArgs e)
         {
-            Frm_KhoHang kh = new Frm_KhoHang();
+            Frm_KhoHangDaXong kh = new Frm_KhoHangDaXong();
             ThemTab("Quản Lý Kho Hàng", kh);
         }
 
@@ -120,7 +120,7 @@ namespace QuanLyKhoHang.CT
 
         private void buttonItem25_Click(object sender, EventArgs e)
         {
-            Frm_DanhMucSP dm = new Frm_DanhMucSP();
+            Frm_DanhMucSPDaXong dm = new Frm_DanhMucSPDaXong();
             ThemTab("Danh Mục Sản Phẩm", dm);
         }
 
