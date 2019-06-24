@@ -981,7 +981,7 @@
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundColor>Turquoise</BackgroundColor>
+      <BackgroundColor>LightBlue</BackgroundColor>
     </Style>
   </Body>
   <Width>19.04682cm</Width>
@@ -1061,7 +1061,7 @@
         <Border>
           <Style>None</Style>
         </Border>
-        <BackgroundColor>Turquoise</BackgroundColor>
+        <BackgroundColor>LightBlue</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>
@@ -1103,7 +1103,7 @@
         <Border>
           <Style>None</Style>
         </Border>
-        <BackgroundColor>Turquoise</BackgroundColor>
+        <BackgroundColor>LightBlue</BackgroundColor>
       </Style>
     </PageFooter>
     <PageHeight>27cm</PageHeight>

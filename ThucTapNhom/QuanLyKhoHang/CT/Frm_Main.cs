@@ -184,5 +184,11 @@ namespace QuanLyKhoHang.CT
             Frm_PhieuXuat px = new Frm_PhieuXuat();
             ThemTab("Quản Lý Xuất Hàng", px);
         }
+
+        private void buttonItem28_Click(object sender, EventArgs e)
+        {
+            Frm_BaoCao bc = new Frm_BaoCao();
+            ThemTab("Báo Cáo Nhập-Xuất Hàng", bc);
+        }
     }
 }

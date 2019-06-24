@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang
 {
-    public partial class Frm_BaoCao : Form
+    public partial class Frm_BaoCao : UserControl
     {
         public Frm_BaoCao()
         {
@@ -676,6 +676,8 @@ namespace QuanLyKhoHang
         {
             lbx_ngaythanglap.Text = DateTime.Now.ToString("dd/MM/yyyy - hh:mm:ss");
         }
+
+        
     }
 }
 

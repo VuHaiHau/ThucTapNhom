@@ -568,7 +568,6 @@ F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.CT.T
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_BaoCaoN_F.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_BaoCaoX_F.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_BaoCao.resources
-F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_NhapHang.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.ThongKeSLTonKho.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.Frm_XuatHang.resources
 F:\Git\HocTap\ThucTapNhom\ThucTapNhom\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.MainMenu.resources

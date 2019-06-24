@@ -143,5 +143,11 @@ namespace QuanLyKhoHang.CT
             Frm_PhieuXuat pn = new Frm_PhieuXuat();
             pn.Show();
         }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            ClearText();
+            Frm_ChiTietPhieuXuat_Load(sender, e);
+        }
     }
 }

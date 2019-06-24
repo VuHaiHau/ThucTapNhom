@@ -512,16 +512,10 @@
       <DependentUpon>Frm_TaiKhoanDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_BaoCao.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Frm_BaoCao.Designer.cs">
       <DependentUpon>Frm_BaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_NhapHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_NhapHang.Designer.cs">
-      <DependentUpon>Frm_NhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongKeSLTonKho.cs">
       <SubType>UserControl</SubType>
@@ -663,9 +657,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCaoXuat.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_NhapHang.resx">
-      <DependentUpon>Frm_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeSLTonKho.resx">
       <DependentUpon>ThongKeSLTonKho.cs</DependentUpon>

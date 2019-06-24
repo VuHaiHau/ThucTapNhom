@@ -69,7 +69,7 @@ namespace QuanLyKhoHang
         {
             this.Hide();
             Frm_BaoCao BC = new Frm_BaoCao();
-            BC.ShowDialog();
+            BC.Show();
         }
 
         private void btn_danhmuc_Click(object sender, EventArgs e)
@@ -120,8 +120,8 @@ namespace QuanLyKhoHang
         private void btn_xuatnhap_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_NhapHang nhapxuat = new Frm_NhapHang();
-            nhapxuat.ShowDialog();
+            //Frm_NhapHang nhapxuat = new Frm_NhapHang();
+            //nhapxuat.ShowDialog();
         }
 
         private void btn_khachhang_Click(object sender, EventArgs e)
@@ -335,15 +335,15 @@ namespace QuanLyKhoHang
         private void nhậpXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_NhapHang xh = new Frm_NhapHang();
-            xh.ShowDialog();
+           // Frm_NhapHang xh = new Frm_NhapHang();
+            //xh.ShowDialog();
         }
 
         private void báoCáoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
             Frm_BaoCao bc = new Frm_BaoCao();
-            bc.ShowDialog();
+            bc.Show();
         }
 
         private void thốngKêHàngTồnToolStripMenuItem_Click(object sender, EventArgs e)
