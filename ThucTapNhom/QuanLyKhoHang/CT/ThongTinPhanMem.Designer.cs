@@ -40,14 +40,14 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Controls.Add(this.pictureBox1);
+            this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1024, 401);
+            this.groupPanel1.Size = new System.Drawing.Size(1024, 447);
             // 
             // 
             // 
@@ -81,26 +81,26 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1018, 371);
+            this.pictureBox1.Size = new System.Drawing.Size(440, 417);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(9, 25);
+            this.labelX1.Location = new System.Drawing.Point(-3, 3);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(1000, 320);
-            this.labelX1.TabIndex = 1;
+            this.labelX1.Size = new System.Drawing.Size(1024, 417);
+            this.labelX1.TabIndex = 2;
             this.labelX1.Text = resources.GetString("labelX1.Text");
             // 
             // ThongTinPhanMem
@@ -110,7 +110,7 @@
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.Name = "ThongTinPhanMem";
-            this.Size = new System.Drawing.Size(1024, 401);
+            this.Size = new System.Drawing.Size(1024, 447);
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
