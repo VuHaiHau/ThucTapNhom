@@ -396,11 +396,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CT\Frm_ChiTietPhieuNhap.cs">
+    <Compile Include="CT\Frm_ChiTietPhieuNhapDaXong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CT\Frm_ChiTietPhieuNhap.Designer.cs">
-      <DependentUpon>Frm_ChiTietPhieuNhap.cs</DependentUpon>
+    <Compile Include="CT\Frm_ChiTietPhieuNhapDaXong.Designer.cs">
+      <DependentUpon>Frm_ChiTietPhieuNhapDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="CT\Frm_ChiTietPhieuXuat.cs">
       <SubType>Form</SubType>
@@ -420,14 +420,14 @@
     <Compile Include="CT\Frm_Main.Designer.cs">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\Frm_PhieuNhap.cs">
+    <Compile Include="CT\Frm_PhieuNhapDaXong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\Frm_PhieuNhap.Designer.cs">
-      <DependentUpon>Frm_PhieuNhap.cs</DependentUpon>
+    <Compile Include="CT\Frm_PhieuNhapDaXong.Designer.cs">
+      <DependentUpon>Frm_PhieuNhapDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="CT\Frm_PhieuXuat.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CT\Frm_PhieuXuat.Designer.cs">
       <DependentUpon>Frm_PhieuXuat.cs</DependentUpon>
@@ -598,8 +598,8 @@
       <DependentUpon>HoaDonBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="CT\Frm_ChiTietPhieuNhap.resx">
-      <DependentUpon>Frm_ChiTietPhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="CT\Frm_ChiTietPhieuNhapDaXong.resx">
+      <DependentUpon>Frm_ChiTietPhieuNhapDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CT\Frm_ChiTietPhieuXuat.resx">
       <DependentUpon>Frm_ChiTietPhieuXuat.cs</DependentUpon>
@@ -610,8 +610,8 @@
     <EmbeddedResource Include="CT\Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\Frm_PhieuNhap.resx">
-      <DependentUpon>Frm_PhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="CT\Frm_PhieuNhapDaXong.resx">
+      <DependentUpon>Frm_PhieuNhapDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CT\Frm_PhieuXuat.resx">
       <DependentUpon>Frm_PhieuXuat.cs</DependentUpon>

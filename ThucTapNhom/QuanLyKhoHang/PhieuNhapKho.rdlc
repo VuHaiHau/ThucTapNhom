@@ -1241,7 +1241,7 @@
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundColor>Aqua</BackgroundColor>
+      <BackgroundColor>LightBlue</BackgroundColor>
     </Style>
   </Body>
   <Width>23.09813cm</Width>

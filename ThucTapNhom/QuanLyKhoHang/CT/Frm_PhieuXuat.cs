@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyKhoHang.CT
 {
-    public partial class Frm_PhieuXuat : Form
+    public partial class Frm_PhieuXuat : UserControl
     {
         public Frm_PhieuXuat()
         {
@@ -106,12 +106,19 @@ namespace QuanLyKhoHang.CT
 
         private void Frm_PhieuXuat_Load(object sender, EventArgs e)
         {
+            tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
             ClearText();
             Disabletbx();
             Enablebtn();
             ShowData();
             dtgrPN.DataSource = acc.Select_Data("select pnx.MAPX ,TENKHO , TENNV  , NGAYXUAT , sum(DONGIAX*SOLUONG) as TONGTIEN , pnx.GHICHU ,TENKH from PHIEUXUAT pnx Left Outer Join CHITIETPHIEUXUAT ctp on pnx.MAPX=ctp.MAPX Left Outer Join NHANVIEN nv on pnx.NVXUAT=nv.MANV Left Outer Join KHOHANG k on pnx.MAKHO=k.MAKHO Left Outer Join KHACHHANG n on pnx.MAKH=n.MAKH group by pnx.MAPX,TENKHO,TENNV, NGAYXUAT,TENKH, pnx.GHICHU ");
             dtgrPN.ClearSelection();
+            dtgrPN.Columns[1].Width = 140;
+            dtgrPN.Columns[2].Width = 230;
+            dtgrPN.Columns[3].Width = 150;
+            dtgrPN.Columns[4].Width = 100;
+            dtgrPN.Columns[6].Width = 180;
+            dtgrPN.Columns[7].Width = 180;
         }
 
         private void btXoa_Click_1(object sender, EventArgs e)
@@ -123,12 +130,12 @@ namespace QuanLyKhoHang.CT
                 {
                     try
                     {
-                        string query = @"DELETE FROM PHIEUNXUAT Where MAPX='" + txt_maphieu.Text + "'";
+                        string query = @"DELETE FROM PHIEUXUAT Where MAPX='" + txt_maphieu.Text + "'";
                         acc.Select_Data("DELETE FROM CHITIETPHIEUXUAT Where MAPX ='" + txt_maphieu.Text + "'");
                         acc.Select_Data(query);
                         ClearText();
                         MessageBox.Show("Xóa thành công!");
-                        //Frm_PhieuNhap_Load(sender, e);
+                        Frm_PhieuXuat_Load(sender, e);
                         key = 0;
                     }
                     catch
@@ -187,7 +194,7 @@ namespace QuanLyKhoHang.CT
                         acc.Select_Data("INSERT INTO PHIEUXUAT(MAPX,MAKHO,NVXUAT ,NGAYXUAT,MAKH,GHICHU)VALUES('" + txt_maphieu.Text + "', N'" + cb_khohang.SelectedValue + "', N'" + cb_NhanVien.SelectedValue + "', '" + dt_ngaynhap.Value + "','" + cb_NCC.SelectedValue + "','" + txt_ghichu.Text + "')");
                         ClearText();
                         MessageBox.Show("Thêm Thành Công!", "Thông Báo");
-                        // Frm_PhieuNhap_Load(sender, e);
+                        Frm_PhieuXuat_Load(sender, e);
                         key = 0;
                     }
                 }
@@ -202,7 +209,7 @@ namespace QuanLyKhoHang.CT
                     acc.Select_Data("UPDATE PHIEUXUAT SET MAKHO='" + cb_khohang.SelectedValue + "', NVXUAT='" + cb_NhanVien.SelectedValue + "',NGAYXUAT='" + dt_ngaynhap.Value + "',MAKH='" + cb_NCC.SelectedValue + "',GHICHU='" + txt_ghichu + "' WHERE MAPX='" + txt_maphieu.Text + "'");
                     ClearText();
                     MessageBox.Show("Sửa Thành Công", "Thông Báo!");
-                    //Frm_PhieuNhap_Load(sender, e);
+                    Frm_PhieuXuat_Load(sender, e);
                     key = 0;
 
                 }
@@ -212,7 +219,7 @@ namespace QuanLyKhoHang.CT
             }
         }
 
-        private void dtgrPN_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgrPN_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_maphieu.Text = dtgrPN.CurrentRow.Cells["MAPX"].Value.ToString();
             cb_khohang.Text = dtgrPN.CurrentRow.Cells["TENKHO"].Value.ToString();
@@ -233,6 +240,57 @@ namespace QuanLyKhoHang.CT
             catch
             {
                 Frm_PhieuXuat_Load(sender, e);
+            }
+        }
+
+        private void txt_timkiem_leave(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "")
+            {
+                tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
+
+        private void txt_timkiem_Enter(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                tbx_timkiem.Text = "";
+            }
+        }
+
+        private void buttonX4_Click_1(object sender, EventArgs e)
+        {
+            ClearText();
+            Frm_PhieuXuat_Load(sender, e);
+        }
+
+        private void buttonX5_Click_1(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Cần Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                dtgrPN.DataSource = acc.Select_Data("select pnx.MAPX ,TENKHO , TENNV  , NGAYXUAT , sum(DONGIAX*SOLUONG) as TONGTIEN , pnx.GHICHU ,TENKH from PHIEUXUAT pnx Left Outer Join CHITIETPHIEUXUAT ctp on pnx.MAPX=ctp.MAPX Left Outer Join NHANVIEN nv on pnx.NVXUAT=nv.MANV Left Outer Join KHOHANG k on pnx.MAKHO=k.MAKHO Left Outer Join KHACHHANG n on pnx.MAKH=n.MAKH where (pnx.MAPX like N'%" + tbx_timkiem.Text + "%' or NVXUAT like N'%" + tbx_timkiem.Text + "%' or TENKHO like N'%" + tbx_timkiem.Text + "%' or TENKH like N'%" + tbx_timkiem.Text + "%') group by pnx.MAPX,TENKHO,TENNV, NGAYXUAT,TENKH, pnx.GHICHU");
+                tbx_timkiem.Clear();
+                dtgrPN.ClearSelection();
+            }
+        }
+
+        private void buttonX6_Click(object sender, EventArgs e)
+        {
+            if (txt_maphieu.Text == null || txt_maphieu.Text == "")
+            {
+                MessageBox.Show("Hãy Chọn Phiếu Xuất Để In!");
+            }
+            else
+            {
+                
+                HoaDonBanHang baocaof = new HoaDonBanHang(txt_maphieu.Text);
+                baocaof.ShowDialog();
             }
         }
     }

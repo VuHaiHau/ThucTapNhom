@@ -981,7 +981,7 @@
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundColor>Aqua</BackgroundColor>
+      <BackgroundColor>Turquoise</BackgroundColor>
     </Style>
   </Body>
   <Width>19.04682cm</Width>
@@ -1061,7 +1061,7 @@
         <Border>
           <Style>None</Style>
         </Border>
-        <BackgroundColor>Aqua</BackgroundColor>
+        <BackgroundColor>Turquoise</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>
@@ -1103,13 +1103,13 @@
         <Border>
           <Style>None</Style>
         </Border>
-        <BackgroundColor>Aqua</BackgroundColor>
+        <BackgroundColor>Turquoise</BackgroundColor>
       </Style>
     </PageFooter>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>27cm</PageHeight>
+    <PageWidth>19cm</PageWidth>
     <LeftMargin>0cm</LeftMargin>
-    <RightMargin>1.5cm</RightMargin>
+    <RightMargin>0cm</RightMargin>
     <TopMargin>0cm</TopMargin>
     <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
