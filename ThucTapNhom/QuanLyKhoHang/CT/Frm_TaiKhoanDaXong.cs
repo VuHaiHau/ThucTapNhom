@@ -242,7 +242,7 @@ namespace QuanLyKhoHang.CT
             //Dộ rộng cột
             dgvThemTK.Columns[0].Width = 145;
             dgvThemTK.Columns[1].Width = 115;
-            dgvThemTK.Columns[2].Width = 175;
+            dgvThemTK.Columns[2].Width = 180;
             dgvThemTK.Columns[3].Width = 145;
 
             dgvThemTK.Columns["USERNAME"].HeaderText = "Tên Đăng Nhập";
