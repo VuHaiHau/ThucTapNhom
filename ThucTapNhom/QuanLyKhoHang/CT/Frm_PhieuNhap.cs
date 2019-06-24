@@ -89,6 +89,13 @@ namespace QuanLyKhoHang.CT
             ShowData();
             dtgrPN.DataSource = acc.Select_Data("select pnx.MAPN ,TENKHO , TENNV  , NGAYNHAP , sum(DONGIAN*SOLUONG) as TONGTIEN , pnx.GHICHU ,TENNHACC from PHIEUNHAPKHO pnx Left Outer Join CHITIETPHIEUNHAP ctp on pnx.MAPN=ctp.MAPN Left Outer Join NHANVIEN nv on pnx.NVNHAP=nv.MANV Left Outer Join KHOHANG k on pnx.MAKHO=k.MAKHO Left Outer Join NHACUNGCAP n on pnx.MANCC=n.MANCC group by pnx.MAPN,TENKHO,TENNV, NGAYNHAP,TENNHACC, pnx.GHICHU ");
             dtgrPN.ClearSelection();
+           // dtgrPN.Columns[0].Width = 60;
+            dtgrPN.Columns[1].Width = 140;
+            dtgrPN.Columns[2].Width = 230;
+            dtgrPN.Columns[3].Width = 150;
+            dtgrPN.Columns[4].Width = 100;
+            dtgrPN.Columns[6].Width = 180;
+            dtgrPN.Columns[7].Width = 180;
         }
 
         
@@ -238,6 +245,35 @@ namespace QuanLyKhoHang.CT
             }
         }
 
-      
+        private void buttonX6_Click(object sender, EventArgs e)
+        {
+            if (txt_maphieu.Text == null || txt_maphieu.Text == "")
+            {
+                MessageBox.Show("Hãy Chọn Phiếu Nhập Để In!");
+            }
+            else
+            {
+                //ReportPhieuXuat.MAPX = txb_maPX.Text;
+                PhieuNhapKho baocaof = new PhieuNhapKho(txt_maphieu.Text);
+                baocaof.ShowDialog();
+            }
+
+        }
+
+        private void txt_timkiem_enter(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                tbx_timkiem.Text = "";
+            }
+        }
+
+        private void txt_timkiem_leave(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "")
+            {
+                tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
     }
 }

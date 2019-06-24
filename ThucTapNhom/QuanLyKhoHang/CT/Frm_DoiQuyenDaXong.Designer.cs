@@ -164,9 +164,9 @@
             this.groupPanel1.Controls.Add(this.labelX5);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPanel1.Location = new System.Drawing.Point(312, 251);
+            this.groupPanel1.Location = new System.Drawing.Point(383, 251);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(383, 160);
+            this.groupPanel1.Size = new System.Drawing.Size(312, 160);
             // 
             // 
             // 
@@ -212,7 +212,7 @@
     "thân!\r\n\r\n        - Tên đăng nhập không thể được bỏ trống nếu đổi \r\n           qu" +
     "yền cho tài khoản khác!";
             // 
-            // Frm_DoiQuyen
+            // Frm_DoiQuyenDaXong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,7 +227,7 @@
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
-            this.Name = "Frm_DoiQuyen";
+            this.Name = "Frm_DoiQuyenDaXong";
             this.Size = new System.Drawing.Size(1040, 440);
             this.Load += new System.EventHandler(this.Frm_DoiQuyen_Load);
             this.groupPanel1.ResumeLayout(false);

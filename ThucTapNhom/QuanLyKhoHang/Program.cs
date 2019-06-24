@@ -16,7 +16,7 @@ namespace QuanLyKhoHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_PhieuXuat());
+            Application.Run(new Frm_DangNhapDaXong());
         }
     }
 }

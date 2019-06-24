@@ -240,10 +240,10 @@ namespace QuanLyKhoHang.CT
             // INSERT
 
             //Dộ rộng cột
-            dgvThemTK.Columns[0].Width = 105;
-            dgvThemTK.Columns[1].Width = 105;
-            dgvThemTK.Columns[2].Width = 145;
-            dgvThemTK.Columns[3].Width = 130;
+            dgvThemTK.Columns[0].Width = 145;
+            dgvThemTK.Columns[1].Width = 115;
+            dgvThemTK.Columns[2].Width = 175;
+            dgvThemTK.Columns[3].Width = 145;
 
             dgvThemTK.Columns["USERNAME"].HeaderText = "Tên Đăng Nhập";
             dgvThemTK.Columns["PASSWORD"].HeaderText = "Mật Khẩu";

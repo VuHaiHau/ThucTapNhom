@@ -114,7 +114,7 @@
             this.tbx_tdn.Border.Class = "TextBoxBorder";
             this.tbx_tdn.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbx_tdn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_tdn.Location = new System.Drawing.Point(447, 58);
+            this.tbx_tdn.Location = new System.Drawing.Point(443, 58);
             this.tbx_tdn.Name = "tbx_tdn";
             this.tbx_tdn.PreventEnterBeep = true;
             this.tbx_tdn.Size = new System.Drawing.Size(237, 26);
@@ -154,7 +154,7 @@
             this.tbx_matkhaucu.Border.Class = "TextBoxBorder";
             this.tbx_matkhaucu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbx_matkhaucu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_matkhaucu.Location = new System.Drawing.Point(447, 90);
+            this.tbx_matkhaucu.Location = new System.Drawing.Point(443, 90);
             this.tbx_matkhaucu.Name = "tbx_matkhaucu";
             this.tbx_matkhaucu.PreventEnterBeep = true;
             this.tbx_matkhaucu.Size = new System.Drawing.Size(237, 26);
@@ -169,7 +169,7 @@
             this.tbx_matkhaumoi.Border.Class = "TextBoxBorder";
             this.tbx_matkhaumoi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbx_matkhaumoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_matkhaumoi.Location = new System.Drawing.Point(447, 122);
+            this.tbx_matkhaumoi.Location = new System.Drawing.Point(443, 122);
             this.tbx_matkhaumoi.Name = "tbx_matkhaumoi";
             this.tbx_matkhaumoi.PreventEnterBeep = true;
             this.tbx_matkhaumoi.Size = new System.Drawing.Size(237, 26);
@@ -184,14 +184,14 @@
             this.tbx_nlmatkhaumoi.Border.Class = "TextBoxBorder";
             this.tbx_nlmatkhaumoi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbx_nlmatkhaumoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_nlmatkhaumoi.Location = new System.Drawing.Point(447, 154);
+            this.tbx_nlmatkhaumoi.Location = new System.Drawing.Point(443, 154);
             this.tbx_nlmatkhaumoi.Name = "tbx_nlmatkhaumoi";
             this.tbx_nlmatkhaumoi.PreventEnterBeep = true;
             this.tbx_nlmatkhaumoi.Size = new System.Drawing.Size(237, 26);
             this.tbx_nlmatkhaumoi.TabIndex = 13;
             this.tbx_nlmatkhaumoi.UseSystemPasswordChar = true;
             // 
-            // Frm_DoiMatKhau
+            // Frm_DoiMatKhauDaXong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,7 +207,7 @@
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
-            this.Name = "Frm_DoiMatKhau";
+            this.Name = "Frm_DoiMatKhauDaXong";
             this.Size = new System.Drawing.Size(1040, 440);
             this.Load += new System.EventHandler(this.Frm_DoiMatKhau_Load);
             this.ResumeLayout(false);
