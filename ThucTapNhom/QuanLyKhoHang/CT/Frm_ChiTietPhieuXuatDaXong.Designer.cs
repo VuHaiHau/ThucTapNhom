@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhoHang.CT
 {
-    partial class Frm_ChiTietPhieuXuat
+    partial class Frm_ChiTietPhieuXuatDaXong
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChiTietPhieuXuat));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChiTietPhieuXuatDaXong));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbx_timkiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.bt_xoa = new DevComponents.DotNetBar.ButtonX();
@@ -284,7 +284,7 @@
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(64, 23);
             this.labelX9.TabIndex = 25;
-            this.labelX9.Text = "Mã SP";
+            this.labelX9.Text = "Tên SP";
             // 
             // txt_soluong
             // 

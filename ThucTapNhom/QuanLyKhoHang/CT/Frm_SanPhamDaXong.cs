@@ -97,44 +97,51 @@ namespace QuanLyKhoHang.CT
             btn_xoa.Enabled = false;
             btn_chophepsua.Enabled = false;
             btn_themmoi.Enabled = true;
-            // key = 3;
-            if (dgv_SANPHAM.SelectedRows == null || tbx_masp.Text == "")
+            try
             {
-                MessageBox.Show("Hãy chọn 1 sản phẩm để xóa!", "Thông Báo");
-
-            }
-            //else
-            //{
-            //    DataTable dtctpn = new DataTable();
-            //    dtctpn = acc.CheckSql("select * from CHITIETPHIEUNHAP where MASP ='" + tbx_masp.Text + "'");
-            //    DataTable dtctpx = new DataTable();
-            //    dtctpx = acc.CheckSql("select * from CHITIETPHIEUXUAT where MASP ='" + tbx_masp.Text + "'");
-            //    if (dtctpn.Rows.Count > 0 || dtctpx.Rows.Count > 0)
-            //    {
-            //        if (MessageBox.Show("Sản phẩm này đang tồn tại ở bảng Chi Tiết Phiếu Nhập Xuất! Bạn chắc chắn muốn xóa!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //        {
-            //            acc.CheckSql("DELETE CHITIETPHIEUNHAP WHERE MASP = '" + tbx_masp.Text + "'");
-            //            acc.CheckSql("DELETE CHITIETPHIEUXUAT WHERE MASP = '" + tbx_masp.Text + "'");
-            //            acc.XOA_SANPHAM(tbx_masp.Text);
-            //            MessageBox.Show("Xóa thành công!", "Thông Báo!");
-
-            //            SANPHAM_Load(sender, e);
-            //            key = 0;
-            //        }
-            //    }
-            else
-            {
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này", "cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (dgv_SANPHAM.SelectedRows == null || tbx_masp.Text == "")
                 {
-                    acc.XOA_SANPHAM(tbx_masp.Text);
-                   Frm_SanPham_Load(sender, e);
-                    dgv_SANPHAM.ClearSelection();
-                    cleartext();
-                    // label_thongbaoSP.Text = "Đã xóa thành công";
-                    MessageBox.Show("Xóa thành công!", "Thông Báo");
+                    MessageBox.Show("Hãy chọn 1 sản phẩm để xóa!", "Thông Báo");
+
+                }
+                else
+                {
+                    if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này", "cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.XOA_SANPHAM(tbx_masp.Text);
+                        Frm_SanPham_Load(sender, e);
+                        dgv_SANPHAM.ClearSelection();
+                        cleartext();
+
+                        MessageBox.Show("Xóa thành công!", "Thông Báo");
+                    }
                 }
             }
-            // }
+            catch
+            {
+                DataTable dtctpn = new DataTable();
+                dtctpn = acc.CheckSql("select * from CHITIETPHIEUNHAP where MASP ='" + tbx_masp.Text + "'");
+                DataTable dtctpx = new DataTable();
+                dtctpx = acc.CheckSql("select * from CHITIETPHIEUXUAT where MASP ='" + tbx_masp.Text + "'");
+                if (dtctpn.Rows.Count > 0 || dtctpx.Rows.Count > 0)
+                {
+                    if (MessageBox.Show("Sản phẩm này đang tồn tại ở bảng Chi Tiết Phiếu Nhập Xuất! Bạn chắc chắn muốn xóa!", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        acc.CheckSql("DELETE CHITIETPHIEUNHAP WHERE MASP = '" + tbx_masp.Text + "'");
+                        acc.CheckSql("DELETE CHITIETPHIEUXUAT WHERE MASP = '" + tbx_masp.Text + "'");
+                        acc.XOA_SANPHAM(tbx_masp.Text);
+                        MessageBox.Show("Xóa thành công!", "Thông Báo!");
+
+                        Frm_SanPham_Load(sender, e);
+                        key = 0;
+                    }
+                }
+            }
+
+
+
+
+
         }
 
       

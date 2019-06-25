@@ -233,7 +233,7 @@ namespace QuanLyKhoHang.CT
                 if (dtgrPN.Columns[e.ColumnIndex].Name == "XEMCT")
                 {
                     string mph = txt_maphieu.Text;
-                    Frm_ChiTietPhieuXuat dn = new Frm_ChiTietPhieuXuat(mph);
+                    Frm_ChiTietPhieuXuatDaXong dn = new Frm_ChiTietPhieuXuatDaXong(mph);
                     dn.ShowDialog();
                 }
             }

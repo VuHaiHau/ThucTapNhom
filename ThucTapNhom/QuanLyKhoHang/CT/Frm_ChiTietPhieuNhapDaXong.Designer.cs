@@ -309,7 +309,7 @@
             this.dt_ChiTietPhieuNhap.Name = "dt_ChiTietPhieuNhap";
             this.dt_ChiTietPhieuNhap.Size = new System.Drawing.Size(779, 184);
             this.dt_ChiTietPhieuNhap.TabIndex = 8;
-            this.dt_ChiTietPhieuNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_ChiTietPhieuNhap_CellContentClick);
+            this.dt_ChiTietPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_ChiTietPhieuNhap_CellClick);
             // 
             // txtmaphieu
             // 

@@ -23,7 +23,7 @@ namespace QuanLyKhoHang.CT
         private void ClearText()
         {
             cb_sanpham.ResetText();
-            txtmaphieu.Clear();
+            //txtmaphieu.Clear();
             txt_dongia.Clear();
             txt_soluong.Clear();
         }
@@ -80,6 +80,11 @@ namespace QuanLyKhoHang.CT
             dt_ChiTietPhieuNhap.Columns["TENSP"].HeaderText = "Tên Sản Phẩm";
             dt_ChiTietPhieuNhap.Columns["SOLUONG"].HeaderText = "Số Lượng";
             dt_ChiTietPhieuNhap.Columns["DONGIAN"].HeaderText = "Đơn Giá";
+            dt_ChiTietPhieuNhap.Columns["MAPN"].Width = 150;
+            dt_ChiTietPhieuNhap.Columns["MASP"].Width = 150;
+            dt_ChiTietPhieuNhap.Columns["TENSP"].Width = 180;
+            dt_ChiTietPhieuNhap.Columns["SOLUONG"].Width = 145;
+            dt_ChiTietPhieuNhap.Columns["DONGIAN"].Width = 150;
             try
             {
                 txtmaphieu.Text = dt.Rows[0][0].ToString().Trim();
@@ -90,7 +95,7 @@ namespace QuanLyKhoHang.CT
             }
         }
 
-        private void dt_ChiTietPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dt_ChiTietPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtmaphieu.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["MAPN"].Value.ToString();
             cb_sanpham.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["TENSP"].Value.ToString();
@@ -133,13 +138,26 @@ namespace QuanLyKhoHang.CT
 
         private void bt_luu_Click(object sender, EventArgs e)
         {
-            if(key==1)
+            try
             {
-                acc.Select_Data("INSERT into ChiTietPhieuNhap VALUES (N'" + maphieunhap + "', N'" + cb_sanpham.SelectedValue + "', " + txt_soluong.Text + "," + txt_dongia.Text + " ) update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuNhap WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPN='" + maphieunhap + "') where MASP='" + cb_sanpham.SelectedValue + "'");
+                if (txt_dongia.Text == "" || txt_soluong.Text == "")
+                {
+                    MessageBox.Show("Hãy điền đủ thông tin vào các mục!", "Thông Báo");
+
+                }
+                else
+                {
+                    acc.Select_Data("INSERT into ChiTietPhieuNhap VALUES (N'" + maphieunhap + "', N'" + cb_sanpham.SelectedValue + "', " + txt_soluong.Text + "," + txt_dongia.Text + " ) update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuNhap WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPN='" + maphieunhap + "') where MASP='" + cb_sanpham.SelectedValue + "'");
+                    ClearText();
+                    MessageBox.Show("Thêm Thành Công!", "Thông Báo");
+                    Frm_ChiTietPhieuNhap_Load(sender, e);
+                    key = 0;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Sản Phẩm Bạn Chọn Đã Có Trong Phiếu! Vui Lòng Chọn Lại!");
                 ClearText();
-                MessageBox.Show("Thêm Thành Công!", "Thông Báo");
-                Frm_ChiTietPhieuNhap_Load(sender, e);
-                key = 0;
             }
            
         }
