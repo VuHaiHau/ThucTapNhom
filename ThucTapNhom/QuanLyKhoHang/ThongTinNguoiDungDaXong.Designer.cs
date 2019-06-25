@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhoHang
 {
-    partial class ThongTinNguoiDung
+    partial class ThongTinNguoiDungDaXong
     {
         /// <summary>
         /// Required designer variable.
@@ -123,7 +123,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pc_nguoidung);
-            this.panel1.Location = new System.Drawing.Point(645, 46);
+            this.panel1.Location = new System.Drawing.Point(645, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(118, 139);
             this.panel1.TabIndex = 37;
@@ -224,7 +224,7 @@
             this.bt_file.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_file.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.bt_file.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_file.Location = new System.Drawing.Point(645, 191);
+            this.bt_file.Location = new System.Drawing.Point(645, 194);
             this.bt_file.Name = "bt_file";
             this.bt_file.Size = new System.Drawing.Size(56, 23);
             this.bt_file.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -237,7 +237,7 @@
             this.btn_luu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_luu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btn_luu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.Location = new System.Drawing.Point(707, 190);
+            this.btn_luu.Location = new System.Drawing.Point(707, 193);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.Size = new System.Drawing.Size(56, 23);
             this.btn_luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -250,7 +250,7 @@
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX3.Location = new System.Drawing.Point(645, 222);
+            this.buttonX3.Location = new System.Drawing.Point(645, 226);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.Size = new System.Drawing.Size(118, 23);
             this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

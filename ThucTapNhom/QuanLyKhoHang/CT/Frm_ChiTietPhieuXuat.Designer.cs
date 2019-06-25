@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChiTietPhieuXuat));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtTimCT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tbx_timkiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.bt_xoa = new DevComponents.DotNetBar.ButtonX();
             this.bt_them = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.bt_thoat = new DevComponents.DotNetBar.ButtonX();
             this.bt_luu = new DevComponents.DotNetBar.ButtonX();
             this.cb_maphieu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -45,31 +47,34 @@
             this.cb_sanpham = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.dt_ChiTietPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt_ChiTietPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtTimCT
+            // tbx_timkiem
             // 
             // 
             // 
             // 
-            this.txtTimCT.Border.Class = "TextBoxBorder";
-            this.txtTimCT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTimCT.Location = new System.Drawing.Point(170, 15);
-            this.txtTimCT.Name = "txtTimCT";
-            this.txtTimCT.PreventEnterBeep = true;
-            this.txtTimCT.Size = new System.Drawing.Size(148, 20);
-            this.txtTimCT.TabIndex = 30;
+            this.tbx_timkiem.Border.Class = "TextBoxBorder";
+            this.tbx_timkiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tbx_timkiem.Location = new System.Drawing.Point(170, 15);
+            this.tbx_timkiem.Name = "tbx_timkiem";
+            this.tbx_timkiem.PreventEnterBeep = true;
+            this.tbx_timkiem.Size = new System.Drawing.Size(148, 22);
+            this.tbx_timkiem.TabIndex = 30;
+            this.tbx_timkiem.Enter += new System.EventHandler(this.txt_timkiem_Enter);
+            this.tbx_timkiem.Leave += new System.EventHandler(this.txt_timkiem_leave);
             // 
             // bt_xoa
             // 
             this.bt_xoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_xoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_xoa.Location = new System.Drawing.Point(87, 12);
+            this.bt_xoa.Image = ((System.Drawing.Image)(resources.GetObject("bt_xoa.Image")));
+            this.bt_xoa.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.bt_xoa.Location = new System.Drawing.Point(581, 65);
             this.bt_xoa.Name = "bt_xoa";
-            this.bt_xoa.Size = new System.Drawing.Size(75, 23);
+            this.bt_xoa.Size = new System.Drawing.Size(75, 30);
             this.bt_xoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_xoa.TabIndex = 29;
             this.bt_xoa.Text = "Xóa";
@@ -79,9 +84,11 @@
             // 
             this.bt_them.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_them.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_them.Location = new System.Drawing.Point(6, 12);
+            this.bt_them.Image = ((System.Drawing.Image)(resources.GetObject("bt_them.Image")));
+            this.bt_them.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.bt_them.Location = new System.Drawing.Point(581, 15);
             this.bt_them.Name = "bt_them";
-            this.bt_them.Size = new System.Drawing.Size(75, 23);
+            this.bt_them.Size = new System.Drawing.Size(75, 30);
             this.bt_them.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_them.TabIndex = 28;
             this.bt_them.Text = "Thêm";
@@ -96,7 +103,7 @@
             this.groupPanel2.Controls.Add(this.bt_luu);
             this.groupPanel2.Controls.Add(this.cb_maphieu);
             this.groupPanel2.Controls.Add(this.buttonX9);
-            this.groupPanel2.Controls.Add(this.txtTimCT);
+            this.groupPanel2.Controls.Add(this.tbx_timkiem);
             this.groupPanel2.Controls.Add(this.bt_xoa);
             this.groupPanel2.Controls.Add(this.bt_them);
             this.groupPanel2.Controls.Add(this.labelX11);
@@ -109,6 +116,7 @@
             this.groupPanel2.Controls.Add(this.dt_ChiTietPhieuNhap);
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(800, 450);
@@ -143,13 +151,29 @@
             this.groupPanel2.TabIndex = 3;
             this.groupPanel2.Text = "Chi Tiết Phiếu Xuất";
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = ((System.Drawing.Image)(resources.GetObject("buttonX1.Image")));
+            this.buttonX1.ImageFixedSize = new System.Drawing.Size(22, 22);
+            this.buttonX1.Location = new System.Drawing.Point(581, 165);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(75, 30);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 35;
+            this.buttonX1.Text = "Refresh ";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // bt_thoat
             // 
             this.bt_thoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_thoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_thoat.Location = new System.Drawing.Point(433, 97);
+            this.bt_thoat.Image = ((System.Drawing.Image)(resources.GetObject("bt_thoat.Image")));
+            this.bt_thoat.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.bt_thoat.Location = new System.Drawing.Point(581, 215);
             this.bt_thoat.Name = "bt_thoat";
-            this.bt_thoat.Size = new System.Drawing.Size(75, 23);
+            this.bt_thoat.Size = new System.Drawing.Size(75, 30);
             this.bt_thoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_thoat.TabIndex = 34;
             this.bt_thoat.Text = "Thoát";
@@ -159,9 +183,11 @@
             // 
             this.bt_luu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_luu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_luu.Location = new System.Drawing.Point(360, 203);
+            this.bt_luu.Image = ((System.Drawing.Image)(resources.GetObject("bt_luu.Image")));
+            this.bt_luu.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.bt_luu.Location = new System.Drawing.Point(581, 115);
             this.bt_luu.Name = "bt_luu";
-            this.bt_luu.Size = new System.Drawing.Size(75, 23);
+            this.bt_luu.Size = new System.Drawing.Size(75, 30);
             this.bt_luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_luu.TabIndex = 33;
             this.bt_luu.Text = "Lưu";
@@ -172,10 +198,10 @@
             this.cb_maphieu.DisplayMember = "Text";
             this.cb_maphieu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_maphieu.FormattingEnabled = true;
-            this.cb_maphieu.ItemHeight = 14;
-            this.cb_maphieu.Location = new System.Drawing.Point(56, 57);
+            this.cb_maphieu.ItemHeight = 17;
+            this.cb_maphieu.Location = new System.Drawing.Point(110, 54);
             this.cb_maphieu.Name = "cb_maphieu";
-            this.cb_maphieu.Size = new System.Drawing.Size(81, 20);
+            this.cb_maphieu.Size = new System.Drawing.Size(81, 23);
             this.cb_maphieu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cb_maphieu.TabIndex = 32;
             // 
@@ -183,12 +209,15 @@
             // 
             this.buttonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX9.Image = ((System.Drawing.Image)(resources.GetObject("buttonX9.Image")));
+            this.buttonX9.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonX9.Location = new System.Drawing.Point(323, 12);
             this.buttonX9.Name = "buttonX9";
-            this.buttonX9.Size = new System.Drawing.Size(75, 23);
+            this.buttonX9.Size = new System.Drawing.Size(95, 30);
             this.buttonX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX9.TabIndex = 31;
             this.buttonX9.Text = "Tìm Kiếm";
+            this.buttonX9.Click += new System.EventHandler(this.buttonX9_Click);
             // 
             // labelX11
             // 
@@ -198,7 +227,7 @@
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX11.Location = new System.Drawing.Point(3, 175);
             this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(43, 23);
+            this.labelX11.Size = new System.Drawing.Size(64, 23);
             this.labelX11.TabIndex = 27;
             this.labelX11.Text = "Đơn Giá";
             // 
@@ -210,7 +239,7 @@
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.Location = new System.Drawing.Point(3, 135);
             this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(50, 23);
+            this.labelX10.Size = new System.Drawing.Size(64, 23);
             this.labelX10.TabIndex = 26;
             this.labelX10.Text = "Số Lượng";
             // 
@@ -222,7 +251,7 @@
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Location = new System.Drawing.Point(3, 95);
             this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(43, 23);
+            this.labelX9.Size = new System.Drawing.Size(64, 23);
             this.labelX9.TabIndex = 25;
             this.labelX9.Text = "Tên SP";
             // 
@@ -233,10 +262,10 @@
             // 
             this.txt_soluong.Border.Class = "TextBoxBorder";
             this.txt_soluong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_soluong.Location = new System.Drawing.Point(56, 137);
+            this.txt_soluong.Location = new System.Drawing.Point(110, 135);
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.PreventEnterBeep = true;
-            this.txt_soluong.Size = new System.Drawing.Size(81, 20);
+            this.txt_soluong.Size = new System.Drawing.Size(81, 22);
             this.txt_soluong.TabIndex = 24;
             // 
             // txt_dongia
@@ -246,10 +275,10 @@
             // 
             this.txt_dongia.Border.Class = "TextBoxBorder";
             this.txt_dongia.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_dongia.Location = new System.Drawing.Point(56, 177);
+            this.txt_dongia.Location = new System.Drawing.Point(119, 176);
             this.txt_dongia.Name = "txt_dongia";
             this.txt_dongia.PreventEnterBeep = true;
-            this.txt_dongia.Size = new System.Drawing.Size(81, 20);
+            this.txt_dongia.Size = new System.Drawing.Size(81, 22);
             this.txt_dongia.TabIndex = 23;
             // 
             // cb_sanpham
@@ -257,10 +286,10 @@
             this.cb_sanpham.DisplayMember = "Text";
             this.cb_sanpham.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_sanpham.FormattingEnabled = true;
-            this.cb_sanpham.ItemHeight = 14;
-            this.cb_sanpham.Location = new System.Drawing.Point(56, 97);
+            this.cb_sanpham.ItemHeight = 17;
+            this.cb_sanpham.Location = new System.Drawing.Point(110, 95);
             this.cb_sanpham.Name = "cb_sanpham";
-            this.cb_sanpham.Size = new System.Drawing.Size(81, 20);
+            this.cb_sanpham.Size = new System.Drawing.Size(81, 23);
             this.cb_sanpham.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cb_sanpham.TabIndex = 22;
             // 
@@ -272,7 +301,7 @@
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Location = new System.Drawing.Point(3, 54);
             this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(35, 23);
+            this.labelX8.Size = new System.Drawing.Size(64, 23);
             this.labelX8.TabIndex = 10;
             this.labelX8.Text = "Mã PX";
             // 
@@ -281,7 +310,7 @@
             this.dt_ChiTietPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -292,18 +321,6 @@
             this.dt_ChiTietPhieuNhap.Name = "dt_ChiTietPhieuNhap";
             this.dt_ChiTietPhieuNhap.Size = new System.Drawing.Size(779, 165);
             this.dt_ChiTietPhieuNhap.TabIndex = 8;
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(566, 157);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 35;
-            this.buttonX1.Text = "Refresh ";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // Frm_ChiTietPhieuXuat
             // 
@@ -323,7 +340,7 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTimCT;
+        private DevComponents.DotNetBar.Controls.TextBoxX tbx_timkiem;
         private DevComponents.DotNetBar.ButtonX bt_xoa;
         private DevComponents.DotNetBar.ButtonX bt_them;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;

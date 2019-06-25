@@ -108,7 +108,7 @@ namespace QuanLyKhoHang.CT
         private void Doimk(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            MainMenu m = new MainMenu();
+            Frm_Main m = new Frm_Main();
             m.ShowDialog();
                 
         }

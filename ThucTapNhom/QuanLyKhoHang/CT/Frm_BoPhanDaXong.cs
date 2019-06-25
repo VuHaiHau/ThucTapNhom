@@ -378,9 +378,9 @@ namespace QuanLyKhoHang.CT
 
         private void BoPhan(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            MainMenu m = new MainMenu();
-            m.ShowDialog();
+            //this.Hide();
+            //MainMenu m = new MainMenu();
+            //m.ShowDialog();
         }
     }
 }

@@ -70,6 +70,7 @@ namespace QuanLyKhoHang.CT
 
         void ShowData()
         {
+            
             cb_NhanVien.DataSource = acc.Select_Data("select * from NHANVIEN");
             cb_NCC.DataSource = acc.Select_Data("select * from NHACUNGCAP");
             cb_khohang.DataSource = acc.Select_Data("select * from KHOHANG");

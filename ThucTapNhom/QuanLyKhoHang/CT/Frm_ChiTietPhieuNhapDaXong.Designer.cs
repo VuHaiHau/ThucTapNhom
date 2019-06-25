@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChiTietPhieuNhapDaXong));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbx_timkiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.bt_xoa = new DevComponents.DotNetBar.ButtonX();
             this.bt_them = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.bt_thoat = new DevComponents.DotNetBar.ButtonX();
             this.bt_luu = new DevComponents.DotNetBar.ButtonX();
-            this.cb_maphieu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.buttonX9 = new DevComponents.DotNetBar.ButtonX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
@@ -46,7 +46,7 @@
             this.cb_sanpham = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.dt_ChiTietPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.txtmaphieu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt_ChiTietPhieuNhap)).BeginInit();
             this.SuspendLayout();
@@ -98,10 +98,10 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.txtmaphieu);
             this.groupPanel2.Controls.Add(this.buttonX1);
             this.groupPanel2.Controls.Add(this.bt_thoat);
             this.groupPanel2.Controls.Add(this.bt_luu);
-            this.groupPanel2.Controls.Add(this.cb_maphieu);
             this.groupPanel2.Controls.Add(this.buttonX9);
             this.groupPanel2.Controls.Add(this.tbx_timkiem);
             this.groupPanel2.Controls.Add(this.bt_xoa);
@@ -117,9 +117,9 @@
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPanel2.Location = new System.Drawing.Point(0, 0);
+            this.groupPanel2.Location = new System.Drawing.Point(5, 1);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(800, 450);
+            this.groupPanel2.Size = new System.Drawing.Size(790, 447);
             // 
             // 
             // 
@@ -151,6 +151,20 @@
             this.groupPanel2.TabIndex = 2;
             this.groupPanel2.Text = "Chi Tiết Phiếu Nhập";
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = ((System.Drawing.Image)(resources.GetObject("buttonX1.Image")));
+            this.buttonX1.ImageFixedSize = new System.Drawing.Size(22, 22);
+            this.buttonX1.Location = new System.Drawing.Point(596, 158);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(75, 30);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 35;
+            this.buttonX1.Text = "Refresh ";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // bt_thoat
             // 
             this.bt_thoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -178,18 +192,6 @@
             this.bt_luu.TabIndex = 33;
             this.bt_luu.Text = "Lưu";
             this.bt_luu.Click += new System.EventHandler(this.bt_luu_Click);
-            // 
-            // cb_maphieu
-            // 
-            this.cb_maphieu.DisplayMember = "Text";
-            this.cb_maphieu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_maphieu.FormattingEnabled = true;
-            this.cb_maphieu.ItemHeight = 17;
-            this.cb_maphieu.Location = new System.Drawing.Point(215, 37);
-            this.cb_maphieu.Name = "cb_maphieu";
-            this.cb_maphieu.Size = new System.Drawing.Size(151, 23);
-            this.cb_maphieu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_maphieu.TabIndex = 32;
             // 
             // buttonX9
             // 
@@ -294,14 +296,14 @@
             // dt_ChiTietPhieuNhap
             // 
             this.dt_ChiTietPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dt_ChiTietPhieuNhap.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dt_ChiTietPhieuNhap.DefaultCellStyle = dataGridViewCellStyle1;
             this.dt_ChiTietPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dt_ChiTietPhieuNhap.Location = new System.Drawing.Point(6, 242);
             this.dt_ChiTietPhieuNhap.Name = "dt_ChiTietPhieuNhap";
@@ -309,28 +311,26 @@
             this.dt_ChiTietPhieuNhap.TabIndex = 8;
             this.dt_ChiTietPhieuNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_ChiTietPhieuNhap_CellContentClick);
             // 
-            // buttonX1
+            // txtmaphieu
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Image = ((System.Drawing.Image)(resources.GetObject("buttonX1.Image")));
-            this.buttonX1.ImageFixedSize = new System.Drawing.Size(22, 22);
-            this.buttonX1.Location = new System.Drawing.Point(596, 158);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 30);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 35;
-            this.buttonX1.Text = "Refresh ";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
-            // Frm_ChiTietPhieuNhap
+            // 
+            // 
+            this.txtmaphieu.Border.Class = "TextBoxBorder";
+            this.txtmaphieu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtmaphieu.Location = new System.Drawing.Point(215, 38);
+            this.txtmaphieu.Name = "txtmaphieu";
+            this.txtmaphieu.PreventEnterBeep = true;
+            this.txtmaphieu.Size = new System.Drawing.Size(151, 22);
+            this.txtmaphieu.TabIndex = 36;
+            // 
+            // Frm_ChiTietPhieuNhapDaXong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupPanel2);
-            this.DoubleBuffered = true;
-            this.Name = "Frm_ChiTietPhieuNhap";
+            this.Name = "Frm_ChiTietPhieuNhapDaXong";
             this.Text = "Frm_ChiTietPhieuNhap";
             this.Load += new System.EventHandler(this.Frm_ChiTietPhieuNhap_Load);
             this.groupPanel2.ResumeLayout(false);
@@ -345,7 +345,6 @@
         private DevComponents.DotNetBar.ButtonX bt_xoa;
         private DevComponents.DotNetBar.ButtonX bt_them;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cb_maphieu;
         private DevComponents.DotNetBar.ButtonX buttonX9;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX labelX10;
@@ -358,5 +357,6 @@
         private DevComponents.DotNetBar.ButtonX bt_luu;
         private DevComponents.DotNetBar.ButtonX bt_thoat;
         private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtmaphieu;
     }
 }

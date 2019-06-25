@@ -12,11 +12,11 @@ namespace QuanLyKhoHang.CT
 {
     public partial class Frm_ChiTietPhieuXuat : DevComponents.DotNetBar.OfficeForm
     {
-        
-        public Frm_ChiTietPhieuXuat()
+        public string maphieuxuat;
+        public Frm_ChiTietPhieuXuat(string ma)
         {
             InitializeComponent();
-            
+            maphieuxuat = ma;
         }
         private int key = 0;
         DataAccess acc = new DataAccess();
@@ -148,6 +148,37 @@ namespace QuanLyKhoHang.CT
         {
             ClearText();
             Frm_ChiTietPhieuXuat_Load(sender, e);
+        }
+
+        private void txt_timkiem_leave(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "")
+            {
+                tbx_timkiem.Text = "Hãy nhập từ khóa tìm kiếm..";
+            }
+        }
+
+        private void txt_timkiem_Enter(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text == "Hãy nhập từ khóa tìm kiếm..")
+            {
+                tbx_timkiem.Text = "";
+            }
+        }
+
+        private void buttonX9_Click(object sender, EventArgs e)
+        {
+            if (tbx_timkiem.Text.Trim() == "")
+            {
+                MessageBox.Show("Đề Nghị Bạn Nhập Từ Khóa Cần Tìm!", "Thông Báo!");
+                return;
+            }
+            else
+            {
+                dt_ChiTietPhieuNhap.DataSource = acc.Select_Data("select MAPX,  sp.MASP,TENSP , ctp.DONGIAX , ctp.SOLUONG  from CHITIETPHIEUXUAT ctp Left Outer Join SANPHAM sp on sp.MASP=ctp.MASP where (sp.MASP like N'%" + tbx_timkiem.Text + "%' or TENSP like N'%" + tbx_timkiem.Text + "%') and MAPX='" + maphieuxuat + "' ");
+                tbx_timkiem.Clear();
+                dt_ChiTietPhieuNhap.ClearSelection();
+            }
         }
     }
 }

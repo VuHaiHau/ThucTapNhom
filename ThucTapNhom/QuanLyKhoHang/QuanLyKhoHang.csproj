@@ -534,17 +534,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HoaDonMuaHang.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongTinNguoiDung.cs">
+    <Compile Include="ThongTinNguoiDungDaXong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ThongTinNguoiDung.Designer.cs">
-      <DependentUpon>ThongTinNguoiDung.cs</DependentUpon>
+    <Compile Include="ThongTinNguoiDungDaXong.Designer.cs">
+      <DependentUpon>ThongTinNguoiDungDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_NhanVienDaXong.cs">
       <SubType>UserControl</SubType>
@@ -667,11 +661,8 @@
     <EmbeddedResource Include="HoaDonBanHang.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongTinNguoiDung.resx">
-      <DependentUpon>ThongTinNguoiDung.cs</DependentUpon>
+    <EmbeddedResource Include="ThongTinNguoiDungDaXong.resx">
+      <DependentUpon>ThongTinNguoiDungDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NhanVienDaXong.resx">
       <DependentUpon>Frm_NhanVienDaXong.cs</DependentUpon>

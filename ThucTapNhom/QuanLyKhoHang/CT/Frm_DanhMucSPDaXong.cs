@@ -38,12 +38,7 @@ namespace QuanLyKhoHang.CT
         {
             tbx_madm.Enabled = true; tbx_makho.Enabled = true; tbx_tendm.Enabled = true; tbx_ghichu.Enabled = true; tbx_tendm.Focus();
         }
-        private void bt_quaylai_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainMenu Menu = new MainMenu();
-            Menu.ShowDialog();
-        }
+       
         public DataTable ThongTinMaKho(string Text)
         {
             SqlDataReader a = acc.ExecuteReader("Select MAKHO FROM KHOHANG WHERE TENKHO LIKE N'" + Text + "'");

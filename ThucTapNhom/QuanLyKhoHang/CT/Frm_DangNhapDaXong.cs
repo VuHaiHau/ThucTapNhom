@@ -39,9 +39,9 @@ namespace QuanLyKhoHang.CT
             if (reader.Read() == true)
             {
                 QH(txtTaiKhoan.Text);
-                MainMenu.Quyenhan = QuyenHan;
-                ThongTinNguoiDung.QuyenHan = QuyenHan;
-                ThongTinNguoiDung.TenDangNhap = txtTaiKhoan.Text;
+                Frm_Main.Quyenhan = QuyenHan;
+                ThongTinNguoiDungDaXong.QuyenHan = QuyenHan;
+                ThongTinNguoiDungDaXong.TenDangNhap = txtTaiKhoan.Text;
                 Frm_BaoCao.TenDangNhap = txtTaiKhoan.Text;
                 Frm_DoiMatKhauDaXong.USERNAME = txtTaiKhoan.Text;
                 Frm_DoiQuyenDaXong.USERNAME = txtTaiKhoan.Text;
@@ -101,9 +101,9 @@ namespace QuanLyKhoHang.CT
                 if (reader.Read() == true)
                 {
                     QH(txtTaiKhoan.Text);
-                    MainMenu.Quyenhan = QuyenHan;
-                    ThongTinNguoiDung.QuyenHan = QuyenHan;
-                    ThongTinNguoiDung.TenDangNhap = txtTaiKhoan.Text;
+                    Frm_Main.Quyenhan = QuyenHan;
+                    ThongTinNguoiDungDaXong.QuyenHan = QuyenHan;
+                    ThongTinNguoiDungDaXong.TenDangNhap = txtTaiKhoan.Text;
                     Frm_BaoCao.TenDangNhap = txtTaiKhoan.Text;
                     Frm_DoiMatKhauDaXong.USERNAME = txtTaiKhoan.Text;
                     Frm_DoiQuyenDaXong.USERNAME = txtTaiKhoan.Text;
@@ -112,7 +112,7 @@ namespace QuanLyKhoHang.CT
                     MessageBox.Show("Đăng Nhập Thành Công!");
                     MessageBox.Show("Bạn Đang Là: " + QuyenHan + "");
                     this.Hide();
-                    MainMenu menu = new MainMenu();
+                    Frm_Main menu = new Frm_Main();
                     menu.ShowDialog();
                 }
                 else

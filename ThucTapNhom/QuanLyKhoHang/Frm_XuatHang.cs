@@ -230,13 +230,7 @@ namespace QuanLyKhoHang
             }
         }
 
-        private void btn_quaylai_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainMenu m = new MainMenu();
-            m.ShowDialog();
-        }
-
+       
        
 
         private void groupBox3_Enter(object sender, EventArgs e)

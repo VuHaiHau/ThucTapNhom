@@ -123,7 +123,7 @@
             this.btn_quaylai.Size = new System.Drawing.Size(65, 40);
             this.btn_quaylai.TabIndex = 27;
             this.btn_quaylai.UseVisualStyleBackColor = true;
-            this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
+           // this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
             // 
             // label22
             // 

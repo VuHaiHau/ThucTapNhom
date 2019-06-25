@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKhoHang
 {
-    public partial class ThongTinNguoiDung : UserControl
+    public partial class ThongTinNguoiDungDaXong : UserControl
     {
         DataAccess acc = new DataAccess();
         public static string QuyenHan = "";
@@ -22,7 +22,7 @@ namespace QuanLyKhoHang
         private string filename;
         private string filepaths;
         private string MaNV;
-        public ThongTinNguoiDung()
+        public ThongTinNguoiDungDaXong()
         {
             InitializeComponent();
         }
@@ -80,13 +80,7 @@ namespace QuanLyKhoHang
         }
 
      
-        private void bt_quaylai_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            MainMenu menu = new MainMenu();
-            menu.ShowDialog();
-        }
+        
 
         private void bt_file_Click(object sender, EventArgs e)
         {

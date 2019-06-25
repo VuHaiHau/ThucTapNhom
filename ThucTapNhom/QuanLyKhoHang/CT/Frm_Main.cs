@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using DevComponents.DotNetBar;
 namespace QuanLyKhoHang.CT
 {
     public partial class Frm_Main : DevComponents.DotNetBar.Office2007RibbonForm
     {
+        public static string Quyenhan = "";
         public Frm_Main()
         {
             InitializeComponent();
+            userNamemenu.Text = Quyenhan;
         }
+
         private void ThemTab(string strtabname, UserControl UCContent)
         {
             foreach (TabItem tabPage in tabControl1.Tabs)
@@ -97,7 +101,7 @@ namespace QuanLyKhoHang.CT
 
         private void buttonItem15_Click(object sender, EventArgs e)
         {
-            ThongTinNguoiDung nd = new ThongTinNguoiDung();
+            ThongTinNguoiDungDaXong nd = new ThongTinNguoiDungDaXong();
             ThemTab("Thông Tin Người Dùng", nd);
         }
 
@@ -190,5 +194,10 @@ namespace QuanLyKhoHang.CT
             Frm_BaoCao bc = new Frm_BaoCao();
             ThemTab("Báo Cáo Nhập-Xuất Hàng", bc);
         }
+    }
+
+    internal class userNamemenu
+    {
+        public static string Text { get; internal set; }
     }
 }

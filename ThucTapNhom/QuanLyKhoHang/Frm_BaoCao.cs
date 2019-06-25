@@ -98,9 +98,9 @@ namespace QuanLyKhoHang
 
         private void BaoCao_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            MainMenu menu = new MainMenu();
-            menu.ShowDialog();
+            //this.Hide();
+            //MainMenu menu = new MainMenu();
+            //menu.ShowDialog();
         }
 
        
@@ -476,16 +476,16 @@ namespace QuanLyKhoHang
             if (MessageBox.Show("Bạn Có Chắc Chắn Muốn Hủy Không?", "Quản Lý KHo Hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 
-                this.Hide();
-                MainMenu home = new MainMenu();
-                home.ShowDialog();
+                //this.Hide();
+                //MainMenu home = new MainMenu();
+                //home.ShowDialog();
             }
            
         }
 
         private void lbx_tennv_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ThongTinNguoiDung nd = new ThongTinNguoiDung();
+            ThongTinNguoiDungDaXong nd = new ThongTinNguoiDungDaXong();
             nd.Show();
         }
 
@@ -499,12 +499,7 @@ namespace QuanLyKhoHang
 
         }
 
-        private void btn_quaylai_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainMenu main = new MainMenu();
-            main.ShowDialog();
-        }
+       
 
         private void tbx_tungay_TextChanged(object sender, EventArgs e)
         {

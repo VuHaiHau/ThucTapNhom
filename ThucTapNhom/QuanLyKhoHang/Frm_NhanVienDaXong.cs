@@ -197,12 +197,7 @@ namespace QuanLyKhoHang
         }
 
       
-        private void NhanVIen_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            MainMenu menu = new MainMenu();
-            menu.ShowDialog();
-        }
+      
 
     
         private void lbx_xemall_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

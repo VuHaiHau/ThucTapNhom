@@ -257,12 +257,7 @@ namespace QuanLyKhoHang.CT
             }
         }
 
-        private void NhaCungCap(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            MainMenu ncc = new MainMenu();
-            ncc.ShowDialog();
-        }
+     
 
         private void TenNCC(object sender, KeyPressEventArgs e)
         {

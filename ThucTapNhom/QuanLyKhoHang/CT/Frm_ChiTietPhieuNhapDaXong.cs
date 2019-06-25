@@ -23,13 +23,13 @@ namespace QuanLyKhoHang.CT
         private void ClearText()
         {
             cb_sanpham.ResetText();
-            cb_maphieu.ResetText();
+            txtmaphieu.Clear();
             txt_dongia.Clear();
             txt_soluong.Clear();
         }
         private void Enabletbx()
         {
-            cb_maphieu.Enabled = true;
+            txtmaphieu.Enabled = false;
             cb_sanpham.Enabled = true;
             txt_soluong.Enabled = true;
             txt_dongia.Enabled = true;
@@ -37,7 +37,7 @@ namespace QuanLyKhoHang.CT
 
         private void Disabletbx()
         {
-            cb_maphieu.Enabled = false;
+            txtmaphieu.Enabled = false;
             cb_sanpham.Enabled = false;
             txt_soluong.Enabled = false;
             txt_dongia.Enabled = false;
@@ -58,10 +58,8 @@ namespace QuanLyKhoHang.CT
 
         void ShowData()
         {
-            cb_maphieu.DataSource = acc.Select_Data("select * from PHIEUNHAPKHO");
+            txtmaphieu.Text = maphieunhap;
             cb_sanpham.DataSource = acc.Select_Data("select * from SANPHAM");
-            cb_maphieu.DisplayMember = "MAPN";
-            cb_maphieu.ValueMember = "MAPN";
             cb_sanpham.DisplayMember = "TENSP";
             cb_sanpham.ValueMember = "MASP";
         }
@@ -84,7 +82,7 @@ namespace QuanLyKhoHang.CT
             dt_ChiTietPhieuNhap.Columns["DONGIAN"].HeaderText = "Đơn Giá";
             try
             {
-                cb_maphieu.Text = dt.Rows[0][0].ToString().Trim();
+                txtmaphieu.Text = dt.Rows[0][0].ToString().Trim();
             }
             catch
             {
@@ -94,7 +92,7 @@ namespace QuanLyKhoHang.CT
 
         private void dt_ChiTietPhieuNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            cb_maphieu.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["MAPN"].Value.ToString();
+            txtmaphieu.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["MAPN"].Value.ToString();
             cb_sanpham.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["TENSP"].Value.ToString();
             txt_dongia.Text= dt_ChiTietPhieuNhap.CurrentRow.Cells["DONGIAN"].Value.ToString();
             txt_soluong.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["SOLUONG"].Value.ToString();
@@ -111,7 +109,7 @@ namespace QuanLyKhoHang.CT
         private void bt_xoa_Click(object sender, EventArgs e)
         {
             Disabletbx();
-            if (cb_maphieu.Text.Length != 0)
+            if (txtmaphieu.Text.Length != 0)
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này trong phiếu nhập", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
