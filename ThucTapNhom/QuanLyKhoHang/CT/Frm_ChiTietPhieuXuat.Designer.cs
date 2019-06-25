@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChiTietPhieuXuat));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbx_timkiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.bt_xoa = new DevComponents.DotNetBar.ButtonX();
             this.bt_them = new DevComponents.DotNetBar.ButtonX();
@@ -37,7 +37,6 @@
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.bt_thoat = new DevComponents.DotNetBar.ButtonX();
             this.bt_luu = new DevComponents.DotNetBar.ButtonX();
-            this.cb_maphieu = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.buttonX9 = new DevComponents.DotNetBar.ButtonX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
@@ -47,6 +46,9 @@
             this.cb_sanpham = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.dt_ChiTietPhieuNhap = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.txt_MaPhieu = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt_ChiTietPhieuNhap)).BeginInit();
             this.SuspendLayout();
@@ -58,10 +60,10 @@
             // 
             this.tbx_timkiem.Border.Class = "TextBoxBorder";
             this.tbx_timkiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbx_timkiem.Location = new System.Drawing.Point(170, 15);
+            this.tbx_timkiem.Location = new System.Drawing.Point(111, 223);
             this.tbx_timkiem.Name = "tbx_timkiem";
             this.tbx_timkiem.PreventEnterBeep = true;
-            this.tbx_timkiem.Size = new System.Drawing.Size(148, 22);
+            this.tbx_timkiem.Size = new System.Drawing.Size(257, 22);
             this.tbx_timkiem.TabIndex = 30;
             this.tbx_timkiem.Enter += new System.EventHandler(this.txt_timkiem_Enter);
             this.tbx_timkiem.Leave += new System.EventHandler(this.txt_timkiem_leave);
@@ -98,10 +100,12 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.labelX1);
+            this.groupPanel2.Controls.Add(this.textBoxX1);
+            this.groupPanel2.Controls.Add(this.txt_MaPhieu);
             this.groupPanel2.Controls.Add(this.buttonX1);
             this.groupPanel2.Controls.Add(this.bt_thoat);
             this.groupPanel2.Controls.Add(this.bt_luu);
-            this.groupPanel2.Controls.Add(this.cb_maphieu);
             this.groupPanel2.Controls.Add(this.buttonX9);
             this.groupPanel2.Controls.Add(this.tbx_timkiem);
             this.groupPanel2.Controls.Add(this.bt_xoa);
@@ -193,25 +197,13 @@
             this.bt_luu.Text = "Lưu";
             this.bt_luu.Click += new System.EventHandler(this.bt_luu_Click);
             // 
-            // cb_maphieu
-            // 
-            this.cb_maphieu.DisplayMember = "Text";
-            this.cb_maphieu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_maphieu.FormattingEnabled = true;
-            this.cb_maphieu.ItemHeight = 17;
-            this.cb_maphieu.Location = new System.Drawing.Point(110, 54);
-            this.cb_maphieu.Name = "cb_maphieu";
-            this.cb_maphieu.Size = new System.Drawing.Size(81, 23);
-            this.cb_maphieu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_maphieu.TabIndex = 32;
-            // 
             // buttonX9
             // 
             this.buttonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX9.Image = ((System.Drawing.Image)(resources.GetObject("buttonX9.Image")));
             this.buttonX9.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonX9.Location = new System.Drawing.Point(323, 12);
+            this.buttonX9.Location = new System.Drawing.Point(387, 218);
             this.buttonX9.Name = "buttonX9";
             this.buttonX9.Size = new System.Drawing.Size(95, 30);
             this.buttonX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -225,7 +217,7 @@
             // 
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.Location = new System.Drawing.Point(3, 175);
+            this.labelX11.Location = new System.Drawing.Point(136, 142);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(64, 23);
             this.labelX11.TabIndex = 27;
@@ -237,7 +229,7 @@
             // 
             // 
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Location = new System.Drawing.Point(3, 135);
+            this.labelX10.Location = new System.Drawing.Point(136, 102);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(64, 23);
             this.labelX10.TabIndex = 26;
@@ -249,7 +241,7 @@
             // 
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Location = new System.Drawing.Point(3, 95);
+            this.labelX9.Location = new System.Drawing.Point(136, 62);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(64, 23);
             this.labelX9.TabIndex = 25;
@@ -262,10 +254,10 @@
             // 
             this.txt_soluong.Border.Class = "TextBoxBorder";
             this.txt_soluong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_soluong.Location = new System.Drawing.Point(110, 135);
+            this.txt_soluong.Location = new System.Drawing.Point(206, 103);
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.PreventEnterBeep = true;
-            this.txt_soluong.Size = new System.Drawing.Size(81, 22);
+            this.txt_soluong.Size = new System.Drawing.Size(162, 22);
             this.txt_soluong.TabIndex = 24;
             // 
             // txt_dongia
@@ -275,10 +267,10 @@
             // 
             this.txt_dongia.Border.Class = "TextBoxBorder";
             this.txt_dongia.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_dongia.Location = new System.Drawing.Point(119, 176);
+            this.txt_dongia.Location = new System.Drawing.Point(206, 143);
             this.txt_dongia.Name = "txt_dongia";
             this.txt_dongia.PreventEnterBeep = true;
-            this.txt_dongia.Size = new System.Drawing.Size(81, 22);
+            this.txt_dongia.Size = new System.Drawing.Size(162, 22);
             this.txt_dongia.TabIndex = 23;
             // 
             // cb_sanpham
@@ -287,9 +279,9 @@
             this.cb_sanpham.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_sanpham.FormattingEnabled = true;
             this.cb_sanpham.ItemHeight = 17;
-            this.cb_sanpham.Location = new System.Drawing.Point(110, 95);
+            this.cb_sanpham.Location = new System.Drawing.Point(206, 63);
             this.cb_sanpham.Name = "cb_sanpham";
-            this.cb_sanpham.Size = new System.Drawing.Size(81, 23);
+            this.cb_sanpham.Size = new System.Drawing.Size(162, 23);
             this.cb_sanpham.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cb_sanpham.TabIndex = 22;
             // 
@@ -299,7 +291,7 @@
             // 
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(3, 54);
+            this.labelX8.Location = new System.Drawing.Point(136, 22);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(64, 23);
             this.labelX8.TabIndex = 10;
@@ -308,19 +300,57 @@
             // dt_ChiTietPhieuNhap
             // 
             this.dt_ChiTietPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dt_ChiTietPhieuNhap.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dt_ChiTietPhieuNhap.DefaultCellStyle = dataGridViewCellStyle2;
             this.dt_ChiTietPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dt_ChiTietPhieuNhap.Location = new System.Drawing.Point(6, 261);
             this.dt_ChiTietPhieuNhap.Name = "dt_ChiTietPhieuNhap";
             this.dt_ChiTietPhieuNhap.Size = new System.Drawing.Size(779, 165);
             this.dt_ChiTietPhieuNhap.TabIndex = 8;
+            // 
+            // txt_MaPhieu
+            // 
+            // 
+            // 
+            // 
+            this.txt_MaPhieu.Border.Class = "TextBoxBorder";
+            this.txt_MaPhieu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_MaPhieu.Location = new System.Drawing.Point(206, 23);
+            this.txt_MaPhieu.Name = "txt_MaPhieu";
+            this.txt_MaPhieu.PreventEnterBeep = true;
+            this.txt_MaPhieu.Size = new System.Drawing.Size(162, 22);
+            this.txt_MaPhieu.TabIndex = 36;
+            // 
+            // textBoxX1
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX1.Border.Class = "TextBoxBorder";
+            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX1.Location = new System.Drawing.Point(206, 183);
+            this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.PreventEnterBeep = true;
+            this.textBoxX1.Size = new System.Drawing.Size(162, 22);
+            this.textBoxX1.TabIndex = 37;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(111, 182);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(89, 23);
+            this.labelX1.TabIndex = 38;
+            this.labelX1.Text = "Số Lượng Tồn";
             // 
             // Frm_ChiTietPhieuXuat
             // 
@@ -346,7 +376,6 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
         private DevComponents.DotNetBar.ButtonX bt_thoat;
         private DevComponents.DotNetBar.ButtonX bt_luu;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cb_maphieu;
         private DevComponents.DotNetBar.ButtonX buttonX9;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX labelX10;
@@ -357,5 +386,8 @@
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.Controls.DataGridViewX dt_ChiTietPhieuNhap;
         private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_MaPhieu;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
     }
 }
