@@ -60,7 +60,7 @@ namespace QuanLyKhoHang.CT
         {
             txt_MaPhieu.Text = maphieuxuat;
             cb_sanpham.DataSource = acc.Select_Data("select * from SANPHAM");
-            cb_sanpham.DisplayMember = "MASP";
+            cb_sanpham.DisplayMember = "TENSP";
             cb_sanpham.ValueMember = "MASP";
         }
 
@@ -77,18 +77,16 @@ namespace QuanLyKhoHang.CT
             Disabletbx();
             if (txt_MaPhieu.Text.Length != 0)
             {
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này trong phiếu nhập", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này trong phiếu xuất", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
 
-                    acc.Select_Data("update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuXuat WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPN='" + maphieuxuat + "') where MASP='" + cb_sanpham.SelectedValue + "' delete ChiTietPhieuXuat where MAPN = '" + maphieuxuat + "' and MASP = '" + cb_sanpham.SelectedValue + "'");
+                    acc.Select_Data("update SANPHAM set SOLUONG=SOLUONG+(SELECT SoLuong FROM ChiTietPhieuXuat WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPX='" + maphieuxuat + "') where MASP='" + cb_sanpham.SelectedValue + "' delete ChiTietPhieuXuat where MAPX = '" + maphieuxuat + "' and MASP = '" + cb_sanpham.SelectedValue + "'");
 
                     ClearText();
                     MessageBox.Show("Xóa thành công!");
                     Frm_ChiTietPhieuXuat_Load(sender, e);
-                    key = 0;
-
-
+                  
                 }
             }
             else
@@ -194,6 +192,14 @@ namespace QuanLyKhoHang.CT
             DataTable dt = new DataTable();
             dt = acc.Select_Data("select Soluong from SanPham where MaSP='" + cb_sanpham.SelectedValue + "'");
             txtsoluongton.Text = dt.Rows[0][0].ToString().Trim();
+        }
+
+        private void dt_ChiTietPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_MaPhieu.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["MAPX"].Value.ToString();
+            cb_sanpham.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["TENSP"].Value.ToString();
+            txt_dongia.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["DONGIAX"].Value.ToString();
+            txt_soluong.Text = dt_ChiTietPhieuNhap.CurrentRow.Cells["SOLUONG"].Value.ToString();
         }
     }
 }
