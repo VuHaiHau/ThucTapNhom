@@ -1167,10 +1167,10 @@
     </PageFooter>
     <PageHeight>29cm</PageHeight>
     <PageWidth>28cm</PageWidth>
-    <LeftMargin>3cm</LeftMargin>
-    <RightMargin>1cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>1cm</BottomMargin>
+    <LeftMargin>3.5cm</LeftMargin>
+    <RightMargin>3.5cm</RightMargin>
+    <TopMargin>3cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

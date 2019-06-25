@@ -523,12 +523,6 @@
     <Compile Include="ThongKeSLTonKho.Designer.cs">
       <DependentUpon>ThongKeSLTonKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_XuatHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_XuatHang.Designer.cs">
-      <DependentUpon>Frm_XuatHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="HoaDonMuaHang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -654,9 +648,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeSLTonKho.resx">
       <DependentUpon>ThongKeSLTonKho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_XuatHang.resx">
-      <DependentUpon>Frm_XuatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDonBanHang.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using Microsoft.Reporting.WinForms;
 namespace QuanLyKhoHang
 {
-    public partial class Frm_BaoCaoN_F : DevComponents.DotNetBar.Office2007RibbonForm
+    public partial class Frm_BaoCaoN_F : Form
     {
         DataAccess acc = new DataAccess();
         public static string TDN;

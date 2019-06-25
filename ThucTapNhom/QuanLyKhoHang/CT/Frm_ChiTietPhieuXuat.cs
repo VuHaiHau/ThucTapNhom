@@ -60,7 +60,7 @@ namespace QuanLyKhoHang.CT
         {
             txt_MaPhieu.Text = maphieuxuat;
             cb_sanpham.DataSource = acc.Select_Data("select * from SANPHAM");
-            cb_sanpham.DisplayMember = "TENSP";
+            cb_sanpham.DisplayMember = "MASP";
             cb_sanpham.ValueMember = "MASP";
         }
 
@@ -126,11 +126,20 @@ namespace QuanLyKhoHang.CT
         {
             if (key == 1)
             {
-                acc.Select_Data("INSERT into ChiTietPhieuXuat VALUES (N'" + maphieuxuat + "', N'" + cb_sanpham.SelectedValue + "', " + txt_soluong.Text + "," + txt_dongia.Text + " ) update SANPHAM set SOLUONG=SOLUONG-(SELECT SoLuong FROM ChiTietPhieuXuat WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPX='" + maphieuxuat + "') where MASP='" + cb_sanpham.SelectedValue + "'");
-                ClearText();
-                MessageBox.Show("Thêm Thành Công!", "Thông Báo");
-                Frm_ChiTietPhieuXuat_Load(sender, e);
-                key = 0;
+                int soluong = int.Parse(txt_soluong.Text.ToString());
+                int soluongton = int.Parse(txtsoluongton.Text.ToString());
+                if(soluong<soluongton)
+                {
+                    acc.Select_Data("INSERT into ChiTietPhieuXuat VALUES (N'" + maphieuxuat + "', N'" + cb_sanpham.SelectedValue + "', " + txt_soluong.Text + "," + txt_dongia.Text + " ) update SANPHAM set SOLUONG=SOLUONG-(SELECT SoLuong FROM ChiTietPhieuXuat WHERE MASP='" + cb_sanpham.SelectedValue + "' AND MAPX='" + maphieuxuat + "') where MASP='" + cb_sanpham.SelectedValue + "'");
+                    ClearText();
+                    MessageBox.Show("Thêm Thành Công!", "Thông Báo");
+                    Frm_ChiTietPhieuXuat_Load(sender, e);
+                    key = 0;
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng sản phẩm trong kho không đủ đế mua", "Thông báo");
+                }
             }
 
         }
@@ -177,6 +186,14 @@ namespace QuanLyKhoHang.CT
                 tbx_timkiem.Clear();
                 dt_ChiTietPhieuNhap.ClearSelection();
             }
+        }
+
+       
+        private void txtsoluongton_MouseClick(object sender, MouseEventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = acc.Select_Data("select Soluong from SanPham where MaSP='" + cb_sanpham.SelectedValue + "'");
+            txtsoluongton.Text = dt.Rows[0][0].ToString().Trim();
         }
     }
 }
