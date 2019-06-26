@@ -188,7 +188,7 @@
             // 
             this.txt_MaPhieu.Border.Class = "TextBoxBorder";
             this.txt_MaPhieu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_MaPhieu.Location = new System.Drawing.Point(206, 15);
+            this.txt_MaPhieu.Location = new System.Drawing.Point(206, 23);
             this.txt_MaPhieu.Name = "txt_MaPhieu";
             this.txt_MaPhieu.PreventEnterBeep = true;
             this.txt_MaPhieu.Size = new System.Drawing.Size(162, 22);
@@ -330,7 +330,7 @@
             // 
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(136, 15);
+            this.labelX8.Location = new System.Drawing.Point(136, 23);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(64, 23);
             this.labelX8.TabIndex = 10;
@@ -354,13 +354,13 @@
             this.dt_ChiTietPhieuNhap.TabIndex = 8;
             this.dt_ChiTietPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dt_ChiTietPhieuNhap_CellClick);
             // 
-            // Frm_ChiTietPhieuXuat
+            // Frm_ChiTietPhieuXuatDaXong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupPanel2);
-            this.Name = "Frm_ChiTietPhieuXuat";
+            this.Name = "Frm_ChiTietPhieuXuatDaXong";
             this.Text = "Frm_ChiTietPhieuXuat";
             this.Load += new System.EventHandler(this.Frm_ChiTietPhieuXuat_Load);
             this.groupPanel2.ResumeLayout(false);

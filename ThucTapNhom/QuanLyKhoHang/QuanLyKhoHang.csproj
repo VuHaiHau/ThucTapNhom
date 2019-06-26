@@ -402,11 +402,11 @@
     <Compile Include="CT\Frm_ChiTietPhieuNhapDaXong.Designer.cs">
       <DependentUpon>Frm_ChiTietPhieuNhapDaXong.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\Frm_ChiTietPhieuXuat.cs">
+    <Compile Include="CT\Frm_ChiTietPhieuXuatDaXong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CT\Frm_ChiTietPhieuXuat.Designer.cs">
-      <DependentUpon>Frm_ChiTietPhieuXuat.cs</DependentUpon>
+    <Compile Include="CT\Frm_ChiTietPhieuXuatDaXong.Designer.cs">
+      <DependentUpon>Frm_ChiTietPhieuXuatDaXong.cs</DependentUpon>
     </Compile>
     <Compile Include="CT\Frm_LienHe.cs">
       <SubType>UserControl</SubType>
@@ -583,8 +583,8 @@
     <EmbeddedResource Include="CT\Frm_ChiTietPhieuNhapDaXong.resx">
       <DependentUpon>Frm_ChiTietPhieuNhapDaXong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\Frm_ChiTietPhieuXuat.resx">
-      <DependentUpon>Frm_ChiTietPhieuXuat.cs</DependentUpon>
+    <EmbeddedResource Include="CT\Frm_ChiTietPhieuXuatDaXong.resx">
+      <DependentUpon>Frm_ChiTietPhieuXuatDaXong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CT\Frm_LienHe.resx">
       <DependentUpon>Frm_LienHe.cs</DependentUpon>

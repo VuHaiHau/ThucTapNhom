@@ -605,7 +605,7 @@
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundColor>LightBlue</BackgroundColor>
+      <BackgroundColor>#19d6e0</BackgroundColor>
     </Style>
   </Body>
   <Width>18.90448cm</Width>

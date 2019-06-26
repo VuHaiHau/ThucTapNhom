@@ -1119,7 +1119,7 @@
       <Border>
         <Style>Solid</Style>
       </Border>
-      <BackgroundColor>White</BackgroundColor>
+      <BackgroundColor>#19d6e0</BackgroundColor>
     </Style>
   </Body>
   <Width>8.21537in</Width>

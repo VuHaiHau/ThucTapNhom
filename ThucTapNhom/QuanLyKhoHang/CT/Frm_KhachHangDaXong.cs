@@ -82,12 +82,12 @@ namespace QuanLyKhoHang.CT
             dgvKhachHang.Columns["EMAIL"].HeaderText = "Email";
             dgvKhachHang.Columns["FAX"].HeaderText = "Fax";
             dgvKhachHang.Columns[0].Width = 50;
-            dgvKhachHang.Columns[1].Width = 120;
-            dgvKhachHang.Columns[2].Width = 150;
-            dgvKhachHang.Columns[3].Width = 110;
-            dgvKhachHang.Columns[4].Width = 90;
+            dgvKhachHang.Columns[1].Width = 150;
+            dgvKhachHang.Columns[2].Width = 160;
+            dgvKhachHang.Columns[3].Width = 130;
+            dgvKhachHang.Columns[4].Width = 100;
             dgvKhachHang.Columns[5].Width = 120;
-            dgvKhachHang.Columns[6].Width = 160;
+            dgvKhachHang.Columns[6].Width = 200;
             dgvKhachHang.Columns[7].Width = 100;
         }
 

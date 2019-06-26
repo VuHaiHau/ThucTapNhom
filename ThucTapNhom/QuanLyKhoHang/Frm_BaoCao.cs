@@ -107,20 +107,7 @@ namespace QuanLyKhoHang
 
         private void btn_xemtat_Click_1(object sender, EventArgs e)
         {
-            string SelectQuery = "Select N.MAPN as [Mã Phiếu Nhập], KHO.TENKHO as [Tên Kho], SP.TENSP as [Tên Sản Phẩm], NCC.TENNHACC as [Tên Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TongTien = CTN.SOLUONG* DONGIAN , NV.TENNV as [Tên Nhân Viên], N.NGAYNHAP as [Ngày Nhập]";
-            string FromQuery = "from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO ";
-            string Query = SelectQuery + FromQuery;
-            dgv_thongkenhap.DataSource = acc.Select_Data(Query);
-            Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
-            Frm_BaoCaoN_F.TenNcc_Kh = cbx_ncc.Text;
-            Frm_BaoCaoN_F.TenNv = cbx_nv.Text;
-            Frm_BaoCaoN_F.TenSp = cbx_tensp.Text;
-            Frm_BaoCaoN_F.TuNgay = tbx_tungay.Text;
-            Frm_BaoCaoN_F.NgayNh_Xu = tbx_ngaynhap.Text;
-            Frm_BaoCaoN_F.DenNgay = tbx_denngay.Text;
-            Frm_BaoCaoN_F.Gia = cbx_giasp.Text;
-            keybtn = 2;
-            btn_xembc.Enabled = true;
+           
         }
 
         private void dpc_ngaynhap_ValueChanged(object sender, EventArgs e)
@@ -416,59 +403,61 @@ namespace QuanLyKhoHang
 
         private void btn_xembc_Click_1(object sender, EventArgs e)
         {
-            SelectQuery = "Select N.MAPN as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], NCC.TENNHACC as [Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TONGTIEN=CTN.SOLUONG*DONGIAN, NV.TENNV as [Nhân Viên], N.NGAYNHAP as [Ngày Nhập] from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO  ";
+            //SelectQuery = "Select N.MAPN as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], NCC.TENNHACC as [Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TONGTIEN=CTN.SOLUONG*DONGIAN, NV.TENNV as [Nhân Viên], N.NGAYNHAP as [Ngày Nhập] from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO  ";
 
-            if (cbx_kho.Text != "")
-            {
-                FromQuery = FromQuery + " And " + "KHO.TENKHO like N'%" + cbx_kho.Text + "%'";
-                Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
-               
-            }
-               
+            //if (cbx_kho.Text != "")
+            //{
+            //    FromQuery = FromQuery + " And " + "KHO.TENKHO like N'%" + cbx_kho.Text + "%'";
+            //    Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
 
-            if (cbx_tensp.Text != "")
-                FromQuery = FromQuery + "And " + "SP.TENSP like N'%" + cbx_tensp.Text + "%'";
+            //}
 
-            if (cbx_ncc.Text != "")
-                FromQuery = FromQuery + "And " + "NCC.TENNHACC like N'%" + cbx_ncc.Text + "%'";
 
-            if (cbx_giasp.Text != "")
-                FromQuery = FromQuery + "And " + "DONGIAN like N'%" + cbx_giasp.Text + "%'";
+            //if (cbx_tensp.Text != "")
+            //    FromQuery = FromQuery + "And " + "SP.TENSP like N'%" + cbx_tensp.Text + "%'";
 
-            if (cbx_nv.Text != "")
-                FromQuery = FromQuery + "And " + "NV.TENNV like N'%" + cbx_nv.Text + "%'";
+            //if (cbx_ncc.Text != "")
+            //    FromQuery = FromQuery + "And " + "NCC.TENNHACC like N'%" + cbx_ncc.Text + "%'";
 
-            if (tbx_ngaynhap.Text != "")
-                FromQuery = FromQuery + "And " + "N.NGAYNHAP = Convert(Datetime,'" + tbx_ngaynhap.Text + "',103)";
+            //if (cbx_giasp.Text != "")
+            //    FromQuery = FromQuery + "And " + "DONGIAN like N'%" + cbx_giasp.Text + "%'";
 
-            if (tbx_tungay.Text != "" && tbx_denngay.Text != "")
-            {
-                FromQuery = FromQuery + "And " + "N.NGAYNHAP > Convert(Datetime,'" + tbx_tungay.Text + "',103) And N.NGAYNHAP < Convert(Datetime,'" + tbx_denngay.Text + "',103)";
-            }
+            //if (cbx_nv.Text != "")
+            //    FromQuery = FromQuery + "And " + "NV.TENNV like N'%" + cbx_nv.Text + "%'";
 
-            Query = SelectQuery + FromQuery;
-            if ((cbx_kho.Text != "" || cbx_ncc.Text != "" || cbx_giasp.Text != "" || cbx_nv.Text != "" || cbx_tensp.Text != "" || tbx_ngaynhap.Text != "") || (tbx_tungay.Text != "" && tbx_denngay.Text != ""))
-            {
-                dgv_thongkenhap.DataSource = acc.Select_Data(Query);
-                FromQuery = null;
+            //if (tbx_ngaynhap.Text != "")
+            //    FromQuery = FromQuery + "And " + "N.NGAYNHAP = Convert(Datetime,'" + tbx_ngaynhap.Text + "',103)";
 
-                btn_xembc.Enabled = true;
-                ClearN();
-            }
-            else
-            {
-                MessageBox.Show("Bạn Chưa Nhập Dữ Liệu Cần Lọc!");
-            }
-            Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
-            Frm_BaoCaoN_F.TenNcc_Kh = cbx_ncc.Text;
-            Frm_BaoCaoN_F.TenNv = cbx_nv.Text;
-            Frm_BaoCaoN_F.TenSp = cbx_tensp.Text;
-            Frm_BaoCaoN_F.TuNgay = tbx_tungay.Text;
-            Frm_BaoCaoN_F.NgayNh_Xu = tbx_ngaynhap.Text;
-            Frm_BaoCaoN_F.DenNgay = tbx_denngay.Text;
-            Frm_BaoCaoN_F.Gia = cbx_giasp.Text;
-            Frm_BaoCaoN_F baocaof = new Frm_BaoCaoN_F();
-            baocaof.ShowDialog();
+            //if (tbx_tungay.Text != "" && tbx_denngay.Text != "")
+            //{
+            //    FromQuery = FromQuery + "And " + "N.NGAYNHAP > Convert(Datetime,'" + tbx_tungay.Text + "',103) And N.NGAYNHAP < Convert(Datetime,'" + tbx_denngay.Text + "',103)";
+            //}
+
+            //Query = SelectQuery + FromQuery;
+            //if ((cbx_kho.Text != "" || cbx_ncc.Text != "" || cbx_giasp.Text != "" || cbx_nv.Text != "" || cbx_tensp.Text != "" || tbx_ngaynhap.Text != "") || (tbx_tungay.Text != "" && tbx_denngay.Text != ""))
+            //{
+            //    dgv_thongkenhap.DataSource = acc.Select_Data(Query);
+            //    FromQuery = null;
+
+            //    btn_xembc.Enabled = true;
+            //    ClearN();
+            //}
+            //else
+            //{
+
+
+            //    Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
+            //    Frm_BaoCaoN_F.TenNcc_Kh = cbx_ncc.Text;
+            //    Frm_BaoCaoN_F.TenNv = cbx_nv.Text;
+            //    Frm_BaoCaoN_F.TenSp = cbx_tensp.Text;
+            //    Frm_BaoCaoN_F.TuNgay = tbx_tungay.Text;
+            //    Frm_BaoCaoN_F.NgayNh_Xu = tbx_ngaynhap.Text;
+            //    Frm_BaoCaoN_F.DenNgay = tbx_denngay.Text;
+            //    Frm_BaoCaoN_F.Gia = cbx_giasp.Text;
+            //    Frm_BaoCaoN_F baocaof = new Frm_BaoCaoN_F();
+            //    baocaof.ShowDialog();
+            //}
+        
         }
 
         private void btn_huythaotac_Click(object sender, EventArgs e)
@@ -542,47 +531,7 @@ namespace QuanLyKhoHang
 
        
 
-        private void btn_timkiem_Click(object sender, EventArgs e)
-        {
-            SelectQuery = "Select N.MAPN as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], NCC.TENNHACC as [Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TONGTIEN=CTN.SOLUONG*DONGIAN, NV.TENNV as [Nhân Viên], N.NGAYNHAP as [Ngày Nhập] from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO  ";
-
-            if (cbx_kho.Text != "")
-                FromQuery = FromQuery + " And " + "KHO.TENKHO like N'%" + cbx_kho.Text + "%'";
-
-            if (cbx_tensp.Text != "")
-                FromQuery = FromQuery + "And " + "SP.TENSP like N'%" + cbx_tensp.Text + "%'";
-
-            if (cbx_ncc.Text != "")
-                FromQuery = FromQuery + "And " + "NCC.TENNHACC like N'%" + cbx_ncc.Text + "%'";
-
-            if (cbx_giasp.Text != "")
-                FromQuery = FromQuery + "And " + "DONGIAN like N'%" + cbx_giasp.Text + "%'";
-
-            if (cbx_nv.Text != "")
-                FromQuery = FromQuery + "And " + "NV.TENNV like N'%" + cbx_nv.Text + "%'";
-
-            if (tbx_ngaynhap.Text != "")
-                FromQuery = FromQuery + "And " + "N.NGAYNHAP = Convert(Datetime,'" + tbx_ngaynhap.Text + "',103)";
-
-            if (tbx_tungay.Text != "" && tbx_denngay.Text != "")
-            {
-                FromQuery = FromQuery + "And " + "N.NGAYNHAP > Convert(Datetime,'" + tbx_tungay.Text + "',103) And N.NGAYNHAP < Convert(Datetime,'" + tbx_denngay.Text + "',103)";
-            }
-
-            Query = SelectQuery + FromQuery;
-            if ((cbx_kho.Text != "" || cbx_ncc.Text != "" || cbx_giasp.Text != "" || cbx_nv.Text != "" || cbx_tensp.Text != "" || tbx_ngaynhap.Text != "") || (tbx_tungay.Text != "" && tbx_denngay.Text != ""))
-            {
-                dgv_thongkenhap.DataSource = acc.Select_Data(Query);
-                FromQuery = null;
-                
-                btn_xembc.Enabled = true;
-                ClearN();
-            }
-            else
-            {
-                MessageBox.Show("Bạn Chưa Nhập Dữ Liệu Cần Lọc!");
-            }
-        }
+      
 
         private void btn_timkiemx_Click(object sender, EventArgs e)
         {
@@ -672,7 +621,140 @@ namespace QuanLyKhoHang
             lbx_ngaythanglap.Text = DateTime.Now.ToString("dd/MM/yyyy - hh:mm:ss");
         }
 
-        
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            SelectQuery = "Select N.MAPN as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], NCC.TENNHACC as [Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TONGTIEN=CTN.SOLUONG*DONGIAN, NV.TENNV as [Nhân Viên], N.NGAYNHAP as [Ngày Nhập] from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO  ";
+
+            if (cbx_kho.Text != "")
+                FromQuery = FromQuery + " And " + "KHO.TENKHO like N'%" + cbx_kho.Text + "%'";
+
+            if (cbx_tensp.Text != "")
+                FromQuery = FromQuery + "And " + "SP.TENSP like N'%" + cbx_tensp.Text + "%'";
+
+            if (cbx_ncc.Text != "")
+                FromQuery = FromQuery + "And " + "NCC.TENNHACC like N'%" + cbx_ncc.Text + "%'";
+
+            if (cbx_giasp.Text != "")
+                FromQuery = FromQuery + "And " + "DONGIAN like N'%" + cbx_giasp.Text + "%'";
+
+            if (cbx_nv.Text != "")
+                FromQuery = FromQuery + "And " + "NV.TENNV like N'%" + cbx_nv.Text + "%'";
+
+            if (tbx_ngaynhap.Text != "")
+                FromQuery = FromQuery + "And " + "N.NGAYNHAP = Convert(Datetime,'" + tbx_ngaynhap.Text + "',103)";
+
+            if (tbx_tungay.Text != "" && tbx_denngay.Text != "")
+            {
+                FromQuery = FromQuery + "And " + "N.NGAYNHAP > Convert(Datetime,'" + tbx_tungay.Text + "',103) And N.NGAYNHAP < Convert(Datetime,'" + tbx_denngay.Text + "',103)";
+            }
+
+            Query = SelectQuery + FromQuery;
+            if ((cbx_kho.Text != "" || cbx_ncc.Text != "" || cbx_giasp.Text != "" || cbx_nv.Text != "" || cbx_tensp.Text != "" || tbx_ngaynhap.Text != "") || (tbx_tungay.Text != "" && tbx_denngay.Text != ""))
+            {
+                dgv_thongkenhap.DataSource = acc.Select_Data(Query);
+                FromQuery = null;
+
+                btn_xembc.Enabled = true;
+                ClearN();
+            }
+            else
+            {
+                MessageBox.Show("Bạn Chưa Nhập Dữ Liệu Cần Lọc!");
+            }
+        }
+
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            string SelectQuery = "Select N.MAPN as [Mã Phiếu Nhập], KHO.TENKHO as [Tên Kho], SP.TENSP as [Tên Sản Phẩm], NCC.TENNHACC as [Tên Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TongTien = CTN.SOLUONG* DONGIAN , NV.TENNV as [Tên Nhân Viên], N.NGAYNHAP as [Ngày Nhập]";
+            string FromQuery = "from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO ";
+            string Query = SelectQuery + FromQuery;
+            dgv_thongkenhap.DataSource = acc.Select_Data(Query);
+            Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
+            Frm_BaoCaoN_F.TenNcc_Kh = cbx_ncc.Text;
+            Frm_BaoCaoN_F.TenNv = cbx_nv.Text;
+            Frm_BaoCaoN_F.TenSp = cbx_tensp.Text;
+            Frm_BaoCaoN_F.TuNgay = tbx_tungay.Text;
+            Frm_BaoCaoN_F.NgayNh_Xu = tbx_ngaynhap.Text;
+            Frm_BaoCaoN_F.DenNgay = tbx_denngay.Text;
+            Frm_BaoCaoN_F.Gia = cbx_giasp.Text;
+            keybtn = 2;
+            btn_xembc.Enabled = true;
+        }
+
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            ClearN();
+        }
+
+        private void buttonX4_Click(object sender, EventArgs e)
+        {
+            SelectQuery = "Select N.MAPN as [Mã Phiếu], KHO.TENKHO as [Kho], SP.TENSP as [Sản Phẩm], NCC.TENNHACC as [Nhà Cung Cấp], CTN.DONGIAN as [Đơn Giá], TONGTIEN=CTN.SOLUONG*DONGIAN, NV.TENNV as [Nhân Viên], N.NGAYNHAP as [Ngày Nhập] from PHIEUNHAPKHO N, CHITIETPHIEUNHAP CTN, SANPHAM SP, NHACUNGCAP NCC, NHANVIEN NV, KHOHANG KHO where N.MAPN = CTN.MAPN and CTN.MASP = SP.MASP and N.MANCC = NCC.MANCC and N.NVNHAP = NV.MANV and N.MAKHO = KHO.MAKHO  ";
+
+            if (cbx_kho.Text != "")
+            {
+                FromQuery = FromQuery + " And " + "KHO.TENKHO like N'%" + cbx_kho.Text + "%'";
+                Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
+
+            }
+
+
+            if (cbx_tensp.Text != "")
+                FromQuery = FromQuery + "And " + "SP.TENSP like N'%" + cbx_tensp.Text + "%'";
+
+            if (cbx_ncc.Text != "")
+                FromQuery = FromQuery + "And " + "NCC.TENNHACC like N'%" + cbx_ncc.Text + "%'";
+
+            if (cbx_giasp.Text != "")
+                FromQuery = FromQuery + "And " + "DONGIAN like N'%" + cbx_giasp.Text + "%'";
+
+            if (cbx_nv.Text != "")
+                FromQuery = FromQuery + "And " + "NV.TENNV like N'%" + cbx_nv.Text + "%'";
+
+            if (tbx_ngaynhap.Text != "")
+                FromQuery = FromQuery + "And " + "N.NGAYNHAP = Convert(Datetime,'" + tbx_ngaynhap.Text + "',103)";
+
+            if (tbx_tungay.Text != "" && tbx_denngay.Text != "")
+            {
+                FromQuery = FromQuery + "And " + "N.NGAYNHAP > Convert(Datetime,'" + tbx_tungay.Text + "',103) And N.NGAYNHAP < Convert(Datetime,'" + tbx_denngay.Text + "',103)";
+            }
+
+            Query = SelectQuery + FromQuery;
+            if ((cbx_kho.Text != "" || cbx_ncc.Text != "" || cbx_giasp.Text != "" || cbx_nv.Text != "" || cbx_tensp.Text != "" || tbx_ngaynhap.Text != "") || (tbx_tungay.Text != "" && tbx_denngay.Text != ""))
+            {
+                dgv_thongkenhap.DataSource = acc.Select_Data(Query);
+                FromQuery = null;
+
+                btn_xembc.Enabled = true;
+                ClearN();
+            }
+            else
+            {
+
+
+                Frm_BaoCaoN_F.TenKho = cbx_kho.Text;
+                Frm_BaoCaoN_F.TenNcc_Kh = cbx_ncc.Text;
+                Frm_BaoCaoN_F.TenNv = cbx_nv.Text;
+                Frm_BaoCaoN_F.TenSp = cbx_tensp.Text;
+                Frm_BaoCaoN_F.TuNgay = tbx_tungay.Text;
+                Frm_BaoCaoN_F.NgayNh_Xu = tbx_ngaynhap.Text;
+                Frm_BaoCaoN_F.DenNgay = tbx_denngay.Text;
+                Frm_BaoCaoN_F.Gia = cbx_giasp.Text;
+                Frm_BaoCaoN_F baocaof = new Frm_BaoCaoN_F();
+                baocaof.ShowDialog();
+            }
+        }
+
+        private void btn_huythaotac_Click_1(object sender, EventArgs e)
+        {
+            //if (MessageBox.Show("Bạn Có Chắc Chắn Muốn Hủy Không?", "Quản Lý KHo Hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+
+            //    this.Hide();
+            //    MainMenu home = new MainMenu();
+            //    home.ShowDialog();
+            //}
+
+        }
     }
 }
 
